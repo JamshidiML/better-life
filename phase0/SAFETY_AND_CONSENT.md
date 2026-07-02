@@ -6,6 +6,17 @@ This product area touches health, sexuality, relationships, shame, privacy, coer
 
 The product is not a therapist, clinician, emergency service, or diagnostic tool. It can support behavior change, self-reflection, device friction, and voluntary accountability. It should escalate to human support when the situation exceeds software.
 
+## Phase 0 Safety Review Summary
+
+The first safety review approves Phase 0 discovery only under these constraints:
+
+- Interview adults only.
+- Do not collect explicit sexual content.
+- Do not use raw participant notes in external AI tools.
+- Do not test coercive accountability flows.
+- Treat ally support as voluntary support, not emergency response.
+- Do not move to Phase 1 implementation until the safety gates in this file are satisfied.
+
 ## Language Rules
 
 Use:
@@ -40,6 +51,27 @@ Avoid by default:
 6. Users must have a calm-state exit process.
 7. Strict controls must be user-authored, not imposed by a partner or organization.
 8. Partner/family modes must include coercion checks.
+9. Research participation must be separate from product account creation.
+10. Recording consent must be separate from interview consent.
+11. Participants must be able to request deletion of research notes.
+12. Interviewers must explain that the product cannot guarantee prevention or recovery.
+
+## Consent Script For Interviews
+
+Before every Phase 0 interview, say this in plain language:
+
+"This is product research, not therapy or clinical care. You can skip any question or stop at any time. Please do not share explicit sexual content, explicit URLs, screenshots, or identifying details about other people. I am interested in patterns, emotions, devices, and what kind of support feels safe. If this conversation starts to feel distressing, we can pause or stop."
+
+Then confirm:
+
+- Participant is 18 or older.
+- Participation is voluntary.
+- No one else is requiring them to participate.
+- They understand this is not therapy.
+- They understand no explicit content should be shared.
+- They understand what notes will be kept.
+- They understand deletion options.
+- Recording is off unless they separately consent.
 
 ## Data Categories
 
@@ -66,6 +98,32 @@ Avoid by default:
 - Employer names.
 - Anything not needed for product discovery.
 
+## AI And Research Data Rules
+
+Phase 0 notes may contain highly sensitive information even when explicit content is avoided. Treat them as restricted research data.
+
+Do not:
+
+- Paste raw participant notes into external AI systems.
+- Use raw participant notes to train or fine-tune a model.
+- Upload recordings, transcripts, or participant quotes to third-party tools without a written review.
+- Ask an AI model to infer diagnosis, sexuality, trauma history, religion, or mental health state from raw notes.
+
+Allowed:
+
+- Use de-identified synthesis notes after removing participant codes, names, dates, locations, and rare identifying details.
+- Use AI to help organize themes only after manual redaction.
+- Keep a record of any AI-assisted synthesis step.
+
+## Retention And Deletion Rules
+
+- Separate contact information from interview notes.
+- Use participant codes such as `U01`, `T02`, and `A03`.
+- Delete recordings after note verification unless there is a documented reason to retain them.
+- Keep a deletion request log.
+- Do not keep sensitive raw notes longer than needed for Phase 0 synthesis.
+- Before Phase 1, define a formal retention schedule.
+
 ## Minimal Disclosure Model For Allies
 
 Default ally reports should never include raw content. Suggested levels:
@@ -75,6 +133,15 @@ Default ally reports should never include raw content. Suggested levels:
 - Red: user requested support or hit a high-risk loop.
 - Tamper: user tried to disable an agreed protection.
 - Help request: user explicitly asks for contact.
+
+Ally support must include boundaries:
+
+- Allies are not therapists by default.
+- Allies are not emergency services.
+- Allies should not interrogate the user.
+- Allies should not receive content details by default.
+- Users must be able to change or remove an ally through a calm-state process.
+- The product should provide ally response scripts to reduce shame and panic.
 
 ## Safety Escalation Draft
 
@@ -119,6 +186,8 @@ Response:
 - Stop product/research flow.
 - Encourage contacting local emergency services or crisis support immediately.
 - If in a live research session, follow the pre-approved safety protocol and document only necessary facts.
+- Do not rely on an ally notification as the only emergency response.
+- Do not continue product testing after immediate safety risk appears.
 
 ### Coercion Risk
 
@@ -130,6 +199,17 @@ Response:
 - Ask if participation is voluntary.
 - Offer privacy-preserving alternatives.
 - Do not share data with the coercive party.
+
+### Interview Stop Conditions
+
+Stop or pause a Phase 0 interview if:
+
+- The participant appears distressed and wants to stop.
+- The participant begins sharing explicit content despite redirection.
+- The participant appears coerced.
+- The participant describes imminent self-harm or harm to another person.
+- The interviewer cannot maintain the non-clinical research boundary.
+- A third party is present and may influence answers.
 
 ## Red Lines For Phase 1
 
@@ -144,6 +224,24 @@ Do not build:
 - AI claims of clinical treatment.
 - Content collection for model training.
 - Features that require breaking encrypted messaging.
+- Features that hide activity from the user.
+- Features that let another person secretly configure controls.
+- Features that make emergency promises the product cannot keep.
+- Features that store raw participant or user sexual content.
+
+## Phase 1 Entry Safety Gates
+
+Phase 1 implementation can begin only after:
+
+- At least 8 adult user interviews are complete.
+- At least 3 expert interviews are complete.
+- Safety language has been revised from evidence.
+- Coercion checks are defined for ally/partner flows.
+- Data minimization rules are written for each MVP feature.
+- Exit and deletion paths are defined.
+- Claims are reviewed to avoid diagnosis, treatment, cure, or guaranteed prevention.
+- The risk register is updated with Phase 0 evidence.
+- The first MVP does not require invasive monitoring.
 
 ## Regulatory Watch Items
 

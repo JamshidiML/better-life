@@ -16,6 +16,10 @@ This register should be updated after every 5 interviews.
 | R10 | Co-occurring mental health crisis | Critical | Safety escalation protocol | What live-support partnerships are needed? |
 | R11 | Religious/value customization amplifies shame | Medium | User-chosen language, safety review | What community modes are unsafe? |
 | R12 | Tapering controls too early causes setback | Medium | Tapering criteria, user review | What signals indicate readiness? |
+| R13 | Raw research notes leak through AI or third-party tools | Critical | De-identify before AI use; no raw notes in external AI systems | What redaction standard is enough for synthesis? |
+| R14 | Allies are treated as emergency responders | High | Ally boundary language; emergency risk routes away from product flow | What live crisis resources should the product reference by country? |
+| R15 | Participants cannot clearly delete or limit research data | High | Deletion request log; separate contact info from notes | What retention schedule should Phase 0 use? |
+| R16 | Coercive participant recruitment contaminates research | High | Voluntary participation confirmation; stop interview if third party influences answers | How do we screen coercion without making participants unsafe? |
 
 ## Update Ritual
 
