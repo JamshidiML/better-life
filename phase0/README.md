@@ -43,6 +43,7 @@ Do not build invasive monitoring until we understand user safety, consent, clini
 - [x] Decision log.
 - [x] User recruitment kit.
 - [x] Candidate pipeline template.
+- [x] U01 outreach brief.
 - [ ] Interview synthesis after first 5 users.
 - [ ] Interview synthesis after first 5 therapists/coaches.
 - [ ] Updated Phase 1 MVP recommendation.
