@@ -41,6 +41,8 @@ Do not build invasive monitoring until we understand user safety, consent, clini
 - [x] Ally signal copy prototype.
 - [x] Risk register.
 - [x] Decision log.
+- [x] User recruitment kit.
+- [x] Candidate pipeline template.
 - [ ] Interview synthesis after first 5 users.
 - [ ] Interview synthesis after first 5 therapists/coaches.
 - [ ] Updated Phase 1 MVP recommendation.
