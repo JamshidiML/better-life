@@ -1,347 +1,275 @@
-# Startup Execution Plan
+# Better Life — Startup Execution Plan
 
-Date: 2026-07-03
+Version: 2.0  
+Date: 2026-07-10  
+Status: Active
 
-This plan turns the product brief into an operating startup. It assumes we will use GitHub as the source of truth for code, product decisions, research artifacts, issues, milestones, pull requests, and release discipline.
+> This plan supersedes the original P-Vermeiden execution plan. The original remains available in Git history. Detailed current work is tracked in `docs/roadmap/FOUNDING_SPRINT_01.md` and GitHub issues.
 
 ## Company Thesis
 
-Build the first consent-based recovery operating layer for adults who want to reduce unwanted compulsive pornography use and related digital sexual behavior.
+Build a privacy-first, voluntary protection system that helps adults stay aligned with their long-term values during high-risk, emotionally dysregulated, or compulsive moments.
 
-The product should not be a simple blocker. It should become a trusted recovery infrastructure that:
-
-- Detects relapse sequences early.
-- Adds friction during vulnerable moments.
-- Protects privacy by default.
-- Involves humans only with informed consent.
-- Helps the user become less dependent on external controls over time.
+The first focus is unwanted compulsive pornography use and related digital sexual behavior. The long-term mission may expand to other self-control domains only after the first product is validated.
 
 ## Founding Principles
 
 1. Consent before control.
-2. Privacy before analytics.
+2. Privacy before prediction.
 3. Safety before growth.
-4. Evidence before product certainty.
+4. Evidence before certainty.
 5. Platform honesty before marketing.
 6. Repair before shame.
-7. Autonomy before lock-in.
-8. Build small, validate deeply, then expand.
+7. User ownership before third-party power.
+8. Simplicity outside, sophistication inside.
+9. Build small, validate deeply, then expand.
+10. Long-term autonomy before permanent product dependence.
 
-## GitHub Operating Model
+## Strategic Sequence
 
-### Repository Setup
+### Stage 0 — Foundation And Evidence
 
-Recommended initial repository:
+Outcome:
 
-- Name: `p-vermeiden` or `digital-recovery-platform`
-- Visibility: private during Phase 0 and early MVP
-- Default branch: `main`
-- Branch prefix for work: `codex/`
-- First protected branch: `main`
+- clear mission;
+- product doctrine;
+- scientific and clinical strategy;
+- collaboration model;
+- evidence map;
+- user and expert discovery plan;
+- technical feasibility report;
+- privacy and safety governance.
 
-The repo should become the company memory:
+Current artifacts:
 
-- Product strategy lives in markdown.
-- Research protocols and synthesis live in `/phase0`.
-- Product requirements live in `/product`.
-- Architecture lives in `/architecture`.
-- App code should come later under `/apps`.
-- Security and privacy reviews should be required for sensitive features.
+- `README.md`
+- `docs/foundation/PROJECT_CHARTER.md`
+- `docs/foundation/PRODUCT_DOCTRINE.md`
+- `docs/foundation/SCIENTIFIC_AND_CLINICAL_STRATEGY.md`
+- `AI_COLLABORATION.md`
+- `AGENTS.md`
+- `docs/roadmap/FOUNDING_SPRINT_01.md`
+- `phase0/`
 
-### Suggested Repository Structure
+### Stage 1 — Discovery And Product Selection
 
-```text
-/
-  README.md
-  STARTUP_EXECUTION_PLAN.md
-  PRODUCT_INNOVATION_BRIEF.md
-  PRODUCT_INNOVATION_BRIEF_FA.md
-  phase0/
-  product/
-  architecture/
-  research/
-  security/
-  legal/
-  apps/
-    web/
-    mobile/
-    browser-extension/
-    desktop-agent/
-  packages/
-  .github/
-```
+Outcome:
 
-Only create folders when they have real content. Empty structure looks professional for one day and then becomes clutter.
+- validated first-user segment;
+- ranked user problems;
+- validated desired protection strength;
+- evidence-backed intervention hypotheses;
+- expert and lived-experience feedback;
+- platform capability matrix;
+- first product wedge;
+- first product requirements document;
+- explicit safety gates.
 
-### GitHub Labels
+Work:
 
-Create these labels first:
+- user interviews;
+- clinician/researcher/coach interviews;
+- NGO and association landscape;
+- competitor and substitute analysis;
+- technical feasibility;
+- concept testing;
+- pricing and trust research;
+- secure research-data process.
 
-- `phase-0`
-- `research`
-- `safety`
-- `privacy`
-- `product`
-- `clinical-review`
-- `technical-feasibility`
-- `platform-ios`
-- `platform-android`
-- `platform-desktop`
-- `platform-browser`
-- `mvp`
-- `blocked`
-- `decision-needed`
-- `do-not-build-yet`
+### Stage 2 — Trust-First Prototype
 
-### Milestones
+Outcome:
 
-1. `M0: Foundation`
-   - Product brief complete.
-   - Persian brief complete.
-   - Phase 0 research kit complete.
-   - GitHub repo created.
+A small, usable prototype that tests the core value proposition without invasive monitoring.
 
-2. `M1: Phase 0 Evidence`
-   - 8-12 user interviews.
-   - 5-8 therapist/coach interviews.
-   - 5-8 ally/partner interviews.
-   - First synthesis batch.
-   - Updated risk register.
+Candidate elements:
 
-3. `M2: MVP Definition`
-   - Phase 1 MVP scope.
-   - Feature red lines.
-   - Data model boundaries.
-   - Platform feasibility decision.
-   - Prototype copy approved.
+- Protection Constitution / calm-state plan;
+- high-risk windows and device inventory;
+- chosen friction rules;
+- one high-risk intervention flow;
+- non-shaming lapse review;
+- transparent data and consent controls;
+- guided setup for existing platform protections;
+- one platform-specific protection component if feasibility supports it.
 
-4. `M3: Trust-First Prototype`
-   - Web command center prototype.
-   - Browser extension concept.
-   - Device Constitution flow.
-   - Urge Delay Exchange prototype.
-   - Relapse debrief prototype.
+The exact form—web, mobile, browser extension, desktop helper, or a layered combination—will be selected after the technical feasibility report and user evidence.
 
-5. `M4: Private Alpha`
-   - Local-first event log.
-   - Minimal ally signal.
-   - Manual debrief.
-   - Privacy review.
-   - Small alpha cohort.
+### Stage 3 — Private Alpha
 
-## First GitHub Issues
+Outcome:
 
-Create these as the initial issue backlog:
+A secure, instrumented, privacy-reviewed product used by a small adult cohort.
 
-1. `Create private GitHub repository and push foundation docs`
-2. `Create labels and milestones`
-3. `Review Phase 0 safety and consent guardrails`
-4. `Recruit first 5 user interview participants`
-5. `Recruit first 3 therapist or coach participants`
-6. `Run first user interview and save notes with template`
-7. `Synthesize first 5 user interviews`
-8. `Revise Device Constitution draft from interview evidence`
-9. `Revise ally signal copy from supporter interviews`
-10. `Define Phase 1 MVP safety gates`
-11. `Decide first technical platform target`
-12. `Draft product requirements for Trust-First MVP`
+Requirements:
 
-## 90-Day Execution Plan
+- threat model;
+- data classification;
+- secure identity and account recovery;
+- user-visible audit trail;
+- deletion and exit paths;
+- adverse-event and support process;
+- privacy review;
+- security review;
+- usability testing;
+- clear limitations;
+- no unsupported clinical claims.
 
-### Days 1-7: Foundation
+### Stage 4 — Free Public Beta
 
-- Create GitHub repo.
-- Commit product brief, Persian brief, Phase 0 kit, and startup plan.
-- Create labels, milestones, issue templates, and PR template.
-- Decide whether the repo stays private.
-- Write one-page public-safe description that avoids medical claims.
-- Prepare participant recruitment message.
+Outcome:
 
-### Days 8-21: Discovery Interviews
+A simple, trustworthy free product with measurable user value and safe operations.
 
-- Interview 5 users.
-- Interview 2-3 therapists/coaches.
-- Interview 2 allies/partners.
-- Update risk register after every batch.
-- Do not build product features yet.
+Requirements:
 
-### Days 22-35: Synthesis And Narrowing
+- stable onboarding;
+- reliable core protection and intervention flow;
+- localized support and referral information;
+- accessibility;
+- privacy documentation;
+- incident response;
+- product analytics that avoid intimate-content collection;
+- transparent limitations;
+- user support.
 
-- Produce first synthesis document.
-- Identify top 3 relapse sequence archetypes.
-- Identify top 3 safe interventions.
-- Identify top 3 privacy red lines.
-- Decide the first target platform for prototype.
+### Stage 5 — Sustainable Product
 
-### Days 36-50: Prototype Requirements
+Outcome:
 
-- Write Phase 1 PRD.
-- Define data model boundaries.
-- Define Device Constitution flow.
-- Define relapse debrief flow.
-- Define ally signal flow.
-- Define what must stay local.
+An accessible, mission-aligned product with a sustainable operating model.
 
-### Days 51-75: Build Trust-First Prototype
+Working business hypotheses:
 
-- Build a simple web command center prototype.
-- Build Device Constitution creation flow.
-- Build manual relapse debrief.
-- Build minimal ally signal mock flow.
-- Avoid invasive monitoring.
-- Test copy and flow with interview participants.
+- free core access;
+- later very-low-cost membership, initially envisioned around EUR 1/month;
+- optional supporter membership;
+- grants;
+- research partnerships;
+- NGO or public-interest partnerships;
+- paid advanced infrastructure or professional services only where they create real value and do not remove essential safety from the free core.
 
-### Days 76-90: Alpha Readiness
+The EUR 1/month idea is a hypothesis, not a committed price. It must be tested against app-store fees, taxes, payment costs, infrastructure, support, security, legal, clinical, and operational expenses.
 
-- Run a small usability study.
-- Update safety guardrails.
-- Decide whether to add browser extension prototype.
-- Prepare private alpha plan.
-- Decide what legal, clinical, and security reviews are required before launch.
+## Product Architecture Direction
 
-## Product Roadmap
+The likely long-term system is layered:
 
-### Phase 0: Discovery And Clinical Safety
+1. Shared account and user-authored protection policy.
+2. Web command center for setup, review, and transparency.
+3. Native mobile components for platform-specific protection and intervention.
+4. Browser extensions for high-resolution web intervention.
+5. Desktop helpers where justified.
+6. Optional DNS/router/network support.
+7. Local policy and risk processing where feasible.
+8. Minimal cloud synchronization.
+9. Optional minimal-disclosure human support.
+10. Consent, policy versioning, audit, export, deletion, and exit.
 
-Outcome: evidence-backed MVP scope and safety boundaries.
-
-Artifacts:
-
-- Research notes.
-- Interview synthesis.
-- Updated risk register.
-- Safety language.
-- Consent model.
-- Phase 1 PRD.
-
-### Phase 1: Trust-First MVP
-
-Outcome: users can define their recovery rules, debrief lapses without shame, and optionally involve an ally with minimal disclosure.
-
-Possible features:
-
-- Device Constitution.
-- Urge Delay Exchange.
-- Manual relapse debrief.
-- Device inventory.
-- Minimal ally signal.
-- Local-first event log.
-- Setup guides for existing OS controls.
-
-Avoid:
-
-- Screenshots.
-- Raw browser history collection.
-- AI diagnosis.
-- Hidden monitoring.
-- Partner surveillance.
-
-### Phase 2: Cross-Device Hardening
-
-Outcome: add platform-specific friction where technically and ethically safe.
-
-Possible features:
-
-- Browser extension.
-- Android companion with explicit permissions.
-- Desktop helper.
-- Router/DNS guidance.
-- Tamper cooling period.
-- Travel mode.
-
-### Phase 3: Predictive Intelligence
-
-Outcome: intervene earlier using privacy-preserving signals.
-
-Possible features:
-
-- Local risk model.
-- Sequence-level detection.
-- Personalized friction ladder.
-- AI-assisted debrief.
-- Privacy-preserving aggregate insights.
-
-## First Product To Build
-
-The safest first product is not the blocker. It is the recovery command center:
-
-1. User writes a Device Constitution.
-2. User maps high-risk windows and devices.
-3. User chooses friction rules.
-4. User chooses what an ally may see.
-5. User completes a non-shaming debrief after lapses.
-6. User learns which patterns repeat.
-
-This creates trust and evidence before asking for deeper device permissions.
+This is a hypothesis. Codex Issue #13 must test it against current platform capabilities and limitations before architectural commitment.
 
 ## Decision Gates
 
-Do not move to Phase 1 until:
+### Before production implementation
 
-- At least 8 user interviews are complete.
-- At least 3 expert interviews are complete.
-- Safety language has been revised from evidence.
-- Consent model has been reviewed.
-- First target platform is chosen.
-- Phase 1 feature list avoids invasive monitoring.
+- project charter approved;
+- product doctrine approved;
+- first-user hypothesis defined;
+- technical feasibility report reviewed;
+- initial evidence map complete;
+- sensitive-data boundaries defined;
+- first product wedge selected;
+- PRD written;
+- safety and privacy review complete.
 
-Do not add AI prediction until:
+### Before predictive AI
 
-- We know which signals are useful.
-- We can keep sensitive data local by default.
-- Users understand what the model infers.
-- False positives have a review path.
+- useful signals are supported by evidence or a justified experiment;
+- data necessity is documented;
+- local-first processing is evaluated;
+- users understand what is inferred;
+- false positives and false negatives have review paths;
+- no diagnosis is inferred or implied;
+- model performance and subgroup risks are evaluated;
+- an off switch and deletion path exist.
 
-Do not add ally reporting until:
+### Before strong restriction mode
 
-- Users can see exactly what is shared.
-- Allies understand how to respond.
-- Coercion checks exist.
-- Default reports avoid raw content.
+- informed adult opt-in;
+- clear preview of consequences;
+- explicit duration and scope;
+- transparent platform limitations;
+- pre-agreed calm-state change and exit process;
+- coercion and account-recovery threat model;
+- no secret third-party control;
+- usability and adverse-effect testing.
 
-## How We Work Together
+### Before ally or partner features
 
-You act as founder and product owner:
+- minimal disclosure by default;
+- user sees exactly what is shared;
+- consent is specific and renewable;
+- coercion checks exist;
+- ally boundaries and response guidance exist;
+- no raw history or screenshots by default;
+- removal and change paths are safe.
 
-- Decide mission, market, user priorities, and risk tolerance.
-- Recruit interview participants.
-- Review product copy and safety choices.
-- Decide when to create the GitHub remote.
-- Decide company name and public positioning.
+### Before clinical claims
 
-I act as product/engineering/research partner:
+- claim-specific evidence;
+- qualified clinical review;
+- regulatory assessment;
+- validated outcomes;
+- appropriate study design;
+- adverse-event process;
+- wording approved for the target jurisdiction.
 
-- Maintain repo structure.
-- Turn ideas into specs, issues, and prototypes.
-- Draft research artifacts and syntheses.
-- Build MVP code when Phase 1 starts.
-- Keep safety, privacy, and platform realism visible.
-- Prepare commits, PRs, and release notes when you want them.
+## GitHub Operating Model
 
-## Immediate Next Actions
+GitHub is the company memory for approved, non-sensitive work.
 
-1. Choose repository name.
-2. Create GitHub remote.
-3. Commit the current foundation docs.
-4. Create initial labels and milestones.
-5. Recruit the first 5 user interview candidates.
-6. Run the first interview using `phase0/INTERVIEW_GUIDES.md`.
-7. Save notes using `phase0/INTERVIEW_NOTE_TEMPLATE.md`.
+- `main` is the stable branch.
+- Strategy and governance work uses `chatgpt/<topic>` branches.
+- Technical work uses `codex/<issue-number>-<topic>` branches.
+- Substantial changes require issues and pull requests.
+- Sensitive raw research data never enters GitHub.
+- Decisions are recorded in a decision log.
+- Architecture, product, safety, and data changes receive explicit review.
 
-## Public Positioning Draft
+See `AI_COLLABORATION.md` and `AGENTS.md`.
 
-P-Vermeiden helps adults build healthier digital boundaries through consent-based recovery tools, privacy-preserving self-reflection, and support systems designed to reduce shame and increase autonomy.
+## Immediate Priorities
 
-Avoid public claims like:
+1. Merge the Better Life foundation pull request after founder review.
+2. Rename the GitHub repository to `better-life` or an approved available variant.
+3. Complete Codex Issue #13: cross-device feasibility and reference architecture.
+4. Build the evidence-map structure and claims register.
+5. Map clinicians, researchers, associations, NGOs, digital-rights experts, and lived-experience groups.
+6. Create the assumption register.
+7. Review and improve Phase 0 interview materials.
+8. Define secure research-data storage and de-identification.
+9. Recruit first participants only after the research process is approved.
+10. Select the first product wedge from evidence, not preference.
 
-- "Cures porn addiction."
-- "Impossible to bypass."
-- "Clinically proven."
-- "AI therapist."
-- "Guaranteed recovery."
+## Public-Safe Positioning Draft
 
-Until validated, use:
+> Better Life helps adults create healthier digital boundaries through voluntary protection tools, privacy-first self-reflection, and support designed to strengthen long-term autonomy.
 
-- "Supports voluntary behavior change."
-- "Helps users understand and interrupt high-risk patterns."
-- "Designed around privacy, consent, and long-term autonomy."
+Avoid until supported and approved:
+
+- “Cures porn addiction.”
+- “Impossible to bypass.”
+- “Clinically proven.”
+- “AI therapist.”
+- “Guaranteed recovery.”
+- “Rewires your brain.”
+
+Use carefully:
+
+- “Supports voluntary behavior change.”
+- “Helps users understand and interrupt personally unwanted high-risk patterns.”
+- “Designed around privacy, consent, transparency, and long-term autonomy.”
+
+## Current Sprint
+
+See `docs/roadmap/FOUNDING_SPRINT_01.md`.
