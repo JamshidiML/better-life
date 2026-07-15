@@ -1,72 +1,38 @@
-# Platform limitations and bypass register
+# Platform Limitations and Bypass Register
 
-Status: Cycle 1 Draft  
-Issue: #13  
-Branch: `codex/13-cross-device-feasibility`  
-Research date: 2026-07-15  
-Stage: architecture / technical feasibility
+- Status: Cycle 1 draft
+- Issue: #13
+- Research date: 2026-07-15
 
-## Statement Classification Key
+## Interpretation
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+Bypass analysis is defensive and user-facing. It is not a promise to defeat a determined device owner and must not be used to design covert monitoring.
 
-## Purpose
+| ID | Surface | Classification | Bypass or failure | Consequence | Required response |
+| --- | --- | --- | --- | --- | --- |
+| P01 | All | Platform limitation | Use an unmanaged, borrowed, work, old, or newly purchased device | Policy has no local adapter | Show enrolled-device scope; never say "all devices protected" |
+| P02 | All | Platform limitation | Factory reset, account recovery, reinstall, alternate OS/user, VM, remote desktop | Local protection disappears or is isolated | Visible adapter health; calm re-enrollment; no secret recovery controls |
+| P03 | Browser | Platform limitation | Disable/remove extension; use alternate/private browser | Web requests bypass extension | Detect only where browser exposes status; show degraded state; no hidden reinstall |
+| P04 | Browser | Platform limitation | Privileged/internal pages, cached/service-worker content, downloads/offline files | Rules do not see or cannot alter content | Declare coverage precisely; avoid content-wide claims |
+| P05 | iOS | Platform limitation | Entitlement unavailable, authorization revoked, device/account changes | Shield/activity behavior unavailable | Do not launch enforcement claim before approved entitlement and real-device tests |
+| P06 | Android | Platform limitation | VPN disabled/replaced, safe mode, secondary user, OEM task killing, uninstall | Filtering stops | Foreground health indicator; conflict handling; test OEM matrix |
+| P07 | Network | Platform limitation | DoH/DoT, full VPN, cellular, tethering, alternate Wi-Fi, IP access | DNS/router policy bypassed | Treat network layer as optional defense, not authority |
+| P08 | Encrypted apps | Platform limitation | In-app feeds, encrypted messages, proprietary protocols | Domain/connection data cannot classify individual content | No claim to inspect message/content semantics |
+| P09 | Local content | Platform limitation | Cached media, external storage, cloud-sync local copy, generated content | No network request to block | Scope exclusion and non-digital intervention only |
+| P10 | Shared device | Verified risk | Policy or logs affect another household member | Non-user privacy violation | Per-user setup where available; no household logging by default |
+| P11 | Strict mode | Verified risk | Emergency or essential site is blocked | Safety/access harm | Always-available safety exception and allowlist; incident review |
+| P12 | Strict mode | Verified risk | Partner/employer secretly configures or controls exit | Coercive control | Adult self-authorization, anti-coercion checks, no secret admin |
+| P13 | Cloud | Verified risk | Sync outage or account takeover | Policy inconsistency or exposure | Local operation, secure recovery, minimal server data, transparent conflict state |
+| P14 | Classification | Verified risk | Domain/page classifier false positive or false negative | Lockout or false confidence | Deterministic fixture, appeal, uncertainty, no clinical/enforcement guarantee |
 
-Expose reset, private browsing, alternate device, VPN, encrypted app, and managed-device limitations.
+## Failure Communication Contract
 
-## Architecture / Product Pre-Check
+- **Verified:** State the adapter, declared action, result, and limitation in plain language.
+- **Verified:** Never hide a permission loss or present a local failure as user misconduct.
+- **Verified:** A failure event must not automatically disclose browsing intent to an ally.
+- **Hypothesis:** A single neutral message such as "Protection is reduced on Chrome because the extension is off" is preferable to repeated alarms; validate in user research.
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Expose reset, private browsing, alternate device, VPN, encrypted app, and managed-device limitations. | Issue #13 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+## Stop Conditions
 
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The repository doctrine forbids hidden monitoring, default screenshots, raw explicit-content storage, and impossible-bypass promises. | AGENTS.md; PRODUCT_DOCTRINE.md; phase0/SAFETY_AND_CONSENT.md | Architecture must describe honest capability tiers, not universal enforcement. |
-| Evidence-supported | Browser extension and local network controls are plausible early wedges because they can offer visible user-controlled friction without requiring full mobile-device ownership. | Chrome DNR docs; MDN WebExtensions docs; Phase 0 doctrine | Favor browser/web command center plus guided existing controls for v0 exploration. |
-| Platform limitation | Ordinary consumer apps cannot be assumed to control every app, alternate browser, private browsing session, VPN, device reset, unmanaged device, borrowed device, or encrypted content channel. | Official platform docs to be completed per mechanism | Every claim must be mechanism-specific and bypass-aware. |
-| Open question | Apple FamilyControls / ManagedSettings / DeviceActivity production access and App Review suitability require deeper entitlement and policy verification. | Apple Developer docs opened; further entitlement review pending | Do not make iOS the first enforcement promise until entitlement path is verified. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/documentation/familycontrols | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/managedsettings | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/deviceactivity | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/networkextension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/net/VpnService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/admin/DevicePolicyManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/usage/UsageStatsManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/accessibilityservice/AccessibilityService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/extension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/safariservices/creating-a-content-blocker | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about platform limitations and bypass register after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** Reject any proposed mechanism that depends on covert installation, raw screenshot upload, breaking encryption, or unreviewed third-party control.
+- **Verified:** Escalate entitlement, app-store policy, managed-device, work-device, and legal uncertainty rather than converting it into a capability claim.

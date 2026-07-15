@@ -1,72 +1,66 @@
-# Reference architecture options
+# Reference Architecture Options
 
-Status: Cycle 1 Draft  
-Issue: #13  
-Branch: `codex/13-cross-device-feasibility`  
-Research date: 2026-07-15  
-Stage: architecture / technical feasibility
+- Status: Cycle 1 draft
+- Issue: #13
+- Research date: 2026-07-15
 
-## Statement Classification Key
+## Option Comparison
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+All rows are **Hypothesis** informed by the platform findings; no production stack is selected.
 
-## Purpose
+| Option | Value | Enforceability | Setup / privacy | Complexity / cost | Principal failure | Cycle 1 decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| Web command center + guided controls | Fast plan creation and device-specific instructions | Low | Low setup; minimal data if local browser storage is used | Low | Guidance is ignored or existing controls are weak | Keep as base experience |
+| Mobile-first companion | Available during high-risk moments | Low-medium, platform dependent | App permissions and store review; intimate context risk | Medium | Overpromises system control | Keep as support surface, not sole architecture |
+| Browser-extension-first | Direct web friction and redirect | Medium inside one installed browser | Clear permission surface; local-only feasible | Low-medium | Disable/removal and alternate browser | Recommended first technical wedge |
+| Layered suite | Broadest long-term coverage | Medium-high across enrolled surfaces | Highest setup, trust, and data-flow burden | High | Inconsistent adapters and operational fragility | Long-term target, not MVP |
+| Network-first | Covers multiple applications/domains | Medium for known domains | VPN/DNS conflict and household privacy burden | Medium-high | Encrypted/app-internal/alternate-network bypass | Spike later; guidance only in v1 |
 
-Compare product shapes and trust boundaries without choosing a production stack.
+## Recommended Conceptual Architecture
 
-## Architecture / Product Pre-Check
+```text
+User and transparency UI
+  -> versioned Protection Constitution
+  -> local policy engine
+       -> browser adapter
+       -> mobile adapter
+       -> desktop adapter
+       -> optional network adapter
+  -> local intervention engine
+  -> local content-free event journal
+  -> optional encrypted sync of policy metadata
+  -> optional minimal-disclosure help request
+```
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Compare product shapes and trust boundaries without choosing a production stack. | Issue #13 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+## Trust Boundaries
 
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The repository doctrine forbids hidden monitoring, default screenshots, raw explicit-content storage, and impossible-bypass promises. | AGENTS.md; PRODUCT_DOCTRINE.md; phase0/SAFETY_AND_CONSENT.md | Architecture must describe honest capability tiers, not universal enforcement. |
-| Evidence-supported | Browser extension and local network controls are plausible early wedges because they can offer visible user-controlled friction without requiring full mobile-device ownership. | Chrome DNR docs; MDN WebExtensions docs; Phase 0 doctrine | Favor browser/web command center plus guided existing controls for v0 exploration. |
-| Platform limitation | Ordinary consumer apps cannot be assumed to control every app, alternate browser, private browsing session, VPN, device reset, unmanaged device, borrowed device, or encrypted content channel. | Official platform docs to be completed per mechanism | Every claim must be mechanism-specific and bypass-aware. |
-| Open question | Apple FamilyControls / ManagedSettings / DeviceActivity production access and App Review suitability require deeper entitlement and policy verification. | Apple Developer docs opened; further entitlement review pending | Do not make iOS the first enforcement promise until entitlement path is verified. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Boundary | Classification | Rule |
 | --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/documentation/familycontrols | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/managedsettings | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/deviceactivity | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/networkextension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/net/VpnService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/admin/DevicePolicyManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/usage/UsageStatsManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/accessibilityservice/AccessibilityService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/extension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/safariservices/creating-a-content-blocker | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User to local policy engine | Verified | Only an authenticated adult user creates or changes policy; consequences are previewed before activation. |
+| Adapter to local journal | Verified | Record action, adapter health, coarse time, and policy version; exclude page content, screenshots, and explicit URLs. |
+| Device to cloud sync | Hypothesis | Sync is optional and end-to-end encryption should be evaluated; server receives the minimum needed for multi-device policy consistency. |
+| Device to ally | Verified | Send only an explicit help request or pre-selected state; never raw history or content. |
+| Operations to observability | Verified | Metrics cover crashes, latency, and adapter health with pseudonymous/coarse identifiers; no intimate event stream by default. |
+| Recovery / strict-mode exit | Verified | Account recovery cannot silently let a third party control the user; safety escape and calm-state change are separate flows. |
 
-## Artifact-Specific Work To Complete
+## Component Responsibilities
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about reference architecture options after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+- **Verified:** Identity proves access to the user's account, not diagnosis, morality, or ownership of every device.
+- **Verified:** Consent service versions each permission and purpose, records revocation, and prevents a policy from silently gaining new data access.
+- **Hypothesis:** Local policy engine resolves schedules, rules, degraded adapter state, and an intervention choice without requiring the cloud.
+- **Hypothesis:** Optional sync stores encrypted policy envelopes and adapter status, not raw browsing events.
+- **Verified:** Audit UI explains what was attempted, what succeeded, what failed, and why protection is degraded.
+- **Verified:** Deletion removes local journals and requests server-side erasure; uninstall alone must not be described as complete cloud deletion.
 
-## Known Weaknesses
+## Alternatives Not Selected
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** Device-owner/MDM-first is rejected for the consumer MVP because its provisioning model and control power conflict with simple voluntary self-install.
+- **Verified:** Screenshot/classifier-first is rejected because it creates disproportionate intimate-data and false-positive risk before value is established.
+- **Platform limitation:** DNS-only is rejected as the product architecture because it cannot address app-internal, encrypted, local, or alternate-network paths.
+
+## Open Questions
+
+- Whether cross-device sync can be useful without centralizing intimate events.
+- Whether users understand and trust per-adapter degraded-state messaging.
+- Whether a browser extension provides enough moment-of-need value to justify a first product.
+- Which local storage, encryption, and account-recovery design passes Thread 07 review.

@@ -1,62 +1,61 @@
-# Quality Scorecard — Thread 01, Cycle 1
+# Quality Scorecard - Thread 01, Cycle 1
 
 ## Context
 
 - Issue: #13
-- Branch: `codex/13-cross-device-feasibility`
 - Author: Codex
-- Reviewer: ChatGPT / founder pending
+- Reviewer: ChatGPT and founder pending
 - Date: 2026-07-15
-- Stage: architecture / technical feasibility
+- Decision: Revise
 
 ## Mandatory Gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
-
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+- [x] No production code, participant data, explicit content, covert monitoring, or perfect-prevention claim.
+- [x] Consumer and managed-device capabilities are separated.
+- [x] Detect, delay, block, redirect, notify, and log are distinguished.
+- [x] Official sources and access date are recorded.
+- [ ] Platform entitlement/store-policy claims independently reviewed.
+- [ ] Prototype and real-device verification completed.
 
 ## Shared Score
 
-| Dimension | Weight | Score | Evidence | Gap |
+| Dimension | Weight | Score | Evidence | Lost points |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 6 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 5 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 9 | Five required artifacts cover platforms, options, recommendation, architecture, and spike. | No executed spike. |
+| Factual accuracy | 10 | 8 | Official platform documentation and cautious wording. | Entitlement/policy and OS-version behavior not independently verified. |
+| Evidence and traceability | 10 | 8 | Dated official source register and row-level classifications. | Several qualitative strength/complexity estimates lack measurements. |
+| Safety and harm prevention | 10 | 9 | False confidence, lockout, coercion, and shared-device risks are explicit. | Safety-exception UX not user-tested. |
+| Privacy and consent | 10 | 9 | Content-free local schema, consent, audit, deletion, and ally limits. | Thread 07 review pending. |
+| Internal consistency | 5 | 5 | Matches charter, doctrine, Phase 0, and execution rules. | None identified in self-review. |
+| Clarity and usability | 5 | 4 | Decision summary, tables, and explicit terminology. | Capability matrix remains dense. |
+| Feasibility and realism | 5 | 4 | Managed/consumer split and bypasses are explicit. | Battery, latency, OEM, and maintenance data absent. |
+| Testability and verification | 5 | 4 | Prototype pass/fail criteria and scenarios defined. | Not executed. |
 
 ## Specialist Score
 
-| Criterion | Weight | Score | Evidence | Gap |
+| Criterion | Weight | Score | Evidence | Lost points |
 | --- | ---: | ---: | --- | --- |
-| Platform-documentation correctness | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Bypass and failure-mode completeness | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Architecture and prototype decision quality | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Platform-documentation correctness | 10 | 8 | Apple, Android, browser, Windows, and macOS official sources. | Store-policy and entitlement outcomes open. |
+| Bypass and failure completeness | 10 | 9 | Fourteen-row register plus cross-device limits. | Real red-team test absent. |
+| Architecture and prototype decision quality | 10 | 8 | Five options, trust boundaries, decisive wedge, measurable spike. | User value remains unvalidated. |
 
 ## Result
 
-- Creator self-score: 68/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
-- Confidence: Medium-low
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Creator self-score: **85/100**
+- Critical defects: 0 introduced; risks R01 and R02 remain mandatory design gates.
+- High defects: independent platform review and prototype verification are incomplete.
+- Confidence: Medium
+- Decision: **Revise after independent review**
+
+## Performed Verification
+
+- `git diff --check origin/main...HEAD` after formatting
+- Required-file and scope inspection with `git diff --name-only origin/main...HEAD`
+- Manual source-link and classification review on 2026-07-15
+- No hardware, entitlement, store submission, latency, battery, or user test was performed.
 
 ## Score History
 
-| Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
+| Cycle | Author | Reviewer | Accepted | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 68 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 85 | Pending | Pending | 0 | 2 evidence/verification gaps | Revise |
