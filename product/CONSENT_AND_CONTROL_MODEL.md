@@ -1,59 +1,71 @@
 # Consent and control model
 
-Status: Cycle 1 Draft  
-Issue: #22  
-Branch: `codex/22-privacy-architecture`  
-Research date: 2026-07-15  
-Stage: architecture / privacy / security
+Status: Cycle 1 Draft - legal and user validation required
+Issue: #22
+Branch: `codex/22-privacy-architecture`
 
-## Statement Classification Key
+## Consent principles
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Evidence-supported:** EDPB consent guidance treats valid consent as freely given, specific, informed, and unambiguous, with withdrawal as easy as giving consent. [EDPB Guidelines 05/2020](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en)
+- **Open question:** Consent is not automatically the correct legal basis or Article 9 condition for every Better Life activity; legal review must decide purpose by purpose.
+- **Verified:** Product controls below apply even where processing relies on another legal basis; “consent” cannot be used to justify a forbidden or unsafe design.
 
-## Purpose
+## Consent units
 
-Define consent states, renewal, revocation, calm-state strict-mode changes, ally visibility, and audit UI.
+| Unit | Classification | Default | User must understand | Withdrawal effect |
+| --- | --- | --- | --- | --- |
+| Local personal plan | Hypothesis | Available without external processing | Device storage, backup/notification behavior | Delete/archive local state. |
+| Local platform rule | Platform limitation | Off | Permission, observed event, limitations, false block/bypass | Disable rule and revoke permission. |
+| Account | Open question | Not required first | Identifier, security/support processing | Close account; local mode may remain. |
+| Sync | Open question | Off | Fields, encryption/access, devices, recovery, metadata | Stop future sync and delete server copy per policy. |
+| Product research/analytics | Verified | Off unless truly necessary and otherwise justified | Exact fields, purpose, retention, recipients | Stop future collection; rights/deletion workflow. |
+| External AI | Verified | Off | Exact selected input, provider, retention/training, output limits | Cancel future use; delete where supported/disclosed. |
+| Ally setup | Verified | Off | Recipient, purpose, what is never shared | Remove recipient and pending capability. |
+| Each ally send | Verified | No pre-send | Exact recipient/message and delivery limits | Cancel before send; after send cannot retract recipient copy. |
+| Peer participation | Verified | Excluded from MVP | Pseudonymity, moderation, reports, retention, emergency limits | Leave/block immediately; incident exceptions explained. |
+| Strict/friction mode | Hypothesis | Off | Exact restriction, platform limits, recovery, duration | Safe calm-state path; no partner veto. |
 
-## Architecture / Product Pre-Check
+## State model
 
-| Required element | Classification | Cycle 1 answer | Evidence |
+| State | Classification | Meaning | Allowed transition |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define consent states, renewal, revocation, calm-state strict-mode changes, ally visibility, and audit UI. | Issue #22 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| `NOT_OFFERED` | Verified | Capability unavailable or gate not passed. | Only after evidence/privacy/safety review. |
+| `AVAILABLE_OFF` | Verified | Clear optional offer, no processing. | `LEARN_MORE` or `ACTIVE`; dismissal stays off. |
+| `LEARN_MORE` | Verified | Layered purpose/data/risk/control explanation. | Back/off or explicit activation. |
+| `ACTIVE` | Verified | Current version and settings apply. | Pause, modify, withdraw, expire, or re-consent. |
+| `PAUSED` | Hypothesis | No new optional processing; state retained as disclosed. | Resume or withdraw/delete. |
+| `WITHDRAWN` | Verified | Future optional processing/capability stopped. | Delete/retain only by disclosed rule; fresh consent for reactivation. |
+| `EXPIRED` | Hypothesis | Time/purpose/version trigger ended activation. | Fresh review; no silent renewal. |
+| `RECONSENT_REQUIRED` | Verified | Material purpose/data/recipient/risk change. | Stay off until explicit choice. |
 
-## Cycle 1 Findings
+## Consent record
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Sex life, sexual orientation, health, religion, biometrics, and inferred special-category data are high-risk privacy domains under UK/GDPR-style guidance. | ICO special category data guidance; GDPR Article 9 | Better Life must minimize and localize sensitive signals. |
-| Verified | Phase 0 prohibits raw explicit-content storage and raw participant notes in external AI. | SAFETY_AND_CONSENT.md; RISK_REGISTER.md | Architecture must exclude raw explicit content by default. |
-| Evidence-supported | Local-first processing is the default candidate for intimate signals, with cloud sync limited to user-visible policy state and non-explicit summaries. | Product doctrine; ICO minimization principles | Use cloud only when value justifies risk. |
-| Open question | Jurisdiction-specific legal basis, DPIA, and data-transfer requirements need qualified review. | Privacy source pass | Do not claim legal compliance yet. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Field | Classification | Requirement |
 | --- | --- | --- |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Purpose/capability ID and version | Verified | Specific, immutable receipt; not a bundled “privacy accepted” flag. |
+| Data classes and source | Verified | User-readable plus machine-enforced inventory reference. |
+| Processing location and recipients | Verified | Local, Better Life service, named processor category/person. |
+| User action and interface version | Verified | Evidence of choice without copying intimate payload. |
+| Timestamp/expiry | Verified | Renewal/review trigger where appropriate. |
+| Withdrawal/deletion state | Verified | Auditable completion and exceptions. |
 
-## Artifact-Specific Work To Complete
+## Anti-coercion controls
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about consent and control model after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+1. **Verified:** Current scope is adult voluntary self-use; no partner, employer, parent, or organization admin role.
+2. **Verified:** Ally cannot view settings/history, enforce a restriction, reset credentials, approve exit, or know that they were removed.
+3. **Verified:** Strict/friction changes are authored by the user while calm; recovery is not an ally approval flow.
+4. **Verified:** Notifications and receipts do not reveal sensitive goals to device observers by default.
+5. **Verified:** Refusing optional processing does not remove core local planning, safety information, export, or deletion.
 
-## Known Weaknesses
+## Audit and control surface
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+**Verified:** A single control view must answer: what is on; what data exists locally/remotely; who can receive it; last external send; active devices/permissions; retention; export/delete; and how to withdraw. No hidden developer-only state may contradict it.
+
+## Test cases
+
+- **Verified:** withdrawing sync stops all future uploads and queues server deletion.
+- **Verified:** cancelling an ally preview sends nothing.
+- **Verified:** material processor/purpose/data change enters `RECONSENT_REQUIRED`.
+- **Verified:** decline and withdrawal are no harder than activation.
+- **Verified:** removing an ally or restriction does not notify or require the ally.
+- **Open question:** comprehension and coercion tests must include shared devices, intimate-partner abuse scenarios, low literacy, disability, and target languages.

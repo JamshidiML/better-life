@@ -1,62 +1,65 @@
-# Quality Scorecard — Thread 07, Cycle 1
+# Quality Scorecard - Thread 07, Cycle 1
 
 ## Context
 
 - Issue: #22
 - Branch: `codex/22-privacy-architecture`
 - Author: Codex
-- Reviewer: ChatGPT / founder pending
+- Reviewer: ChatGPT / founder / EU-German privacy and security specialists pending
 - Date: 2026-07-15
-- Stage: architecture / privacy / security
 
-## Mandatory Gates
+## Mandatory gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
+- [x] Four required artifacts and thread logs are complete.
+- [x] Data classes, elements, capability layers, trust boundaries, consent states, retention, deletion, export, recovery, and tests are explicit.
+- [x] Local/accountless core and prohibited-data/inference boundaries are defined.
+- [x] No compliance, anonymity, zero-knowledge, or deletion overclaim is made.
+- [ ] DPIA/legal-basis/Article 9/controller-processor/transfer review passes.
+- [ ] Security, platform, consent, coercion, export, recovery, and deletion tests pass.
 
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+Gate status: **Revision required; no personal-data production implementation approved.**
 
-## Shared Score
+## Shared score
 
 | Dimension | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 10 | Full classification, architecture, consent, lifecycle, and verification artifacts. | Processor-specific map absent by design stage. |
+| Factual accuracy | 10 | 9 | GDPR/EDPB statements are bounded and legal uncertainty explicit. | Counsel review absent. |
+| Evidence and traceability | 10 | 8 | Authoritative GDPR/EDPB sources and repository policy map to controls. | No implementation evidence. |
+| Safety and harm prevention | 10 | 10 | Coercion, device, provider, export, recovery, logging, inference, and claim harms controlled. | Controls untested. |
+| Privacy and consent | 10 | 10 | Conservative classes, local first, consent states, rights/lifecycle, no forbidden data. | Legal sufficiency unresolved. |
+| Internal consistency | 5 | 5 | All artifacts share classes, local core, optional layers, and exact-claim policy. | Cross-thread review pending. |
+| Clarity and usability | 5 | 5 | Matrices make each flow, class, control, and exception reviewable. | Participant-facing language untested. |
+| Feasibility and realism | 5 | 4 | Accountless first shape and sync/recovery tradeoffs are candid. | Platform/security prototype absent. |
+| Testability and verification | 5 | 5 | Store inventory, deletion, export, backup, consent and platform tests specified. | Pass thresholds and implementation absent. |
 
-## Specialist Score
+## Specialist score
 
 | Criterion | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Data-flow and classification completeness | 10 | 8 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Consent, retention, deletion, export, and recovery quality | 10 | 8 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Local-first and minimum-data architecture quality | 10 | 8 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Data-flow and classification completeness | 10 | 9 | D0-D5/DX, field inventory, derived-data and handling matrices. | Real processor/store inventory pending. |
+| Consent, retention, deletion, export, recovery | 10 | 9 | Unit/state model, design targets, semantics, backup/crypto and recovery cautions. | Legal schedules and UX tests pending. |
+| Local-first and minimum-data architecture | 10 | 9 | Accountless L1 core; all services are optional layers with exits. | Device/platform proof pending. |
 
 ## Result
 
-- Creator self-score: 78/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
+- Creator self-score: **93/100**
+- Critical defects: 0 identified in documentation
+- High defects: 3 - no legal approval, no security/platform implementation proof, no consent/coercion user evidence
+- Medium defects: 2 - processor-specific inventory and final retention schedules absent
 - Confidence: Medium
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Decision: **Revise**
 
-## Score History
+## Performed verification
+
+- Verified: data elements were checked against every class and optional capability layer.
+- Verified: consent withdrawal, deletion, export, recovery, logging, and backup failure paths are represented.
+- Verified: authoritative source links and repository red lines were reviewed; Markdown links/whitespace were checked locally.
+- Verified: no production code or compliance claim was added.
+- Open question: all legal, security, platform, and user validation remains pending.
+
+## Score history
 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 78 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 93 | Pending | Pending | 0 | 3 author-identified | Revise |

@@ -1,59 +1,67 @@
-# Data classification
+# Data classification and handling standard
 
-Status: Cycle 1 Draft  
-Issue: #22  
-Branch: `codex/22-privacy-architecture`  
-Research date: 2026-07-15  
-Stage: architecture / privacy / security
+Status: Cycle 1 Draft - legal and security review required
+Issue: #22
+Branch: `codex/22-privacy-architecture`
+Research cutoff: 2026-07-15
 
-## Statement Classification Key
+## Legal and product boundary
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** GDPR Article 9 lists data concerning health, sex life, sexual orientation, religious/philosophical beliefs, and certain biometric data among special categories. [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679)
+- **Evidence-supported:** Better Life inputs and inferences can reveal sex-life, health, religion, or sexual-orientation information even when the user never supplies those labels.
+- **Open question:** Exact controller/processor roles, legal bases, Article 9 condition, and jurisdictional obligations require qualified counsel and a documented DPIA.
+- **Verified:** Product classification is intentionally conservative and does not itself assert a legal conclusion.
 
-## Purpose
+## Classes
 
-Classify identity, device, behavior, content-adjacent, inferred, ally, peer, clinical, and operational data.
+| Class | Classification | Examples | Storage / access | Prohibited handling |
+| --- | --- | --- | --- | --- |
+| D0 Public | Verified | Published policy, source citations, non-user-specific help content | Public, versioned, integrity-controlled | Mixing with user records as if consented data. |
+| D1 Internal operational | Verified | Service health, coarse error code, build/version, aggregate capacity | Short retention; least-privilege operations | User behavior funnels, advertising, intimate labels, raw identifiers. |
+| D2 Account/security | Verified | Opaque account ID, authentication state, consent receipt, device key ID, abuse-control event | Separated service, encrypted, audited, role-limited | Public profile, ad identity, casual support access. |
+| D3 Intimate user-authored | Verified | Goal, value, context label, plan, optional outcome, ally choice, support message | Local by default; external only for a named function and separate consent | Ad/marketing use, model training, hidden sharing, broad staff access. |
+| D4 Intimate observed/inferred | Verified | Domain/app event, high-risk window, inferred interest, “risk” or “relapse” score, content classification | Avoid; narrow local event only if essential and explicitly configured | Cloud raw browsing, screenshots, hidden inference, pricing/engagement use. |
+| D5 Safety/incident | Verified | Block relation, abuse report, flagged message, moderator action, appeal | Isolated incident store, purpose-bound access, audited retention | General analytics, recommendation, public reputation. |
+| DX Prohibited | Verified | Raw explicit content by default, secret partner report, contact-list scrape, covert screenshot, diagnosis inference, password/secret in logs | Must not be collected | Any collection, storage, sharing, training, or export as normal product data. |
 
-## Architecture / Product Pre-Check
+## Data element inventory
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Classify identity, device, behavior, content-adjacent, inferred, ally, peer, clinical, and operational data. | Issue #22 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Element | Class | Classification | First-shape need | Handling decision |
+| --- | --- | --- | --- | --- |
+| Paper/low-fidelity plan | D3 | Hypothesis | Research prototype can avoid system collection entirely. | Participant keeps it; no raw copy in repo/external AI. |
+| Adult/voluntary attestation | D2 | Verified | Only if an account/pilot requires it. | Store state/version, not identity proof unless separately justified. |
+| Goal/value/action | D3 | Hypothesis | Useful for a digital plan. | Local encrypted storage; notification hidden; user edit/delete. |
+| Broad context/time | D3 | Hypothesis | Optional. | User-authored; no location or causal inference. |
+| Domain/app event | D4 | Platform limitation | Not needed for manual prototype. | If later approved: local allow/block list and event handling; no raw cloud history. |
+| Explicit content/image/screenshot | DX | Verified | Not required. | Reject collection by default, including support and telemetry. |
+| Outcome/reflection | D3 | Hypothesis | Optional research/product measure. | Local or consented research dataset with participant code. |
+| Email/phone | D2 | Open question | Not needed for accountless first shape. | Avoid until authentication/support need is justified. |
+| Ally contact/message | D2 + D3 | Hypothesis | Not needed first. | Exact preview, separated recipient, minimal delivery state, no address-book upload. |
+| Peer pseudonym/message | D2 + D3/D5 | Open question | Excluded from MVP by Thread 04. | Pairwise identifiers and isolated moderation only if future gates pass. |
+| IP/security event | D2 | Platform limitation | Infrastructure may process it. | Minimize, truncate/pseudonymize where defensible, short retention, no behavior linkage. |
+| Crash/error telemetry | D1/D2 | Hypothesis | Operational value possible. | Allowlist schema; no free text, URL, goal, message, or screen content. |
+| Consent receipt | D2 | Verified | Needed for external processing/sharing. | Purpose/version/time/action; do not copy intimate payload. |
+| Clinical diagnosis/record | DX for current product | Verified | Outside scope. | Do not solicit/store; user may seek qualified care independently. |
 
-## Cycle 1 Findings
+## Derived data rule
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Sex life, sexual orientation, health, religion, biometrics, and inferred special-category data are high-risk privacy domains under UK/GDPR-style guidance. | ICO special category data guidance; GDPR Article 9 | Better Life must minimize and localize sensitive signals. |
-| Verified | Phase 0 prohibits raw explicit-content storage and raw participant notes in external AI. | SAFETY_AND_CONSENT.md; RISK_REGISTER.md | Architecture must exclude raw explicit content by default. |
-| Evidence-supported | Local-first processing is the default candidate for intimate signals, with cloud sync limited to user-visible policy state and non-explicit summaries. | Product doctrine; ICO minimization principles | Use cloud only when value justifies risk. |
-| Open question | Jurisdiction-specific legal basis, DPIA, and data-transfer requirements need qualified review. | Privacy source pass | Do not claim legal compliance yet. |
+1. **Verified:** Derived or pseudonymized data inherits the highest sensitivity of its source unless a documented re-identification and purpose review approves a lower handling class.
+2. **Verified:** Aggregation is not automatically anonymous in small or shame-sensitive populations.
+3. **Verified:** Hashing an email, domain, or identifier does not make it non-personal when it remains linkable or enumerable.
+4. **Verified:** Free-text, URLs, filenames, notification payloads, logs, support tickets, and backups are data stores and must follow the inventory.
 
-## Source Register
+## Handling matrix
 
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Control | D1 | D2 | D3 | D4 | D5 | DX |
+| --- | --- | --- | --- | --- | --- | --- |
+| Collect | Minimal | Justified | Explicit purpose/consent as applicable | Avoid; narrow local only | Incident need only | No |
+| Default location | Service | Separated service | Local device | Local ephemeral | Isolated service | None |
+| Human access | Operations | Security/support by role | None by default | None | Trained case reviewers | None |
+| Analytics | Aggregate ops | Security only | No default | No | Safety aggregate only | No |
+| External AI/training | No raw data | No | Off; separate reviewed consent cannot override unsafe scope | No | No automated final decision/training | No |
+| Export | Aggregate docs | User-readable account/security | User-readable intimate data | Explain local state if retained | Case data subject to rights/safety/legal review | N/A |
+| Delete | Schedule | Account/right workflow | Immediate local plus sync propagation | Immediate local | Approved incident schedule/exceptions | N/A |
 
-## Artifact-Specific Work To Complete
+## Data review gate
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about data classification after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+**Verified:** No new field is approved until owner records purpose, class, source, legal basis/condition question, storage, processors, access, retention, export, deletion, consent, misuse, metric, and non-collection alternative.

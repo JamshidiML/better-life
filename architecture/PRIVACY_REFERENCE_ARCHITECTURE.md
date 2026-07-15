@@ -1,59 +1,88 @@
 # Privacy reference architecture
 
-Status: Cycle 1 Draft  
-Issue: #22  
-Branch: `codex/22-privacy-architecture`  
-Research date: 2026-07-15  
-Stage: architecture / privacy / security
+Status: Cycle 1 Draft - not a compliance claim
+Issue: #22
+Branch: `codex/22-privacy-architecture`
 
-## Statement Classification Key
+## Architecture decision
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Hypothesis:** The first useful digital shape can be accountless and local-only: personal plan, manual Protective Spiral, static education, and local settings.
+- **Verified:** Account, sync, AI, ally, peer, and telemetry are separate capability layers, not prerequisites hidden inside the core.
+- **Evidence-supported:** Data protection by design/default supports minimizing processing and making privacy-preserving defaults part of system design. [EDPB Article 25 guidance](https://www.edpb.europa.eu/public-consultations/guidelines-42019-on-article-25-data-protection-by-design-and-by-default_et)
+- **Open question:** This architecture requires EU/German legal, security, accessibility, and platform validation before implementation.
 
-## Purpose
+## Architecture and product pre-check
 
-Define local-first processing, optional sync, trust boundaries, and sensitive logging rules.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define local-first processing, optional sync, trust boundaries, and sensitive logging rules. | Issue #22 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Sex life, sexual orientation, health, religion, biometrics, and inferred special-category data are high-risk privacy domains under UK/GDPR-style guidance. | ICO special category data guidance; GDPR Article 9 | Better Life must minimize and localize sensitive signals. |
-| Verified | Phase 0 prohibits raw explicit-content storage and raw participant notes in external AI. | SAFETY_AND_CONSENT.md; RISK_REGISTER.md | Architecture must exclude raw explicit content by default. |
-| Evidence-supported | Local-first processing is the default candidate for intimate signals, with cloud sync limited to user-visible policy state and non-explicit summaries. | Product doctrine; ICO minimization principles | Use cloud only when value justifies risk. |
-| Open question | Jurisdiction-specific legal basis, DPIA, and data-transfer requirements need qualified review. | Privacy source pass | Do not claim legal compliance yet. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Adults need intimate self-help tools without creating a surveillance record or losing control of sharing. |
+| Expected benefit | Hypothesis | Local/accountless core reduces breach, coercion, processor, and consent complexity while keeping manual planning usable. |
+| Supporting evidence | Evidence-supported | Repository doctrine plus GDPR/EDPB data-minimization and privacy-by-design principles support the direction, not its legal sufficiency. |
+| Required data | Verified | Core requires only local plan/settings; each optional service adds a named inventory. |
+| Consent requirements | Verified | Optional service boundaries require separate, informed, specific, revocable choices and purpose-limited receipts. |
+| Safety/misuse | Verified | Device compromise, coercive partner, insider, provider, logging, re-identification, recovery, notification, and export leaks. |
+| Platform feasibility | Open question | Secure local storage and permission behavior vary; accountless use complicates backup/recovery but reduces server exposure. |
+| Success metric | Hypothesis | Core task success with zero external intimate data, consent comprehension, zero hidden flows, delete/export correctness, and incident results. |
+| Exit strategy | Verified | Optional service can be disabled independently; local core remains; feature is removed if its value does not justify added data. |
 
-## Artifact-Specific Work To Complete
+## Capability layers
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about privacy reference architecture after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Layer | Classification | Components/data | Trust boundary | Default |
+| --- | --- | --- | --- | --- |
+| L0 Research artifact | Verified | Paper/Figma-like plan, synthetic scenarios | Researcher/participant protocol | No raw participant artifact in repo/AI. |
+| L1 Local core | Hypothesis | Encrypted local plan, manual Spiral, static content, consent/control UI | Device account, OS storage, backups, notifications | First digital candidate. |
+| L2 Local platform adapter | Platform limitation | Browser/app/domain rules and local events | Extension/VPN/OS permission | Off; per-capability consent. |
+| L3 Optional account | Open question | Opaque auth, consent receipts, entitlement, security events | Identity service | Not needed first. |
+| L4 Optional encrypted sync | Open question | User-selected plan/settings | Sync service, keys, recovery | Off; design not approved. |
+| L5 Optional ally delivery | Open question | Recipient and exact selected message | Notification/message processor | Off; preview every send. |
+| L6 Optional peer support | Verified | Thread 04 match/report data | Relay/moderation | Excluded from MVP. |
+| L7 Optional AI | Open question | Narrow user-selected prompt | Model/provider | Off; static/rules-first. |
+| L8 Operational telemetry | Hypothesis | Allowlisted health/error schema | Analytics/observability | Off or minimal aggregate; no ad SDK. |
 
-## Known Weaknesses
+## Local core trust boundaries
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Boundary | Classification | Control and residual risk |
+| --- | --- | --- |
+| User -> app | Verified | Explicit input and current visibility; shoulder-surfing and coercion remain. |
+| App -> OS secure storage | Platform limitation | Platform encryption/key store and app isolation; rooted/jailbroken or shared/unlocked device remains. |
+| App -> notifications | Platform limitation | Neutral/off default and preview setting; OS sync or observers may reveal metadata. |
+| App -> backup | Open question | Sensitive backup should be disabled or end-to-end protected with clear recovery tradeoff; platform behavior must be tested. |
+| App -> platform adapter | Platform limitation | Narrow user-selected rule and local event; extension/VPN permissions expose capability and require review. |
+| App -> export target | Verified | User-initiated, re-authenticated, sensitivity warning, encrypted option; destination leaves Better Life control. |
+
+## Optional sync design choices
+
+| Option | Classification | Benefit | Privacy/recovery cost | Decision |
+| --- | --- | --- | --- | --- |
+| No sync | Hypothesis | Smallest breach/processor surface | Device loss loses plan unless user exports | Default candidate. |
+| Provider-readable sync | Verified | Easier recovery/support | Provider can access D3; creates high-impact breach and legal scope | Reject for intimate core unless exceptional need. |
+| End-to-end encrypted sync | Open question | Reduces provider content access | Key recovery, metadata, multi-device revocation, abuse/support complexity | Research only after user need. |
+| User-managed encrypted export | Hypothesis | Explicit portable backup | Password/key loss and unsafe destination | Candidate after usability/security test. |
+
+## Logging and analytics standard
+
+1. **Verified:** Compile-time/schema allowlist; unknown fields and free text are rejected.
+2. **Verified:** Never log URLs, titles, screenshots, goals, values, context labels, messages, contact details, clipboard, or form content.
+3. **Verified:** Separate security events from product analytics and intimate local state.
+4. **Verified:** No third-party advertising, cross-app tracking, session replay, heatmaps, or raw screen capture.
+5. **Verified:** Debug mode has time-limited explicit consent, visible indicator, local review, and automatic expiry; it still excludes DX data.
+
+## Threat-control summary
+
+| Threat | Classification | Primary control | Exit/limitation |
+| --- | --- | --- | --- |
+| Server breach | Verified | Keep D3/D4 local; separate D2; minimize service | Accountless mode. |
+| Coercive partner/device observer | Verified | Neutral surface, local re-auth, session review, no ally controls | No app can protect a fully compromised device; provide fast safe exit. |
+| Insider/support browsing | Verified | No default D3 server copy; role access/audit | Remove support feature needing broad access. |
+| Processor/model reuse | Verified | No ad tech/training; contract/technical controls; no default AI | Static/local fallback. |
+| Re-identification | Verified | Avoid granular small-cohort analytics and linkable IDs | Suppress report rather than weaken threshold. |
+| Export/recovery leak | Verified | Re-auth, explicit destination, encryption option, no email attachment | Warn that exported copy leaves control. |
+| Silent feature drift | Verified | Data review gate, DPIA/change review, consent versioning | Disable feature until review. |
+
+## Required verification
+
+- **Open question:** DPIA, records of processing, controller/processor map, legal bases/Article 9 condition, transfer and vendor reviews.
+- **Open question:** mobile/browser secure-storage, backup, notification, permission, uninstall, and multi-user-device tests.
+- **Open question:** security design review, threat model, penetration test, dependency/supply-chain controls, incident plan.
+- **Open question:** consent comprehension, coercion, recovery, export, deletion, and accessibility usability tests.
+- **Verified:** No “GDPR compliant,” “anonymous,” or “zero knowledge” claim is approved by this document.

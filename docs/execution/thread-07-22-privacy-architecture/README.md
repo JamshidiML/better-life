@@ -1,9 +1,9 @@
 # Execution Thread 07 — Cycle 1 Index
 
-Issue: #22  
-Title: Privacy, consent, and sensitive-data architecture  
-Branch: `codex/22-privacy-architecture`  
-Date: 2026-07-15  
+Issue: #22
+Title: Privacy, consent, and sensitive-data architecture
+Branch: `codex/22-privacy-architecture`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Data classification](../../security/DATA_CLASSIFICATION.md)
-- Evidence-supported: [Privacy reference architecture](../../architecture/PRIVACY_REFERENCE_ARCHITECTURE.md)
-- Evidence-supported: [Consent and control model](../../product/CONSENT_AND_CONTROL_MODEL.md)
-- Evidence-supported: [Retention, deletion, and export](../../security/RETENTION_DELETION_AND_EXPORT.md)
+- Evidence-supported: [Data classification](../../../security/DATA_CLASSIFICATION.md)
+- Evidence-supported: [Privacy reference architecture](../../../architecture/PRIVACY_REFERENCE_ARCHITECTURE.md)
+- Evidence-supported: [Consent and control model](../../../product/CONSENT_AND_CONTROL_MODEL.md)
+- Evidence-supported: [Retention, deletion, and export](../../../security/RETENTION_DELETION_AND_EXPORT.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT find any hidden external flow, sensitive inference, overbroad access, or deletion gap?
+- Open question: Do EU/German privacy counsel and security reviewers accept the local/accountless first architecture and identify required changes?
+- Open question: Does the founder accept losing automatic backup/sync convenience when it cannot be provided with proportionate privacy?
