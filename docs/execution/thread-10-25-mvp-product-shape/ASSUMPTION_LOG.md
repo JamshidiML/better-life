@@ -13,3 +13,13 @@ Date: 2026-07-15
 | A05 | Hypothesis | The first journey can avoid account, payment, AI, human contact, and explicit disclosure. | Low-fidelity walkthroughs. | Open |
 | A06 | Open question | Which first languages should be released after human clinical/privacy review. | Founder/recruitment need and qualified translation/user validation. | Open |
 | A07 | Open question | Target thresholds for comprehension, value, burden, shame and usability. | Method/clinical/user research plan freezes before testing. | Open |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A08 | Hypothesis | Users understand Supportive/Friction/Strict as different contracts rather than a moral severity ladder. | Concept and comprehension tests; rename/restructure if stronger means better. | Open |
+| A09 | Hypothesis | One local dashboard can explain layered scope/health without false composite protection. | Scenario usability across browser/device/network states. | Open |
+| A10 | Hypothesis | Progressive permission and exact-change previews are understandable under realistic setup/change tasks. | Accessibility/coercion/user tests with recall measures. | Open |
+| A11 | Open question | Any adapter spike produces sufficient incremental value to enter an MVP candidate. | Technical spike plus comparative user research against free/first-party/no tool. | Deferred |
+| A12 | Open question | Strict can ever satisfy safe recovery, benefit, teardown, cost, and anti-coercion gates. | Sequential external review and participant research only after lower modes. | Deferred |

@@ -50,13 +50,13 @@ Gate status: **Revision required; MVP not accepted or authorized.**
 - Confidence: Medium
 - Decision: **Revise, not accept**
 
-**Verified:** The self-score remains below the 95-point threshold, and unchecked gates plus author-identified High defects independently block acceptance.
+**Arithmetic check:** The self-score remains below the 95-point threshold, and unchecked gates plus author-identified High defects independently block acceptance.
 
 ## Performed verification
 
-- Verified: all shapes and acceptance criteria were cross-checked against Threads 01-09 findings available in Cycle 1.
-- Verified: each first-journey external data/person/payment/AI path was removed from baseline.
-- Verified: no production code was added; links and Markdown whitespace were checked locally.
+- Executed test result: all shapes and acceptance criteria were cross-checked against Threads 01-09 findings available in Cycle 1.
+- Executed test result: each first-journey external data/person/payment/AI path was removed from baseline.
+- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: every empirical, specialist, legal and implementation gate remains pending.
 
 ## Score history
@@ -64,3 +64,10 @@ Gate status: **Revision required; MVP not accepted or authorized.**
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 92 | Pending | Pending | 0 | 3 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 creator score: **92/100**.
+- Cycle 1 ChatGPT reviewer score: **83/100**.
+- Cycle 1 decision: **Revise**; findings are preserved in the Cycle 2 review response.
+- Cycle 2 self-score: **89/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).

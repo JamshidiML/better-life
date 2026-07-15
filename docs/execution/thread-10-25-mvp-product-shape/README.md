@@ -1,40 +1,33 @@
-# Execution Thread 10 — Cycle 1 Index
+# Execution Thread 10 - Cycle 1 and Cycle 2 Index
 
 Issue: #25
 Title: Simple UX, product shape, and first MVP recommendation
 Branch: `codex/25-mvp-product-shape`
 Date: 2026-07-15
-Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
+Status: Draft PR workstream, Cycle 2 revision; MVP not accepted and no implementation authorization.
 
 ## Read-First Evidence
 
-- Verified: `AGENTS.md` was included in the read-before-work set.
-- Verified: `README.md` was included in the read-before-work set.
-- Verified: `AI_COLLABORATION.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PROJECT_CHARTER.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PRODUCT_DOCTRINE.md` was included in the read-before-work set.
-- Verified: `docs/foundation/SCIENTIFIC_AND_CLINICAL_STRATEGY.md` was included in the read-before-work set.
-- Verified: `docs/vision/BETTER_LIFE_MASTER_VISION.md` was included in the read-before-work set.
-- Verified: `docs/vision/VISION_TO_PRODUCT_MAP.md` was included in the read-before-work set.
-- Verified: `docs/execution/EXECUTION_THREADS_01.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_REVIEW_TEMPLATE.md` was included in the read-before-work set.
-- Verified: `phase0/*` was included in the read-before-work set.
+- Executed test result: the required repository documents were read before Cycle 1 work.
+- Executed test result: the independent review, PR #41, Issue #42, and every PR #39 comment were read before Cycle 2 revision.
+- Repository decision: non-existent legacy filenames previously listed here are not claimed as read artifacts.
 
 ## Deliverables
 
-- Evidence-supported: [Product shape comparison](../../../product/PRODUCT_SHAPE_COMPARISON.md)
-- Evidence-supported: [First-user journey](../../../product/FIRST_USER_JOURNEY.md)
-- Evidence-supported: [MVP scope recommendation](../../../product/MVP_SCOPE_RECOMMENDATION.md)
-- Evidence-supported: [UX principles](../../../product/UX_PRINCIPLES.md)
-- Evidence-supported: [MVP acceptance criteria](../../../product/MVP_ACCEPTANCE_CRITERIA.md)
+- Evidence-supported conclusion: [Product shape comparison](../../../product/PRODUCT_SHAPE_COMPARISON.md)
+- Design requirement: [First-user journey](../../../product/FIRST_USER_JOURNEY.md)
+- Hypothesis: [MVP scope recommendation](../../../product/MVP_SCOPE_RECOMMENDATION.md)
+- Design requirement: [UX principles](../../../product/UX_PRINCIPLES.md)
+- Repository decision: [MVP acceptance criteria](../../../product/MVP_ACCEPTANCE_CRITERIA.md)
+- Design requirement: [Cycle 2 product shape and lifecycle UX](../../../product/CYCLE_2_PRODUCT_SHAPE_AND_UX.md)
 
 ## Quality Artifacts
 
 - [Quality Scorecard](QUALITY_SCORECARD.md)
 - [Assumption Log](ASSUMPTION_LOG.md)
 - [Risk Log](RISK_LOG.md)
+- [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md)
+- [Cycle 2 Review Response](CYCLE_2_REVIEW_RESPONSE.md)
 
 ## Current Review Request
 
