@@ -54,10 +54,10 @@ Gate status: **Revision required.** Acceptance is blocked by the three unchecked
 
 ## Performed verification
 
-- Verified: all required repository documents were read before revision.
-- Verified: WHO, PubMed, and PMC records linked in the artifacts were opened or retrieved during Cycle 1.
-- Verified: product claims were cross-checked against repository red lines.
-- Verified: deliverable links and Markdown whitespace were checked locally.
+- Executed test result: all required repository documents were read before revision.
+- Executed test result: WHO, PubMed, and PMC records linked in the artifacts were opened or retrieved during Cycle 1.
+- Executed test result: product claims were cross-checked against repository red lines.
+- Executed test result: deliverable links and Markdown whitespace were checked locally.
 - Open question: independent reproduction of source interpretation is pending.
 
 ## Next cycle actions
@@ -72,3 +72,11 @@ Gate status: **Revision required.** Acceptance is blocked by the three unchecked
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 85 | Pending | Pending | 0 | 2 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 ChatGPT reviewer score: **76/100**.
+- Cycle 1 reviewer decision: **Revise**.
+- Cycle 1 reviewer defects: 0 Critical, 4 High.
+- Cycle 2 self-score: **83/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
+- Neither Cycle 1 score nor any reviewer defect is overwritten.
