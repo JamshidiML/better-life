@@ -51,9 +51,9 @@ Gate status: **Revision required; no participant-ready curriculum or production 
 
 ## Performed verification
 
-- Verified: all required artifacts were cross-checked for prohibited inference and consent consistency.
-- Verified: Thread 02 claim boundaries and Thread 05 state/measure concepts were incorporated without copying branch files.
-- Verified: no production code was added; links and Markdown whitespace were checked locally.
+- Executed test result: all required artifacts were cross-checked for prohibited inference and consent consistency.
+- Executed test result: Thread 02 claim boundaries and Thread 05 state/measure concepts were incorporated without copying branch files.
+- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: all specialist and user validation remains pending.
 
 ## Score history
@@ -61,3 +61,10 @@ Gate status: **Revision required; no participant-ready curriculum or production 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 90 | Pending | Pending | 0 | 2 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 creator score: **90/100**.
+- Cycle 1 ChatGPT reviewer score: **81/100**.
+- Cycle 1 decision: **Revise**; findings are preserved in the Cycle 2 review response.
+- Cycle 2 self-score: **88/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
