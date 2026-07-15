@@ -1,37 +1,30 @@
-# Execution Thread 04 — Cycle 1 Index
+# Execution Thread 04 - Cycle 1 and Cycle 2 Index
 
 Issue: #19
 Title: Anonymous peer-support safety architecture
 Branch: `codex/19-anonymous-support`
 Date: 2026-07-15
-Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
+Status: Draft PR workstream, Cycle 2 revision; no live-support or implementation authorization.
 
 ## Read-First Evidence
 
-- Verified: `AGENTS.md` was included in the read-before-work set.
-- Verified: `README.md` was included in the read-before-work set.
-- Verified: `AI_COLLABORATION.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PROJECT_CHARTER.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PRODUCT_DOCTRINE.md` was included in the read-before-work set.
-- Verified: `docs/foundation/SCIENTIFIC_AND_CLINICAL_STRATEGY.md` was included in the read-before-work set.
-- Verified: `docs/vision/BETTER_LIFE_MASTER_VISION.md` was included in the read-before-work set.
-- Verified: `docs/vision/VISION_TO_PRODUCT_MAP.md` was included in the read-before-work set.
-- Verified: `docs/execution/EXECUTION_THREADS_01.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_REVIEW_TEMPLATE.md` was included in the read-before-work set.
-- Verified: `phase0/*` was included in the read-before-work set.
+- Executed test result: the required corpus was read from base commit `eefca1e` before Cycle 1 decisions.
+- Executed test result: `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md` was the active quality source; nonexistent legacy filenames are no longer claimed as read.
+- Executed test result: the independent review, PR #41, Issue #42, and every PR #33 comment were read before Cycle 2 revision.
 
 ## Deliverables
 
-- Evidence-supported: [Pseudonymous support architecture](../../../architecture/ANONYMOUS_SUPPORT_ARCHITECTURE.md)
-- Evidence-supported: [Peer support threat model](../../../security/PEER_SUPPORT_THREAT_MODEL.md)
-- Evidence-supported: [Peer support safety rules](../../../product/PEER_SUPPORT_SAFETY_RULES.md)
-- Evidence-supported: [Pseudonymous matching flow](../../../product/ANONYMOUS_MATCHING_FLOW.md)
+- Repository decision: [Pseudonymous support architecture](../../../architecture/ANONYMOUS_SUPPORT_ARCHITECTURE.md)
+- Repository decision: [Peer support threat model](../../../security/PEER_SUPPORT_THREAT_MODEL.md)
+- Repository decision: [Peer support safety rules](../../../product/PEER_SUPPORT_SAFETY_RULES.md)
+- Repository decision: [Pseudonymous matching flow](../../../product/ANONYMOUS_MATCHING_FLOW.md)
+- Design requirement: [Cycle 2 support and trusted-ally safety model](../../../security/CYCLE_2_SUPPORT_AND_ALLY_SAFETY_MODEL.md)
 
 ## Quality Artifacts
 
 - [Quality Scorecard](QUALITY_SCORECARD.md)
+- [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md)
+- [Cycle 2 Review Response](CYCLE_2_REVIEW_RESPONSE.md)
 - [Assumption Log](ASSUMPTION_LOG.md)
 - [Risk Log](RISK_LOG.md)
 

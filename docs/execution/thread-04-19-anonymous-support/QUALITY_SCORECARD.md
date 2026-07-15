@@ -52,9 +52,9 @@ Gate status: **Revision required; live matching deferred.**
 
 ## Performed verification
 
-- Verified: architecture, threat model, rules, and flow were cross-checked for consistent invariants.
-- Verified: source and repository policy links were reviewed.
-- Verified: no production code was added; links and Markdown whitespace were checked locally.
+- Executed test result: architecture, threat model, rules, and flow were cross-checked for consistent invariants.
+- Executed test result: source and repository policy links were reviewed.
+- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: specialist review and all empirical tests remain pending.
 
 ## Score history
@@ -62,3 +62,11 @@ Gate status: **Revision required; live matching deferred.**
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 88 | Pending | Pending | 0 | 3 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 ChatGPT reviewer score: **77/100**.
+- Cycle 1 reviewer decision: **Revise**.
+- Cycle 1 reviewer defects: 0 Critical in research scope, 5 High.
+- Cycle 2 self-score: **85/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
+- Cycle 1 scores and defects remain visible and are not replaced.
