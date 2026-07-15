@@ -1,39 +1,32 @@
-# Execution Thread 07 — Cycle 1 Index
+# Execution Thread 07 - Cycle 1 and Cycle 2 Index
 
 Issue: #22
 Title: Privacy, consent, and sensitive-data architecture
 Branch: `codex/22-privacy-architecture`
 Date: 2026-07-15
-Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
+Status: Draft PR workstream, Cycle 2 revision; no personal-data implementation authorization.
 
 ## Read-First Evidence
 
-- Verified: `AGENTS.md` was included in the read-before-work set.
-- Verified: `README.md` was included in the read-before-work set.
-- Verified: `AI_COLLABORATION.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PROJECT_CHARTER.md` was included in the read-before-work set.
-- Verified: `docs/foundation/PRODUCT_DOCTRINE.md` was included in the read-before-work set.
-- Verified: `docs/foundation/SCIENTIFIC_AND_CLINICAL_STRATEGY.md` was included in the read-before-work set.
-- Verified: `docs/vision/BETTER_LIFE_MASTER_VISION.md` was included in the read-before-work set.
-- Verified: `docs/vision/VISION_TO_PRODUCT_MAP.md` was included in the read-before-work set.
-- Verified: `docs/execution/EXECUTION_THREADS_01.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md` was included in the read-before-work set.
-- Verified: `docs/execution/QUALITY_REVIEW_TEMPLATE.md` was included in the read-before-work set.
-- Verified: `phase0/*` was included in the read-before-work set.
+- Executed test result: the required repository documents were read before Cycle 1 work.
+- Executed test result: the independent review, PR #41, Issue #42, and every PR #36 comment were read before Cycle 2 revision.
+- Repository decision: non-existent legacy filenames previously listed here are not claimed as read artifacts.
 
 ## Deliverables
 
-- Evidence-supported: [Data classification](../../../security/DATA_CLASSIFICATION.md)
-- Evidence-supported: [Privacy reference architecture](../../../architecture/PRIVACY_REFERENCE_ARCHITECTURE.md)
-- Evidence-supported: [Consent and control model](../../../product/CONSENT_AND_CONTROL_MODEL.md)
-- Evidence-supported: [Retention, deletion, and export](../../../security/RETENTION_DELETION_AND_EXPORT.md)
+- Design requirement: [Data classification](../../../security/DATA_CLASSIFICATION.md)
+- Design requirement: [Privacy reference architecture](../../../architecture/PRIVACY_REFERENCE_ARCHITECTURE.md)
+- Design requirement: [Consent and control model](../../../product/CONSENT_AND_CONTROL_MODEL.md)
+- Design requirement: [Retention, deletion, and export](../../../security/RETENTION_DELETION_AND_EXPORT.md)
+- Design requirement: [Cycle 2 Protection Stack privacy and teardown](../../../architecture/CYCLE_2_PROTECTION_STACK_PRIVACY_AND_TEARDOWN.md)
 
 ## Quality Artifacts
 
 - [Quality Scorecard](QUALITY_SCORECARD.md)
 - [Assumption Log](ASSUMPTION_LOG.md)
 - [Risk Log](RISK_LOG.md)
+- [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md)
+- [Cycle 2 Review Response](CYCLE_2_REVIEW_RESPONSE.md)
 
 ## Current Review Request
 
