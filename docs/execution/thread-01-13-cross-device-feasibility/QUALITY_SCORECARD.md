@@ -59,3 +59,11 @@
 | Cycle | Author | Reviewer | Accepted | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 85 | Pending | Pending | 0 | 2 evidence/verification gaps | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 ChatGPT reviewer score: **76/100**.
+- Cycle 1 reviewer decision: **Revise**.
+- Cycle 1 reviewer defects: 0 Critical, 4 High.
+- Cycle 2 self-score: **88/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
+- History rule: neither Cycle 1 score nor any Cycle 1 defect is superseded by the Cycle 2 self-score.

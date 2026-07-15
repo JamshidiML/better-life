@@ -13,3 +13,14 @@
 | A05 | Hypothesis | Android VPN overhead and OEM behavior are acceptable. | Determines second enforcement adapter. | Real-device measurements | Open |
 | A06 | Hypothesis | Policy metadata can sync without intimate event history. | Shapes cross-device architecture. | Thread 07 privacy review and threat model | Open |
 | A07 | Hypothesis | A 100 ms browser navigation-overhead threshold is user-acceptable. | Defines spike target. | Benchmark and usability test | Open |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Why it matters | Validation | Status |
+| --- | --- | --- | --- | --- | --- |
+| A08 | Founder decision | A central visible policy with separate adapters preserves the product vision. | Establishes architecture direction but not feasibility. | Founder review of Cycle 2 model | Open |
+| A09 | Hypothesis | Users can understand a per-layer health dashboard without false confidence or overload. | Determines whether layered protection remains usable. | Comprehension and adverse-effect test | Open |
+| A10 | Hypothesis | A user-held inventory export supports post-uninstall recovery without hidden persistence. | Governs teardown and reinstall. | Usability, loss, tamper, and shared-device tests | Open |
+| A11 | Open question | At least one consumer adapter can meet transparent recovery and teardown gates. | Required before an actual MVP decision. | Stage B real-device spikes | Open |
+| A12 | Hypothesis | Official-control guidance can be completed accurately across supported OS versions. | Determines orchestrator value. | Named-version setup/rollback tests | Open |
+| A13 | Founder decision pending | Optional synchronization is valuable enough to justify account, key, and privacy risk. | Affects cross-device continuity. | User research plus Thread 07 threat model | Open |

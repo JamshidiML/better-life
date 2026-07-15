@@ -8,7 +8,7 @@
 
 - Classes: detect (D), delay (Y), block (B), redirect (R), notify (N), log (L).
 - Strength: Low, Medium, High within the stated installation mode only.
-- Every row is **Evidence-supported** unless marked otherwise. No row asserts bypass-proof protection.
+- Every row is **Evidence-supported conclusion** unless marked otherwise. No row asserts bypass-proof protection.
 
 | Platform / mechanism | Classes | Permission or configuration | Strength | Key bypass/failure | Privacy and performance | Policy risk | MVP fit |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -33,6 +33,6 @@
 ## Capability Interpretation
 
 - **Platform limitation:** "High" strength applies only to the enrolled surface and installation mode; it is not a cross-device guarantee.
-- **Verified:** Managed-device capabilities must never be presented as normal consumer-app powers.
-- **Verified:** Any log must record adapter health and declared action, not raw content or hidden browsing history.
+- **Repository decision:** Managed-device capabilities must never be presented as normal consumer-app powers.
+- **Design requirement:** Any log must record adapter health and declared action, not raw content or hidden browsing history.
 - **Open question:** Battery, latency, false-positive, and maintenance scores require prototype measurements; qualitative estimates above must not become marketing claims.

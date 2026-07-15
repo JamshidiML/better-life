@@ -7,14 +7,14 @@
 
 ## Classification
 
-Material statements use one of: **Verified**, **Evidence-supported**, **Platform limitation**, **Hypothesis**, or **Open question**. "Verified" means verified against repository doctrine or an authoritative source; it does not mean the capability was tested on hardware.
+Cycle 2 supersedes the Cycle 1 legend. Material statements now use: **Source-verified fact**, **Evidence-supported conclusion**, **Repository decision**, **Founder decision**, **Founder decision pending**, **Design requirement**, **Proposed control**, **Hypothesis**, **Platform limitation**, **Open question**, **Executed test result**, or **Arithmetic check**. Design requirements below are not implemented or tested behavior.
 
 ## Decision Summary
 
-- **Verified:** No ordinary consumer application can guarantee universal protection across personally controlled phones, desktops, browsers, networks, borrowed devices, and offline content.
-- **Evidence-supported:** A Chromium extension can block or redirect matching network requests through declarative rules without reading response bodies. It remains user-disableable in an ordinary installation.
-- **Evidence-supported:** Apple Screen Time frameworks expose privacy-preserving app and web-domain controls, but distribution requires Apple approval for the Family Controls entitlement.
-- **Evidence-supported:** Android `VpnService` can create a user-authorized local network tunnel; always-on enforcement is stronger when set by a device/profile owner than in ordinary consumer mode.
+- **Evidence-supported conclusion:** No ordinary consumer application can guarantee universal protection across personally controlled phones, desktops, browsers, networks, borrowed devices, and offline content.
+- **Evidence-supported conclusion:** A Chromium extension can block or redirect matching network requests through declarative rules without reading response bodies. It remains user-disableable in an ordinary installation.
+- **Evidence-supported conclusion:** Apple Screen Time frameworks expose privacy-preserving app and web-domain controls, but distribution requires Apple approval for the Family Controls entitlement.
+- **Evidence-supported conclusion:** Android `VpnService` can create a user-authorized local network tunnel; always-on enforcement is stronger when set by a device/profile owner than in ordinary consumer mode.
 - **Platform limitation:** DNS, VPN, browser, and device-level controls operate at different layers. None sees every app-internal feed, encrypted message, local file, alternate device, or AI-generated content.
 - **Hypothesis:** The lowest-risk first technical wedge is a local-first web command center paired with a Chromium desktop extension, while mobile spikes verify iOS entitlement access and Android VPN behavior.
 
@@ -22,31 +22,31 @@ Material statements use one of: **Verified**, **Evidence-supported**, **Platform
 
 | Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| User problem | Evidence-supported | A consenting adult needs useful friction during a high-risk moment without surveillance, shame, or a promise of perfect prevention. |
+| User problem | Evidence-supported conclusion | A consenting adult needs useful friction during a high-risk moment without surveillance, shame, or a promise of perfect prevention. |
 | Expected benefit | Hypothesis | Earlier interruption and a user-authored redirect may create enough time for a values-aligned action. Benefit is not yet validated with users. |
-| Supporting evidence | Evidence-supported | Official platform documentation establishes available mechanisms. Behavioral benefit remains dependent on Thread 02 and Phase 0 research. |
+| Supporting evidence | Evidence-supported conclusion | Official platform documentation establishes available mechanisms. Behavioral benefit remains dependent on Thread 02 and Phase 0 research. |
 | Required data | Hypothesis | Policy IDs, selected domains/apps, schedules, local intervention events, consent version, and coarse success/failure outcomes. Raw page content is not required for the first spike. |
-| Consent | Verified | Explicit adult self-authorization, permission-by-permission explanation, local/cloud choice, visible audit, and calm-state exit are mandatory. |
-| Safety risks | Verified | False confidence, lockout, shame, overblocking, crisis substitution, and loss of essential access. |
-| Misuse risks | Verified | Partner spyware, employer/parent deployment, secret policy changes, and identity or browsing-history disclosure. |
+| Consent | Design requirement | Explicit adult self-authorization, permission-by-permission explanation, local/cloud choice, visible audit, and calm-state exit are mandatory. |
+| Safety risks | Evidence-supported conclusion | False confidence, lockout, shame, overblocking, crisis substitution, and loss of essential access. |
+| Misuse risks | Evidence-supported conclusion | Partner spyware, employer/parent deployment, secret policy changes, and identity or browsing-history disclosure. |
 | Platform feasibility | Platform limitation | Consumer strength varies by platform and installation mode; managed-device powers are not an acceptable default consumer assumption. |
 | Success metric | Hypothesis | The spike correctly blocks/redirects selected test domains, exposes bypasses, preserves local-only event data, and adds less than 100 ms median navigation overhead in the test harness. |
-| Exit strategy | Verified | Disable the spike, export/delete local policy and events, revoke permissions, and reject the mechanism if value does not justify data or lockout risk. |
+| Exit strategy | Design requirement | Disable the spike, export/delete local policy and events, revoke permissions, and reject the mechanism if value does not justify data or lockout risk. |
 
 ## Platform Findings
 
 | Surface | Classification | Consumer capability | Stronger mode | Principal limitation |
 | --- | --- | --- | --- | --- |
-| iOS/iPadOS Screen Time APIs | Evidence-supported | User-authorized app/category/web-domain shielding and scheduled activity callbacks are possible through FamilyControls, ManagedSettings, and DeviceActivity. | Family Sharing and supervised/managed deployments can support different control relationships. | Distribution entitlement approval is required; tokens intentionally hide selected app/domain identity from the app; alternate devices and account/reset paths remain. |
-| iOS Network Extension | Evidence-supported | Provider types exist for VPN and filtering, with deployment conditions varying by provider. | Managed deployment can configure stronger persistent controls. | Entitlements, provider deployment rules, VPN conflicts, WebKit/URLSession coverage, and App Review must be verified per design. |
-| Android consumer app | Evidence-supported | User-approved VPN, usage access, notifications, and ordinary app UI can provide filtering and friction. | Device/profile owner can enforce always-on VPN and broader policy. | User can revoke permissions, uninstall, use safe mode/secondary users/OEM paths, or switch device/network. |
+| iOS/iPadOS Screen Time APIs | Evidence-supported conclusion | User-authorized app/category/web-domain shielding and scheduled activity callbacks are possible through FamilyControls, ManagedSettings, and DeviceActivity. | Family Sharing and supervised/managed deployments can support different control relationships. | Distribution entitlement approval is required; tokens intentionally hide selected app/domain identity from the app; alternate devices and account/reset paths remain. |
+| iOS Network Extension | Evidence-supported conclusion | Provider types exist for VPN and filtering, with deployment conditions varying by provider. | Managed deployment can configure stronger persistent controls. | Entitlements, provider deployment rules, VPN conflicts, WebKit/URLSession coverage, and App Review must be verified per design. |
+| Android consumer app | Evidence-supported conclusion | User-approved VPN, usage access, notifications, and ordinary app UI can provide filtering and friction. | Device/profile owner can enforce always-on VPN and broader policy. | User can revoke permissions, uninstall, use safe mode/secondary users/OEM paths, or switch device/network. |
 | Android accessibility | Platform limitation | Technically observes UI events when enabled. | None appropriate for Better Life consumer enforcement. | Google Play requires declaration, prominent disclosure, consent, and policy-compliant core use; using it as covert monitoring is prohibited. |
-| Chrome/Chromium extension | Evidence-supported | DNR rules can block, redirect, allow, or modify supported requests; content scripts can alter permitted pages. | Enterprise policy can force-install and restrict removal. | Ordinary users can disable/remove the extension; host permissions and incognito access are user controlled; browser-internal and alternate-browser surfaces remain. |
-| Firefox extension | Evidence-supported | WebRequest/content scripts can act on permitted web traffic and pages. | Enterprise policy can constrain extension settings. | Private-window access is user controlled; privileged browser pages and other browsers remain outside coverage. |
-| Safari extension/content blocker | Evidence-supported | Safari Web Extensions and compiled content blockers can block supported Safari loads. | Managed configuration may improve deployment consistency. | Safari-only coverage; user controls installation/permissions; app-internal content is outside Safari. |
-| Windows desktop helper | Evidence-supported | An administrator-installed service can use Windows Filtering Platform for connection-level policy. | Enterprise policy can make persistence stronger. | Administrator rights, driver/service security, uninstall, alternate users, VMs, remote sessions, portable apps, and non-network content. |
-| macOS desktop helper | Evidence-supported | Network Extension content filters exist and can allow/deny flows. | System-extension/MDM deployment can reduce setup friction. | Approval/deployment requirements, competing network filters, admin removal, alternate users, VMs, and local content. |
-| DNS/router | Evidence-supported | Domain-level allow/deny decisions can cover multiple devices on one configured network. | Managed router/profile can make configuration more persistent. | DoH/DoT, VPN, cellular, alternate Wi-Fi, IP access, shared CDNs, app-internal/local content, and borrowed devices. |
+| Chrome/Chromium extension | Evidence-supported conclusion | DNR rules can block, redirect, allow, or modify supported requests; content scripts can alter permitted pages. | Enterprise policy can force-install and restrict removal. | Ordinary users can disable/remove the extension; host permissions and incognito access are user controlled; browser-internal and alternate-browser surfaces remain. |
+| Firefox extension | Evidence-supported conclusion | WebRequest/content scripts can act on permitted web traffic and pages. | Enterprise policy can constrain extension settings. | Private-window access is user controlled; privileged browser pages and other browsers remain outside coverage. |
+| Safari extension/content blocker | Evidence-supported conclusion | Safari Web Extensions and compiled content blockers can block supported Safari loads. | Managed configuration may improve deployment consistency. | Safari-only coverage; user controls installation/permissions; app-internal content is outside Safari. |
+| Windows desktop helper | Evidence-supported conclusion | An administrator-installed service can use Windows Filtering Platform for connection-level policy. | Enterprise policy can make persistence stronger. | Administrator rights, driver/service security, uninstall, alternate users, VMs, remote sessions, portable apps, and non-network content. |
+| macOS desktop helper | Evidence-supported conclusion | Network Extension content filters exist and can allow/deny flows. | System-extension/MDM deployment can reduce setup friction. | Approval/deployment requirements, competing network filters, admin removal, alternate users, VMs, and local content. |
+| DNS/router | Evidence-supported conclusion | Domain-level allow/deny decisions can cover multiple devices on one configured network. | Managed router/profile can make configuration more persistent. | DoH/DoT, VPN, cellular, alternate Wi-Fi, IP access, shared CDNs, app-internal/local content, and borrowed devices. |
 
 ## Cross-Device Reality
 
@@ -73,7 +73,7 @@ Pass criteria:
 
 Failure criteria:
 
-- **Verified:** Stop if the spike requires hidden monitoring, raw content collection, an unsupported store-policy interpretation, or a claim stronger than observed behavior.
+- **Design requirement:** Stop if the spike requires hidden monitoring, raw content collection, an unsupported store-policy interpretation, or a claim stronger than observed behavior.
 - **Hypothesis:** Reject browser-first as the initial wedge if representative users find partial coverage misleading or setup burden unacceptable.
 
 ## Official Sources

@@ -36,26 +36,26 @@ User and transparency UI
 
 | Boundary | Classification | Rule |
 | --- | --- | --- |
-| User to local policy engine | Verified | Only an authenticated adult user creates or changes policy; consequences are previewed before activation. |
-| Adapter to local journal | Verified | Record action, adapter health, coarse time, and policy version; exclude page content, screenshots, and explicit URLs. |
+| User to local policy engine | Design requirement | Only an authenticated adult user creates or changes policy; consequences are previewed before activation. |
+| Adapter to local journal | Design requirement | Record action, adapter health, coarse time, and policy version; exclude page content, screenshots, and explicit URLs. |
 | Device to cloud sync | Hypothesis | Sync is optional and end-to-end encryption should be evaluated; server receives the minimum needed for multi-device policy consistency. |
-| Device to ally | Verified | Send only an explicit help request or pre-selected state; never raw history or content. |
-| Operations to observability | Verified | Metrics cover crashes, latency, and adapter health with pseudonymous/coarse identifiers; no intimate event stream by default. |
-| Recovery / strict-mode exit | Verified | Account recovery cannot silently let a third party control the user; safety escape and calm-state change are separate flows. |
+| Device to ally | Design requirement | Send only an explicit help request or pre-selected state; never raw history or content. |
+| Operations to observability | Design requirement | Metrics cover crashes, latency, and adapter health with pseudonymous/coarse identifiers; no intimate event stream by default. |
+| Recovery / strict-mode exit | Design requirement | Account recovery cannot silently let a third party control the user; safety escape and calm-state change are separate flows. |
 
 ## Component Responsibilities
 
-- **Verified:** Identity proves access to the user's account, not diagnosis, morality, or ownership of every device.
-- **Verified:** Consent service versions each permission and purpose, records revocation, and prevents a policy from silently gaining new data access.
+- **Design requirement:** Identity proves access to the user's account, not diagnosis, morality, or ownership of every device.
+- **Proposed control:** Consent service versions each permission and purpose, records revocation, and prevents a policy from silently gaining new data access.
 - **Hypothesis:** Local policy engine resolves schedules, rules, degraded adapter state, and an intervention choice without requiring the cloud.
 - **Hypothesis:** Optional sync stores encrypted policy envelopes and adapter status, not raw browsing events.
-- **Verified:** Audit UI explains what was attempted, what succeeded, what failed, and why protection is degraded.
-- **Verified:** Deletion removes local journals and requests server-side erasure; uninstall alone must not be described as complete cloud deletion.
+- **Design requirement:** Audit UI explains what was attempted, what succeeded, what failed, and why protection is degraded.
+- **Design requirement:** Deletion removes local journals and requests server-side erasure; uninstall alone must not be described as complete cloud deletion.
 
 ## Alternatives Not Selected
 
-- **Verified:** Device-owner/MDM-first is rejected for the consumer MVP because its provisioning model and control power conflict with simple voluntary self-install.
-- **Verified:** Screenshot/classifier-first is rejected because it creates disproportionate intimate-data and false-positive risk before value is established.
+- **Repository decision:** Device-owner/MDM-first is rejected for the consumer MVP because its provisioning model and control power conflict with simple voluntary self-install.
+- **Repository decision:** Screenshot/classifier-first is rejected because it creates disproportionate intimate-data and false-positive risk before value is established.
 - **Platform limitation:** DNS-only is rejected as the product architecture because it cannot address app-internal, encrypted, local, or alternate-network paths.
 
 ## Open Questions
