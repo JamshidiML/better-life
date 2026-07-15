@@ -18,6 +18,8 @@ Read these files before changing product behavior, architecture, sensitive data,
 6. `phase0/SAFETY_AND_CONSENT.md`
 7. `phase0/RISK_REGISTER.md`
 8. `phase0/DECISION_LOG.md`
+9. `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md`
+10. `docs/execution/QUALITY_REVIEW_TEMPLATE.md`
 
 ## Non-Negotiable Constraints
 
@@ -47,6 +49,27 @@ Read these files before changing product behavior, architecture, sensitive data,
 - Record limitations and platform-specific constraints honestly.
 - Prefer local-first processing and data minimization for intimate signals.
 - Treat inferred health, sexual, emotional, religious, relationship, and behavioral data as highly sensitive.
+
+## Mandatory Quality Loop
+
+Every substantial task must follow `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md`.
+
+The creator must:
+
+- include a complete self-score out of 100 in the Pull Request;
+- score each rubric category separately;
+- list known weaknesses, missing evidence, and checks actually performed;
+- never self-approve or merge;
+- revise against reviewer deductions;
+- re-score after every revision cycle.
+
+The reviewer must independently score the work using `docs/execution/QUALITY_REVIEW_TEMPLATE.md`.
+
+A task cannot be accepted only because its numeric score is high. All relevant critical gates must pass.
+
+The normal limit is three review cycles. After that, the task must be accepted, split, blocked, deferred, or have its rubric/scope corrected with documented rationale.
+
+A score of 100 means complete against the approved current scope and rubric. It does not mean permanent truth, clinical proof, zero risk, or freedom from future revision.
 
 ## Product And Architecture Rules
 
@@ -99,4 +122,9 @@ Include:
 - verification and exact commands;
 - screenshots for UI changes when safe;
 - known limitations;
-- follow-up issues.
+- follow-up issues;
+- creator quality self-score;
+- rubric breakdown;
+- known weaknesses;
+- checks actually performed;
+- requested reviewer focus.
