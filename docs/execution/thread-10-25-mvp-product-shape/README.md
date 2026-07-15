@@ -1,9 +1,9 @@
 # Execution Thread 10 — Cycle 1 Index
 
-Issue: #25  
-Title: Simple UX, product shape, and first MVP recommendation  
-Branch: `codex/25-mvp-product-shape`  
-Date: 2026-07-15  
+Issue: #25
+Title: Simple UX, product shape, and first MVP recommendation
+Branch: `codex/25-mvp-product-shape`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,11 +24,11 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Product shape comparison](../../product/PRODUCT_SHAPE_COMPARISON.md)
-- Evidence-supported: [First-user journey](../../product/FIRST_USER_JOURNEY.md)
-- Evidence-supported: [MVP scope recommendation](../../product/MVP_SCOPE_RECOMMENDATION.md)
-- Evidence-supported: [UX principles](../../product/UX_PRINCIPLES.md)
-- Evidence-supported: [MVP acceptance criteria](../../product/MVP_ACCEPTANCE_CRITERIA.md)
+- Evidence-supported: [Product shape comparison](../../../product/PRODUCT_SHAPE_COMPARISON.md)
+- Evidence-supported: [First-user journey](../../../product/FIRST_USER_JOURNEY.md)
+- Evidence-supported: [MVP scope recommendation](../../../product/MVP_SCOPE_RECOMMENDATION.md)
+- Evidence-supported: [UX principles](../../../product/UX_PRINCIPLES.md)
+- Evidence-supported: [MVP acceptance criteria](../../../product/MVP_ACCEPTANCE_CRITERIA.md)
 
 ## Quality Artifacts
 
@@ -38,6 +38,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT agree that the browser extension remains a separate experiment rather than the MVP baseline?
+- Open question: Does the founder accept stopping if the manual/accountless core has insufficient value, instead of adding surveillance or social complexity?
+- Open question: Which acceptance thresholds should be frozen before Phase 0 usability and adverse-effect tests?

@@ -1,75 +1,37 @@
 # UX principles
 
-Status: Cycle 1 Draft  
-Issue: #25  
-Branch: `codex/25-mvp-product-shape`  
-Research date: 2026-07-15  
-Stage: product / MVP definition
+Status: Cycle 1 Draft
+Issue: #25
+Branch: `codex/25-mvp-product-shape`
 
-## Statement Classification Key
-
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
-
-## Purpose
-
-Define simple outside, sophisticated inside, non-shaming, privacy-forward, accessible, multilingual UX rules.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Principle | Classification | Product behavior | Test |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define simple outside, sophisticated inside, non-shaming, privacy-forward, accessible, multilingual UX rules. | Issue #25 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Self-use, not supervision | Verified | No partner/employer/parent admin or secret report. | Coercion scenarios cannot create/control another account. |
+| Scope before setup | Verified | Explain non-clinical and platform limits before asking intimate input. | User can accurately paraphrase limits. |
+| Private without absolutes | Verified | Say local/device risks and exact external flows. | No “anonymous,” “fully private,” or “zero knowledge” without proof. |
+| One action under load | Hypothesis | One primary command, one alternative, visible exit. | Simulated high-load usability. |
+| Calm-state authorship | Verified | Goals, friction, recipients, and rules are configured outside acute flow. | Acute flow cannot add restriction/share. |
+| Exit is first-class | Verified | Pause, cancel, delete, disable, recover legitimate use. | One-action exit from every high-risk state. |
+| Repair, not punishment | Hypothesis | Setback changes plan only if user chooses. | No loss message, forced confession, escalating lock. |
+| User language, not diagnosis | Verified | Neutral editable goal and context. | No frequency-only/AI label. |
+| Data is visible | Verified | Show local/remote fields, recipients, last send, retention and controls. | Control UI matches system inventory. |
+| No automatic human disclosure | Verified | Exact recipient/message preview on each future send. | Cancel sends zero bytes/messages. |
+| Static before AI | Verified | Reviewed content/rules solve first task. | Core works offline/without model. |
+| Honest platform friction | Platform limitation | Name browser/device coverage, bypass and false-block recovery. | Synthetic capability matrix passes. |
+| Accessible without time pressure | Verified | Keyboard, screen reader, reflow, contrast, reduced motion, no forced timer. | Accessibility test suite and specialist/user review. |
+| Multilingual meaning, not word substitution | Open question | Human-reviewed clinical/privacy/safety meaning in each language. | Back-translation plus user comprehension; no language launched unreviewed. |
+| No engagement extraction | Verified | No feed, streak pressure, notifications for return, variable reward, or vulnerability-targeted upsell. | Product metrics and UI audit. |
+| Real-world care remains reachable | Verified | Professional/emergency routes directly available. | No module/payment/account prerequisite. |
 
-## Cycle 1 Findings
+## Content hierarchy
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The long-term vision includes a broad layered ecosystem, but the current phase forbids production features and requires first-wedge discipline. | VISION_TO_PRODUCT_MAP.md; EXECUTION_THREADS_01.md | MVP must be small and honest. |
-| Evidence-supported | A web command center plus optional browser-extension path is the lowest-regret first candidate because it can express consent, education, reflection, and limited visible friction without overpromising full device control. | Thread 01 preliminary source pass; product doctrine | Recommend as provisional pending Thread 01 review. |
-| Hypothesis | First user value is highest when onboarding ends with one user-authored protection rule, one repair plan, and one transparent exit path. | Phase 0 artifacts; Product Doctrine | Journey should finish in minutes. |
-| Open question | Real users must validate whether the first wedge feels strong enough without mobile enforcement. | Phase 0 interview dependency | Founder should not approve MVP until user interviews test this. |
+1. **Verified:** What can I do now?
+2. **Verified:** What will happen and what data is used?
+3. **Verified:** How do I stop/change/delete it?
+4. **Verified:** What are the limits and alternatives?
+5. **Hypothesis:** Optional explanation/evidence only after the immediate choice.
 
-## Source Register
+## Prohibited patterns
 
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/documentation/familycontrols | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/managedsettings | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/deviceactivity | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/networkextension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/net/VpnService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/admin/DevicePolicyManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/usage/UsageStatsManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/accessibilityservice/AccessibilityService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/extension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/safariservices/creating-a-content-blocker | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about ux principles after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** countdown pressure, alarming red failure states, loss-framed streaks, hidden defaults, prechecked sharing, consent walls, forced account/payment, buried cancellation, fake scarcity, “commitment” shaming, and permission requests before explanation.
+- **Verified:** sexualized/explicit imagery, moralizing copy, testimonials presented as outcomes, or visual comparison of “clean/dirty” states.

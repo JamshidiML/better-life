@@ -1,75 +1,67 @@
 # MVP scope recommendation
 
-Status: Cycle 1 Draft  
-Issue: #25  
-Branch: `codex/25-mvp-product-shape`  
-Research date: 2026-07-15  
-Stage: product / MVP definition
+Status: Cycle 1 Draft - recommendation pending review and Phase 0 evidence
+Issue: #25
+Branch: `codex/25-mvp-product-shape`
 
-## Statement Classification Key
+## Recommendation
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+**Hypothesis:** After Phase 0 and all acceptance gates, the first MVP candidate is an **accountless local web core** that provides:
 
-## Purpose
+1. one editable private personal plan;
+2. one manual Protective Spiral with static reviewed steps;
+3. short optional education modules;
+4. a visible data/consent/exit surface;
+5. local export/delete appropriate to the prototype.
 
-Recommend one first wedge and defer unsafe or over-broad components.
+**Verified:** Current phase remains research, architecture, validation, product definition, and documentation. This recommendation does not authorize production code.
 
-## Architecture / Product Pre-Check
+## In scope
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Recommend one first wedge and defer unsafe or over-broad components. | Issue #25 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Item | Classification | User problem / benefit | Data and consent | Metric / exit |
+| --- | --- | --- | --- | --- |
+| Scope/privacy first-run | Verified | Prevent false clinical/protection/privacy understanding. | No external data. | Comprehension; leave freely. |
+| One-page personal plan | Hypothesis | Turn intention into a calm-state plan. | Local D3; explicit save, edit/delete. | Ownership, usefulness, burden. |
+| Manual Protective Spiral | Hypothesis | Make one chosen action easy in a difficult moment. | Session/local minimal. | Agency/usefulness/shame; one-tap exit. |
+| Static education | Evidence-supported mechanisms, product hypothesis | Explain neutral distinctions, consent, actions, limits, and care routes. | No completion needed. | Comprehension/adverse interpretation; hide. |
+| Local control view | Verified | Show exactly what exists and how to stop/delete. | Local inventory. | 100% task completion in system tests. |
 
-## Cycle 1 Findings
+## Separate gated experiment, not MVP baseline
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The long-term vision includes a broad layered ecosystem, but the current phase forbids production features and requires first-wedge discipline. | VISION_TO_PRODUCT_MAP.md; EXECUTION_THREADS_01.md | MVP must be small and honest. |
-| Evidence-supported | A web command center plus optional browser-extension path is the lowest-regret first candidate because it can express consent, education, reflection, and limited visible friction without overpromising full device control. | Thread 01 preliminary source pass; product doctrine | Recommend as provisional pending Thread 01 review. |
-| Hypothesis | First user value is highest when onboarding ends with one user-authored protection rule, one repair plan, and one transparent exit path. | Phase 0 artifacts; Product Doctrine | Journey should finish in minutes. |
-| Open question | Real users must validate whether the first wedge feels strong enough without mobile enforcement. | Phase 0 interview dependency | Founder should not approve MVP until user interviews test this. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Item | Classification | Gate |
 | --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/documentation/familycontrols | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/managedsettings | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/deviceactivity | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/networkextension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/net/VpnService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/admin/DevicePolicyManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/usage/UsageStatsManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/accessibilityservice/AccessibilityService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/extension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/safariservices/creating-a-content-blocker | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Chromium extension with synthetic/user-selected test rules | Platform limitation | Thread 01 technical spike, Thread 07 permissions/data, false-block/recovery UX, incremental user value. |
 
-## Artifact-Specific Work To Complete
+## Explicitly out of scope
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about mvp scope recommendation after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+- **Verified:** accounts, cloud sync, external AI, ally messaging, anonymous/pseudonymous peer support, free chat, monitoring reports, screenshots, content classification, diagnosis/screening, clinical treatment, payments, ads, and organization/admin dashboards.
+- **Verified:** iOS/Android/desktop/router enforcement, universal blocking, automatic risk detection, streaks/leaderboards, partner controls, and emergency monitoring.
+- **Platform limitation:** Future adapter work cannot exceed Thread 01's verified capability and bypass statements.
 
-## Known Weaknesses
+## Dependency gates
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Dependency | Classification | Required result |
+| --- | --- | --- |
+| Phase 0 interviews | Open question | Repeated user problem and value; coercion/shame/language findings; no unresolved critical safety defect. |
+| Thread 02 evidence | Verified | Claims/content stay within approved register; clinical reviewer signs off participant copy. |
+| Thread 05/06 product | Open question | Plan/Spiral/curriculum/outcomes pass comprehension and adverse-effect testing. |
+| Thread 07 privacy | Verified | Local storage, backup, notification, export/delete, DPIA/legal scope, and consent controls pass. |
+| Accessibility | Verified | Keyboard, screen reader, zoom/reflow, contrast, motion, cognitive load, and target-language tests pass. |
+| Quality loop | Verified | Independent score >=95 with every universal gate and no unresolved Critical/High defect. |
+
+## Success and failure
+
+| Classification | Decision rule |
+| --- | --- |
+| Hypothesis | Success means users understand, own, and can safely use/leave the local plan/Spiral, with useful agency and no unacceptable shame, burden, or disclosure. |
+| Verified | Session count, time in app, streak length, or subscription conversion cannot define MVP success. |
+| Verified | If manual core lacks value, stop or reframe; do not add monitoring/AI/social complexity to manufacture engagement. |
+| Verified | If local privacy/control cannot be explained and tested, stop before production. |
+
+## Post-MVP order if evidence supports continuation
+
+1. **Platform limitation:** Chromium adapter with synthetic tests and explicit limitations.
+2. **Platform limitation:** Android VPN spike and iOS entitlement/API validation in parallel.
+3. **Open question:** Optional sync/account only after demonstrated multi-device need and privacy proof.
+4. **Open question:** Chosen ally only after coercion and exact-message consent tests.
+5. **Verified:** Peer network and AI coach remain separate future decisions, not inevitable roadmap items.

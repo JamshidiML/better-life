@@ -1,75 +1,50 @@
 # First-user journey
 
-Status: Cycle 1 Draft  
-Issue: #25  
-Branch: `codex/25-mvp-product-shape`  
-Research date: 2026-07-15  
-Stage: product / MVP definition
+Status: Cycle 1 Draft - low-fidelity research journey
+Issue: #25
+Branch: `codex/25-mvp-product-shape`
 
-## Statement Classification Key
+## Journey outcome
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Hypothesis:** In a few calm minutes, the user can create one private plan and try one manual Spiral without account, diagnosis, explicit disclosure, payment, monitoring, AI, or another person.
+- **Verified:** The journey must be useful even if the user refuses every optional field and leaves after reading scope/privacy.
 
-## Purpose
+| Step | Classification | Screen / decision | Data and consent | Success / exit |
+| ---: | --- | --- | --- | --- |
+| 0 | Verified | “For adults using this for themselves” plus not therapy/diagnosis/emergency/full-device guarantee. | No data. | Understand / leave to reviewed resources. |
+| 1 | Verified | “Private by default” summary: local only, what is not collected, shared-device warning, delete/export limits. | No bundled external consent. | Continue / leave. |
+| 2 | Hypothesis | “What would you like to make easier?” Choose/edit one neutral goal or skip to demo. | Local goal only if saved. | User wording; no addiction label. |
+| 3 | Hypothesis | Optional “Why this matters to me” in one short line. | Local D3; skip/hide/delete. | No moral prompt or required confession. |
+| 4 | Hypothesis | Choose one safe next action and one fallback from reviewed options or own wording. | Local plan. | Accessibility/context check; skip. |
+| 5 | Verified | Plan preview: exact stored fields, no monitoring, no person notified, edit/delete controls. | Explicit save-to-device action. | Save / use without save / discard. |
+| 6 | Hypothesis | Try manual “Pause”: one reason, one action, finish/exit. | Session-local; no success score. | Complete, skip, or exit in one action. |
+| 7 | Hypothesis | Optional response: useful, not useful, uncomfortable; optional short reason in research protocol only. | Separate research consent; no raw note in repo/external AI. | Submit/skip/delete. |
+| 8 | Verified | Home shows Plan, Pause, Learn, Privacy/Exit; no feed, streak, score, paywall, or notification prompt. | Local state summary. | Delete all / close. |
 
-Define a minutes-scale onboarding journey with consent, protection constitution, first rule, and exit visibility.
+## Copy rules
 
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define a minutes-scale onboarding journey with consent, protection constitution, first rule, and exit visibility. | Issue #25 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The long-term vision includes a broad layered ecosystem, but the current phase forbids production features and requires first-wedge discipline. | VISION_TO_PRODUCT_MAP.md; EXECUTION_THREADS_01.md | MVP must be small and honest. |
-| Evidence-supported | A web command center plus optional browser-extension path is the lowest-regret first candidate because it can express consent, education, reflection, and limited visible friction without overpromising full device control. | Thread 01 preliminary source pass; product doctrine | Recommend as provisional pending Thread 01 review. |
-| Hypothesis | First user value is highest when onboarding ends with one user-authored protection rule, one repair plan, and one transparent exit path. | Phase 0 artifacts; Product Doctrine | Journey should finish in minutes. |
-| Open question | Real users must validate whether the first wedge feels strong enough without mobile enforcement. | Phase 0 interview dependency | Founder should not approve MVP until user interviews test this. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Classification | Use | Avoid |
 | --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/documentation/familycontrols | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/managedsettings | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/deviceactivity | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/networkextension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/net/VpnService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/admin/DevicePolicyManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/app/usage/UsageStatsManager | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.android.com/reference/android/accessibilityservice/AccessibilityService | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.chrome.com/docs/extensions/reference/api/extension | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/documentation/safariservices/creating-a-content-blocker | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Verified | “your goal,” “pause,” “next step,” “private plan,” “setback,” “what helps” | addicted, clean/dirty, failed, cured, relapse prevented, risky person |
+| Hypothesis | “This may help you create a pause.” | “This will stop the urge.” |
+| Verified | “The web app does not monitor other apps or devices.” | “You are protected.” |
+| Verified | “Nothing is sent to another person in this version.” | Absolute “anonymous” or “no one can ever see this.” |
 
-## Artifact-Specific Work To Complete
+## Failure and edge journeys
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about first-user journey after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Scenario | Classification | Response |
+| --- | --- | --- |
+| Shared/coercive device | Verified | Explain risk, neutral/no-save use, fast delete/exit; no partner setup. |
+| User wants diagnosis/treatment | Verified | Scope boundary and qualified-care route; no assessment score. |
+| User wants strong blocking | Platform limitation | Explain current absence and exact future research; point to OS/user-controlled alternatives without superiority claim. |
+| User is in immediate danger | Verified | Clear real-world emergency/crisis choices; no monitoring/rescue claim. |
+| Storage unavailable/cleared | Platform limitation | Use session-only flow and explain plan may not persist. |
+| Accessibility/language need | Open question | Core must be keyboard/screen-reader/zoom/reduced-motion ready; target languages require validated human review. |
 
-## Known Weaknesses
+## Journey research questions
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Open question:** Does a user understand that this is self-help research and not treatment/protection across devices?
+2. **Open question:** Can they make a plan without disclosing explicit content or adopting a diagnosis label?
+3. **Open question:** Is the manual Spiral useful enough to justify a digital product?
+4. **Open question:** Does any step increase shame, coercion, fear, or compulsive checking?
+5. **Open question:** What capability, if any, is truly missing after the manual core?
