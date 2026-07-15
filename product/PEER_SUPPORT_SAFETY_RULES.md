@@ -1,63 +1,61 @@
-# Peer support safety rules
+# Peer-support safety rules
 
-Status: Cycle 1 Draft  
-Issue: #19  
-Branch: `codex/19-anonymous-support`  
-Research date: 2026-07-15  
-Stage: architecture / safety / privacy
+Status: Cycle 1 Draft - not participant-approved
+Issue: #19
+Branch: `codex/19-anonymous-support`
 
-## Statement Classification Key
+## Scope
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** Peers share brief encouragement or lived experience; they are not therapists, sponsors, monitors, moderators, or emergency responders.
+- **Verified:** Better Life remains accountable for platform rules and human moderation.
+- **Hypothesis:** A first test, if approved, uses asynchronous structured messages rather than free chat.
 
-## Purpose
+## Participant rules
 
-Define participant rules, boundaries, escalation, and incident handling.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define participant rules, boundaries, escalation, and incident handling. | Issue #19 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 says allies and peers must not be treated as therapists or emergency responders. | phase0/SAFETY_AND_CONSENT.md; phase0/ALLY_SIGNAL_COPY.md | Peer support architecture needs escalation boundaries. |
-| Evidence-supported | Anonymity protects shame-sensitive participation but creates abuse, repeat-contact, and identity-leakage risk. | Phase 0 risk register; mutual-aid anonymity source pass | MVP should prefer structured signals and asynchronous support before open real-time contact. |
-| Hypothesis | A relay-based pseudonymous contact model with rate limits, block lists, minimal profiles, and incident review is safer than direct exchange of handles. | Security reasoning; privacy doctrine | No direct contact exchange in MVP candidate. |
-| Open question | Whether moderation operations are affordable and clinically safe enough at EUR 1/month depends on Thread 09. | Issue #24 dependency | Do not launch real-time peer support without moderation budget. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Rule | Classification | Enforcement response |
 | --- | --- | --- |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/information-about-aa | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.saa-recovery.org/our-program/twelve-traditions/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Participate only for yourself as an adult and by your own choice. | Verified | End session and review eligibility/coercion concerns. |
+| Do not request or share names, handles, contact details, location, workplace, images, files, or links. | Verified | Block message; repeated/severe attempts trigger human review. |
+| Do not send explicit sexual descriptions or content. | Verified | Block/quarantine; report illegal content under reviewed protocol. |
+| Do not flirt, solicit sexual contact, groom, threaten, shame, blackmail, or discriminate. | Verified | Immediate block and priority human review; suspend for credible severe behavior. |
+| Speak from personal experience; do not diagnose, prescribe, or promise recovery. | Verified | Interrupt content; educate or enforce on repetition/severity. |
+| Do not present yourself as therapist, sponsor, clergy, moderator, or emergency service. | Verified | Remove role claim and review intent. |
+| Do not pressure someone to disclose, reply, abstain, follow a belief, or remain matched. | Verified | Terminate match for coercive behavior. |
+| Treat a block or ended match as final; do not attempt re-contact. | Verified | Technical suppression plus ban-evasion review. |
+| Use report for safety, not retaliation or disagreement. | Verified | Human review; report abuse can lead to limits with appeal. |
 
-## Artifact-Specific Work To Complete
+## Consent and exit rules
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about peer support safety rules after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+1. **Verified:** Availability is off by default and expires automatically.
+2. **Verified:** Each participant sees the permitted interaction, limits, retention, and report process before accepting.
+3. **Verified:** Decline, timeout, block, and leave carry no penalty or peer-visible reason.
+4. **Verified:** The user previews every outgoing message; no AI autonomously sends to a peer.
+5. **Verified:** Ending a match invalidates both delivery capabilities; queued non-safety messages are discarded.
+6. **Verified:** Account deletion clearly separates immediate social exit from any legally justified incident-evidence retention.
 
-## Known Weaknesses
+## Incident levels
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Level | Classification | Examples | Required response |
+| --- | --- | --- | --- |
+| P0 critical | Verified | credible exploitation/grooming, extortion, severe threat, child-safety concern, systemic identity exposure | Immediate containment, on-call human, preserve minimum evidence, legal/safety protocol, matching pause if systemic. |
+| P1 high | Verified | harassment, coercion, repeated off-platform contact attempt, clinical impersonation | Block/contain, prompt human review, user safety update, account action and appeal. |
+| P2 standard | Verified | boundary violation, prohibited advice, spam, report abuse | Queue review, education/rate limit/action by policy. |
+| P3 quality | Verified | unhelpful or mismatched but non-abusive interaction | End/avoid rematch; aggregate for product research without punishing preference. |
+
+**Open question:** Response-time targets cannot be promised until staffing and country coverage are funded and tested.
+
+## Moderation governance
+
+- **Verified:** High-severity decisions require trained human review, documented rationale, proportionate action, and appeal where safe.
+- **Verified:** Moderators receive least-privilege case access, training, supervision, wellbeing support, and quality audits.
+- **Verified:** AI may prioritize or summarize but cannot make the final P0/P1 decision.
+- **Verified:** Law-enforcement or emergency disclosure requires a published, legally reviewed policy; no informal peer escalation.
+- **Verified:** Aggregate transparency should report volume, action, response performance, appeals, and known limitations without exposing users.
+
+## Launch blockers
+
+- **Open question:** adult eligibility and ban-evasion approach reconciles safety with data minimization.
+- **Open question:** rules are comprehensible and non-shaming across target languages and cultures.
+- **Open question:** moderator coverage, training, escalation partners, and budget pass simulations.
+- **Open question:** Thread 07 approves legal basis, DPIA, processors, retention, deletion, and data-subject rights.
+- **Open question:** Thread 09 shows safety operations remain sustainable without engagement incentives.

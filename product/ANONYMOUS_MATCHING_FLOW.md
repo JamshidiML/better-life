@@ -1,63 +1,56 @@
-# Anonymous matching flow
+# Pseudonymous matching flow
 
-Status: Cycle 1 Draft  
-Issue: #19  
-Branch: `codex/19-anonymous-support`  
-Research date: 2026-07-15  
-Stage: architecture / safety / privacy
+Status: Cycle 1 Draft - research specification only
+Issue: #19
+Branch: `codex/19-anonymous-support`
 
-## Statement Classification Key
+## Recommended sequence
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+| Step | Classification | User-visible action | System invariant / failure path |
+| ---: | --- | --- | --- |
+| 0 | Verified | Private tools remain usable without social participation. | No social consent is bundled with account or protection features. |
+| 1 | Verified | User opens “human support research” and sees purpose, limits, data, moderation, confidentiality limits, and emergency boundary. | Decline exits cleanly; no repeated pressure. |
+| 2 | Verified | Adult user separately attests voluntary self-use and chooses whether to be available now. | Coercion concern or ineligible state disables matching and offers safe exit. |
+| 3 | Hypothesis | User selects one bounded need: encouragement, listen briefly, plan next action, or resource navigation. | No explicit story, diagnosis, exact location, or demographic targeting. |
+| 4 | Verified | User selects a short availability window and notification privacy. | Availability expires; neutral notification default. |
+| 5 | Hypothesis | Match service checks eligibility, block graph, cooldown, prior incidents, language, and bounded need. | No engagement/vulnerability optimization; no stable public profile. |
+| 6 | Verified | Both users receive pairwise pseudonyms, rules, allowed message format, and accept/decline. | Match opens only after dual acceptance; decline is invisible. |
+| 7 | Hypothesis | One user chooses a reviewed structured message; the other may respond from a reviewed set or end. | No links/media/handles/free biography; rate and turn limits apply. |
+| 8 | Verified | Block, report, and end remain visible throughout. | Block is immediate; report can preserve minimum case evidence; no final peer message. |
+| 9 | Hypothesis | Each user optionally rates helpfulness, safety, and unwanted disclosure. | Feedback is not a public reputation score. |
+| 10 | Verified | Match capability and pairwise pseudonym expire. | No direct rematch or contact graph; retention follows approved policy. |
 
-## Purpose
+## Matching constraints
 
-Specify MVP-safe matching, blocking, rate limiting, reputation, and exit behavior.
+- **Verified:** Exclude exact location, explicit behavior, diagnosis, religion, sexuality, and vulnerability scoring from initial matching.
+- **Hypothesis:** Language, broad time zone, support-mode preference, and mutual block/eligibility state may be sufficient; user research must validate.
+- **Verified:** Do not match on “most at risk,” likelihood to engage, spending, or shame signals.
+- **Verified:** Do not expose queue size, rejection reason, safety score, or another user's history.
 
-## Architecture / Product Pre-Check
+## Empty, unsafe, and degraded states
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Specify MVP-safe matching, blocking, rate limiting, reputation, and exit behavior. | Issue #19 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 says allies and peers must not be treated as therapists or emergency responders. | phase0/SAFETY_AND_CONSENT.md; phase0/ALLY_SIGNAL_COPY.md | Peer support architecture needs escalation boundaries. |
-| Evidence-supported | Anonymity protects shame-sensitive participation but creates abuse, repeat-contact, and identity-leakage risk. | Phase 0 risk register; mutual-aid anonymity source pass | MVP should prefer structured signals and asynchronous support before open real-time contact. |
-| Hypothesis | A relay-based pseudonymous contact model with rate limits, block lists, minimal profiles, and incident review is safer than direct exchange of handles. | Security reasoning; privacy doctrine | No direct contact exchange in MVP candidate. |
-| Open question | Whether moderation operations are affordable and clinically safe enough at EUR 1/month depends on Thread 09. | Issue #24 dependency | Do not launch real-time peer support without moderation budget. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Condition | Classification | Response |
 | --- | --- | --- |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/information-about-aa | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.saa-recovery.org/our-program/twelve-traditions/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| No match | Verified | Say none is available; offer private plan, chosen ally, or external resource without urgency manipulation. |
+| User changes mind | Verified | Cancel immediately; remove availability and pending capability. |
+| Unsafe message blocked before send | Verified | Explain the boundary without exposing evasion details; offer safe structured wording. |
+| Report during match | Verified | End/block, confirm report state, show immediate safety options, route human review. |
+| Service/moderation degraded | Verified | Stop new matches; preserve report, block, delete, and static support routes. |
+| Possible crisis | Verified | Show country-appropriate professional/emergency choices; never promise peer or AI rescue. |
 
-## Artifact-Specific Work To Complete
+## Evaluation plan
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about anonymous matching flow after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Metric | Classification | Decision use |
+| --- | --- | --- |
+| Incremental helpfulness versus private/ally alternative | Hypothesis | Social feature needs positive value beyond safer options. |
+| Unwanted-contact and privacy-regret rate | Hypothesis | Predefined threshold; any severe identity harm triggers pause. |
+| P0/P1 incident and moderator-response distribution | Verified | Safety gate, reported with denominator and uncertainty. |
+| Block/report false-positive and appeal outcomes | Verified | Detect biased or retaliatory enforcement. |
+| Match decline, exit, and deletion completion | Verified | Verify autonomy; failure is a launch blocker. |
+| Moderator burden and cost per active participant | Verified | Thread 09 sustainability gate. |
 
-## Known Weaknesses
+## Cycle 1 exit decision
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** Do not build production matching.
+- **Hypothesis:** First validate needs with interviews, then test static/private concepts and safety tabletop exercises using synthetic data.
+- **Verified:** If live support cannot beat the chosen-ally/private alternative on value while meeting safety, privacy, and cost gates, remove it from scope.

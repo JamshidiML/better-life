@@ -1,9 +1,9 @@
 # Execution Thread 04 — Cycle 1 Index
 
-Issue: #19  
-Title: Anonymous peer-support safety architecture  
-Branch: `codex/19-anonymous-support`  
-Date: 2026-07-15  
+Issue: #19
+Title: Anonymous peer-support safety architecture
+Branch: `codex/19-anonymous-support`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Anonymous support architecture](../../architecture/ANONYMOUS_SUPPORT_ARCHITECTURE.md)
-- Evidence-supported: [Peer support threat model](../../security/PEER_SUPPORT_THREAT_MODEL.md)
-- Evidence-supported: [Peer support safety rules](../../product/PEER_SUPPORT_SAFETY_RULES.md)
-- Evidence-supported: [Anonymous matching flow](../../product/ANONYMOUS_MATCHING_FLOW.md)
+- Evidence-supported: [Pseudonymous support architecture](../../../architecture/ANONYMOUS_SUPPORT_ARCHITECTURE.md)
+- Evidence-supported: [Peer support threat model](../../../security/PEER_SUPPORT_THREAT_MODEL.md)
+- Evidence-supported: [Peer support safety rules](../../../product/PEER_SUPPORT_SAFETY_RULES.md)
+- Evidence-supported: [Pseudonymous matching flow](../../../product/ANONYMOUS_MATCHING_FLOW.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT agree that live matching is excluded from the MVP until every launch blocker is closed?
+- Open question: Do privacy and security reviewers accept the separation, pseudonym, moderation-access, and incident-retention model?
+- Open question: Does the founder accept removing peer matching entirely if it cannot outperform safer ally/private options?
