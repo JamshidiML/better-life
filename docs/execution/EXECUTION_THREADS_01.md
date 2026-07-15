@@ -48,18 +48,39 @@ Every thread must read:
 8. `AI_COLLABORATION.md`
 9. `phase0/SAFETY_AND_CONSENT.md`
 10. `phase0/RISK_REGISTER.md`
+11. `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md`
 
 ## Standard Thread Protocol
 
 For each issue:
 
-1. Comment with an execution plan and major unknowns.
+1. Comment with an execution plan, major unknowns, and interpretation of the thread-specific quality criteria.
 2. Create the specified branch from current `main`.
 3. Create the requested document skeletons.
 4. Open an early draft PR linked to the issue.
 5. Use current authoritative and primary sources where external facts are required.
 6. Mark hypotheses, uncertainty, and unresolved conflicts.
-7. Stop after documentation deliverables and request review.
+7. Complete the deliverables and submit Quality Scorecard Cycle 1.
+8. Request independent review.
+9. Convert every lost point and defect into concrete revision work.
+10. Revise, re-verify, and re-score while preserving score history.
+11. Stop only at Pass, Conditional acceptance, Escalate, or Stop under the quality framework.
+12. Do not merge without independent review and founder approval where required.
+
+## Quality Target
+
+The normal acceptance target for each thread is:
+
+- accepted weighted score at least 95/100;
+- all applicable mandatory gates passed;
+- zero unresolved Critical defects;
+- zero unresolved High defects;
+- explicit evidence for the awarded score;
+- required deliverables and acceptance criteria complete.
+
+A 100/100 score is permitted only when every applicable current-scope criterion is fully evidenced. It does not imply universal truth, clinical proof, or permanent completeness.
+
+A thread must escalate instead of pretending to reach 100 when the missing evidence requires a qualified expert, legal review, unavailable entitlement, real user research, or another external dependency.
 
 ## Review Gates
 
@@ -72,30 +93,40 @@ Each draft PR will be reviewed for:
 - technical realism;
 - simplicity and usability;
 - business coherence;
-- conflicts with other threads.
+- conflicts with other threads;
+- rubric completeness;
+- evidence supporting every score;
+- defect severity and closure;
+- measurable improvement between cycles.
 
 No individual thread result becomes a final product decision merely by being merged. Final decisions occur during synthesis.
 
 ## Final Synthesis
 
-After all ten threads reach reviewable status, create:
+After all ten threads reach a terminal review state, create:
 
 - `docs/execution/THREADS_01_FINAL_REPORT.md`
 - `docs/execution/THREADS_01_DECISION_MATRIX.md`
 - `docs/execution/THREADS_01_ARTIFACT_INDEX.md`
+- `docs/execution/THREAD_QUALITY_SUMMARY.md`
+- `docs/execution/FINAL_SYNTHESIS_SCORECARD.md`
 
 The final report must include:
 
 1. Executive summary.
 2. Status and output of every thread.
-3. Strongest findings.
-4. Contradictions between threads.
-5. New risks.
-6. Decisions ready for founder approval.
-7. Decisions blocked by evidence or feasibility.
-8. Recommended first product wedge.
-9. Recommended next execution cycle.
-10. Complete artifact list with PR and issue references.
+3. Initial score, final score, and number of revision cycles for every thread.
+4. Strongest findings.
+5. Defects discovered and resolved.
+6. Unresolved limitations and expert escalations.
+7. Contradictions between threads.
+8. New risks.
+9. Decisions ready for founder approval.
+10. Decisions blocked by evidence or feasibility.
+11. Recommended first product wedge.
+12. Recommended next execution cycle.
+13. Complete artifact list with PR and issue references.
+14. Transparent program-level score.
 
 ## Small Founder-Facing Build Summary Template
 
@@ -114,10 +145,17 @@ Built:
 - Sustainable business scenarios
 - First-product and UX recommendation
 
+Quality:
+- Initial and final score for every thread
+- Revision cycles completed
+- Critical and High defects resolved
+- Remaining limitations and expert escalations
+- Overall program score
+
 Result:
-A coherent evidence, safety, architecture, product, and business foundation for selecting and designing the first Better Life MVP.
+A coherent, scored, reviewed, and iteratively improved evidence, safety, architecture, product, and business foundation for selecting and designing the first Better Life MVP.
 ```
 
 ## Completion Definition
 
-This execution cycle is complete when all ten threads have draft PRs, reviews are resolved, final synthesis documents exist, and the founder receives a single consolidated report rather than ten disconnected outputs.
+This execution cycle is complete when all ten threads have draft PRs, each thread reaches a terminal quality decision, reviews are resolved, final synthesis and quality documents exist, cross-thread contradictions are addressed, and the founder receives a single consolidated report rather than ten disconnected outputs.
