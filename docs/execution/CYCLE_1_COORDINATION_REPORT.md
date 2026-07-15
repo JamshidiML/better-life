@@ -1,10 +1,16 @@
 # Better Life Execution Cycle 01 - Coordination Report
 
-Status: Pre-review Cycle 1 coordination
+Status: Historical Cycle 1 review dashboard
 Date: 2026-07-15
 Prepared by: Codex
 Scope: Issues #13 and #17-#25
 Decision: Stop for independent ChatGPT and founder review
+
+> Historical classification note: this report preserves the Cycle 1 wording and
+> self-scores for auditability. Labels such as `Verified` and
+> `Evidence-supported` were overloaded in Cycle 1 and are not current claim
+> classifications. Current decisions and the corrected taxonomy are in
+> [CYCLE_2_COORDINATION_REPORT.md](CYCLE_2_COORDINATION_REPORT.md).
 
 ## Report boundary
 
