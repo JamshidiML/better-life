@@ -13,3 +13,13 @@ Date: 2026-07-15
 | A05 | Open question | Named organizations have relevant capacity or willingness. | Respectful approved outreach later; no assumption now. | Open |
 | A06 | Open question | Current named ecosystem sample is representative enough. | Add missing organization/product categories and explicit sampling frame. | Open |
 | A07 | Hypothesis | EUR1 positioning makes free substitutes especially important. | Thread 09 and user willingness/value research. | Open |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A08 | Hypothesis | The expanded 14-family frame captures the main substitute architectures relevant to Cycle 2. | Dual-review search and user-reported tool inventory; add missed families. | Open |
+| A09 | Hypothesis | First-party, free, open, and DIY controls materially raise the value bar for Better Life enforcement. | Hands-on and user comparative research. | Open |
+| A10 | Open question | Vendor-stated cross-device/strict/privacy capabilities survive exact scenario testing. | Approved synthetic hands-on protocol. | Open |
+| A11 | Hypothesis | Accountless Supportive MVE is a more defensible first comparison than an integrated blocker. | Phase 0 concept comparison against no tool/free substitutes. | Open |
+| A12 | Open question | Expanded organization/advisor categories yield willing, independent, fairly compensated reviewers. | Founder-approved screening and outreach later. | Deferred |

@@ -52,9 +52,9 @@ Gate status: **Revision required; internal research only.**
 
 ## Performed verification
 
-- Verified: named product and organization claims were checked against linked official pages in Cycle 1.
-- Verified: every external entity is presented without relationship or endorsement.
-- Verified: no outreach or production code occurred; links and Markdown whitespace were checked locally.
+- Executed test result: named product and organization claims were checked against linked official pages in Cycle 1.
+- Executed test result: every external entity is presented without relationship or endorsement.
+- Executed test result: no outreach or production code occurred; links and Markdown whitespace were checked locally.
 - Open question: systematic sampling, hands-on testing, and stakeholder review remain pending.
 
 ## Score history
@@ -62,3 +62,10 @@ Gate status: **Revision required; internal research only.**
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 84 | Pending | Pending | 0 | 3 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 creator score: **84/100**.
+- Cycle 1 ChatGPT reviewer score: **69/100**.
+- Cycle 1 decision: **Revise**; findings are preserved in the Cycle 2 review response.
+- Cycle 2 self-score: **78/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
