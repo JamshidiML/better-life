@@ -1,62 +1,84 @@
-# Personal recovery plan spec
+# Personal plan specification
 
-Status: Cycle 1 Draft  
-Issue: #21  
-Branch: `codex/21-personal-recovery-plan`  
-Research date: 2026-07-15  
-Stage: product / education / personalization
+Status: Cycle 1 Draft - non-diagnostic self-help plan
+Issue: #21
+Branch: `codex/21-personal-recovery-plan`
+Research cutoff: 2026-07-15
 
-## Statement Classification Key
+## Position and pre-check
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
-
-## Purpose
-
-Define non-diagnostic onboarding, goals, values, triggers, devices, high-risk windows, and plan outputs.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define non-diagnostic onboarding, goals, values, triggers, devices, high-risk windows, and plan outputs. | Issue #21 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The product must avoid diagnosis and therapy replacement. | README.md; PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md | Onboarding asks goals and patterns, not clinical labels. |
-| Evidence-supported | User-authored values, triggers, high-risk windows, and device setup are appropriate Phase 0 data categories. | RESEARCH_PROTOCOL.md; INTERVIEW_GUIDES.md | Plan inputs can be local and user-visible. |
-| Hypothesis | Progress should track repair speed, plan adherence, sleep/environment changes, and reduced high-risk loops rather than only abstinence streaks. | Phase 0 relapse debrief and product doctrine | Outcome model should avoid all-or-nothing shame. |
-| Open question | Which curriculum modules improve user trust and actionability needs interviews and expert review. | Thread 02 and Phase 0 dependency | Treat curriculum as provisional. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Some adults want to turn a self-chosen behavior goal into concrete preparation, action, and review without diagnosis or surveillance. |
+| Expected benefit | Hypothesis | A concise user-authored plan may reduce memory/decision load and support agency before, during, and after difficult moments. |
+| Supporting evidence | Evidence-supported | Thread 02 supports testing selected planning, values, coping, and repair mechanisms while withholding treatment/efficacy claims. |
+| Required data | Hypothesis | Goal, reason/value, user-described contexts, preferred actions, device/platform choices, optional support route, review cadence, and outcomes selected by the user. |
+| Consent requirements | Verified | Every collection, automation, device integration, external processing, and human share is separate, visible, revocable, and editable. |
+| Safety risks | Verified | Moralizing, diagnosis implication, rumination, compulsive tracking, care displacement, coercion, and sensitive-data exposure. |
+| Misuse risks | Verified | Partner-authored goals, hidden monitoring, employer use, forced disclosure, public streaks, and inferred sexuality/religion/trauma are prohibited. |
+| Platform feasibility | Platform limitation | Device actions vary by Thread 01 capability; a plan must remain useful without enforcement. |
+| Success metric | Hypothesis | Plan comprehension, self-ownership, use of a chosen action, perceived agency, burden/shame, review completion, and safe exit. |
+| Exit strategy | Verified | Pause, archive, export, delete, or replace the plan without penalty; remove personalization that cannot explain itself. |
 
-## Artifact-Specific Work To Complete
+## Plan lifecycle
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about personal recovery plan spec after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Stage | Classification | User task | Output | Safety boundary |
+| --- | --- | --- | --- | --- |
+| 1. Scope | Verified | Confirm adult voluntary self-use and non-clinical limits. | Consent state | No partner/employer setup. |
+| 2. Choose | Hypothesis | State one self-chosen change in neutral language. | Editable goal | No diagnosis, forced abstinence, or moral score. |
+| 3. Connect | Hypothesis | Add a brief personal reason/value or skip. | Optional local text | User can hide/delete; do not infer values. |
+| 4. Notice | Hypothesis | Select or add broad situations where support might help. | User-authored context labels | No explicit content, browsing history, or causal claim required. |
+| 5. Prepare | Hypothesis | Choose one primary and one fallback action. | Calm-state action plan | Safety/accessibility checks; no punishment. |
+| 6. Configure | Platform limitation | Optionally select manual, schedule, or local platform entry. | Transparent rule | Automation off by default; show bypass/failure limits. |
+| 7. Support | Hypothesis | Optionally choose private, ally, professional, or emergency routes. | Bounded support choices | No automatic send or peer/AI clinical role. |
+| 8. Review | Hypothesis | Select useful non-clinical outcomes and cadence. | Minimal progress view | No required streak or “recovery score.” |
+| 9. Re-consent | Verified | Review changes affecting data, restriction, or people. | Versioned consent | Material change cannot rely on old consent. |
 
-## Known Weaknesses
+## Data fields
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Field | Classification | Need and default | Visibility / control |
+| --- | --- | --- | --- |
+| Adult/voluntary attestation | Verified | Required for current scope; minimal state | User visible; renew on material concern/change. |
+| Goal label | Hypothesis | Required for plan usefulness; user-authored | Local default; edit/delete. |
+| Personal reason/value | Hypothesis | Optional | Hidden by default in notifications/sharing. |
+| Context labels | Hypothesis | Optional broad categories | No automatic inference; edit/delete. |
+| Time/window | Hypothesis | Optional coarse schedule | Local; no location need. |
+| Device/action rule | Platform limitation | Optional | Exact platform permission and limitation visible. |
+| Primary/fallback action | Hypothesis | Required only to activate Spiral | User-authored/selected; review expiry. |
+| Ally/resource | Hypothesis | Optional and off | Exact recipient/share preview; remove instantly. |
+| Progress fields | Hypothesis | User selects; all optional for product use | Local summary; export/delete. |
+
+## Explicitly excluded inputs and inferences
+
+- **Verified:** no diagnosis, explicit-content upload, raw browsing history, screenshot capture, contact-list upload, precise location, or hidden partner reports.
+- **Verified:** no inferred sexuality, religion, trauma, mental-health condition, relationship status, “addiction severity,” honesty, or probability of relapse.
+- **Verified:** no eligibility, pricing, or feature restriction based on sensitive behavior or a generated risk score.
+
+## Plan output
+
+**Hypothesis:** A valid first plan fits on one calm-state summary:
+
+1. “My chosen change” - user wording.
+2. “Why it matters to me” - optional.
+3. “When I may want support” - up to three broad contexts.
+4. “First action / fallback” - one each.
+5. “How to open support” - manual by default.
+6. “Who or what can help” - optional, with boundaries.
+7. “What I want to notice” - up to three selected outcomes.
+8. “Review / pause / delete” - always visible.
+
+## Failure and exit strategy
+
+| Failure | Classification | Required response |
+| --- | --- | --- |
+| Plan is not used | Verified | Ask whether it still fits; never infer resistance or escalate punishment. |
+| Goal changes | Verified | Preserve user agency; edit/archive rather than mark failure. |
+| Automation fails | Platform limitation | Keep plan/manual Spiral usable and explain limitation. |
+| Tracking increases shame or checking | Hypothesis | Turn off measure, simplify view, and offer deletion. |
+| User needs clinical help | Verified | Show qualified-care route without diagnosing or abandoning private tools. |
+
+## Cycle 1 recommendation
+
+- **Hypothesis:** Test a paper/low-fidelity plan with manual Spiral and no account, AI, monitoring, or human share.
+- **Verified:** Do not call the plan a treatment plan or claim recovery outcomes.
+- **Open question:** “Personal plan” may be safer language than “recovery plan”; user and clinical review must decide.

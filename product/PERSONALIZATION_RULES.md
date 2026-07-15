@@ -1,62 +1,56 @@
 # Personalization rules
 
-Status: Cycle 1 Draft  
-Issue: #21  
-Branch: `codex/21-personal-recovery-plan`  
-Research date: 2026-07-15  
-Stage: product / education / personalization
+Status: Cycle 1 Draft - deterministic, explainable rules only
+Issue: #21
+Branch: `codex/21-personal-recovery-plan`
 
-## Statement Classification Key
+## Invariants
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+1. **Verified:** Personalization uses explicit user choices and transparent rules, not inferred diagnosis or hidden behavioral profiles.
+2. **Verified:** “Why am I seeing this?” reveals the input, rule, and way to change/disable it.
+3. **Verified:** A recommendation never sends data, changes a restriction, or contacts a person without separate confirmation.
+4. **Verified:** Core safety, privacy, consent, export, deletion, and professional-care controls are never personalized away.
+5. **Verified:** No objective optimizes engagement, shame, vulnerability, or commercial conversion.
 
-## Purpose
+## Allowed Cycle 1 rules
 
-Define transparent, user-controlled adaptation rules and excluded inferences.
+| ID | Classification | Explicit input | Rule/output | User control | Validation |
+| --- | --- | --- | --- | --- | --- |
+| P01 | Hypothesis | User selects manual-only support. | Show manual Spiral; hide automation prompts. | Change anytime. | Comprehension and usefulness. |
+| P02 | Hypothesis | User selects one broad context. | Suggest the user-authored action attached to it. | Inspect/edit/disable. | False-context and burden rate. |
+| P03 | Hypothesis | User marks an action unavailable/unhelpful. | Offer the configured fallback next time. | Undo/reset. | Incremental usefulness. |
+| P04 | Verified | User disables notifications. | Send none. | Immediate setting. | Delivery/system test. |
+| P05 | Hypothesis | User selects concise vs explanatory education. | Adjust module length, not scientific conclusion. | Toggle. | Comprehension parity. |
+| P06 | Verified | User revokes ally consent. | Remove ally option and cancel pending messages. | Immediate. | No-send property test. |
+| P07 | Hypothesis | User chooses review cadence. | Offer review at that cadence with neutral snooze. | Pause/disable. | Unwanted prompt rate. |
+| P08 | Platform limitation | User enables a verified local platform rule. | Show only supported capability and failure recovery. | Disable locally. | Thread 01 platform tests. |
 
-## Architecture / Product Pre-Check
+## Prohibited rules and inferences
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define transparent, user-controlled adaptation rules and excluded inferences. | Issue #21 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The product must avoid diagnosis and therapy replacement. | README.md; PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md | Onboarding asks goals and patterns, not clinical labels. |
-| Evidence-supported | User-authored values, triggers, high-risk windows, and device setup are appropriate Phase 0 data categories. | RESEARCH_PROTOCOL.md; INTERVIEW_GUIDES.md | Plan inputs can be local and user-visible. |
-| Hypothesis | Progress should track repair speed, plan adherence, sleep/environment changes, and reduced high-risk loops rather than only abstinence streaks. | Phase 0 relapse debrief and product doctrine | Outcome model should avoid all-or-nothing shame. |
-| Open question | Which curriculum modules improve user trust and actionability needs interviews and expert review. | Thread 02 and Phase 0 dependency | Treat curriculum as provisional. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Classification | Prohibited behavior | Reason |
 | --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Verified | Infer CSBD, “addiction severity,” relapse likelihood, honesty, or treatment need. | Clinical overreach and unvalidated inference. |
+| Verified | Infer sexuality, religion, trauma, mental health, relationship status, or explicit interests. | Sensitive/protected inference not required. |
+| Verified | Use browsing/content, location, contacts, purchases, or late-night use to infer risk without explicit narrow consent. | Surveillance and false inference. |
+| Verified | Increase restriction, notify an ally, or expose data because a score crossed a threshold. | Coercion and unsafe automation. |
+| Verified | Personalize price, access, persuasion, or cancellation using vulnerability/behavior. | Exploitation and dark patterns. |
+| Verified | Rank users, peers, or “recovery” publicly. | Shame, gaming, and sensitive disclosure. |
 
-## Artifact-Specific Work To Complete
+## Rule record
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about personalization rules after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Field | Classification | Requirement |
+| --- | --- | --- |
+| Input | Verified | Named explicit user choice and location/retention. |
+| Output | Verified | Exact visible change; no hidden side effect. |
+| Rationale | Hypothesis | Benefit statement and supporting evidence/uncertainty. |
+| Consent | Verified | Whether rule is core/local/external/share and how to revoke. |
+| Safety | Verified | Misuse, false-positive, coercion, and accessibility cases. |
+| Metric | Hypothesis | Usefulness plus burden/adverse-effect measure. |
+| Exit | Verified | Disable, reset, delete derived state, and static fallback. |
+| Version | Verified | Owner, date, source, review trigger. |
 
-## Known Weaknesses
+## Escalation order
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** First simplify or ask the user; do not silently infer more data.
+- **Verified:** If no transparent low-risk rule solves the problem, leave the experience unpersonalized.
+- **Open question:** Machine-learned personalization is outside Cycle 1 and requires a new evidence, privacy, fairness, security, and clinical review.

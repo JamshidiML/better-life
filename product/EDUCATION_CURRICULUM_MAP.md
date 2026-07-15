@@ -1,62 +1,42 @@
 # Education curriculum map
 
-Status: Cycle 1 Draft  
-Issue: #21  
-Branch: `codex/21-personal-recovery-plan`  
-Research date: 2026-07-15  
-Stage: product / education / personalization
+Status: Cycle 1 Draft - content outline, not treatment
+Issue: #21
+Branch: `codex/21-personal-recovery-plan`
 
-## Statement Classification Key
+## Curriculum rules
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** Education explains concepts and product choices; it does not diagnose, prescribe treatment, or promise change.
+- **Verified:** Every module is optional, short, source-linked, clinically reviewed where relevant, and removable from recommendations.
+- **Verified:** User completion is not a recovery score and never gates core controls, export, deletion, or care routes.
 
-## Purpose
+| Module | Classification | Learning aim | Candidate content | Required review / prohibited claim | Product action |
+| --- | --- | --- | --- | --- | --- |
+| E01 Scope and self-chosen goals | Evidence-supported | Distinguish product support from diagnosis and morality. | Frequency alone, impaired control/impact, moral incongruence, professional assessment boundary. | Clinical review; never tell user they do/do not have CSBD. | Write/edit neutral goal. |
+| E02 Consent and privacy | Verified | Understand what the product can see/share. | Local vs external data, permissions, ally preview, delete/export. | Privacy/legal review; no “fully anonymous/private” absolute. | Review controls. |
+| E03 Pattern reflection | Hypothesis | Notice broad contexts without causal certainty. | User-selected time, environment, emotion, routine categories. | Clinical/user review; no deterministic trigger claim. | Select/skip context labels. |
+| E04 Values and motivation | Hypothesis | Connect change to a chosen life direction. | Values prompt and autonomy check. | Diversity/clinical review; no required religious or abstinence frame. | Optional reason/value. |
+| E05 Prepare one action | Evidence-supported mechanism, product hypothesis | Convert intention into a safe next step. | Environment change, replacement action, private plan. | Clinical/accessibility review; no guaranteed urge reduction. | Choose primary/fallback. |
+| E06 Use the Protective Spiral | Hypothesis | Understand manual support and safe exit. | One-action flow, limitations, ally confirmation, emergency boundary. | Product/safety review; no prevention promise. | Configure manual start. |
+| E07 Setbacks and repair | Evidence-supported mechanism, product hypothesis | Avoid all-or-nothing product framing. | Optional debrief, one adjustment, self-compassionate neutral copy. | Clinical/user review; no “relapse” diagnosis or forced confession. | Optional repair plan. |
+| E08 Human and professional support | Evidence-supported boundary | Know role limits and available paths. | Ally/peer/AI limits, qualified care, crisis resources. | Country/legal/clinical maintenance. | Save optional route. |
+| E09 Platform limits | Platform limitation | Understand what blocking can and cannot do. | Browser/device gaps, bypass, false blocks, safe recovery. | Platform verification. | Choose no automation or informed rule. |
+| E10 Review progress safely | Hypothesis | Choose measures without shame/compulsion. | Agency, plan fit, burden, setbacks, optional frequency. | Method/clinical review; no score as diagnosis. | Select up to three measures. |
 
-Map learning modules and review boundaries without treatment claims.
+## Sequencing
 
-## Architecture / Product Pre-Check
+| Classification | Decision |
+| --- | --- |
+| Hypothesis | E01-E02 appear before plan activation because scope and data control are foundational. |
+| Hypothesis | E03-E06 appear only when the user is calmly configuring, not during the acute Spiral. |
+| Verified | E08 professional/emergency routes remain directly accessible without completing modules. |
+| Hypothesis | E07 follows a user-initiated review, never an automatically detected “failure.” |
+| Verified | Users may skip, revisit, hide, or reset all curriculum progress. |
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Map learning modules and review boundaries without treatment claims. | Issue #21 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+## Evidence and maintenance gate
 
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | The product must avoid diagnosis and therapy replacement. | README.md; PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md | Onboarding asks goals and patterns, not clinical labels. |
-| Evidence-supported | User-authored values, triggers, high-risk windows, and device setup are appropriate Phase 0 data categories. | RESEARCH_PROTOCOL.md; INTERVIEW_GUIDES.md | Plan inputs can be local and user-visible. |
-| Hypothesis | Progress should track repair speed, plan adherence, sleep/environment changes, and reduced high-risk loops rather than only abstinence streaks. | Phase 0 relapse debrief and product doctrine | Outcome model should avoid all-or-nothing shame. |
-| Open question | Which curriculum modules improve user trust and actionability needs interviews and expert review. | Thread 02 and Phase 0 dependency | Treat curriculum as provisional. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about education curriculum map after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Verified:** Each material claim gets a `CLAIMS_REGISTER` ID and source record from Thread 02.
+2. **Verified:** Clinical reviewers approve construct, tone, exclusions, and care boundaries.
+3. **Verified:** User tests check comprehension, shame, coercion, cultural exclusion, and actionability.
+4. **Verified:** Content has owner, version, review date, and withdrawal trigger.
+5. **Open question:** No module is participant-ready in Cycle 1.

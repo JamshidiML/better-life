@@ -1,9 +1,9 @@
 # Execution Thread 06 — Cycle 1 Index
 
-Issue: #21  
-Title: Personal recovery plan and education system  
-Branch: `codex/21-personal-recovery-plan`  
-Date: 2026-07-15  
+Issue: #21
+Title: Personal recovery plan and education system
+Branch: `codex/21-personal-recovery-plan`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Personal recovery plan spec](../../product/PERSONAL_RECOVERY_PLAN_SPEC.md)
-- Evidence-supported: [Education curriculum map](../../product/EDUCATION_CURRICULUM_MAP.md)
-- Evidence-supported: [Personalization rules](../../product/PERSONALIZATION_RULES.md)
-- Evidence-supported: [Progress and outcome model](../../product/PROGRESS_AND_OUTCOME_MODEL.md)
+- Evidence-supported: [Personal plan spec](../../../product/PERSONAL_RECOVERY_PLAN_SPEC.md)
+- Evidence-supported: [Education curriculum map](../../../product/EDUCATION_CURRICULUM_MAP.md)
+- Evidence-supported: [Personalization rules](../../../product/PERSONALIZATION_RULES.md)
+- Evidence-supported: [Progress and outcome model](../../../product/PROGRESS_AND_OUTCOME_MODEL.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT find any hidden diagnosis, sensitive inference, coercion, or proxy optimization in the model?
+- Open question: Do clinical/method reviewers accept the curriculum and non-clinical outcome hierarchy?
+- Open question: Does the founder prefer “personal plan” over “recovery plan” until user language is validated?

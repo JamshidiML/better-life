@@ -1,62 +1,63 @@
-# Quality Scorecard — Thread 06, Cycle 1
+# Quality Scorecard - Thread 06, Cycle 1
 
 ## Context
 
 - Issue: #21
 - Branch: `codex/21-personal-recovery-plan`
 - Author: Codex
-- Reviewer: ChatGPT / founder pending
+- Reviewer: ChatGPT / founder / clinical-method-privacy reviewers pending
 - Date: 2026-07-15
-- Stage: product / education / personalization
 
-## Mandatory Gates
+## Mandatory gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
+- [x] Four required artifacts and thread logs are complete.
+- [x] Plan lifecycle, curriculum, transparent rules, prohibited inferences, outcomes, and exits are explicit.
+- [x] No diagnosis, treatment, public rank, required streak, or hidden personalization is allowed.
+- [ ] Clinical/method/privacy review and diverse user-language testing pass.
+- [ ] Phase 0 evidence establishes which fields/modules/outcomes are useful.
 
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+Gate status: **Revision required; no participant-ready curriculum or production implementation.**
 
-## Shared Score
+## Shared score
 
 | Dimension | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 10 | Lifecycle/data spec, ten modules, eight allowed rules, exclusions, outcomes, logs. | Detailed content copy absent. |
+| Factual accuracy | 10 | 8 | Diagnostic and evidence-transfer boundaries align with Thread 02. | Specialist review pending. |
+| Evidence and traceability | 10 | 7 | Each module/mechanism is classified and claim-gated. | No product outcome evidence. |
+| Safety and harm prevention | 10 | 10 | Coercion, shame, care displacement, tracking and inference controls are explicit. | User tests absent. |
+| Privacy and consent | 10 | 10 | Minimal/local fields, prohibited data/inference, granular automation/sharing. | Thread 07 final architecture pending. |
+| Internal consistency | 5 | 5 | Plan, education, rules, outcomes, assumptions and risks align. | Cross-thread review pending. |
+| Clarity and usability | 5 | 5 | One-page plan and auditable rule records. | Language/accessibility testing absent. |
+| Feasibility and realism | 5 | 5 | Deterministic manual/local scope avoids unnecessary ML/monitoring. | No prototype. |
+| Testability and verification | 5 | 4 | Measures, rule validation, and falsification paths exist. | Thresholds/instruments not selected. |
 
-## Specialist Score
+## Specialist score
 
 | Criterion | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Personalization logic without diagnosis | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Educational pathway and outcome quality | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| User control, adaptation, and professional-care boundaries | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Personalization without diagnosis | 10 | 9 | Explicit inputs, explainable rules, prohibited inference and objective list. | Enforcement design not tested. |
+| Educational pathway and outcome quality | 10 | 8 | Ten modules and multi-family adverse-effect-aware outcomes. | Clinical/method approval absent. |
+| User control and care boundaries | 10 | 9 | Edit/archive/delete, no hidden share, care routes accessible without completion. | User comprehension absent. |
 
 ## Result
 
-- Creator self-score: 76/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
+- Creator self-score: **90/100**
+- Critical defects: 0 identified in documentation
+- High defects: 2 - no user evidence; no clinical/method/privacy sign-off
+- Medium defects: 2 - participant copy and validated measures absent
 - Confidence: Medium
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Decision: **Revise**
 
-## Score History
+## Performed verification
+
+- Verified: all required artifacts were cross-checked for prohibited inference and consent consistency.
+- Verified: Thread 02 claim boundaries and Thread 05 state/measure concepts were incorporated without copying branch files.
+- Verified: no production code was added; links and Markdown whitespace were checked locally.
+- Open question: all specialist and user validation remains pending.
+
+## Score history
 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 76 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 90 | Pending | Pending | 0 | 2 author-identified | Revise |
