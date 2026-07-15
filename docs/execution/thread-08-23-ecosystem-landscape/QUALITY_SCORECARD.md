@@ -1,4 +1,4 @@
-# Quality Scorecard — Thread 08, Cycle 1
+# Quality Scorecard - Thread 08, Cycle 1
 
 ## Context
 
@@ -7,56 +7,58 @@
 - Author: Codex
 - Reviewer: ChatGPT / founder pending
 - Date: 2026-07-15
-- Stage: research / ecosystem
 
-## Mandatory Gates
+## Mandatory gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
+- [x] Four required artifacts and thread logs are complete.
+- [x] Vendor-stated claims, independent evidence, hypotheses, and open questions are separated.
+- [x] No outreach, endorsement, affiliation, public comparison, or partnership is implied.
+- [x] Advisor and partnership models include safety, privacy, conflict, inclusion, consent, and exit.
+- [ ] Product sample is systematically expanded and hands-on/current facts are verified.
+- [ ] Missing organization/population categories and founder/independent review pass.
 
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+Gate status: **Revision required; internal research only.**
 
-## Shared Score
+## Shared score
 
 | Dimension | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 6 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 6 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 5 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 9 | Competitors/substitutes, organizations, role map, screening, logs. | Named product/org sample incomplete. |
+| Factual accuracy | 10 | 8 | Named statements link to official sources and are marked vendor/organization-stated. | No hands-on/vendor confirmation. |
+| Evidence and traceability | 10 | 8 | Dated cutoff, sources, transfer limits, and next protocol. | Search/sampling not systematic. |
+| Safety and harm prevention | 10 | 9 | Coercion, shame, overclaim, crisis, exploitation, and gate controls. | Stakeholder review absent. |
+| Privacy and consent | 10 | 9 | No raw data/outreach; partnership data and advisor privacy gates. | Candidate-specific diligence absent. |
+| Internal consistency | 5 | 5 | All artifacts prioritize learning and challenge before partnership. | Cross-thread review pending. |
+| Clarity and usability | 5 | 5 | Maps, roles, priorities, scoring, and rejections are actionable. | Public-facing comparison intentionally absent. |
+| Feasibility and realism | 5 | 4 | Paid scoped review and phased research are practical. | Budget/capacity unknown. |
+| Testability and verification | 5 | 4 | Hands-on comparison protocol and advisor/partner evidence requirements exist. | Threshold/sample not frozen. |
 
-## Specialist Score
+## Specialist score
 
 | Criterion | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Market and competitor coverage | 10 | 5 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| NGO, association, advisor, and partnership relevance | 10 | 5 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Source freshness, prioritization, and positioning insight | 10 | 5 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Market and competitor coverage | 10 | 7 | Named specialist sample plus substitute families and dimensions. | Only three named products; no hands-on tests. |
+| NGO, advisor, partnership relevance | 10 | 8 | Germany/EU named sample, role rubric, gates, priorities. | Key inclusion categories unnamed. |
+| Freshness, prioritization, positioning insight | 10 | 8 | Research cutoff, volatility warning, hypotheses/falsification, ordered reviews. | No repeated market snapshot or user validation. |
 
 ## Result
 
-- Creator self-score: 60/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
-- Confidence: Low
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Creator self-score: **84/100**
+- Critical defects: 0 identified
+- High defects: 3 - incomplete sample, no hands-on verification, no stakeholder/user validation
+- Medium defects: 2 - budget and named inclusion candidates absent
+- Confidence: Medium-low
+- Decision: **Revise**
 
-## Score History
+## Performed verification
+
+- Verified: named product and organization claims were checked against linked official pages in Cycle 1.
+- Verified: every external entity is presented without relationship or endorsement.
+- Verified: no outreach or production code occurred; links and Markdown whitespace were checked locally.
+- Open question: systematic sampling, hands-on testing, and stakeholder review remain pending.
+
+## Score history
 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 60 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 84 | Pending | Pending | 0 | 3 author-identified | Revise |

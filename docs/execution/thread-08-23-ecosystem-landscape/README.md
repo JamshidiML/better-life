@@ -1,9 +1,9 @@
 # Execution Thread 08 — Cycle 1 Index
 
-Issue: #23  
-Title: Market, competitor, NGO, and advisor landscape  
-Branch: `codex/23-ecosystem-landscape`  
-Date: 2026-07-15  
+Issue: #23
+Title: Market, competitor, NGO, and advisor landscape
+Branch: `codex/23-ecosystem-landscape`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Competitor and substitute map](../../research/COMPETITOR_AND_SUBSTITUTE_MAP.md)
-- Evidence-supported: [NGO and association landscape](../../research/NGO_ASSOCIATION_LANDSCAPE.md)
-- Evidence-supported: [Advisor candidate map](../../research/ADVISOR_CANDIDATE_MAP.md)
-- Evidence-supported: [Partnership screening criteria](../../business/PARTNERSHIP_SCREENING_CRITERIA.md)
+- Evidence-supported: [Competitor and substitute map](../../../research/COMPETITOR_AND_SUBSTITUTE_MAP.md)
+- Evidence-supported: [NGO and association landscape](../../../research/NGO_ASSOCIATION_LANDSCAPE.md)
+- Evidence-supported: [Advisor candidate map](../../../research/ADVISOR_CANDIDATE_MAP.md)
+- Evidence-supported: [Partnership screening criteria](../../../business/PARTNERSHIP_SCREENING_CRITERIA.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT find any vendor marketing accidentally treated as efficacy, safety, or privacy evidence?
+- Open question: Does the founder approve role-first paid review before named outreach or commercial partnership work?
+- Open question: Which missing accessibility, LGBTQ+, multilingual, and lived-experience perspectives must be added first?

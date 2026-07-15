@@ -1,60 +1,65 @@
 # Partnership screening criteria
 
-Status: Cycle 1 Draft  
-Issue: #23  
-Branch: `codex/23-ecosystem-landscape`  
-Research date: 2026-07-15  
-Stage: research / ecosystem
+Status: Cycle 1 Draft - no partnership or outreach authorized
+Issue: #23
+Branch: `codex/23-ecosystem-landscape`
 
-## Statement Classification Key
+## Pre-check
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
-
-## Purpose
-
-Define conflict, safety, privacy, endorsement, and mission-alignment criteria.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define conflict, safety, privacy, endorsement, and mission-alignment criteria. | Issue #23 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | No outreach, endorsement, affiliation, or partnership claim has been made in this thread. | Issue #23 constraint | Landscape is research-only. |
-| Evidence-supported | Existing accountability/shameware products create useful negative reference points around surveillance, shame, partner coercion, and policy risk. | Wired accountability-app reporting; Phase 0 risk register | Better Life positioning should emphasize voluntary, transparent, minimal-disclosure design. |
-| Hypothesis | Learning partners should be prioritized over commercial partners until safety and clinical boundaries mature. | Founding sprint Workstream C | Use outreach only after founder-approved screening. |
-| Open question | Current pricing, moderation, clinical evidence, and data practices for competitors require deeper source-by-source verification. | Initial web pass incomplete | Do not use this map for public positioning yet. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Requirement before discussion |
 | --- | --- | --- |
-| Evidence-supported | https://www.wired.com/story/covenant-eyes-anti-porn-accountability-monitoring-apps/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.wired.com/story/anti-porn-covenant-eyes-bond-revoked/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Named need that the partner can address better than internal work or a neutral link. |
+| Expected benefit | Hypothesis | Specific learning, review, access, or operation; no halo/endorsement-only goal. |
+| Supporting evidence | Verified | Current official scope plus independent references where risk warrants. |
+| Required data | Verified | Data-flow inventory; default is no participant or intimate data. |
+| Consent | Verified | User and participant choices are not bundled into the relationship. |
+| Safety/misuse | Verified | Coercion, surveillance, shame, discrimination, clinical/crisis overreach, and commercial pressure analyzed. |
+| Feasibility | Open question | Capability, staffing, jurisdiction, reliability, termination, and incident responsibilities verified. |
+| Success metric | Hypothesis | Defined benefit, safety, privacy, independence, and cost measures. |
+| Exit strategy | Verified | Termination, user continuity, data return/deletion, listing removal, and public statement process. |
 
-## Artifact-Specific Work To Complete
+## Mandatory gates
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about partnership screening criteria after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Gate | Classification | Pass condition |
+| --- | --- | --- |
+| Mission and independence | Verified | Partner cannot control doctrine, research result, user goal, care choice, or publication beyond legitimate confidentiality. |
+| Safety and anti-coercion | Verified | No hidden monitoring, partner/employer control, shame, impossible-bypass, or emergency promise. |
+| Evidence and claims | Verified | No unsupported clinical/outcome claim or transferred endorsement. |
+| Privacy/security | Verified | Thread 07 review, minimal data, appropriate agreements, processors, incident/rights/deletion paths. |
+| Inclusion | Verified | No discriminatory access, moral condemnation, forced theology, or exclusionary default. |
+| Commercial fairness | Verified | Fees, referrals, ranking, conflicts, renewal/cancellation, and incentives are disclosed; no pay-to-rank support. |
+| Operational accountability | Verified | Named owners, service limits, response/incident/appeal process, and audit right where needed. |
+| Reputation/claim permission | Verified | Exact name/logo/quote/endorsement permissions in writing; default is no implied endorsement. |
 
-## Known Weaknesses
+## Red flags and automatic rejection
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** demands raw participant notes, explicit content, browsing history, contact lists, or unrelated identifiers.
+- **Verified:** proposes secret reporting to a partner, employer, parent, organization, insurer, advertiser, or seller.
+- **Verified:** markets cure, guaranteed recovery, diagnosis from app data, or impossible-to-bypass control without valid evidence.
+- **Verified:** refuses security/privacy diligence, conflict disclosure, user deletion/export rights, incident notification, or termination handling.
+- **Verified:** uses shame, discrimination, conversion pressure, coercive religion/ideology, or vulnerable-user upselling.
+- **Verified:** makes Better Life dependent on a proprietary provider without tested data/feature exit.
+
+## Scored comparison after mandatory gates (100)
+
+| Dimension | Weight | Classification |
+| --- | ---: | --- |
+| User benefit and fit | 20 | Hypothesis evaluated with evidence. |
+| Safety and anti-coercion quality | 20 | Verified against scenarios. |
+| Privacy/security/data minimization | 20 | Verified by specialist diligence. |
+| Evidence and claim integrity | 15 | Verified source/claim review. |
+| Independence, inclusion, and conflicts | 10 | Verified governance review. |
+| Operational reliability and reversibility | 10 | Verified through contract/test. |
+| Cost and sustainability | 5 | Hypothesis until Thread 09 validation. |
+
+**Verified:** A score cannot compensate for a failed mandatory gate. No acceptance threshold is set until founder/legal/safety review.
+
+## Relationship types and current preference
+
+| Type | Classification | Cycle 1 posture |
+| --- | --- | --- |
+| Paid independent review | Hypothesis | Preferred for clinical, legal, security, coercion, and accessibility challenges. |
+| Research learning conversation | Hypothesis | Possible after approved brief and no raw participant data. |
+| Neutral resource listing | Open question | Requires listing/maintenance/conflict criteria; no endorsement. |
+| Referral/integration/data sharing | Verified | Deferred until product, legal, privacy, safety, and operational gates. |
+| Marketing/co-branding/distribution | Verified | Premature and not authorized. |

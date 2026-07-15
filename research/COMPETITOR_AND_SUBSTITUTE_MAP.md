@@ -1,60 +1,65 @@
 # Competitor and substitute map
 
-Status: Cycle 1 Draft  
-Issue: #23  
-Branch: `codex/23-ecosystem-landscape`  
-Research date: 2026-07-15  
-Stage: research / ecosystem
+Status: Cycle 1 Draft - research only, not public comparison
+Issue: #23
+Branch: `codex/23-ecosystem-landscape`
+Research cutoff: 2026-07-15
 
-## Statement Classification Key
+## Method and claim boundary
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** Cycle 1 sampled official product pages/app listings and authoritative organization pages; it did not perform hands-on product tests, purchase subscriptions, inspect code, or obtain vendor confirmation.
+- **Verified:** A vendor-stated feature or benefit is marketing evidence about positioning, not clinical evidence or independent proof that the feature works safely.
+- **Open question:** Pricing, regional availability, platform capabilities, data practices, and terms are volatile and require a dated refresh before any external use.
+- **Verified:** No vendor or organization has been contacted and no endorsement, affiliation, or partnership is implied.
 
-## Purpose
+## Market frame
 
-Classify blockers, accountability apps, recovery apps, digital therapeutics, peer-support platforms, and substitutes.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| User job | Classification | Solution family | Better Life learning question |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Classify blockers, accountability apps, recovery apps, digital therapeutics, peer-support platforms, and substitutes. | Issue #23 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Restrict access | Verified | Browser/device/network blockers and OS controls | Can voluntary friction remain transparent, recoverable, and useful despite bypass? |
+| Create accountability | Verified | Monitoring/reporting to a partner or ally | Can support exist without surveillance, shame, or third-party control? |
+| Learn and plan | Verified | Recovery/self-help apps, education, journaling | Which mechanisms are evidence-bounded and useful without therapy claims? |
+| Receive human support | Verified | Clinicians, mutual-aid groups, helplines, chosen allies | Should Better Life route/augment rather than build a new network? |
+| Protect privacy | Verified | Local tools, DNS/browser configuration, digital-rights practices | Can accountless/local defaults be a primary differentiator and not just copy? |
 
-## Cycle 1 Findings
+## Named sample
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | No outreach, endorsement, affiliation, or partnership claim has been made in this thread. | Issue #23 constraint | Landscape is research-only. |
-| Evidence-supported | Existing accountability/shameware products create useful negative reference points around surveillance, shame, partner coercion, and policy risk. | Wired accountability-app reporting; Phase 0 risk register | Better Life positioning should emphasize voluntary, transparent, minimal-disclosure design. |
-| Hypothesis | Learning partners should be prioritized over commercial partners until safety and clinical boundaries mature. | Founding sprint Workstream C | Use outreach only after founder-approved screening. |
-| Open question | Current pricing, moderation, clinical evidence, and data practices for competitors require deeper source-by-source verification. | Initial web pass incomplete | Do not use this map for public positioning yet. |
+| Product / substitute | Classification | Officially observed positioning or capability | Evidence and uncertainty | Better Life implication |
+| --- | --- | --- | --- | --- |
+| Covenant Eyes | Verified as vendor-stated | Its site describes blocking/accountability and “Victory” reports; its EULA uses monitoring/report terminology and requires informing other device users. [How it works](https://www.covenanteyes.com/victory/how-it-works/); [EULA](https://www.covenanteyes.com/legal/end-user-license-agreement/) | No independent efficacy, coercion, privacy, or current platform test completed. | Negative/contrast hypothesis: user-owned visibility and no secret partner monitoring. Do not make superiority claim. |
+| Migiri | Verified as vendor-stated | Its FAQ and product education describe blocking and recovery-oriented app functions. [FAQ](https://www.migiri.app/faq); [education page](https://www.migiri.app/porn-addiction) | Vendor claims and terminology are not clinical validation; hands-on/data-practice review absent. | Compare how blocking and self-help are combined; preserve Better Life claim discipline. |
+| BlockerX | Verified as listing-stated | App Store listing presents a porn-blocking product and associated feature claims. [App Store](https://apps.apple.com/us/app/blockerx-pornblocker-app/id1522854086) | Store listing can change and does not prove feature behavior, privacy, or outcomes. | Platform breadth and app-store messaging require independent verification. |
+| Apple Screen Time / Family Controls | Platform limitation | First-party Apple controls and APIs provide selected restriction capabilities under platform/entitlement rules. | Thread 01 contains current official sources and limits; not a clinical product. | Strong substitute for restriction; Better Life must add validated planning/support value rather than duplicate controls. |
+| Android Digital Wellbeing / device policy / DNS tools | Platform limitation | OS/network tools can provide timers, restrictions, or filtering depending on configuration/management. | Coverage and permissions vary; current official review belongs to Thread 01. | User may assemble a no-subscription solution; simplicity and truthful limits matter. |
+| General habit/journaling apps | Hypothesis | Planning, reflection, reminders, and progress can be met without intimate specialization. | No named sample reviewed in Cycle 1. | Better Life must show why domain-specific language/safety adds value without collecting more data. |
+| Qualified clinician / sex therapist | Evidence-supported substitute | Professional assessment and care can address clinical and differential needs outside product scope. | Access, quality, cost, and fit vary; Better Life cannot evaluate individual care. | Route, never replace or impersonate. |
+| Mutual-aid fellowship / peer group | Evidence-supported substitute | Existing groups provide meetings and lived-experience support under their own traditions. | Thread 03 warns against transferring alcohol evidence or copying identity. | Research preparation/routing before a proprietary network. |
+| Chosen ally | Hypothesis | A trusted person may provide encouragement without a platform peer network. | Benefit and coercion risk both require user evidence. | Safer comparison candidate than stranger matching, with explicit message consent. |
+| Self-configured browser/DNS/hosts controls | Platform limitation | Technically capable users can create local/network friction. | Bypass, maintenance, overblocking, and shared-household effects vary. | Better Life should not claim unique blocking; focus on safe configuration and repair if validated. |
 
-## Source Register
+## Comparison dimensions for future hands-on research
 
-| Classification | Source | Cycle 1 use |
+| Dimension | Classification | Evidence required |
 | --- | --- | --- |
-| Evidence-supported | https://www.wired.com/story/covenant-eyes-anti-porn-accountability-monitoring-apps/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.wired.com/story/anti-porn-covenant-eyes-bond-revoked/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Actual platform coverage/bypass | Verified | Current version, device matrix, synthetic-domain tests, false-block and recovery results. |
+| Monitoring and recipient visibility | Verified | Product test, permission/data-flow review, current policy/terms, exact user disclosure. |
+| Consent and exit | Verified | Setup/remove/recovery/coercion walkthrough; partner-role permissions. |
+| Data and security | Verified | Privacy policy is insufficient alone: inspect SDKs/flows where lawful, retention, deletion/export, processors, incident history. |
+| Clinical/outcome claims | Verified | Exact claim, population, intervention, comparator, outcome, independent evidence, harms, and regulatory context. |
+| Price/value | Verified | Country, date, tax, platform, free trial, cancellation, and included service. |
+| Accessibility/inclusion | Verified | Language, disability, gender/sexuality, values/religion, shame and moral framing tests. |
 
-## Artifact-Specific Work To Complete
+## Positioning hypotheses, not claims
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about competitor and substitute map after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Classification | Hypothesis | Falsification |
+| --- | --- | --- |
+| Hypothesis | A local/accountless personal plan plus manual Spiral may occupy a quieter space between blocker and therapy. | Users see no incremental value over OS tools/journaling or require professional care instead. |
+| Hypothesis | Anti-coercion and precise platform/privacy limits are meaningful trust differentiators. | Users do not understand/trust the distinction or implementation cannot prove it. |
+| Hypothesis | Repair-oriented progress is preferable to surveillance/streak-first framing for some users. | User research shows it is confusing, invalidating, or ineffective. |
 
-## Known Weaknesses
+## Next research actions
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Open question:** Build a dated 6-10 product sample across Germany/EU, including free substitutes, and freeze a comparison protocol before testing.
+2. **Open question:** Purchase/test only after founder approves budget, test accounts, sensitive-data protocol, and legal terms.
+3. **Open question:** Recruit users who tried blockers, accountability, therapy, mutual aid, and no tool; do not assume one “competitor” category.
+4. **Verified:** Do not publish “more private,” “safer,” “evidence-based,” or “better” comparisons from Cycle 1.
