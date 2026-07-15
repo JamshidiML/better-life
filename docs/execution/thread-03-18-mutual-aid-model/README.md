@@ -1,9 +1,9 @@
 # Execution Thread 03 — Cycle 1 Index
 
-Issue: #18  
-Title: Mutual-aid fellowship model and digital translation  
-Branch: `codex/18-mutual-aid-model`  
-Date: 2026-07-15  
+Issue: #18
+Title: Mutual-aid fellowship model and digital translation
+Branch: `codex/18-mutual-aid-model`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,9 +24,9 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Mutual-aid mechanism map](../../research/MUTUAL_AID_MECHANISM_MAP.md)
-- Evidence-supported: [Digital fellowship principles](../../product/DIGITAL_FELLOWSHIP_PRINCIPLES.md)
-- Evidence-supported: [Human versus AI responsibility boundaries](../../product/HUMAN_VS_AI_RESPONSIBILITY_BOUNDARIES.md)
+- Evidence-supported: [Mutual-aid mechanism map](../../../research/MUTUAL_AID_MECHANISM_MAP.md)
+- Evidence-supported: [Digital fellowship principles](../../../product/DIGITAL_FELLOWSHIP_PRINCIPLES.md)
+- Evidence-supported: [Human versus AI responsibility boundaries](../../../product/HUMAN_VS_AI_RESPONSIBILITY_BOUNDARIES.md)
 
 ## Quality Artifacts
 
@@ -36,6 +36,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT agree that augmentation should be researched before a proprietary peer network?
+- Open question: Does the founder accept the prohibition on copying fellowship identity, sponsor roles, theology, or universal abstinence framing?
+- Open question: Do safety reviewers agree that AI and peers cannot own diagnosis, moderation, or emergency response?

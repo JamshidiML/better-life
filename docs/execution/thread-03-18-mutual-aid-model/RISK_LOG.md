@@ -1,19 +1,21 @@
-# Risk Log — Thread 03
+# Risk Log - Thread 03
 
-Issue: #18  
-Branch: `codex/18-mutual-aid-model`  
+Issue: #18
+Branch: `codex/18-mutual-aid-model`
 Date: 2026-07-15
 
-| ID | Severity | Risk | Cycle 1 mitigation | Status |
-| --- | --- | --- | --- | --- |
-| R01 | High | Implied affiliation with AA/NA/SA-style fellowships. | Use independent language and source citations. | Open until independent review confirms mitigation |
-| R02 | High | AI is treated as sponsor/therapist replacement. | Human-vs-AI boundaries file blocks this. | Open until independent review confirms mitigation |
-| R03 | Medium | Digital product over-organizes what should remain peer/community-led. | Keep principles, not clone mechanics. | Open until independent review confirms mitigation |
+| ID | Severity | Classification | Risk | Control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R01 | Critical | Verified | AI or peer is presented as therapist, diagnostician, or emergency responder. | Responsibility matrix and prohibited zone. | Open until enforced and tested. |
+| R02 | Critical | Verified | Live network launches without accountable human moderation. | Explicit no-launch gate and kill switch. | Controlled by current deferral. |
+| R03 | High | Verified | Implied affiliation, endorsement, or copying of fellowship identity. | Independent vocabulary and no Steps/Traditions/sponsor/chip/prayer imitation. | Open pending legal/organization feedback. |
+| R04 | High | Evidence-supported | Spiritual or abstinence framing excludes users or amplifies moral shame. | User-authored values and no universal model. | Open pending diverse user research. |
+| R05 | High | Verified | Pseudonymity is marketed as absolute anonymity. | Precise data/metadata disclosure required. | Open pending Thread 07. |
+| R06 | High | Hypothesis | Peer relationship creates grooming, dependency, misinformation, or coercion. | Defer live roles; Thread 04 threat model and human moderation. | Unmitigated for live network. |
+| R07 | Medium | Evidence-supported | Alcohol mutual-aid evidence is transferred to PPU or Better Life. | Explicit evidence firewall and claims register. | Controlled in artifacts. |
+| R08 | Medium | Hypothesis | Product encloses support that existing communities provide better. | Research augmentation first and neutral external routes. | Open. |
 
-## Standing Red Lines
+## Standing red lines
 
-- Verified: No hidden monitoring.
-- Verified: No partner spyware.
-- Verified: No raw explicit-content storage by default.
-- Verified: No diagnosis, treatment, cure, or guaranteed-prevention claim.
-- Verified: No emergency promise through peers, allies, or AI.
+- **Verified:** no hidden monitoring, partner control, public shame, or forced disclosure.
+- **Verified:** no fellowship endorsement claim, clinical claim, emergency promise, or AI-only moderation.

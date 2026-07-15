@@ -1,60 +1,58 @@
 # Digital fellowship principles
 
-Status: Cycle 1 Draft  
-Issue: #18  
-Branch: `codex/18-mutual-aid-model`  
-Research date: 2026-07-15  
-Stage: research / product principles
+Status: Cycle 1 Draft
+Issue: #18
+Branch: `codex/18-mutual-aid-model`
 
-## Statement Classification Key
+## Position
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** Better Life is not a fellowship, treatment program, meeting provider, sponsor network, or emergency service.
+- **Hypothesis:** Better Life may augment self-chosen human connection without enclosing or replacing it.
+- **Open question:** Target users have not validated a need for a proprietary peer network.
 
-## Purpose
+## Product principles
 
-Translate safe mechanisms into Better Life product principles.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Principle | Classification | Required behavior | Prohibited behavior |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Translate safe mechanisms into Better Life product principles. | Issue #18 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Autonomy before adherence | Verified | The user chooses goals, cadence, contacts, and exit. | Attendance scores, forced disclosure, punitive streaks. |
+| Connection without surveillance | Verified | Share only an explicit user-selected message to an explicit recipient. | Background partner reports or contact access. |
+| Pseudonymity stated precisely | Verified | Explain what is hidden, retained, reportable, and technically linkable. | Absolute “anonymous” claims. |
+| Lived experience is not expertise | Verified | Label peer content as personal experience. | Diagnosis, treatment, medication, legal, or crisis direction from peers. |
+| No sponsor imitation | Verified | Use original bounded role names only after validation. | “Sponsor,” Steps, chips, prayers, or fellowship branding. |
+| Multiple paths remain legitimate | Verified | Support user-authored values and professional/community choices. | One required ideology, theology, or abstinence model. |
+| Repair over public shame | Verified | Setbacks remain private by default; support a next-step plan. | Leaderboards, exposure, humiliation, or peer punishment. |
+| Minimum necessary disclosure | Verified | Prefer categories and short structured messages over narratives. | Explicit-content details or permanent public histories. |
+| Human safety operations are real | Verified | Live interaction requires staffed moderation, reports, appeals, and incident response. | Claiming AI alone makes a community safe. |
+| Boundaries are visible in the moment | Verified | Show who can see content and what the role can do before sharing. | Relying on buried terms. |
+| Leave cleanly | Verified | End matching, revoke contact, block, delete, and export without social penalty. | Dark patterns or peer veto over exit. |
+| Existing support is not captured | Verified | Link neutrally and disclose relationship/compensation. | Pay-to-rank, implied endorsement, or proprietary lock-in. |
 
-## Cycle 1 Findings
+## Feature proposal gate
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Established fellowships protect autonomy, anonymity, non-professional identity, and non-affiliation with outside enterprises in their traditions. | AA Twelve Traditions; NA and SAA public resources | Better Life must not imply endorsement or copy fellowship identity. |
-| Evidence-supported | General mechanisms worth learning from include shared experience, repeated meetings, availability, service, identity-safe participation, and hope through seeing others recover. | Mutual-aid source pass | Design principles can generalize mechanisms while avoiding imitation. |
-| Hypothesis | A digital support layer can provide meeting discovery, preparation, reflection, and ally/peer scripts without replacing fellowship participation. | Product doctrine and Phase 0 support goals | Build augmentation, not a proprietary substitute for community. |
-| Open question | Whether anonymous real-time peer matching is MVP-safe depends on Thread 04 threat modeling. | Issue #19 dependency | Do not recommend live anonymous matching until Thread 04 reaches review. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Gate for any social feature |
 | --- | --- | --- |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/information-about-aa | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.saa-recovery.org/our-program/twelve-traditions/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Named interview evidence distinguishes loneliness, accountability, advice, and crisis needs. |
+| Expected benefit | Hypothesis | A specific behavior and outcome are stated without “community improves recovery.” |
+| Supporting evidence | Open question | Direct evidence or an explicit transfer-distance analysis is present. |
+| Required data | Verified | Data inventory, visibility, retention, deletion, and abuse-report need are complete. |
+| Consent | Verified | Join, match, message, notify, and leave are separate choices. |
+| Safety and misuse | Verified | Threat model covers grooming, harassment, coercion, triggering content, misinformation, crisis, ban evasion, and collusion. |
+| Feasibility | Open question | Human staffing, response targets, platform limits, and cost are credible. |
+| Success metric | Hypothesis | Benefit and harm thresholds are fixed before testing. |
+| Exit strategy | Verified | Kill switch, user block/delete, feature withdrawal, and support handoff are defined. |
 
-## Artifact-Specific Work To Complete
+## Cycle 1 recommendation
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about digital fellowship principles after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Classification | Recommendation |
+| --- | --- |
+| Hypothesis | Research private preparation/reflection and user-chosen ally scripts before creating a Better Life network. |
+| Open question | A neutral resource directory needs listing criteria, maintenance ownership, and conflict-of-interest rules. |
+| Verified | Live anonymous matching is deferred until Threads 04, 07, and 09 pass safety, privacy, and operational gates. |
+| Verified | No fellowship identity, endorsement, outcome, or equivalence claim is approved. |
 
-## Known Weaknesses
+## Verification plan
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Hypothesis:** Interview adults with and without mutual-aid experience using neutral language.
+2. **Verified:** Ask separately about desired connection, unwanted contact, disclosure limits, and exit expectations.
+3. **Verified:** Review terminology with representatives only as research; do not request endorsement during Cycle 1.
+4. **Open question:** Test low-fidelity private tools before any peer-to-peer prototype.

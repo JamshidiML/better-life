@@ -1,62 +1,64 @@
-# Quality Scorecard — Thread 03, Cycle 1
+# Quality Scorecard - Thread 03, Cycle 1
 
 ## Context
 
 - Issue: #18
 - Branch: `codex/18-mutual-aid-model`
 - Author: Codex
-- Reviewer: ChatGPT / founder pending
+- Reviewer: ChatGPT / founder / safety specialist pending
 - Date: 2026-07-15
-- Stage: research / product principles
 
-## Mandatory Gates
+## Mandatory gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
+- [x] Three required deliverables and thread logs are present.
+- [x] External fellowship evidence is separated from product hypotheses.
+- [x] Affiliation, sponsor imitation, clinical, and emergency boundaries are explicit.
+- [x] Every proposed social mechanism has data, consent, risk, metric, feasibility, and exit gates.
+- [ ] Independent review and fellowship/community sensitivity feedback pass.
+- [ ] Live-support safety, privacy, and business dependencies pass.
 
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+Gate status: **Revision required.** Live peer support remains deferred.
 
-## Shared Score
+## Shared score
 
 | Dimension | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 8 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 9 | Mechanism map, principles, role boundaries, logs, and gates are complete. | No stakeholder feedback. |
+| Factual accuracy | 10 | 8 | Organization practices use their public materials; Cochrane transfer limit is explicit. | Source interpretation not independently reviewed. |
+| Evidence and traceability | 10 | 7 | Mechanisms link to sources and product claims remain hypotheses. | Digital/PPU direct evidence is absent. |
+| Safety and harm prevention | 10 | 10 | Clinical, crisis, affiliation, coercion, grooming, and moderation hazards are bounded. | Operational controls untested. |
+| Privacy and consent | 10 | 9 | Separate consent, precise pseudonymity, minimum disclosure, exit. | Thread 07 unresolved. |
+| Internal consistency | 5 | 5 | All artifacts recommend augmentation before network creation. | Cross-thread review pending. |
+| Clarity and usability | 5 | 5 | Mechanism and responsibility tables produce explicit decisions. | Terminology needs user testing. |
+| Feasibility and realism | 5 | 4 | Human staffing and cost are acknowledged. | No staffing/cost model. |
+| Testability and verification | 5 | 4 | Interview, simulation, incident, and stop gates are defined. | Thresholds not quantified. |
 
-## Specialist Score
+## Specialist score
 
 | Criterion | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Mechanism extraction without imitation or false affiliation | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Human-versus-AI boundary quality | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Digital translation usefulness and safety | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Mechanism extraction without imitation | 10 | 8 | Practices are decomposed and protected identity elements are excluded. | Fellowship feedback pending. |
+| Human-versus-AI boundary quality | 10 | 8 | Role/activity/scenario matrices identify accountable humans. | Legal and clinical review pending. |
+| Digital translation usefulness and safety | 10 | 7 | Low-risk private tools precede live network; full feature gate present. | User need and direct evidence unvalidated. |
 
 ## Result
 
-- Creator self-score: 76/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
+- Creator self-score: **84/100**
+- Critical defects: 0 identified by author
+- High defects: 2 - no direct Better Life social-support evidence; no operational moderation proof
+- Medium defects: 2 - stakeholder sensitivity feedback and terminology tests absent
 - Confidence: Medium
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Decision: **Revise**
 
-## Score History
+## Performed verification
+
+- Verified: required repository documents and named fellowship/Cochrane sources were reviewed.
+- Verified: no production implementation was added.
+- Verified: links and Markdown whitespace were checked locally.
+- Open question: independent source, clinical, community, and safety review remains pending.
+
+## Score history
 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 76 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 84 | Pending | Pending | 0 | 2 author-identified | Revise |

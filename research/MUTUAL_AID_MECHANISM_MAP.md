@@ -1,60 +1,73 @@
 # Mutual-aid mechanism map
 
-Status: Cycle 1 Draft  
-Issue: #18  
-Branch: `codex/18-mutual-aid-model`  
-Research date: 2026-07-15  
-Stage: research / product principles
+Status: Cycle 1 Draft
+Issue: #18
+Branch: `codex/18-mutual-aid-model`
+Research cutoff: 2026-07-15
 
-## Statement Classification Key
+## Scope and evidence boundary
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+| Classification | Statement |
+| --- | --- |
+| Verified | Better Life is independent from AA, NA, SA, SAA, and every other fellowship; no endorsement, affiliation, or reproduction of proprietary identity is claimed. |
+| Evidence-supported | Cochrane found evidence for AA/12-step facilitation in alcohol use disorder. That evidence concerns alcohol-focused programs and must not be transferred to PPU/CSBD or to a digital product. [Cochrane review](https://www.cochrane.org/evidence/CD012880_alcoholics-anonymous-aa-and-other-12-step-programs-alcohol-use-disorder) |
+| Evidence-supported | Fellowship publications describe practices such as meetings, anonymity, service, shared experience, and member-to-member sponsorship. These sources establish what the organizations say they do, not that a Better Life translation is effective. [NA meeting guide](https://na.org/e-lit/ip-29-introduction-to-na-meetings/); [SAA traditions](https://saa-recovery.org/our-program/the-twelve-traditions/) |
+| Open question | Cycle 1 found no direct evidence that a Better Life digital fellowship or anonymous peer match improves outcomes safely. |
 
-## Purpose
+## Architecture and product pre-check
 
-Extract general mechanisms such as shared experience, meetings, service, hope, availability, and anonymity without copying fellowship identity.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Extract general mechanisms such as shared experience, meetings, service, hope, availability, and anonymity without copying fellowship identity. | Issue #18 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Established fellowships protect autonomy, anonymity, non-professional identity, and non-affiliation with outside enterprises in their traditions. | AA Twelve Traditions; NA and SAA public resources | Better Life must not imply endorsement or copy fellowship identity. |
-| Evidence-supported | General mechanisms worth learning from include shared experience, repeated meetings, availability, service, identity-safe participation, and hope through seeing others recover. | Mutual-aid source pass | Design principles can generalize mechanisms while avoiding imitation. |
-| Hypothesis | A digital support layer can provide meeting discovery, preparation, reflection, and ally/peer scripts without replacing fellowship participation. | Product doctrine and Phase 0 support goals | Build augmentation, not a proprietary substitute for community. |
-| Open question | Whether anonymous real-time peer matching is MVP-safe depends on Thread 04 threat modeling. | Issue #19 dependency | Do not recommend live anonymous matching until Thread 04 reaches review. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/information-about-aa | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.saa-recovery.org/our-program/twelve-traditions/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Some adults seek non-shaming connection, shared experience, and practical support while protecting identity and autonomy. Fellowship sources demonstrate that these needs are served in existing communities; target-user fit remains unvalidated. |
+| Expected benefit | Hypothesis | Selected mechanisms may reduce isolation, improve preparation, and make a self-chosen next action easier. |
+| Supporting evidence | Evidence-supported | Organizational sources support mechanism descriptions; alcohol mutual-aid evidence supports only a distant analogy. |
+| Required data | Hypothesis | A low-risk digital translation needs no explicit narrative; live interaction would require pseudonym, consent state, safety reports, and operational metadata. |
+| Consent requirements | Verified | Joining, leaving, sharing, matching, and contacting must be separate, understandable, revocable choices. |
+| Safety risks | Verified | Harassment, grooming, moral pressure, misinformation, shame, dependency, crisis mishandling, and implied affiliation are foreseeable. |
+| Misuse risks | Verified | A partner, peer, sponsor, or organization must not gain surveillance or account-control power. |
+| Platform feasibility | Open question | Directory/preparation tools are simpler than live matching; live support depends on Thread 04 moderation and Thread 07 privacy architecture. |
+| Success metric | Hypothesis | Early metrics should cover helpfulness, autonomy, unwanted contact, report rate, response time, privacy regret, and exit completion. |
+| Exit strategy | Verified | Remove social contact or matching if moderation, consent, privacy, or economic gates cannot be met; retain private planning if independently useful. |
 
-## Artifact-Specific Work To Complete
+## Mechanism extraction
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about mutual-aid mechanism map after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Mechanism observed | Classification | Potential benefit | Transfer risk | Better Life translation | Decision |
+| --- | --- | --- | --- | --- | --- |
+| Shared lived experience | Evidence-supported | Members may feel understood by people with relevant experience. | False equivalence, triggering detail, advice presented as fact. | Optional short, non-explicit “what helped me” patterns with clear lived-experience labels. | Hypothesis; defer public sharing until moderation exists. |
+| Repeated meetings and routine | Evidence-supported | A recurring cadence can support continuity and belonging. | Compulsory attendance, streak pressure, dependency. | Private check-in or links to independent resources; no attendance score. | Prototype private cadence only. |
+| Anonymity and confidentiality norms | Evidence-supported | Lower identity exposure may make participation easier. | Norms cannot guarantee technical anonymity or prevent screenshots. | Use precise pseudonymity/confidentiality language plus visible limitations. | Design principle; Thread 07 defines implementation. |
+| Sponsorship / experienced-member guidance | Evidence-supported | NA describes sponsors as members offering Step experience. | Unlicensed authority, dependency, grooming, clinical advice. | Do not call any Better Life role “sponsor”; use bounded peer-support roles if later validated. | Reject role imitation; study bounded alternative. |
+| Service and helping others | Evidence-supported | Contribution may support meaning and reciprocity. | Burdening vulnerable people, status hierarchy, unpaid moderation. | Optional, reversible micro-contributions after stability/safety criteria; never a recovery requirement. | Defer. |
+| Hope through visible recovery | Evidence-supported | Seeing varied paths can counter isolation. | Survivorship bias and guaranteed-recovery implication. | Curated, consented, non-prescriptive stories with setbacks and diversity represented. | Defer until evidence and editorial safeguards. |
+| Non-professional peer identity | Evidence-supported | Peers can relate without presenting as clinicians. | “Non-professional” can obscure serious duty-of-care and moderation needs. | Clear scope labels and escalation routes; no diagnosis, treatment, or crisis responsibility. | Required principle. |
+| Group autonomy | Evidence-supported | Fellowship groups commonly emphasize local/member responsibility. | Inconsistent safety, capture by dominant members. | Better Life cannot outsource platform safety; community voice may inform rules but mandatory safeguards remain. | Adapt, do not copy. |
+| Spiritual or higher-power framing | Evidence-supported | Some fellowships centrally use spiritual language. | Exclusion, coercion, moral incongruence, false affiliation. | User-authored values language; no required theology or anti-theology. | Do not import. |
+| Abstinence and counting | Evidence-supported | Some fellowships organize around abstinence and time markers. | All-or-nothing shame, contested target, moral scoring. | User chooses goal; private progress may include multiple outcomes and repair after setbacks. | Do not make universal. |
+| Traditions and organizational non-affiliation | Verified | Public traditions protect fellowship identity and independence. | Product appropriation or misleading endorsement. | Use original Better Life vocabulary; cite sources only in research context. | Mandatory. |
 
-## Known Weaknesses
+## What may and may not transfer
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Classification | Cycle 1 decision |
+| --- | --- |
+| Hypothesis | Private meeting preparation, question prompts, values reflection, and post-meeting notes may be low-risk augmentation ideas. |
+| Hypothesis | A user-controlled directory could link to independent support resources if listings, neutrality, and update responsibility are solved. |
+| Open question | Structured peer availability may be valuable, but no live matching proceeds before threat modeling, moderation staffing, privacy review, and economic viability. |
+| Verified | Better Life will not copy Steps, Traditions, fellowship names, sponsor roles, chips, prayers, or recovery claims into a proprietary experience. |
+| Verified | Better Life will not rank programs, claim equivalence, or present one recovery philosophy as universally correct. |
+
+## Source register
+
+| ID | Classification | Source | Use |
+| --- | --- | --- | --- |
+| S01 | Evidence-supported | [Cochrane AA/TSF review](https://www.cochrane.org/evidence/CD012880_alcoholics-anonymous-aa-and-other-12-step-programs-alcohol-use-disorder) | Alcohol-specific effectiveness context; no PPU/digital transfer. |
+| S02 | Evidence-supported | [NA introduction to meetings](https://na.org/e-lit/ip-29-introduction-to-na-meetings/) | Meeting confidentiality, anonymity, and sponsor description. |
+| S03 | Evidence-supported | [NA group booklet](https://na.org/e-lit/the-group-booklet/) | Group practice and service concepts. |
+| S04 | Evidence-supported | [SAA Twelve Traditions](https://saa-recovery.org/our-program/the-twelve-traditions/) | Organizational independence, anonymity, and non-professional framing. |
+| S05 | Evidence-supported | [Sexaholics Anonymous](https://www.sa.org/sa/) | Example of a distinct fellowship definition; not adopted by Better Life. |
+
+## Open questions
+
+1. **Open question:** Which connection needs appear in Better Life interviews: being heard, practical help, accountability, belonging, or referral?
+2. **Open question:** Can those needs be met through existing communities or a chosen ally without creating a new live network?
+3. **Open question:** What terminology is acceptable to users from secular, religious, queer, and culturally diverse contexts?
+4. **Open question:** What adverse events and exclusion patterns occur in digital mutual-aid settings?

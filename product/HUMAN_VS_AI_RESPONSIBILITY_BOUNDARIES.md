@@ -1,60 +1,69 @@
 # Human versus AI responsibility boundaries
 
-Status: Cycle 1 Draft  
-Issue: #18  
-Branch: `codex/18-mutual-aid-model`  
-Research date: 2026-07-15  
-Stage: research / product principles
+Status: Cycle 1 Draft
+Issue: #18
+Branch: `codex/18-mutual-aid-model`
 
-## Statement Classification Key
+## Responsibility rule
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** AI may assist with bounded information, preparation, reflection, and routing; it may not be the accountable owner of diagnosis, treatment, moderation, safeguarding, or emergency response.
+- **Verified:** A peer may share lived experience and encouragement; peer status does not create clinical authority or emergency responsibility.
+- **Verified:** Better Life remains responsible for product safeguards even when community members or third parties provide support.
 
-## Purpose
+## Role matrix
 
-Define where AI may support, where peers help, and where professionals or emergency services are required.
+| Activity | User | AI/tool | Peer or chosen ally | Human moderator | Qualified professional / emergency service |
+| --- | --- | --- | --- | --- | --- |
+| Choose personal goal | **Verified:** decides | **Hypothesis:** offers neutral prompts | **Verified:** may support without veto | Not responsible | **Evidence-supported:** may help clinically when appropriate |
+| Record private reflection | **Verified:** controls content | **Hypothesis:** structures user-authored text locally | **Verified:** sees only explicitly shared content | Sees only reported content under policy | Not automatically involved |
+| Explain product features | May ask/verify | **Verified:** may provide source-linked product information | May share experience | Resolves policy disputes | Not responsible |
+| Share lived experience | May share | **Verified:** must not fabricate lived experience | **Verified:** may share bounded, non-explicit experience | Enforces content rules | May provide professional education in a formal context |
+| Diagnose or assess CSBD | Cannot self-confirm through app | **Verified:** prohibited | **Verified:** prohibited | Prohibited | **Verified:** qualified clinician only |
+| Recommend treatment/medication | Chooses whether to seek care | **Verified:** prohibited beyond neutral routing | **Verified:** prohibited | Prohibited | **Verified:** qualified professional only |
+| Moderate live interaction | May report/block | **Verified:** may triage, never own final high-risk action | Cannot moderate own conflict | **Verified:** accountable human role | Consulted under protocol when needed |
+| Respond to imminent danger | Uses local emergency/crisis routes | **Verified:** shows clear route; no reliability promise | Encourages real-world help; no solo rescue duty | Follows escalation protocol | **Verified:** emergency/crisis professionals own response |
+| Decide appeal or ban | May appeal | **Verified:** may summarize evidence | May report | **Verified:** human decides with separation of duties | Not normally involved |
+| Change consent or leave | **Verified:** decides | **Verified:** executes and confirms | Cannot veto | Supports abuse-safe exit | Not responsible |
 
-## Architecture / Product Pre-Check
+## AI allowed zone
 
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Classification | Allowed only when |
+| --- | --- |
+| Hypothesis | Summarizing the user's own selected notes improves clarity and no external model receives content without separate consent. |
+| Hypothesis | Offering a menu of coping-plan prompts uses reviewed, non-clinical wording and makes uncertainty visible. |
+| Verified | Explaining data visibility, consent, deletion, and product limits is grounded in current system facts. |
+| Hypothesis | Routing to a user-chosen ally or public resource uses an explicit confirmation and reveals exactly what is sent. |
+
+## AI and peer prohibited zone
+
+- **Verified:** diagnosis, treatment plans, medication advice, clinical scoring, or claims that the person has a disorder.
+- **Verified:** pretending to be a sponsor, therapist, recovered person, friend, or emergency responder.
+- **Verified:** asking for explicit sexual content when the product can function without it.
+- **Verified:** moral judgment, manipulation, threats, punishment, or disclosure used to force adherence.
+- **Verified:** secret ally/partner reports, autonomous emergency contact, or implied continuous monitoring.
+- **Verified:** deciding high-risk moderation cases without accountable human review.
+
+## Scenario routing
+
+| Scenario | Classification | Product response | Stop condition |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define where AI may support, where peers help, and where professionals or emergency services are required. | Issue #18 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| User asks for a brief pause exercise | Hypothesis | Offer a reviewed optional exercise and a dismiss path. | Stop if distress rises or the user asks to end. |
+| User asks “Do I have an addiction?” | Verified | State non-diagnostic scope, provide neutral distinctions, and offer professional assessment resources. | Do not administer an app diagnosis. |
+| Peer offers treatment or medication instruction | Verified | Interrupt/remove under policy; notify and review repeat behavior. | Suspend contact for severe/repeated violations. |
+| User reports harassment or coercion | Verified | Immediate block, preserve minimum report evidence, human review, safe exit. | Pause matching if response target cannot be met. |
+| Message suggests imminent danger | Verified | Present local emergency/crisis options and encourage immediate real-world contact; route a report only under disclosed policy. | Disable any claim of guaranteed detection or rescue. |
+| AI is uncertain | Verified | Say what is unknown and route to a human or source. | Do not invent an answer. |
 
-## Cycle 1 Findings
+## Required operational proof before live support
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Established fellowships protect autonomy, anonymity, non-professional identity, and non-affiliation with outside enterprises in their traditions. | AA Twelve Traditions; NA and SAA public resources | Better Life must not imply endorsement or copy fellowship identity. |
-| Evidence-supported | General mechanisms worth learning from include shared experience, repeated meetings, availability, service, identity-safe participation, and hope through seeing others recover. | Mutual-aid source pass | Design principles can generalize mechanisms while avoiding imitation. |
-| Hypothesis | A digital support layer can provide meeting discovery, preparation, reflection, and ally/peer scripts without replacing fellowship participation. | Product doctrine and Phase 0 support goals | Build augmentation, not a proprietary substitute for community. |
-| Open question | Whether anonymous real-time peer matching is MVP-safe depends on Thread 04 threat modeling. | Issue #19 dependency | Do not recommend live anonymous matching until Thread 04 reaches review. |
+1. **Open question:** named accountable safety owner and staffed coverage model.
+2. **Open question:** clinically and legally reviewed crisis language by launch country.
+3. **Open question:** measured triage error rates, appeal outcomes, and moderator response time.
+4. **Open question:** privacy review of model/provider access, report evidence, and retention.
+5. **Open question:** incident stop thresholds and a tested network kill switch.
 
-## Source Register
+## Exit strategy
 
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://www.aa.org/the-twelve-traditions | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.aa.org/information-about-aa | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://na.org/meetingsearch/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.saa-recovery.org/our-program/twelve-traditions/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about human versus ai responsibility boundaries after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** If accountable human moderation cannot be staffed, no live peer network launches.
+- **Verified:** If AI cannot stay within bounded, auditable tasks, replace it with static reviewed content or remove it.
+- **Verified:** If professional or emergency routing is inaccurate for a geography, disclose the limitation and do not claim coverage there.
