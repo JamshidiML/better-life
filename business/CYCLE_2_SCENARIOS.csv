@@ -1,0 +1,7 @@
+scenario_id,offer,active_users,payers,annual_price_eur,other_funding_eur,gross_paid_eur,channel_fee_eur,tax_reserve_eur,variable_cost_eur,fixed_cost_eur,resource_after_fee_tax_eur,total_cost_eur,surplus_eur,classification,decision
+S0,Research foundation MVE,250,0,0,180000,0,0,0,20000,160000,180000,180000,0,Hypothesis,Current-stage candidate
+S1,Free local core plus supporters and grant,20000,1000,24,120000,24000,610,3831.93,5000,150000,139558.07,155000,-15441.93,Hypothesis,Funding gap under inputs
+S2,Free core plus paid convenience,100000,15000,36,0,540000,11850,86218.49,102500,300000,441931.51,402500,39431.51,Hypothesis,Positive only under unvalidated scale and costs
+S3,Optional managed controls,30000,10000,60,0,600000,90000,95798.32,150000,500000,414201.68,650000,-235798.32,Hypothesis,Funding gap under inputs
+S4,Dedicated human support service,50000,50000,120,2500000,6000000,900000,957983.19,2000000,4000000,6642016.81,6000000,642016.81,Hypothesis,Depends on large price scale and dedicated subsidy
+S5,Organization-funded free core without reporting,100000,0,0,500000,0,0,0,100000,450000,500000,550000,-50000,Hypothesis,Funding gap and procurement risk

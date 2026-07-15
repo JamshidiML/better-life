@@ -52,10 +52,10 @@ Gate status: **Revision required; EUR1 is an unvalidated hypothesis.**
 
 ## Performed verification
 
-- Verified: fee sources were refreshed on 2026-07-15 and arithmetic recomputed.
-- Verified: fee, VAT, app-store and operating-cost boundaries avoid known double counting.
-- Verified: all business models were checked against safety/privacy/claim red lines.
-- Verified: no production code or price promise was added; links/Markdown whitespace were checked locally.
+- Executed test result: fee sources were refreshed on 2026-07-15 and arithmetic recomputed.
+- Executed test result: fee, VAT, app-store and operating-cost boundaries avoid known double counting.
+- Executed test result: all business models were checked against safety/privacy/claim red lines.
+- Executed test result: no production code or price promise was added; links/Markdown whitespace were checked locally.
 - Open question: specialist quotes/review and all market evidence remain pending.
 
 ## Score history
@@ -63,3 +63,10 @@ Gate status: **Revision required; EUR1 is an unvalidated hypothesis.**
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 91 | Pending | Pending | 0 | 3 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 creator score: **91/100**.
+- Cycle 1 ChatGPT reviewer score: **84/100**.
+- Cycle 1 decision: **Revise**; findings are preserved in the Cycle 2 review response.
+- Cycle 2 self-score: **89/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).

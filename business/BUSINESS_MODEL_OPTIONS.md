@@ -9,15 +9,15 @@ Research cutoff: 2026-07-15
 
 | Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| User problem | Evidence-supported | Adults may need trustworthy low-cost self-help without surveillance, shame, or a therapy promise. |
+| User problem | Evidence-supported conclusion | Adults may need trustworthy low-cost self-help without surveillance, shame, or a therapy promise. |
 | Expected benefit | Hypothesis | A free local core plus transparent voluntary support/payment may preserve access and fund responsible maintenance. |
-| Supporting evidence | Evidence-supported | Current payment/platform fees constrain EUR1 billing; user willingness, conversion, cost, and benefit are unvalidated. |
-| Required data | Verified | Payment/account data must be separated from intimate plan/behavior data; no monetization needs explicit content or risk scores. |
-| Consent | Verified | Payment, donation, research, partner, and optional service choices are separate and cancellable. |
-| Safety/misuse | Verified | Shame upsells, crisis paywalls, dark cancellation, ads, data sale, vulnerable-user targeting, and underfunded moderation are prohibited. |
+| Supporting evidence | Evidence-supported conclusion | Current payment/platform fees constrain EUR1 billing; user willingness, conversion, cost, and benefit are unvalidated. |
+| Required data | Design requirement | Payment/account data must be separated from intimate plan/behavior data; no monetization needs explicit content or risk scores. |
+| Consent | Design requirement | Payment, donation, research, partner, and optional service choices are separate and cancellable. |
+| Safety/misuse | Design requirement | Shame upsells, crisis paywalls, dark cancellation, ads, data sale, vulnerable-user targeting, and underfunded moderation are prohibited. |
 | Feasibility | Open question | Legal entity, tax/VAT, consumer law, insurance, app-store terms, support and specialist costs need professional review. |
 | Success metric | Hypothesis | Free-core reach, paid/supporter contribution, net revenue, full safety cost, cancellation/refund, access equity, and no monetization harm. |
-| Exit strategy | Verified | Remove a paid feature/model before weakening free safety, privacy, consent, evidence, or support standards. |
+| Exit strategy | Design requirement | Remove a paid feature/model before weakening free safety, privacy, consent, evidence, or support standards. |
 
 ## Options
 
@@ -32,8 +32,8 @@ Research cutoff: 2026-07-15
 | Public-interest/nonprofit structure | Open question | May support grants/donations and mission lock. | Potentially strong. | German legal/tax eligibility, governance and admin unknown. | Seek professional advice; no Cycle 1 legal recommendation. |
 | Mission-locked commercial/social enterprise | Open question | Supports subscriptions/investment with governance safeguards. | Depends on enforceable charter and incentives. | Growth/investor pressure can erode free core/privacy. | Compare with counsel after needs/traction evidence. |
 | Organization sponsorship | Hypothesis | Institution funds access/research without user charge. | Only if users remain self-directed. | Employer/partner surveillance, biased access, procurement complexity. | Reject any admin/user reporting; defer. |
-| Referral/affiliate revenue | Verified | Payment for routing to services. | Weak due trust/conflict risk. | Care ranking, undisclosed conflict, vulnerable-user exploitation. | Reject for care/support routing. |
-| Advertising/data brokerage | Verified | Monetizes attention or intimate profiles. | Incompatible. | Surveillance and exploitation. | Reject. |
+| Referral/affiliate revenue | Repository decision | Payment for routing to services. | Weak due trust/conflict risk. | Care ranking, undisclosed conflict, vulnerable-user exploitation. | Reject for care/support routing. |
+| Advertising/data brokerage | Repository decision | Monetizes attention or intimate profiles. | Incompatible. | Surveillance and exploitation. | Reject. |
 | Live peer support included at EUR1 | Open question | Adds human service. | Attractive in vision only. | Moderation/safeguarding cost and liability dominate. | Excluded until Thread 04/09 proof; likely separate funding/service. |
 
 ## Staged recommendation
@@ -44,12 +44,12 @@ Research cutoff: 2026-07-15
 | Accountless pilot | Hypothesis | Free local prototype; test optional supporter intent without charging in sensitive flow. | Value, burden, willingness, tax/consumer/payment review. |
 | Sustainable local core | Hypothesis | Free core plus annual supporter contribution or low annual price; no ads/data sale. | Net contribution covers defined maintenance and specialist reserve. |
 | Optional services | Open question | Price each data/operationally expensive service transparently. | Incremental benefit, consent/privacy, full-cost and exit proof. |
-| Human network | Verified | No launch until dedicated safety operations are fully funded independent of optimistic engagement. | Thread 04 critical gates plus conservative cost coverage. |
+| Human network | Design requirement | No launch until dedicated safety operations are fully funded independent of optimistic engagement. | Thread 04 critical gates plus conservative cost coverage. |
 
 ## Governance protections
 
-1. **Verified:** Publish the free-core policy, funding sources, major conflicts, and material partner relationships.
-2. **Verified:** Payment/account records do not influence risk, intervention, peer match, claim, or cancellation pressure.
-3. **Verified:** No payer status is visible to peers/allies or used as a recovery/commitment signal.
-4. **Verified:** Founder approval cannot waive safety, privacy, clinical-claim, or legal gates merely to reach revenue.
+1. **Design requirement:** Publish the free-core policy, funding sources, major conflicts, and material partner relationships.
+2. **Design requirement:** Payment/account records do not influence risk, intervention, peer match, claim, or cancellation pressure.
+3. **Design requirement:** No payer status is visible to peers/allies or used as a recovery/commitment signal.
+4. **Design requirement:** Founder approval cannot waive safety, privacy, clinical-claim, or legal gates merely to reach revenue.
 5. **Open question:** Mission-lock/legal-entity mechanisms require German professional advice.

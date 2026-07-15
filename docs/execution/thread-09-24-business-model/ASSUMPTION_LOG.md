@@ -13,3 +13,13 @@ Date: 2026-07-15
 | A05 | Open question | 19% German VAT illustration applies to the final offer/entity/channel. | Tax/accounting advice; revise model. | Open |
 | A06 | Open question | Grants/donations/supporter revenue can preserve independence and predictability. | Funding pipeline and terms; reject mission-distorting funds. | Open |
 | A07 | Hypothesis | Human moderation/safeguarding makes live peer support incompatible with undifferentiated EUR1 funding. | Conservative staffing quotes and Thread 04 simulation. | Open |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A08 | Hypothesis | Free core, convenience, managed controls, and human services can be costed and funded independently. | Architecture budgets and cost allocation; reject hidden cross-subsidy that weakens safety. | Open |
+| A09 | Hypothesis | 15% direct conversion at EUR36 can cover convenience at 100k active users under the model inputs. | Willingness/cohort evidence and quotes; current scenario is not forecast. | Open |
+| A10 | Open question | Organization funding is viable without admin reporting/control or user coercion. | Procurement/legal/user tests with hard independence clauses. | Deferred |
+| A11 | Hypothesis | Dedicated subsidy can support human operations without engagement pressure. | Conservative staffing plan, multi-year commitments, incident simulation. | Deferred |
+| A12 | Open question | EUR1 remains a useful mission constraint after full-cost and user evidence. | Founder decision and scenario comparison. | Open |
