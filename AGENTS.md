@@ -18,8 +18,8 @@ Read these files before changing product behavior, architecture, sensitive data,
 6. `phase0/SAFETY_AND_CONSENT.md`
 7. `phase0/RISK_REGISTER.md`
 8. `phase0/DECISION_LOG.md`
-9. `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md`
-10. `docs/execution/QUALITY_REVIEW_TEMPLATE.md`
+9. `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md`
+10. `docs/execution/EXECUTION_THREADS_01.md`
 
 ## Non-Negotiable Constraints
 
@@ -52,24 +52,26 @@ Read these files before changing product behavior, architecture, sensitive data,
 
 ## Mandatory Quality Loop
 
-Every substantial task must follow `docs/execution/QUALITY_SCORE_AND_IMPROVEMENT_LOOP.md`.
+Every substantial task must follow `docs/execution/QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md`.
 
 The creator must:
 
 - include a complete self-score out of 100 in the Pull Request;
 - score each rubric category separately;
+- provide evidence for every awarded point;
 - list known weaknesses, missing evidence, and checks actually performed;
 - never self-approve or merge;
 - revise against reviewer deductions;
+- preserve score history;
 - re-score after every revision cycle.
 
-The reviewer must independently score the work using `docs/execution/QUALITY_REVIEW_TEMPLATE.md`.
+The reviewer must independently score the work using the same framework.
 
-A task cannot be accepted only because its numeric score is high. All relevant critical gates must pass.
-
-The normal limit is three review cycles. After that, the task must be accepted, split, blocked, deferred, or have its rubric/scope corrected with documented rationale.
+A task cannot be accepted only because its numeric score is high. All applicable mandatory gates must pass, and no unresolved Critical or High defect may remain.
 
 A score of 100 means complete against the approved current scope and rubric. It does not mean permanent truth, clinical proof, zero risk, or freedom from future revision.
+
+The loop continues until the result is Pass, Conditional acceptance, Escalate, or Stop according to the documented rules. Blind repetition is not allowed when expert review, real user research, or unavailable platform evidence is required.
 
 ## Product And Architecture Rules
 
@@ -107,7 +109,9 @@ Stop the affected work and raise a blocker when:
 - a clinical claim lacks approval;
 - the requested platform capability is impossible or materially weaker than promised;
 - tests cannot be run or results are uncertain;
-- the change could create serious safety, privacy, or legal risk.
+- the change could create serious safety, privacy, or legal risk;
+- two quality-review cycles fail to improve the accepted score materially;
+- a full score would require evidence or expertise not currently available.
 
 ## Pull Request Checklist
 
@@ -124,7 +128,8 @@ Include:
 - known limitations;
 - follow-up issues;
 - creator quality self-score;
-- rubric breakdown;
-- known weaknesses;
+- rubric breakdown and evidence;
+- defect list and severity;
+- score history;
 - checks actually performed;
 - requested reviewer focus.
