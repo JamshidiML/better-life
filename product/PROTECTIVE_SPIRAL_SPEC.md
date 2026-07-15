@@ -1,62 +1,98 @@
-# Protective Spiral spec
+# Protective Spiral specification
 
-Status: Cycle 1 Draft  
-Issue: #20  
-Branch: `codex/20-protective-spiral`  
-Research date: 2026-07-15  
-Stage: product / intervention design
+Status: Cycle 1 Draft - product hypothesis, not a clinical protocol
+Issue: #20
+Branch: `codex/20-protective-spiral`
+Research cutoff: 2026-07-15
 
-## Statement Classification Key
+## Product proposition
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Hypothesis:** In a self-identified high-risk moment, a short sequence of user-chosen pause, environment change, coping action, and optional human support may help the user make a deliberate next choice.
+- **Verified:** Better Life has no evidence that the sequence treats CSBD/PPU, prevents a setback, or works for a particular person.
+- **Verified:** The Spiral is user-initiated or triggered by an explicitly configured local event; it does not secretly infer sexual behavior or psychological state.
 
-## Purpose
+## Architecture and product pre-check
 
-Define trigger entry, escalation, repair, safe exit, and user-authored rules.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define trigger entry, escalation, repair, safe exit, and user-authored rules. | Issue #20 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 requires calm, repair-oriented language and no punitive dark patterns. | phase0/RELAPSE_DEBRIEF_PROTOTYPE.md; SAFETY_AND_CONSENT.md | The spiral must reduce cognitive load and shame. |
-| Evidence-supported | A high-risk intervention should present one clear primary action rather than a menu of escalating demands. | Issue #20; product doctrine | State machine should prioritize a single next action. |
-| Hypothesis | A sequence of pause, grounding, values reminder, environment change, and optional support can help interrupt a lapse sequence. | Evidence map dependency not complete | Treat as product hypothesis pending Thread 02 and interviews. |
-| Open question | Which intervention wording and order users find supportive requires Phase 0 interviews. | Phase 0 success criteria | Mark UX copy as prototype-only. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Required element | Classification | Cycle 1 answer |
 | --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| User problem | Evidence-supported | Interviews and repository research concern adults who describe moments where intention and immediate action diverge; exact target fit remains to be validated. |
+| Expected benefit | Hypothesis | Reduce cognitive load and make one self-chosen alternative action easier without shame or certainty claims. |
+| Supporting evidence | Evidence-supported | Thread 02 supports cautious research into CBT/ACT/mindfulness/relapse-planning mechanisms while explicitly withholding Better Life efficacy claims. |
+| Required data | Hypothesis | Local configuration, entry source, chosen step, completion/skip, optional usefulness/burden, and no explicit content. |
+| Consent requirements | Verified | Each trigger source, restriction, notification, ally signal, and data-sharing path is separately opt-in, previewable, revocable, and editable in a calm state. |
+| Safety risks | Verified | Cognitive overload, panic, shame, rumination, compulsive logging, blocked legitimate activity, care displacement, and coercion. |
+| Misuse risks | Verified | Partner-controlled rules, secret notification, punitive lockout, forced disclosure, fake emergency detection, and impossible-bypass claims are prohibited. |
+| Platform feasibility | Platform limitation | Detection/enforcement varies by platform and can be bypassed; Thread 01 recommends testing a web/Chromium wedge and Android network spike. |
+| Success metric | Hypothesis | Intent-to-action completion, time-to-chosen-action, usefulness, burden, shame effect, unwanted triggering, exit success, and platform failure rate. |
+| Exit strategy | Verified | A visible safe exit always returns control; remove or simplify any step that adds harm/burden without incremental benefit. |
 
-## Artifact-Specific Work To Complete
+## Design invariants
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about protective spiral spec after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+1. **Verified:** One primary action is shown per state, with one visible alternative and a visible exit.
+2. **Verified:** No countdown, red alarm, loss message, streak threat, moral judgment, or escalating punishment.
+3. **Verified:** The user writes or selects their plan while calm; the high-risk flow cannot silently add restrictions or recipients.
+4. **Verified:** Ally/peer contact is never automatic and always previews the exact recipient and message.
+5. **Verified:** Skipping, leaving, disabling, or experiencing a setback does not create a penalty or public event.
+6. **Verified:** “Urgent” means the user's chosen support mode, not a clinical or emergency assessment.
+7. **Verified:** The flow works without AI; AI is optional and cannot send messages or make clinical decisions.
 
-## Known Weaknesses
+## Configuration model
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Setting | Classification | Safe default | Constraint |
+| --- | --- | --- | --- |
+| Entry method | Verified | Manual “Pause” action | Automatic signals off until separately configured and platform-limited. |
+| First action | Hypothesis | User-selected environment or grounding action | Must be brief, safe, and physically feasible. |
+| Duration | Hypothesis | No forced countdown; optional short timer | User can end at any time. |
+| Alternative action | Hypothesis | One user-selected fallback | Do not expose a large decision menu. |
+| Friction | Hypothesis | Off | Any delay/block is separately explained, reversible, and platform-qualified. |
+| Human support | Verified | Off | Explicit recipient/message confirmation on every send. |
+| Reflection | Hypothesis | Optional after close, never during acute flow by default | No explicit narrative required. |
+| Local history | Verified | Minimal or off | User can view/delete; no hidden risk score. |
+
+## Entry modes
+
+| Mode | Classification | Benefit hypothesis | Required guard |
+| --- | --- | --- | --- |
+| Manual pause | Hypothesis | Highest intent clarity and lowest monitoring need. | Always available, fast, and private. |
+| User-set scheduled check | Hypothesis | Supports known routines without behavior inference. | Neutral notification and easy snooze/disable. |
+| Local domain/app event | Platform limitation | May place friction near a chosen context. | Explicit allow/block list, local processing, failure disclosure, safe bypass for legitimate need. |
+| User-selected ally prompt | Hypothesis | Human support may help some users. | Never secret or automatic; coercion check and exact preview. |
+| AI-detected risk | Verified | Not approved. | Reject because data, inference validity, and safety are unresolved. |
+
+## Spiral sequence
+
+| Stage | Classification | Primary question/action | Data | Exit |
+| --- | --- | --- | --- | --- |
+| 1. Arrive | Verified | “Pause for a moment?” Start / Not now | Entry source only if user allowed history | Not now closes immediately. |
+| 2. Orient | Hypothesis | Show the user's own short reason or chosen value | Local user-authored text | Hide/edit later; no moral copy. |
+| 3. Act | Hypothesis | One selected action: move, breathe, close, delay, or replace | Step ID and optional completion | Skip goes to fallback or close. |
+| 4. Support | Hypothesis | Optional private plan, chosen ally, or reviewed resource | Only confirmed path data | Cancel sends nothing. |
+| 5. Recheck | Hypothesis | “What would help next?” Continue plan / Finish | Optional user selection | Finish closes; no forced success claim. |
+| 6. Close | Verified | Acknowledge the choice without praise/shame scoring | Optional usefulness/burden | Delete event / turn off feature. |
+| 7. Repair | Hypothesis | Later, optional setback debrief focused on next adjustment | User-authored non-explicit note | Skip permanently or for now. |
+
+## Failure and degradation
+
+| Failure | Classification | Required behavior |
+| --- | --- | --- |
+| Platform detection misses or over-blocks | Platform limitation | Explain limitation, offer manual entry and immediate legitimate-use recovery; record no blame. |
+| Notification reveals sensitive context | Verified | Neutral copy by default, preview control, and notification-free mode. |
+| AI/provider unavailable | Verified | Use static reviewed flow; do not block exit or support information. |
+| Ally delivery fails | Verified | Say delivery is unconfirmed; offer private alternative, never imply the ally saw it. |
+| User appears more distressed | Verified | Offer stop and professional/emergency resources without claiming assessment or rescue. |
+| User repeatedly bypasses | Verified | Do not escalate punishment; invite calm-state review of fit and platform limits. |
+
+## Evaluation ladder
+
+1. **Verified:** Clinical/safety review of every intervention and phrase.
+2. **Verified:** Cognitive walkthroughs with synthetic scenarios, including coercion and accessibility.
+3. **Hypothesis:** Low-fidelity manual-entry prototype with no monitoring, AI, or sharing.
+4. **Hypothesis:** Compare one-action variants for comprehension, autonomy, burden, and adverse reactions.
+5. **Open question:** Add local platform-triggered friction only after Thread 01 and Thread 07 gates.
+6. **Open question:** Add human contact only after consent, delivery, and abuse cases pass; anonymous matching remains excluded.
+
+## Cycle 1 recommendation
+
+- **Hypothesis:** First product test is a manual, local, one-action Spiral configured by the user while calm.
+- **Verified:** No production code, clinical claim, AI risk detection, peer network, or cross-device guarantee is approved.
+- **Verified:** If the manual flow does not improve agency/usefulness without increased shame or burden, stop before adding enforcement.

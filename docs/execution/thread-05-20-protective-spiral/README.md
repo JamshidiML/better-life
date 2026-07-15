@@ -1,9 +1,9 @@
 # Execution Thread 05 — Cycle 1 Index
 
-Issue: #20  
-Title: Protective Spiral intervention design  
-Branch: `codex/20-protective-spiral`  
-Date: 2026-07-15  
+Issue: #20
+Title: Protective Spiral intervention design
+Branch: `codex/20-protective-spiral`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Protective Spiral spec](../../product/PROTECTIVE_SPIRAL_SPEC.md)
-- Evidence-supported: [High-risk intervention state machine](../../product/HIGH_RISK_INTERVENTION_STATE_MACHINE.md)
-- Evidence-supported: [Intervention library](../../product/INTERVENTION_LIBRARY.md)
-- Evidence-supported: [Protective Spiral test scenarios](../../product/PROTECTIVE_SPIRAL_TEST_SCENARIOS.md)
+- Evidence-supported: [Protective Spiral spec](../../../product/PROTECTIVE_SPIRAL_SPEC.md)
+- Evidence-supported: [High-risk intervention state machine](../../../product/HIGH_RISK_INTERVENTION_STATE_MACHINE.md)
+- Evidence-supported: [Intervention library](../../../product/INTERVENTION_LIBRARY.md)
+- Evidence-supported: [Protective Spiral test scenarios](../../../product/PROTECTIVE_SPIRAL_TEST_SCENARIOS.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT find any transition that can punish, coerce, disclose, or trap the user?
+- Open question: Do clinical and user reviewers approve testing a manual one-action flow before monitoring, AI, or social support?
+- Open question: Does the founder accept stopping the Spiral if it adds shame or burden without incremental agency?

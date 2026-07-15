@@ -1,62 +1,50 @@
 # Protective Spiral test scenarios
 
-Status: Cycle 1 Draft  
-Issue: #20  
-Branch: `codex/20-protective-spiral`  
-Research date: 2026-07-15  
-Stage: product / intervention design
+Status: Cycle 1 Draft
+Issue: #20
+Branch: `codex/20-protective-spiral`
 
-## Statement Classification Key
+## Acceptance approach
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** Scenario tests evaluate specification behavior, not clinical efficacy.
+- **Open question:** Quantitative UX and harm thresholds require clinical, research, accessibility, and founder approval before participant testing.
 
-## Purpose
+| ID | Classification | Scenario | Expected behavior | Failure / stop signal |
+| --- | --- | --- | --- | --- |
+| S01 | Verified | User manually starts and immediately exits. | One-action exit, no penalty, no outbound data. | Exit obscured or event publicly exposed. |
+| S02 | Verified | User skips every action. | Close calmly; optional later review only by user initiation. | Shame, escalating restriction, repeated nagging. |
+| S03 | Hypothesis | User starts under high cognitive load. | One short action, readable copy, no large menu. | Confusion, >one primary command, text overflow. |
+| S04 | Verified | Configured action is unsafe or inaccessible now. | Skip/fallback/exit without explanation. | Flow insists on movement/breathing/contact. |
+| S05 | Verified | Partner configured the plan under pressure. | Consent review and easy disable; no partner notification. | Partner can veto or learn exit. |
+| S06 | Platform limitation | Local trigger is false positive. | Immediate legitimate-use recovery and limitation disclosure. | Lockout, blame, hidden escalation. |
+| S07 | Platform limitation | Trigger fails to fire. | Manual start remains available; no protection guarantee. | User is told system prevented/observed behavior. |
+| S08 | Verified | User cancels ally message at preview. | Nothing sent; no delivery record beyond approved local state. | Any recipient notification. |
+| S09 | Verified | Ally delivery fails. | “Not confirmed” plus private alternatives. | Implied receipt or repeated auto-send. |
+| S10 | Verified | AI/provider is unavailable. | Static flow and exit remain functional. | Blocked session or false answer. |
+| S11 | Verified | User asks whether they have an addiction. | Non-diagnostic boundary and professional route. | Screening presented as diagnosis. |
+| S12 | Verified | User asks for immediate emergency help. | Clear real-world routes and no rescue promise. | Peer/AI retained as sole responder. |
+| S13 | Hypothesis | User reports a setback after the flow. | Optional repair, one plan adjustment, no streak loss. | Failure label, confession requirement, punishment. |
+| S14 | Verified | Notification appears on shared/locked device. | Neutral or disabled preview according to setting. | Sensitive product/behavior text leaks. |
+| S15 | Verified | User revokes consent mid-session. | Pending triggers/shares cancel and session exits. | Old consent remains active. |
+| S16 | Verified | User deletes configuration/history. | Approved data removed; exceptions precisely disclosed. | Hidden history or broken future use. |
+| S17 | Hypothesis | User repeatedly opens the Spiral for reassurance. | Offer quiet exit/config review; no engagement reward. | Product encourages compulsive checking. |
+| S18 | Verified | Resource link is stale or wrong geography. | Show limitation/fallback; report for maintenance. | False local availability or endorsement. |
+| S19 | Platform limitation | Browser/app protection is bypassed. | Explain known limitation; invite calm review, no blame. | “Tamper” shame or stronger covert monitoring. |
+| S20 | Verified | Screen reader, zoom, keyboard, or reduced motion is used. | Stable focus, concise labels, no time pressure, no motion dependency. | Any action or exit becomes inaccessible. |
 
-Define testable cases for usability, safety, bypass, failure, and repair.
+## Research measures
 
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Measure | Classification | Why collected | Minimum-data rule |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define testable cases for usability, safety, bypass, failure, and repair. | Issue #20 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Task comprehension and completion | Hypothesis | Determine whether the flow is usable under simulated load. | No sexual-content disclosure. |
+| Perceived autonomy/control | Hypothesis | Detect coercive framing. | Short optional response. |
+| Burden and shame effect | Hypothesis | Identify adverse product effects. | Allow “prefer not to answer”; aggregate. |
+| Action usefulness | Hypothesis | Compare candidate steps. | Do not call it clinical improvement. |
+| Exit, cancel, delete success | Verified | Validate consent/control invariants. | System test plus participant observation. |
+| False trigger/block and recovery | Platform limitation | Validate technical harm and claims. | Synthetic domains/apps before real behavior. |
 
-## Cycle 1 Findings
+## Stop conditions
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 requires calm, repair-oriented language and no punitive dark patterns. | phase0/RELAPSE_DEBRIEF_PROTOTYPE.md; SAFETY_AND_CONSENT.md | The spiral must reduce cognitive load and shame. |
-| Evidence-supported | A high-risk intervention should present one clear primary action rather than a menu of escalating demands. | Issue #20; product doctrine | State machine should prioritize a single next action. |
-| Hypothesis | A sequence of pause, grounding, values reminder, environment change, and optional support can help interrupt a lapse sequence. | Evidence map dependency not complete | Treat as product hypothesis pending Thread 02 and interviews. |
-| Open question | Which intervention wording and order users find supportive requires Phase 0 interviews. | Phase 0 success criteria | Mark UX copy as prototype-only. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about protective spiral test scenarios after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** Any hidden send, inaccessible exit, partner control, sensitive notification leak, or punitive state is a critical stop.
+- **Verified:** Any copy interpreted as diagnosis, therapy, emergency monitoring, or guaranteed prevention blocks release.
+- **Hypothesis:** Repeated increased shame, distress, or compulsive checking blocks escalation and triggers redesign/clinical review.

@@ -1,62 +1,63 @@
 # High-risk intervention state machine
 
-Status: Cycle 1 Draft  
-Issue: #20  
-Branch: `codex/20-protective-spiral`  
-Research date: 2026-07-15  
-Stage: product / intervention design
+Status: Cycle 1 Draft - implementation-independent
+Issue: #20
+Branch: `codex/20-protective-spiral`
 
-## Statement Classification Key
+## State invariants
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** `EXIT` is reachable from every user-facing state in one action.
+- **Verified:** No state sends data to a human or external AI without a current explicit confirmation.
+- **Verified:** No transition is conditioned on a diagnosis, inferred sexual content, moral score, or obedience history.
+- **Verified:** Failure moves to a simpler state, never a harsher restriction.
 
-## Purpose
+## States and transitions
 
-Specify states, transitions, guards, fallbacks, and stop conditions.
+| State | Classification | Entry | Primary action | Guards | Next | Fallback |
+| --- | --- | --- | --- | --- | --- | --- |
+| `DORMANT` | Verified | Feature available, no session | Manual pause or approved local trigger | Current consent/config exists | `INVITATION` | Stay dormant |
+| `INVITATION` | Verified | Entry event | Start | Neutral copy; no false certainty | `ORIENT` | `EXIT` |
+| `ORIENT` | Hypothesis | User starts | Show user-authored reason/value | Content exists and is current | `ACTION` | `ACTION` without value text |
+| `ACTION` | Hypothesis | Orientation complete | Perform one selected action | Action is safe/available; no forced timer | `RECHECK` | `FALLBACK_ACTION` or `EXIT` |
+| `FALLBACK_ACTION` | Hypothesis | First action skipped/unavailable | Perform one alternate | Exactly one fallback configured | `RECHECK` | `SUPPORT_MENU` or `EXIT` |
+| `RECHECK` | Hypothesis | Action complete/skip | Choose finish or one support route | No success assumption | `CLOSE` or `SUPPORT_MENU` | `EXIT` |
+| `SUPPORT_MENU` | Hypothesis | User asks for more | Choose private plan, ally, or reviewed resource | Show one recommended user-configured path plus alternatives | Path-specific state | `CLOSE` |
+| `ALLY_PREVIEW` | Verified | Chosen ally selected | Confirm exact recipient/message | Current consent; no secret setup | `ALLY_SEND` | `CLOSE` |
+| `ALLY_SEND` | Platform limitation | Confirmed send | Wait only for delivery result | Provider available | `CLOSE` | `DELIVERY_FAILURE` |
+| `RESOURCE_ROUTE` | Verified | Professional/resource selected | Open or display verified route | Geography/version known | `CLOSE` | `CLOSE` with limitation |
+| `CLOSE` | Verified | User finishes | Optional usefulness/burden response | No streak or outcome claim | `DORMANT` | `DORMANT` |
+| `REPAIR_OFFER` | Hypothesis | Later user initiation only | Start optional debrief | Never interrupt acute flow | `REPAIR` | `DORMANT` |
+| `REPAIR` | Hypothesis | User accepts | Choose one plan adjustment | No explicit narrative required | `DORMANT` | `DORMANT` |
+| `DELIVERY_FAILURE` | Verified | Ally/resource delivery fails | Acknowledge unconfirmed delivery | Never imply receipt | `SUPPORT_MENU` or `CLOSE` | `EXIT` |
+| `EXIT` | Verified | Any user stop or safety failure | Close and restore control | Preserve only approved minimum event data | `DORMANT` | `DORMANT` |
 
-## Architecture / Product Pre-Check
+## Event and guard model
 
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Specify states, transitions, guards, fallbacks, and stop conditions. | Issue #20 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 requires calm, repair-oriented language and no punitive dark patterns. | phase0/RELAPSE_DEBRIEF_PROTOTYPE.md; SAFETY_AND_CONSENT.md | The spiral must reduce cognitive load and shame. |
-| Evidence-supported | A high-risk intervention should present one clear primary action rather than a menu of escalating demands. | Issue #20; product doctrine | State machine should prioritize a single next action. |
-| Hypothesis | A sequence of pause, grounding, values reminder, environment change, and optional support can help interrupt a lapse sequence. | Evidence map dependency not complete | Treat as product hypothesis pending Thread 02 and interviews. |
-| Open question | Which intervention wording and order users find supportive requires Phase 0 interviews. | Phase 0 success criteria | Mark UX copy as prototype-only. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Event/guard | Classification | Rule |
 | --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| `manual_start` | Verified | Always allowed when feature is enabled; no explanation required. |
+| `configured_local_event` | Platform limitation | Allowed only for a user-selected event with current consent and an immediate false-positive recovery. |
+| `timeout` | Verified | Closes or returns to a simpler choice; never sends or escalates. |
+| `consent_changed` | Verified | Cancels pending sharing/automation and returns to `EXIT`. |
+| `platform_unavailable` | Verified | Removes platform-dependent action and offers manual/static alternative. |
+| `possible_crisis_text` | Open question | AI detection is not a reliable gate; if the user explicitly requests urgent help, show reviewed real-world routes and scope limits. |
+| `ally_confirmed` | Verified | Must be a fresh confirmation after preview; preauthorization alone is insufficient. |
 
-## Artifact-Specific Work To Complete
+## Persistence model
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about high-risk intervention state machine after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Item | Classification | Persistence |
+| --- | --- | --- |
+| Configuration and user-authored reason | Hypothesis | Local by default; editable/deletable. |
+| Current state | Verified | Session-only unless needed for crash recovery; no sensitive lock-screen copy. |
+| Event source and step outcome | Hypothesis | Off by default or minimal local history; never an opaque risk score. |
+| Ally message/delivery | Verified | Store only what is required and disclosed; retention set by Thread 07. |
+| Repair note | Hypothesis | Optional local user-authored record; no explicit detail required. |
 
-## Known Weaknesses
+## Safety assertions to test
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Verified:** Cancel before `ALLY_SEND` produces zero outbound messages.
+2. **Verified:** Consent revocation invalidates every pending share and future trigger.
+3. **Verified:** Every platform/AI/network failure still permits `EXIT`.
+4. **Verified:** Repeated skip/bypass never changes the sequence to punishment.
+5. **Verified:** Session restoration cannot expose sensitive content on lock screen or to another account.
+6. **Verified:** No branch labels a session, action, or user as success/failure/addicted/recovered.

@@ -1,62 +1,32 @@
-# Intervention library
+# Protective Spiral intervention library
 
-Status: Cycle 1 Draft  
-Issue: #20  
-Branch: `codex/20-protective-spiral`  
-Research date: 2026-07-15  
-Stage: product / intervention design
+Status: Cycle 1 Draft - candidate mechanisms only
+Issue: #20
+Branch: `codex/20-protective-spiral`
 
-## Statement Classification Key
+**Verified:** Thread 02 permits these only as hypotheses for non-clinical product research. None is approved as treatment or guaranteed urge reduction.
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+| ID | Candidate | Evidence class | Benefit hypothesis | Data / consent | Main safety risk | Metric / exit | Decision |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| I01 | Close or leave the chosen context | Hypothesis, CBT/relapse-planning transfer | Change immediate cues with minimal cognition. | No data; user selects while calm. | Unsafe/impractical movement, overblocking legitimate use. | Feasibility/helpfulness; remove if frequently impossible. | First prototype candidate. |
+| I02 | One slow-breath or sensory grounding prompt | Hypothesis, mindfulness/emotion-regulation transfer | Create a brief pause. | No response required. | Panic, frustration, medicalized promise. | Distress and burden; always skip. | Clinical wording review. |
+| I03 | User-authored value/reason | Hypothesis, ACT-related transfer | Reconnect to chosen intention. | Local sensitive text; explicit display consent. | Moral shame, coercive partner-written text. | Autonomy/shame; hide/delete/edit. | Prototype candidate with coercion test. |
+| I04 | Short user-chosen delay | Hypothesis | Make the next choice less automatic. | Optional local timer. | Countdown fixation, punishment, false control. | Completion/burden; no forced wait. | Test only as optional. |
+| I05 | Replacement action | Hypothesis | Substitute a concrete incompatible or valued action. | Local action label. | Generic/unsafe/inaccessible advice. | Action fit and completion; user authors list. | Prototype candidate. |
+| I06 | Open private plan | Hypothesis, relapse-planning transfer | Reduce memory load using a calm-state plan. | Local plan; no explicit narrative needed. | Rumination or stale advice. | Usefulness; one-tap archive/edit. | Prototype candidate. |
+| I07 | Static supportive script | Hypothesis | Provide non-shaming orientation without external AI. | No external data. | Clinical implication, repetitive irritation. | Comprehension/burden; remove bad copy. | Preferred before AI. |
+| I08 | AI reflection | Open question | Rephrase user-selected thought or plan. | External/provider consent and strict minimization required. | Therapy impersonation, hallucination, privacy, rumination. | Incremental value over static; hard time/turn limit. | Defer. |
+| I09 | Chosen ally message | Hypothesis | Request a predefined bounded kind of support. | Recipient and exact message confirmed each time. | Coercion, disclosure, dependency, failed delivery. | Regret/helpfulness/delivery; disable instantly. | Defer until consent test. |
+| I10 | Pseudonymous peer | Open question | Brief human encouragement. | High-risk social data and moderation. | Thread 04 critical risks. | Must beat safer alternatives. | Excluded from MVP. |
+| I11 | Professional support route | Evidence-supported boundary | Help user find appropriate real-world assessment/support. | Geography/language preference only if needed. | Stale or implied endorsement, care delay. | Link validity and comprehension; maintain or remove. | Required as boundary, not intervention claim. |
+| I12 | Emergency/crisis route | Verified boundary | Direct explicit urgent-help requests toward real services. | Avoid collecting details; show local options. | False detection or guaranteed rescue implication. | Route accuracy; no monitoring claim. | Required reviewed route. |
+| I13 | Temporary local friction | Platform limitation / hypothesis | Add a user-selected barrier near a chosen context. | Local list and consent. | Bypass, lockout, coercion, legitimate-use harm. | False block/bypass/recovery; kill switch. | Defer to Thread 01 spike. |
+| I14 | Later repair debrief | Hypothesis, CBT/relapse-planning transfer | Learn one adjustment without all-or-nothing shame. | Optional non-explicit note. | Rumination, compulsory confession. | Agency/shame/burden; skip/delete. | Prototype after acute flow. |
 
-## Purpose
+## Selection rules
 
-Catalog delay, grounding, values, environment change, replacement action, AI conversation, peer, ally, and professional escalation options.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Catalog delay, grounding, values, environment change, replacement action, AI conversation, peer, ally, and professional escalation options. | Issue #20 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Phase 0 requires calm, repair-oriented language and no punitive dark patterns. | phase0/RELAPSE_DEBRIEF_PROTOTYPE.md; SAFETY_AND_CONSENT.md | The spiral must reduce cognitive load and shame. |
-| Evidence-supported | A high-risk intervention should present one clear primary action rather than a menu of escalating demands. | Issue #20; product doctrine | State machine should prioritize a single next action. |
-| Hypothesis | A sequence of pause, grounding, values reminder, environment change, and optional support can help interrupt a lapse sequence. | Evidence map dependency not complete | Treat as product hypothesis pending Thread 02 and interviews. |
-| Open question | Which intervention wording and order users find supportive requires Phase 0 interviews. | Phase 0 success criteria | Mark UX copy as prototype-only. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-
-## Artifact-Specific Work To Complete
-
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about intervention library after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
-
-## Known Weaknesses
-
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+1. **Verified:** Prefer the least-data, lowest-risk action that addresses the user's stated need.
+2. **Verified:** Show one action, not a scored ranking or expanding punishment ladder.
+3. **Verified:** Accessibility, physical safety, and context constraints override a configured action.
+4. **Verified:** Social and AI options never become mandatory fallbacks.
+5. **Verified:** Review or expire content after evidence, platform, or resource changes.
