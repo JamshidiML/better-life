@@ -1,62 +1,65 @@
-# Quality Scorecard — Thread 09, Cycle 1
+# Quality Scorecard - Thread 09, Cycle 1
 
 ## Context
 
 - Issue: #24
 - Branch: `codex/24-business-model`
 - Author: Codex
-- Reviewer: ChatGPT / founder pending
+- Reviewer: ChatGPT / founder / tax-consumer-payment specialists pending
 - Date: 2026-07-15
-- Stage: business / sustainability
 
-## Mandatory Gates
+## Mandatory gates
 
-- [ ] Universal gates pass after independent review
-- [ ] Research gates pass / N/A after independent review
-- [ ] Technical gates pass / N/A after independent review
-- [ ] Product and UX gates pass / N/A after independent review
-- [ ] Business gates pass / N/A after independent review
+- [x] Four required artifacts and thread logs are complete.
+- [x] Fee arithmetic, annual/monthly contrast, cost stack, break-even formula, free core, rejected revenue, and scenarios are explicit.
+- [x] Assumptions are dated/classified and no price, tax, legal, or sustainability claim is approved.
+- [x] Safety/privacy/clinical/moderation costs cannot be removed to make the model work.
+- [ ] Tax/accounting, consumer, payment, entity, insurance, and cost quotes pass.
+- [ ] User value, willingness, conversion, churn, support burden, and funding evidence pass.
 
-Gate status: Revision required. No critical gate is intentionally failed, but acceptance is blocked until independent review.
+Gate status: **Revision required; EUR1 is an unvalidated hypothesis.**
 
-## Shared Score
+## Shared score
 
 | Dimension | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Requirement coverage | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Factual accuracy | 10 | 6 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Evidence and traceability | 10 | 5 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Safety and harm prevention | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Privacy and consent | 10 | 7 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Internal consistency | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Clarity and usability | 5 | 4 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Feasibility and realism | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
-| Testability and verification | 5 | 3 | Cycle 1 artifacts created with source registers, classifications, and risk/assumption logs. | Needs independent review and deeper evidence validation. |
+| Requirement coverage | 10 | 10 | Options, arithmetic, free policy, five scenarios, experiments, logs. | No entity-specific operating plan. |
+| Factual accuracy | 10 | 8 | Current official Stripe/Apple/Google/EU sources and checked arithmetic. | Tax/channel treatment and full fees unknown. |
+| Evidence and traceability | 10 | 8 | Inputs/snapshot/formulas/omissions classified. | No quotes, user or cohort data. |
+| Safety and harm prevention | 10 | 10 | Unsafe revenue and underfunded social service rejected. | Governance not implemented. |
+| Privacy and consent | 10 | 9 | Payment/intimate separation, free rights, no data revenue. | Payment architecture absent. |
+| Internal consistency | 5 | 5 | Options, free core, unit economics and scenarios align. | Founder constraint unresolved. |
+| Clarity and usability | 5 | 5 | Arithmetic and decision gates are inspectable. | Finance spreadsheet absent. |
+| Feasibility and realism | 5 | 4 | Fixed fee and hidden labor/cost stack exposed. | Inputs mostly hypotheses. |
+| Testability and verification | 5 | 5 | Quotes, willingness, support simulation and pilot sequence. | Not yet executed. |
 
-## Specialist Score
+## Specialist score
 
 | Criterion | Weight | Score | Evidence | Gap |
 | --- | ---: | ---: | --- | --- |
-| Assumption transparency and unit-economics logic | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Sustainability scenario quality | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
-| Mission alignment and ethical monetization discipline | 10 | 7 | Initial thread-specific handling is present. | Needs ChatGPT/founder review and source-deepening. |
+| Assumption transparency and unit economics | 10 | 9 | Dated fee sources, VAT caveat, formulas, annual comparison, omissions. | No accountant/payment review. |
+| Sustainability scenario quality | 10 | 8 | Research, local core, service, human network, rejected growth model. | No probability/runway/cash-flow model. |
+| Mission alignment and ethical monetization | 10 | 10 | Free/never-monetize policy, conflicts, cancellation and hard rejections. | Legal governance mechanism open. |
 
 ## Result
 
-- Creator self-score: 66/100
-- Critical defects: None intentionally introduced; independent review pending.
-- High defects: Evidence depth and reviewer validation remain incomplete.
-- Medium defects: Several recommendations remain hypotheses.
+- Creator self-score: **91/100**
+- Critical defects: 0 identified in documentation
+- High defects: 3 - tax/entity treatment, real full-cost quotes, and user/revenue evidence absent
+- Medium defects: 2 - cash-flow/runway model and governance mechanism absent
 - Confidence: Medium-low
-- Decision: Revise
-- Next cycle actions:
-  - ChatGPT reviews all artifacts and posts deductions.
-  - Codex revises highest-severity gaps first.
-  - Founder validates mission fit and risk tolerance.
-  - Specialist review is requested for clinical, privacy, legal, security, or platform questions where needed.
+- Decision: **Revise**
 
-## Score History
+## Performed verification
+
+- Verified: fee sources were refreshed on 2026-07-15 and arithmetic recomputed.
+- Verified: fee, VAT, app-store and operating-cost boundaries avoid known double counting.
+- Verified: all business models were checked against safety/privacy/claim red lines.
+- Verified: no production code or price promise was added; links/Markdown whitespace were checked locally.
+- Open question: specialist quotes/review and all market evidence remain pending.
+
+## Score history
 
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | 66 | Pending | Pending | 0 | Pending review | Revise |
+| 1 | 91 | Pending | Pending | 0 | 3 author-identified | Revise |

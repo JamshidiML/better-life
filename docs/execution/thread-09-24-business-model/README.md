@@ -1,9 +1,9 @@
 # Execution Thread 09 — Cycle 1 Index
 
-Issue: #24  
-Title: Business model, free core, and EUR 1 sustainability  
-Branch: `codex/24-business-model`  
-Date: 2026-07-15  
+Issue: #24
+Title: Business model, free core, and EUR 1 sustainability
+Branch: `codex/24-business-model`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Business model options](../../business/BUSINESS_MODEL_OPTIONS.md)
-- Evidence-supported: [EUR 1 unit economics](../../business/EUR1_UNIT_ECONOMICS.md)
-- Evidence-supported: [Free core policy](../../business/FREE_CORE_POLICY.md)
-- Evidence-supported: [Sustainability scenarios](../../business/SUSTAINABILITY_SCENARIOS.md)
+- Evidence-supported: [Business model options](../../../business/BUSINESS_MODEL_OPTIONS.md)
+- Evidence-supported: [EUR1 unit economics](../../../business/EUR1_UNIT_ECONOMICS.md)
+- Evidence-supported: [Free core policy](../../../business/FREE_CORE_POLICY.md)
+- Evidence-supported: [Sustainability scenarios](../../../business/SUSTAINABILITY_SCENARIOS.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT find any double-counting, omitted cost, hidden labor, or monetization conflict?
+- Open question: Is EUR1 a founder constraint or a hypothesis that may become EUR12/year, supporter-funded, or free?
+- Open question: Do tax, consumer, payment, and entity specialists agree with the model inputs before any price promise?

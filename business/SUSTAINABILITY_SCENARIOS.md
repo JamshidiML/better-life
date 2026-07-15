@@ -1,61 +1,80 @@
 # Sustainability scenarios
 
-Status: Cycle 1 Draft  
-Issue: #24  
-Branch: `codex/24-business-model`  
-Research date: 2026-07-15  
-Stage: business / sustainability
+Status: Cycle 1 Draft - scenario model, not forecast
+Issue: #24
+Branch: `codex/24-business-model`
 
-## Statement Classification Key
+## Common invariants
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Verified:** No scenario uses advertising, intimate-data sale/training, coercive monitoring, shame upsells, paid care ranking, or underfunded safety promises.
+- **Verified:** Free-core, privacy, evidence, security, clinical, accessibility, support, and legal gates are costs, not optional polish.
+- **Open question:** All volumes, conversion, churn, salaries, grants, costs, and timelines remain unknown.
 
-## Purpose
+## Scenario A - research foundation
 
-Provide conservative, base, and optimistic operating scenarios and experiments.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Provide conservative, base, and optimistic operating scenarios and experiments. | Issue #24 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Apple Developer Program membership is listed by Apple as USD 99/year; Apple Small Business Program states a reduced 15% commission for eligible developers. | Apple Developer Program; Apple Small Business Program | Fixed and percentage platform fees matter for EUR 1 pricing. |
-| Verified | Google Play service fees vary by transaction type and market; its help page states many developers qualify for 15% or less, with changed EEA/UK/US fee structures from June 30, 2026. | Google Play service fee page | Unit economics must be region- and channel-specific. |
-| Evidence-supported | Stripe card processing on a EUR 1 price can be dominated by fixed per-transaction fees in some regions. | Stripe pricing page opened for EEA context | Monthly micro-payments may need annual billing, app-store billing, sponsorship, or donation alternatives. |
-| Open question | VAT, German/EU legal form, insurance, clinical review, moderation staffing, and crisis-resource obligations require professional advice. | Business source pass | Do not commit to EUR 1 until cost experiments are run. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Element | Classification | Model |
 | --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/programs/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/support/compare-memberships/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/app-store/small-business-program/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://support.google.com/googleplay/android-developer/answer/112622?hl=en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://stripe.com/pricing | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Offer | Verified | No production product; Phase 0 research and low-fidelity accountless prototypes. |
+| Funding | Hypothesis | Founder funds, small grants, donations, or fiscal sponsor after conflict/legal review. |
+| Cost priority | Verified | Participant care/compensation, clinical/method/privacy/security/accessibility review, legal/entity advice. |
+| Success | Hypothesis | Validated problem, safe product shape, claims/data gates, and stop/go decision. |
+| Exit | Verified | Stop or narrow if evidence does not support product value/safety. |
 
-## Artifact-Specific Work To Complete
+**Cycle 1 recommendation:** this is the current scenario.
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about sustainability scenarios after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+## Scenario B - free accountless local core
 
-## Known Weaknesses
+| Element | Classification | Model |
+| --- | --- | --- |
+| Offer | Hypothesis | Local plan, manual Spiral, static education; no account/sync/AI/social network. |
+| Funding | Hypothesis | Grants/donations/supporters; optional annual contribution. |
+| Cost shape | Hypothesis | Product/security/privacy/content/support fixed cost; low variable infrastructure. |
+| Economic gate | Hypothesis | Multi-year committed funding or conservative supporter contribution covers maintenance reserve. |
+| Risk | Verified | Volunteer/founder labor hides true cost; security/content can decay. |
+| Exit | Verified | Freeze distribution safely, publish support horizon, preserve export/delete/local use. |
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+## Scenario C - low-cost maintained service
+
+| Element | Classification | Model |
+| --- | --- | --- |
+| Offer | Open question | Optional account/sync/platform integrations while free local core remains. |
+| Funding | Hypothesis | Annual EUR12-style contribution/subscription plus subsidy/supporters. |
+| Cost shape | Verified | Payment, service, support, rights requests, security, platform maintenance, specialist review. |
+| Gate | Verified | Full-cost contribution positive under conservative churn/support/channel assumptions and privacy architecture passes. |
+| Risk | Verified | Convenience drives cloud data expansion or core paywall drift. |
+| Exit | Verified | Disable optional service, export/delete, retain local core. |
+
+## Scenario D - human support network
+
+| Element | Classification | Model |
+| --- | --- | --- |
+| Offer | Verified | Excluded from MVP; model exists only to expose dependency. |
+| Funding | Open question | Dedicated grant/service fee/sponsorship independent of optimistic EUR1 contribution. |
+| Cost shape | Verified | Moderator coverage, training, supervision, wellbeing, incident/legal response, appeals, privacy/security, insurance. |
+| Gate | Verified | Thread 04 launch blockers and conservative multi-year funding all pass. |
+| Risk | Verified | Understaffing creates direct harm; engagement incentives conflict with safety. |
+| Exit | Verified | Network kill switch with reporting/deletion/support continuity; private core unaffected. |
+
+## Scenario E - unsustainable growth model
+
+| Element | Classification | Decision |
+| --- | --- | --- |
+| Ads/data monetization, employer/partner dashboards, shame conversion, clinical overclaims, or AI-only support/moderation | Verified | Reject even if financially attractive. |
+
+## Experiment sequence
+
+| Experiment | Classification | Evidence | Stop condition |
+| --- | --- | --- | --- |
+| User value/problem interviews | Verified | Phase 0 protocol, no selling. | Weak need or unsafe concept. |
+| Pricing comprehension/willingness | Hypothesis | Compare free, supporter, EUR1 monthly, EUR12 annual, sliding-scale concepts without taking payment. | Shame/confusion or no willingness. |
+| Payment-channel quote/legal review | Verified | Country/entity/channel-specific costs, tax, consumer obligations. | Contribution cannot cover required reserve. |
+| Support-cost simulation | Hypothesis | Synthetic tickets, platform cases, minutes/cost per user. | EUR1 model depends on ignored labor. |
+| Local-core pilot | Open question | Retention/value/safety/burden plus actual support. | Adverse effects or no incremental value. |
+| Social safety operation | Verified | Not run until Thread 04/07 gates and funding. | Any critical blocker. |
+
+## Founder decisions requested
+
+1. **Open question:** Is EUR1 a mission constraint, a target, or a hypothesis that may become EUR12/year/supporter-funded/free?
+2. **Open question:** What minimum annual security, privacy, clinical, legal, and maintenance reserve must be funded before production?
+3. **Open question:** Which legal/entity governance best protects free core and independence?
+4. **Verified:** Do not promise price or human support until these decisions and evidence close.

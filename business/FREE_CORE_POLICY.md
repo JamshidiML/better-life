@@ -1,61 +1,53 @@
 # Free core policy
 
-Status: Cycle 1 Draft  
-Issue: #24  
-Branch: `codex/24-business-model`  
-Research date: 2026-07-15  
-Stage: business / sustainability
+Status: Cycle 1 Draft - founder and user review required
+Issue: #24
+Branch: `codex/24-business-model`
 
-## Statement Classification Key
+## Principle
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+- **Hypothesis:** A useful local/accountless core should remain available without payment because dignity, informed choice, and safe exit must not depend on ability to pay.
+- **Verified:** “Free” must not mean ad-funded, data-funded, degraded privacy, hidden trial conversion, or unpaid exposure to unsafe social features.
 
-## Purpose
+## Must remain free
 
-Define what must remain free and what cannot be paywalled.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
-| --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define what must remain free and what cannot be paywalled. | Issue #24 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
-
-## Cycle 1 Findings
-
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Apple Developer Program membership is listed by Apple as USD 99/year; Apple Small Business Program states a reduced 15% commission for eligible developers. | Apple Developer Program; Apple Small Business Program | Fixed and percentage platform fees matter for EUR 1 pricing. |
-| Verified | Google Play service fees vary by transaction type and market; its help page states many developers qualify for 15% or less, with changed EEA/UK/US fee structures from June 30, 2026. | Google Play service fee page | Unit economics must be region- and channel-specific. |
-| Evidence-supported | Stripe card processing on a EUR 1 price can be dominated by fixed per-transaction fees in some regions. | Stripe pricing page opened for EEA context | Monthly micro-payments may need annual billing, app-store billing, sponsorship, or donation alternatives. |
-| Open question | VAT, German/EU legal form, insurance, clinical review, moderation staffing, and crisis-resource obligations require professional advice. | Business source pass | Do not commit to EUR 1 until cost experiments are run. |
-
-## Source Register
-
-| Classification | Source | Cycle 1 use |
+| Capability | Classification | Reason |
 | --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/programs/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/support/compare-memberships/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/app-store/small-business-program/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://support.google.com/googleplay/android-developer/answer/112622?hl=en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://stripe.com/pricing | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Plain-language scope, evidence uncertainty, platform limits | Verified | Informed use and claim integrity. |
+| Consent/control view, withdrawal, export, deletion, safe exit | Verified | Rights and anti-coercion controls cannot be paywalled. |
+| Non-diagnostic education and professional/emergency route information | Verified | Safety boundary; no crisis or care-navigation paywall. |
+| One local personal plan | Hypothesis | Minimum useful core to validate. |
+| Manual local Protective Spiral with static reviewed steps | Hypothesis | Minimum moment-of-need core; value not yet proven. |
+| Pause/disable/recover from any local restriction | Verified | Legitimate-use and coercion safety. |
+| Security updates and material safety/privacy fixes | Verified | Charging for defect remediation is unacceptable. |
+| Accountless use where technically feasible | Hypothesis | Avoid forcing personal/payment data for core value. |
 
-## Artifact-Specific Work To Complete
+## Never monetize
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about free core policy after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+- **Verified:** intimate data, browsing/content signals, inferred vulnerability, diagnosis/risk scores, crisis state, peer reports, or participant research data.
+- **Verified:** partner/employer monitoring, stronger surveillance, secret reports, public shame, streak rescue, emergency access, deletion/export, or consent withdrawal.
+- **Verified:** paid ranking/referral to care, support, advisors, or organizations.
+- **Verified:** advertising, cross-context tracking, model training on intimate data, or differential prices based on behavior/vulnerability.
 
-## Known Weaknesses
+## Possible paid/supporter value after validation
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Candidate | Classification | Gate |
+| --- | --- | --- |
+| Voluntary supporter membership with no exclusive safety function | Hypothesis | No guilt/status pressure; transparent use of funds. |
+| User-managed/encrypted multi-device convenience | Open question | User need, Thread 07 privacy/recovery proof, full cost and deletion. |
+| Extra non-sensitive customization/export presentation | Hypothesis | Core remains complete and accessible; no dark upsell. |
+| Organization-sponsored free access | Open question | No admin reporting/control, conflict disclosure, same user rights. |
+| Live human service | Open question | Dedicated price/funding only after safety gates; never implied emergency care. |
+
+## Checkout and cancellation rules
+
+1. **Verified:** Show total price, billing interval, tax handling as applicable, renewal, refund/cancellation, and free alternative before payment.
+2. **Verified:** Decline/cancel does not trigger shame, fear, loss of plan, or reduced safety/privacy.
+3. **Verified:** Cancellation is at least as easy as purchase and does not require explaining intimate behavior.
+4. **Verified:** Payment failure returns to free core without public/ally disclosure.
+5. **Verified:** Payer status is separated from intimate product data and invisible to peers/allies.
+
+## Policy change gate
+
+- **Verified:** Any proposal to remove a free-core item requires public rationale, safety/privacy/clinical/user review, founder decision, migration/export path, and notice; financial pressure alone is insufficient.
+- **Open question:** Formal mission-lock and governance enforcement require legal/entity design.

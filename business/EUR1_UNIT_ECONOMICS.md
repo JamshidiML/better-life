@@ -1,61 +1,74 @@
-# EUR 1 unit economics
+# EUR1 unit economics
 
-Status: Cycle 1 Draft  
-Issue: #24  
-Branch: `codex/24-business-model`  
-Research date: 2026-07-15  
-Stage: business / sustainability
+Status: Cycle 1 Draft - illustrative model, not a price commitment
+Issue: #24
+Branch: `codex/24-business-model`
+Fee snapshot: 2026-07-15, Germany/EU-oriented
 
-## Statement Classification Key
+## Source facts and limits
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
-
-## Purpose
-
-Model fee drag, taxes, infrastructure, support, moderation, security, legal, clinical review, and research assumptions.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Input | Classification | Current source fact | Model use / limitation |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Model fee drag, taxes, infrastructure, support, moderation, security, legal, clinical review, and research assumptions. | Issue #24 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Stripe EEA standard card | Verified | Germany page lists 1.5% + EUR0.25. [Stripe Germany](https://stripe.com/de/pricing) | Excludes Billing, dispute, refund, foreign-card, currency, tax, and other product fees. |
+| Stripe SEPA Direct Debit | Verified | Germany page lists EUR0.35 per transaction. [Stripe Germany](https://stripe.com/de/pricing) | Mandate/failure/refund/operational costs not modeled. |
+| Apple Small Business Program | Verified | Apple states a 15% commission for eligible developers up to its USD1M proceeds threshold, with eligibility/associated-account rules. [Apple](https://developer.apple.com/app-store/small-business-program/) | Tax treatment and EU alternative terms require channel-specific review. |
+| Google Play fees | Verified | Current help page describes service-fee structures that vary by market/program; subscriptions and post-2026 EEA/UK/US terms require exact enrollment/channel review. [Google](https://support.google.com/googleplay/android-developer/answer/112622?hl=en-GB) | Do not use one universal rate in a decision model. |
+| VAT OSS | Verified | EU OSS provides an optional electronic portal for certain cross-border consumer VAT obligations. [European Commission](https://vat-one-stop-shop.ec.europa.eu/one-stop-shop_en) | It does not determine Better Life's exact VAT rate, establishment, exemption, merchant-of-record, or filing duties. |
 
-## Cycle 1 Findings
+## One EUR monthly transaction
 
-| Classification | Finding | Evidence or source | Product implication |
+**Hypothesis:** The examples assume EUR1 is a German consumer price including illustrative 19% VAT and that Better Life bears the listed payment fee. Legal/tax/accounting review may change the treatment.
+
+| Channel illustration | Gross | Fee assumption | Gross after fee | Illustrative VAT component (`1 - 1/1.19`) | Remaining before all operating cost |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Direct EEA card | EUR1.000 | EUR0.265 | EUR0.735 | EUR0.160 | **EUR0.575** |
+| Direct SEPA debit | EUR1.000 | EUR0.350 | EUR0.650 | EUR0.160 | **EUR0.490** |
+| App store at 15%, before tax treatment | EUR1.000 | EUR0.150 | **EUR0.850** | Not double-counted until merchant/tax role is confirmed | **EUR0.850 pre-tax-context** |
+
+- **Verified arithmetic:** Stripe card fee at EUR1 = `0.25 + 1.5% * 1 = EUR0.265`.
+- **Verified arithmetic:** Illustrative German VAT within EUR1 at 19% = `1 - 1/1.19 = EUR0.1597`.
+- **Open question:** App-store proceeds and VAT must be modeled from the actual agreement/invoice flow; the table intentionally avoids claiming EUR0.690 after double deduction.
+
+## Annual billing illustration
+
+| Channel | EUR12 gross fee | Illustrative VAT component | Annual contribution before operations | Monthly equivalent |
+| --- | ---: | ---: | ---: | ---: |
+| One EEA card transaction | `0.25 + 1.5% * 12 = EUR0.430` | `12 - 12/1.19 = EUR1.916` | **EUR9.654** | **EUR0.805** |
+| One SEPA transaction | EUR0.350 | EUR1.916 | **EUR9.734** | **EUR0.811** |
+| 15% store fee, pre-tax-context | EUR1.800 | Not resolved here | **EUR10.200 pre-tax-context** | **EUR0.850** |
+
+- **Evidence-supported:** Annual direct billing materially reduces fixed-fee drag versus twelve EUR1 card charges.
+- **Open question:** Annual payment can reduce accessibility, create refund/cancellation obligations, and increase perceived commitment; user and consumer-law review are required.
+
+## Cost stack
+
+| Cost | Classification | Driver | Cycle 1 treatment |
 | --- | --- | --- | --- |
-| Verified | Apple Developer Program membership is listed by Apple as USD 99/year; Apple Small Business Program states a reduced 15% commission for eligible developers. | Apple Developer Program; Apple Small Business Program | Fixed and percentage platform fees matter for EUR 1 pricing. |
-| Verified | Google Play service fees vary by transaction type and market; its help page states many developers qualify for 15% or less, with changed EEA/UK/US fee structures from June 30, 2026. | Google Play service fee page | Unit economics must be region- and channel-specific. |
-| Evidence-supported | Stripe card processing on a EUR 1 price can be dominated by fixed per-transaction fees in some regions. | Stripe pricing page opened for EEA context | Monthly micro-payments may need annual billing, app-store billing, sponsorship, or donation alternatives. |
-| Open question | VAT, German/EU legal form, insurance, clinical review, moderation staffing, and crisis-resource obligations require professional advice. | Business source pass | Do not commit to EUR 1 until cost experiments are run. |
+| Payment/store/VAT/tax/accounting | Verified / open legal question | Transaction, channel, country, entity | Model by channel, refresh before decision. |
+| Hosting/sync/AI | Hypothesis | Active accounts, storage, tokens, egress | Local/accountless core minimizes; no estimate without architecture/load. |
+| Customer support | Hypothesis | Active/paying users, platform failures, refunds | Measure tickets/user and minutes/ticket in pilot. |
+| Human moderation/safeguarding | Verified need if social | Coverage, incidents, quality, appeals, moderator care | Zero only because peer network is excluded; cannot be wished into automation. |
+| Security/privacy/compliance | Verified need | Architecture, audits, incidents, rights, vendors | Fixed annual reserve required before production. |
+| Clinical/evidence/accessibility review | Verified need | Content/release/research cycles | Fixed and per-change cost. |
+| Engineering/product/operations | Verified need | Platform count, releases, maintenance | Founder time is an economic cost even if unpaid. |
+| Insurance/legal/entity/admin | Open question | Country, claims, data, staff, contracts | Obtain professional quotes/advice. |
+| Refunds, disputes, fraud, failed payments | Verified | Channel and cohort | Add observed rates; note Stripe page lists material dispute fees. |
 
-## Source Register
+## Break-even model
 
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://developer.apple.com/programs/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/support/compare-memberships/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://developer.apple.com/app-store/small-business-program/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://support.google.com/googleplay/android-developer/answer/112622?hl=en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://stripe.com/pricing | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+`required average paying users = annual fixed cost / (12 * monthly contribution per payer - annual variable cost per payer)`
 
-## Artifact-Specific Work To Complete
+| Illustration | Classification | Annual fixed cost | Contribution assumption | Variable cost | Paying users for break-even |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Lean local core | Hypothesis | EUR40,000 | EUR0.80/month | EUR0.05/month | about **4,445** |
+| Maintained service | Hypothesis | EUR120,000 | EUR0.80/month | EUR0.10/month | about **14,286** |
+| Human safety service | Hypothesis | EUR300,000 | EUR0.80/month | EUR0.25/month | about **45,455** |
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about eur 1 unit economics after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+**Verified arithmetic:** These are formulas over illustrative inputs, not forecasts. They exclude growth/marketing, working capital, bad debt, corporate tax, and founder return; the human-service number is not an approved staffing budget.
 
-## Known Weaknesses
+## Decision
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Hypothesis:** EUR1/month may work only for a very low-service local product at meaningful scale, with annual/prepaid collection or subsidy improving contribution.
+- **Verified:** EUR1 cannot be used to justify underfunded privacy, security, clinical review, support, or moderation.
+- **Open question:** Willingness to pay, free-to-paid conversion, churn, channel mix, support burden, and full costs are unknown.
+- **Verified:** No public “only EUR1” promise is approved.
