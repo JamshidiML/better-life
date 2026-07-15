@@ -6,16 +6,26 @@ Date: 2026-07-15
 
 | ID | Severity | Classification | Risk | Control | Residual status |
 | --- | --- | --- | --- | --- | --- |
-| R01 | Critical | Verified | AI or peer is presented as therapist, diagnostician, or emergency responder. | Responsibility matrix and prohibited zone. | Open until enforced and tested. |
-| R02 | Critical | Verified | Live network launches without accountable human moderation. | Explicit no-launch gate and kill switch. | Controlled by current deferral. |
-| R03 | High | Verified | Implied affiliation, endorsement, or copying of fellowship identity. | Independent vocabulary and no Steps/Traditions/sponsor/chip/prayer imitation. | Open pending legal/organization feedback. |
-| R04 | High | Evidence-supported | Spiritual or abstinence framing excludes users or amplifies moral shame. | User-authored values and no universal model. | Open pending diverse user research. |
-| R05 | High | Verified | Pseudonymity is marketed as absolute anonymity. | Precise data/metadata disclosure required. | Open pending Thread 07. |
+| R01 | Critical | Evidence-supported conclusion | AI or peer is presented as therapist, diagnostician, or emergency responder. | Responsibility matrix and prohibited zone. | Open until enforced and tested. |
+| R02 | Critical | Evidence-supported conclusion | Live network launches without accountable human moderation. | Explicit no-launch gate and kill switch. | Controlled by current deferral. |
+| R03 | High | Evidence-supported conclusion | Implied affiliation, endorsement, or copying of fellowship identity. | Independent vocabulary and no Steps/Traditions/sponsor/chip/prayer imitation. | Open pending legal/organization feedback. |
+| R04 | High | Evidence-supported conclusion | Spiritual or abstinence framing excludes users or amplifies moral shame. | User-authored values and no universal model. | Open pending diverse user research. |
+| R05 | High | Evidence-supported conclusion | Pseudonymity is marketed as absolute anonymity. | Precise data/metadata disclosure required. | Open pending Thread 07. |
 | R06 | High | Hypothesis | Peer relationship creates grooming, dependency, misinformation, or coercion. | Defer live roles; Thread 04 threat model and human moderation. | Unmitigated for live network. |
-| R07 | Medium | Evidence-supported | Alcohol mutual-aid evidence is transferred to PPU or Better Life. | Explicit evidence firewall and claims register. | Controlled in artifacts. |
+| R07 | Medium | Evidence-supported conclusion | Alcohol mutual-aid evidence is transferred to PPU or Better Life. | Explicit evidence firewall and claims register. | Controlled in artifacts. |
 | R08 | Medium | Hypothesis | Product encloses support that existing communities provide better. | Research augmentation first and neutral external routes. | Open. |
 
 ## Standing red lines
 
-- **Verified:** no hidden monitoring, partner control, public shame, or forced disclosure.
-- **Verified:** no fellowship endorsement claim, clinical claim, emergency promise, or AI-only moderation.
+- **Repository decision:** no hidden monitoring, partner control, public shame, or forced disclosure.
+- **Repository decision:** no fellowship endorsement claim, clinical claim, emergency promise, or AI-only moderation.
+
+## Cycle 2 Additions
+
+| ID | Severity | Classification | Risk | Control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R09 | Critical | Hypothesis | Fellowship, peer group, or anonymous member receives enforcement/recovery authority. | Hard separation between support and device-control systems. | Controlled by design; specialist review pending. |
+| R10 | High | Evidence-supported conclusion | Theology, anti-theology, abstinence, gender, culture, or identity framing excludes users. | Multiple-path comparison, user-authored values, and no universal model. | Open pending diverse review. |
+| R11 | High | Evidence-supported conclusion | Group interaction spreads triggering detail, misinformation, hostility, or dependency. | No live network; moderation and incident gates before any test. | Open. |
+| R12 | High | Hypothesis | `Accountability` is interpreted as a peer veto or surveillance mandate. | Exact role/permission language and withdrawal; no browsing history. | Open pending comprehension tests. |
+| R13 | Medium | Open question | Directory listings become stale or imply endorsement. | Source/date/relationship disclosure and removal process. | Open. |

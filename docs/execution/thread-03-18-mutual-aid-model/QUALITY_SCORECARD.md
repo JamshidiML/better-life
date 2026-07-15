@@ -52,9 +52,9 @@ Gate status: **Revision required.** Live peer support remains deferred.
 
 ## Performed verification
 
-- Verified: required repository documents and named fellowship/Cochrane sources were reviewed.
-- Verified: no production implementation was added.
-- Verified: links and Markdown whitespace were checked locally.
+- Executed test result: required repository documents and named fellowship/Cochrane sources were reviewed.
+- Executed test result: no production implementation was added.
+- Executed test result: links and Markdown whitespace were checked locally.
 - Open question: independent source, clinical, community, and safety review remains pending.
 
 ## Score history
@@ -62,3 +62,11 @@ Gate status: **Revision required.** Live peer support remains deferred.
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 84 | Pending | Pending | 0 | 2 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 ChatGPT reviewer score: **76/100**.
+- Cycle 1 reviewer decision: **Revise**.
+- Cycle 1 reviewer defects: 0 Critical, 4 High.
+- Cycle 2 self-score: **84/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
+- Cycle 1 scores and defects remain historical records.
