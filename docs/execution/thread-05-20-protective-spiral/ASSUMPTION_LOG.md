@@ -13,3 +13,13 @@ Date: 2026-07-15
 | A05 | Hypothesis | Optional repair language reduces all-or-nothing response after a setback. | Compare comprehension, agency, shame, and rumination. | Open |
 | A06 | Open question | Any automated trigger adds enough value to justify platform and privacy risk. | Test manual flow first; require incremental benefit and Thread 01/07 gates. | Deferred |
 | A07 | Open question | AI or human contact adds value beyond static/private tools. | Component comparison after safety gates; exclude if not clearly incremental. | Deferred |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A08 | Hypothesis | Friction adds benefit over Supportive mode without unacceptable legitimate-use harm. | Pre-registered comparison; stop if no incremental benefit or safety worsens. | Open |
+| A09 | Hypothesis | Strict adds benefit over Friction for a subgroup who understand and choose its limits. | Sequential research only after external gates; exclude if recovery, harm, or comprehension fails. | Deferred |
+| A10 | Open question | Any finite cooling-off interval is understandable, safe, and useful. | Compare candidate bands with coercion, accessibility, and adverse-effect review. | Open |
+| A11 | Hypothesis | Users can rehearse and later execute independent recovery under stress. | Scenario-based usability and recovery drills; Strict blocked if not. | Open |
+| A12 | Open question | Time-limited ally co-approval or recovery sharing can be safer than user-only recovery. | Security and coercive-control review against no-ally baseline. | Deferred |

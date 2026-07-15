@@ -52,9 +52,9 @@ Gate status: **Revision required; research specification only.**
 
 ## Performed verification
 
-- Verified: all transitions were checked for exit and consent behavior.
-- Verified: intervention entries were cross-checked against Thread 02 claim limits and repository red lines.
-- Verified: no production code was added; links and Markdown whitespace were checked locally.
+- Executed test result: all transitions were checked for exit and consent behavior.
+- Executed test result: intervention entries were cross-checked against Thread 02 claim limits and repository red lines.
+- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: clinical, accessibility, user, privacy, and independent review remain pending.
 
 ## Score history
@@ -62,3 +62,10 @@ Gate status: **Revision required; research specification only.**
 | Cycle | Author score | Reviewer score | Accepted score | Critical | High | Decision |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 1 | 90 | Pending | Pending | 0 | 2 author-identified | Revise |
+
+## Preserved Independent Review And Cycle 2
+
+- Cycle 1 creator score: **90/100**.
+- Cycle 1 ChatGPT reviewer score: **81/100**.
+- Cycle 1 decision: **Revise**; findings are preserved in the Cycle 2 review response.
+- Cycle 2 self-score: **88/100**; see [Cycle 2 Quality Scorecard](CYCLE_2_QUALITY_SCORECARD.md).
