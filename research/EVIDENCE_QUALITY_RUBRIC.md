@@ -1,62 +1,92 @@
 # Evidence quality rubric
 
-Status: Cycle 1 Draft  
-Issue: #17  
-Branch: `codex/17-evidence-map`  
-Research date: 2026-07-15  
-Stage: research / clinical claim discipline
+Status: Cycle 1 Draft
+Issue: #17
+Branch: `codex/17-evidence-map`
+Purpose: prevent citation count from being mistaken for evidence strength
 
-## Statement Classification Key
+## Source hierarchy
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+| Tier | Classification | Typical source | Permitted use | Main caution |
+| ---: | --- | --- | --- | --- |
+| 5 | Verified | Current authoritative diagnostic, regulatory, or platform source | Establish the source owner's rule or definition | Authority in one domain does not prove product efficacy. |
+| 4 | Evidence-supported | High-quality systematic review/meta-analysis or evidence-based guideline with transparent method | Support bounded synthesis claims | Heterogeneity, publication bias, source-study weakness, and population transfer remain. |
+| 3 | Evidence-supported | Well-designed randomized or strong prospective comparative study | Support study-specific causal claims | Replication, attrition, comparator, outcome validity, and generalizability matter. |
+| 2 | Evidence-supported | Observational, validation, qualitative, or uncontrolled intervention study | Support association, usability, measurement, or lived-experience claims | Does not by itself establish intervention effectiveness. |
+| 1 | Hypothesis | Expert opinion, narrative review, professional practice description, or competitor report | Generate mechanisms and questions | Authority and plausibility are not proof. |
+| 0 | Open question | Marketing copy, testimonial, unsourced web content, or internal belief | Discovery only | Must not support public scientific claims. |
 
-## Purpose
+## Study appraisal
 
-Provide a rubric for future scientific sourcing and interpretation.
+Score each dimension 0-2. **Verified:** A high total does not override a critical ethical, safety, or applicability defect.
 
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| Dimension | 0 | 1 | 2 |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Provide a rubric for future scientific sourcing and interpretation. | Issue #17 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| Construct clarity | Undefined/self-label only | Partial operational definition | Diagnostic or validated construct with exclusions stated |
+| Population fit | Unclear or materially different | Some overlap | Target-relevant and diversity reported |
+| Design | Anecdote/cross-sectional for causal claim | Uncontrolled or weak comparator | Appropriate controlled/prospective design |
+| Bias control | Major unaddressed bias | Some safeguards | Transparent robust safeguards and sensitivity work |
+| Outcome validity | Surrogate/author-created without support | Partially validated | Validated and user/clinical relevance justified |
+| Harms and burden | Not measured | Mentioned incompletely | Prespecified and transparently reported |
+| Attrition/missingness | Unreported or threatening | Reported with limited handling | Appropriate analysis and sensitivity checks |
+| Precision | No uncertainty | Partial uncertainty | Effect estimates with intervals and multiplicity handled |
+| Transparency | No protocol/data trail | Partial methods | Protocol/registration, reproducible methods, conflicts disclosed |
+| Transfer distance | Different mechanism/context | Similar mechanism | Same mechanism, delivery, population, and setting |
 
-## Cycle 1 Findings
+### Interpretation
 
-| Classification | Finding | Evidence or source | Product implication |
-| --- | --- | --- | --- |
-| Verified | Better Life is not therapy, diagnosis, treatment, emergency response, or a cure. | README.md; PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md | Product copy must use behavior-change and self-regulation language. |
-| Evidence-supported | ICD-11 is the authoritative international classification anchor for CSBD terminology, but product language should not diagnose users. | WHO ICD-11 pages | Use CSBD only as background, not as an onboarding label. |
-| Hypothesis | CBT, ACT, mindfulness, motivational interviewing, relapse prevention, emotion regulation, and peer support may supply useful mechanisms for non-clinical product design. | Scientific strategy and preliminary source pass | Translate mechanisms into optional exercises, not treatment claims. |
-| Open question | Evidence quality for problematic pornography use interventions needs full-text review and clinical interpretation before strong efficacy claims. | PubMed/source pass incomplete | Claims register should block effectiveness promises until reviewed. |
+| Total | Classification | Decision |
+| ---: | --- | --- |
+| 17-20 | Evidence-supported | May support a bounded claim after specialist review; still not automatically transferable to Better Life. |
+| 12-16 | Evidence-supported | Use with explicit limitations and corroboration. |
+| 7-11 | Hypothesis | Mechanism generation or research design only. |
+| 0-6 | Open question | Do not use for product or efficacy claims. |
 
-## Source Register
+## Review-level appraisal
 
-| Classification | Source | Cycle 1 use |
+| Check | Classification | Pass condition |
 | --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| Search method | Verified | Databases, dates, terms, inclusion/exclusion, and screening process are reported. |
+| Included-study quality | Verified | Risk of bias is assessed with a suitable method and affects conclusions. |
+| Heterogeneity | Verified | Population, construct, intervention, comparator, and outcome differences are analyzed. |
+| Synthesis | Verified | Pooling is justified; uncertainty and publication bias are addressed where possible. |
+| Harms | Verified | Adverse effects, shame, treatment displacement, and reporting gaps are considered. |
+| Applicability | Verified | Product transfer is separated from clinical or researcher-delivered intervention evidence. |
 
-## Artifact-Specific Work To Complete
+## Claim-strength ceiling
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about evidence quality rubric after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+| Best available evidence | Maximum classification for Better Life claim |
+| --- | --- |
+| Better Life-specific replicated trials with acceptable harms and fit | **Evidence-supported**, not “guaranteed” or “proven for everyone.” |
+| External intervention trials or synthesis | **Hypothesis** for the Better Life implementation until transfer is tested. |
+| Observational/qualitative evidence | **Evidence-supported** for association/experience; **Hypothesis** for causality or efficacy. |
+| Expert opinion or competitor practice | **Hypothesis** only. |
+| Marketing/testimonial | **Open question** only. |
 
-## Known Weaknesses
+## Evidence record template
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+| Field | Requirement |
+| --- | --- |
+| Citation and stable link | **Verified:** full citation, DOI/PMID or authoritative URL, access/review date. |
+| Claim supported | **Verified:** exact bounded claim, not a broad topic label. |
+| Design and population | **Verified:** sample, setting, inclusion/exclusion, comparator, follow-up. |
+| Construct and outcome | **Verified:** definition, instrument, timing, clinical/user relevance. |
+| Result | **Verified:** direction, magnitude, uncertainty, and null/adverse findings. |
+| Bias and limits | **Verified:** confounding, attrition, selective reporting, conflicts, transfer distance. |
+| Product implication | **Hypothesis:** candidate mechanism plus the validation needed for Better Life. |
+| Review state | **Verified:** researcher review, clinical review, user validation, expiry trigger. |
+
+## Update and disagreement protocol
+
+1. **Verified:** Preserve conflicting credible findings rather than averaging them into false certainty.
+2. **Verified:** Record search cutoff and superseding sources; do not silently replace prior interpretations.
+3. **Verified:** Downgrade the claim when applicability or harm reporting is weak, even if efficacy estimates are positive.
+4. **Verified:** Require a second reviewer for claims that could imply diagnosis, treatment, crisis support, anonymity, or universal protection.
+5. **Verified:** Reopen a claim when a key source is retracted, a guideline changes, the product mechanism changes, or new harm evidence appears.
+
+## Cycle 1 rubric result
+
+- **Evidence-supported:** WHO diagnostic terminology is the strongest anchor in the current map.
+- **Evidence-supported:** Psychotherapy mechanisms have enough signal for cautious research hypotheses, not Better Life efficacy claims.
+- **Open question:** Individual intervention studies have not yet been scored with this rubric.
+- **Open question:** Independent clinical and methodological review remains required.

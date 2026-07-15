@@ -1,9 +1,9 @@
 # Execution Thread 02 — Cycle 1 Index
 
-Issue: #17  
-Title: Scientific evidence map and claims register  
-Branch: `codex/17-evidence-map`  
-Date: 2026-07-15  
+Issue: #17
+Title: Scientific evidence map and claims register
+Branch: `codex/17-evidence-map`
+Date: 2026-07-15
 Status: Draft PR workstream, author Cycle 1 complete, independent review pending.
 
 ## Read-First Evidence
@@ -24,10 +24,10 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Deliverables
 
-- Evidence-supported: [Evidence map](../../research/EVIDENCE_MAP.md)
-- Evidence-supported: [Intervention evidence matrix](../../research/INTERVENTION_EVIDENCE_MATRIX.md)
-- Evidence-supported: [Claims register](../../research/CLAIMS_REGISTER.md)
-- Evidence-supported: [Evidence quality rubric](../../research/EVIDENCE_QUALITY_RUBRIC.md)
+- Evidence-supported: [Evidence map](../../../research/EVIDENCE_MAP.md)
+- Evidence-supported: [Intervention evidence matrix](../../../research/INTERVENTION_EVIDENCE_MATRIX.md)
+- Evidence-supported: [Claims register](../../../research/CLAIMS_REGISTER.md)
+- Evidence-supported: [Evidence quality rubric](../../../research/EVIDENCE_QUALITY_RUBRIC.md)
 
 ## Quality Artifacts
 
@@ -37,6 +37,6 @@ Status: Draft PR workstream, author Cycle 1 complete, independent review pending
 
 ## Current Review Request
 
-- Open question: Does ChatGPT agree with the conservative Cycle 1 score and the highest-impact gaps?
-- Open question: Does the founder accept the product direction implied by this workstream?
-- Open question: Which items require legal, clinical, privacy, security, or platform-specialist review before Phase 1?
+- Open question: Does ChatGPT agree that all external clinical mechanisms remain product hypotheses rather than Better Life efficacy evidence?
+- Open question: Does a qualified clinical reviewer confirm the WHO interpretation, differential cautions, and prohibited claims?
+- Open question: Does the founder accept non-diagnostic, non-moralizing language even when prospective users self-identify with “addiction” language?

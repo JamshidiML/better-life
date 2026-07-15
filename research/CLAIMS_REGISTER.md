@@ -1,62 +1,69 @@
 # Claims register
 
-Status: Cycle 1 Draft  
-Issue: #17  
-Branch: `codex/17-evidence-map`  
-Research date: 2026-07-15  
-Stage: research / clinical claim discipline
+Status: Cycle 1 Draft
+Issue: #17
+Branch: `codex/17-evidence-map`
+Owner: scientific/clinical claim review
 
-## Statement Classification Key
+## Claim statuses
 
-Every material statement below is classified as one of: Verified, Evidence-supported, Platform limitation, Hypothesis, or Open question.
+| Status | Meaning |
+| --- | --- |
+| Allowed | **Verified:** consistent with repository policy and does not imply unestablished efficacy. |
+| Review required | **Open question:** may be usable only after evidence, clinical, legal, and product-context review. |
+| Rejected | **Verified:** conflicts with evidence, scope, safety, consent, or anti-coercion policy. |
 
-## Purpose
+## Allowed claims for research artifacts
 
-Define allowed, risky, rejected, and review-required product claims.
-
-## Architecture / Product Pre-Check
-
-| Required element | Classification | Cycle 1 answer | Evidence |
+| ID | Classification | Candidate wording | Evidence and conditions |
 | --- | --- | --- | --- |
-| User problem | Evidence-supported | Adults want voluntary support during high-risk moments without shame, spyware, or clinical overclaiming. | README.md; PRODUCT_DOCTRINE.md; phase0/README.md |
-| Expected benefit | Hypothesis | Define allowed, risky, rejected, and review-required product claims. | Issue #17 |
-| Supporting evidence | Evidence-supported | Repository doctrine and initial source pass support the direction, but full review remains open. | Read-first docs and source list below |
-| Required data | Hypothesis | Use only data needed for this artifact; default to local, user-visible, non-explicit data. | PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md |
-| Consent requirements | Verified | Consent must be voluntary, specific, renewable/revocable where data sharing is involved, and include calm-state exit for strict controls. | phase0/SAFETY_AND_CONSENT.md |
-| Safety risks | Verified | Shame, coercion, therapy replacement, privacy breach, and false confidence are standing risks. | phase0/RISK_REGISTER.md |
-| Misuse risks | Verified | Hidden monitoring, partner spyware, public shame, and impossible-bypass promises are forbidden. | AGENTS.md; PRODUCT_DOCTRINE.md |
-| Platform feasibility | Open question | Feasibility depends on this thread's topic and must not be generalized beyond evidence. | Thread deliverable scope |
-| Success metric | Hypothesis | Artifact is useful when a reviewer can trace every recommendation to evidence, limitation, or explicit open question. | Quality loop docs |
-| Exit strategy | Verified | If value cannot justify data or harm risk, the mechanism must be deferred, redesigned, or rejected. | QUALITY_SCORING_AND_IMPROVEMENT_LOOP.md |
+| C-A01 | Verified | “Better Life is being researched as a voluntary self-help and behavior-change tool for adults.” | Accurate current phase; must not imply availability or efficacy. |
+| C-A02 | Verified | “You choose your goal, what to record, and whether to involve another person.” | Only allowed if the actual flow preserves separate, revocable choices. |
+| C-A03 | Evidence-supported | “The product explores reflection, planning, voluntary friction, and recovery after setbacks.” | Describes candidate functions, not proven outcomes. |
+| C-A04 | Verified | “Better Life does not diagnose, provide therapy, or replace professional or emergency care.” | Required boundary, paired with usable care/crisis routes where relevant. |
+| C-A05 | Evidence-supported | “Research distinguishes impaired control and functional impact from frequency or moral disapproval alone.” | Supported by WHO diagnostic requirements and moral-incongruence research; no individual conclusion may follow. |
+| C-A06 | Hypothesis | “This exercise may help you pause and choose your next step.” | Acceptable only as clearly tentative, optional copy after user and clinical review. |
 
-## Cycle 1 Findings
+## Claims requiring review before any public use
 
-| Classification | Finding | Evidence or source | Product implication |
+| ID | Classification | Candidate claim | Required evidence or change |
 | --- | --- | --- | --- |
-| Verified | Better Life is not therapy, diagnosis, treatment, emergency response, or a cure. | README.md; PRODUCT_DOCTRINE.md; SAFETY_AND_CONSENT.md | Product copy must use behavior-change and self-regulation language. |
-| Evidence-supported | ICD-11 is the authoritative international classification anchor for CSBD terminology, but product language should not diagnose users. | WHO ICD-11 pages | Use CSBD only as background, not as an onboarding label. |
-| Hypothesis | CBT, ACT, mindfulness, motivational interviewing, relapse prevention, emotion regulation, and peer support may supply useful mechanisms for non-clinical product design. | Scientific strategy and preliminary source pass | Translate mechanisms into optional exercises, not treatment claims. |
-| Open question | Evidence quality for problematic pornography use interventions needs full-text review and clinical interpretation before strong efficacy claims. | PubMed/source pass incomplete | Claims register should block effectiveness promises until reviewed. |
+| C-R01 | Hypothesis | “Better Life reduces problematic pornography use.” | Prospective evaluation of a defined intervention, population, comparator, outcome, harms, and analysis; legal/clinical review. |
+| C-R02 | Hypothesis | “This technique is evidence-based.” | Name the technique, target, evidence tier, population fit, and product-transfer limits; avoid umbrella wording. |
+| C-R03 | Hypothesis | “Personalized support when you need it.” | Define personalization data and logic, demonstrate privacy/safety, and prevent clinical or surveillance implication. |
+| C-R04 | Hypothesis | “Private” or “anonymous.” | Threat model, retention map, processor list, re-identification analysis, and precise qualifiers are required. |
+| C-R05 | Hypothesis | “Works across all your devices.” | Thread 01 capability verification and explicit bypass/platform limitations are required. |
+| C-R06 | Hypothesis | “Community support improves recovery.” | Direct evidence, moderation model, incident thresholds, and clear non-emergency boundary are required. |
+| C-R07 | Hypothesis | “Clinically informed.” | Name reviewer role, scope, date, conflicts, and exactly what was reviewed; do not imply endorsement. |
+| C-R08 | Hypothesis | “Affordable at EUR1 per month.” | Thread 09 must establish what is included, fees/taxes, subsidy, and sustainability assumptions. |
 
-## Source Register
+## Rejected claims
 
-| Classification | Source | Cycle 1 use |
-| --- | --- | --- |
-| Evidence-supported | https://icd.who.int/browse/2026-01/mms/en | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.who.int/standards/classifications/classification-of-diseases | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://pubmed.ncbi.nlm.nih.gov/29316474/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/ | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
-| Evidence-supported | https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd | Opened or identified during Cycle 1; source details need reviewer verification before public claims. |
+| ID | Classification | Rejected wording or implication | Reason |
+| --- | --- | --- | --- |
+| C-X01 | Verified | “Diagnoses porn addiction/CSBD.” | A consumer product and screening score cannot make the diagnosis; “porn addiction” is not the adopted WHO label. |
+| C-X02 | Verified | “Treats,” “cures,” or “prevents relapse.” | No Better Life clinical efficacy evidence; current scope is not treatment. |
+| C-X03 | Verified | “Guaranteed protection,” “impossible to bypass,” or “blocks everything.” | Platform and motivated-bypass limitations make the promise false and unsafe. |
+| C-X04 | Verified | “Your partner can make sure you behave.” | Coercive surveillance and partner-control framing violate doctrine. |
+| C-X05 | Verified | “AI therapist,” “24/7 crisis support,” or equivalent emergency implication. | Therapy impersonation and emergency reliability are outside scope. |
+| C-X06 | Verified | “Anonymous” when identifiers, linkable metadata, contact details, or moderation records exist. | Absolute anonymity would be misleading. |
+| C-X07 | Verified | “A high score means you have CSBD.” | CSBD-19 and CSBD-DI are screening instruments, not standalone diagnoses. |
+| C-X08 | Verified | “Frequent pornography use means addiction.” | Frequency alone does not establish impaired control or marked distress/impairment. |
+| C-X09 | Verified | “Religious or moral concern is merely shame.” | Moral incongruence is relevant but cannot be used to dismiss a person's lived impairment or values. |
+| C-X10 | Verified | “Scientifically proven” or “clinically proven.” | The reviewed evidence does not establish Better Life's efficacy. |
 
-## Artifact-Specific Work To Complete
+## Claim approval workflow
 
-- Verified: The repository requires a Draft PR and independent review before this work can be accepted.
-- Hypothesis: This artifact should become the canonical place for decisions about claims register after ChatGPT/founder review.
-- Open question: Full acceptance depends on reviewer deductions, deeper source review, and any specialist review identified in the thread scorecard.
+1. **Verified:** Assign a claim ID and copy the exact wording plus placement context into this register.
+2. **Verified:** Link the claim to the user problem, evidence, required data, consent, safety/misuse analysis, feasibility, metric, and exit strategy.
+3. **Verified:** Scientific review checks population, intervention, comparator, outcome, study quality, harms, and transfer distance.
+4. **Verified:** Privacy/legal review checks data and regulatory implications; clinical review checks diagnostic and treatment implications.
+5. **Verified:** User research tests comprehension, shame, coercion, and overclaim interpretation.
+6. **Verified:** Approval records reviewer, date, version, conditions, and expiry/review trigger.
+7. **Verified:** Any product, evidence, platform, or regulatory change reopens the claim.
 
-## Known Weaknesses
+## Current decision
 
-- Evidence-supported: This Cycle 1 draft prioritizes issue structure, safety boundaries, source register, and first-pass reasoning.
-- Open question: It has not yet received ChatGPT review, founder validation, or specialist review.
-- Open question: Some external sources may require deeper primary-source reading before a recommendation can pass the 95 threshold.
+- **Verified:** Only C-A01 through C-A05 are approved for Cycle 1 research documentation.
+- **Open question:** C-A06 requires wording review before participant-facing use.
+- **Verified:** No outcome, clinical efficacy, anonymity, universal protection, or peer-support benefit claim is approved.
