@@ -51,9 +51,9 @@ Gate status: **Revision required; no participant-ready curriculum or production 
 
 ## Performed verification
 
-- Executed test result: all required artifacts were cross-checked for prohibited inference and consent consistency.
-- Executed test result: Thread 02 claim boundaries and Thread 05 state/measure concepts were incorporated without copying branch files.
-- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
+- Desk-review observation: all required artifacts were cross-checked for prohibited inference and consent consistency.
+- Desk-review observation: Thread 02 claim boundaries and Thread 05 state/measure concepts were incorporated without copying branch files.
+- Repository-state verified: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: all specialist and user validation remains pending.
 
 ## Score history

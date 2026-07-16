@@ -25,3 +25,13 @@ Date: 2026-07-15
 | R12 | High | Hypothesis | Constitution language becomes moral, diagnostic, rigid, or identity-defining. | Neutral aliases, optional fields, inclusion review, archive/delete, interpretation stop rules. | Open. |
 | R13 | High | Evidence-supported conclusion | Old consent survives a material data, ally, purpose, permission, or retention change. | Receipt invalidation and fresh exact confirmation. | Specification only. |
 | R14 | High | Hypothesis | Detailed receipts/outcomes increase cognitive load or compulsive review. | Minimal default, layered detail, all outcomes optional, burden/adverse measurement. | Open. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R15 | Critical | Hypothesis | Adaptive pathway infers protected/sensitive traits, diagnosis, trauma, incapacity, or moral worth from behavior. | Explicit-choice-only variants, visible rules, no ML, inspect/reset/delete, and prohibited proxy list. | Open pending privacy/inclusion review. |
+| R16 | High | Hypothesis | A name such as `Constitution` or `Recovery Plan` implies legal force, diagnosis, ideology, or permanence. | Naming protocol and neutral placeholder until tested. | Open. |
+| R17 | High | Platform limitation | Cross-device conflict silently revives deleted/stale policy or overwrites a safer current choice. | No sync in MVE; later detect conflict, freeze enforcement change, show versions, user resolves, preserve audit. | Open; architecture untested. |
+| R18 | High | Hypothesis | Reward eligibility pressures stage completion, intimate disclosure, surveillance, or compulsive use. | Optional private acknowledgement only after review; prohibited eligibility bases and unconditional safety/care/access. | Open; rewards excluded from MVE. |
+| R19 | High | Hypothesis | Repair/amends stage prompts unsafe contact, confession, self-incrimination, or retraumatization. | Skip/defer/revise/exit, no-contact alternatives, no-save mode, safeguarding/clinical review. | Open. |

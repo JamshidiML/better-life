@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: repository/schema review is not an executed test. `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail.
 
 No schema or policy behavior described here has been implemented or validated with users.
 
@@ -26,7 +28,7 @@ No schema or policy behavior described here has been implemented or validated wi
 | Expected benefit | Hypothesis | An inspectable policy may reduce ambiguity about scope, mode, change, recovery, and data while preserving self-authorship. |
 | Supporting evidence | Evidence-supported conclusion | Thread 02 permits cautious research on self-management mechanisms; it does not establish Better Life efficacy or the benefit of enforcement. |
 | Required data | Design requirement | Policy identity/version, mode, scope, context, duration, consent, recovery, review, outcome choices, and adapter references; explicit content is unnecessary. |
-| Consent requirements | Founder decision | The user authors and activates policy while calm; each external layer, share, ally role, or material change has an exact consent receipt. |
+| Consent requirements | Founder decision | The user initiates setup at a chosen time, voluntarily confirms readiness, and demonstrates comprehension; Strict additionally requires recovery rehearsal. No calmness, capacity, diagnosis, or mental state is inferred. Each external layer, share, or material change has an exact consent receipt. |
 | Safety risks | Evidence-supported conclusion | Coercion, lockout, overbreadth, shame, compulsive review, accessibility harm, care displacement, and sensitive-data exposure. |
 | Misuse risks | Evidence-supported conclusion | Partner/employer authorship, hidden monitoring, indefinite control, discriminatory inference, and ally veto. |
 | Platform feasibility | Platform limitation | Context and enforcement capabilities differ by adapter and cannot be represented as universal or tamper-proof. |
@@ -48,7 +50,7 @@ The minimal form is the default research object.
 | `change_rule` | Founder decision | Exact downgrade delay, pending-change handling, cancellation, renewal, and expiry behavior. | Candidate durations remain hypotheses. |
 | `recovery_rule` | Design requirement | Legitimate-use, safety/coercion, lost-device/account, and degraded-adapter paths. | Must work without an ally. |
 | `consent_receipts` | Design requirement | Version, purpose, data, recipient/processor, permission, term, withdrawal effect. | Separate per layer/share/material change. |
-| `review_at` | Design requirement | Next calm-state review date or expiry-only review. | No repeated pressure if ignored. |
+| `review_at` | Design requirement | Next user-chosen review date or expiry-only review. | No repeated pressure if ignored; no inference about mental state. |
 
 ## Extended Constitution
 
@@ -115,7 +117,7 @@ Bundled consent is prohibited. A changed recipient, purpose, data class, adapter
 | --- | --- | --- |
 | Is an ally required? | Founder decision | No. |
 | What can the ally see? | Design requirement | Exact event/message fields, never browsing or explicit history by default. |
-| What can the ally do? | Design requirement | One named level: notification, acknowledgement, time-limited co-approval hypothesis, or recovery-share hypothesis. |
+| What can the ally do? | Design requirement | At most notification or acknowledgement without veto; Cycle 3 prohibits co-approval and recovery-share custody. |
 | When does the role end? | Design requirement | Fixed expiry, withdrawal, replacement, compromise, or relationship-change event. |
 | What if unavailable/hostile? | Design requirement | Timeout and independent recovery; ally cannot extend or punish. |
 | What if account/device is lost? | Design requirement | Independent re-authentication and finite recovery; rotate old grants/material. |
@@ -166,4 +168,4 @@ No Constitution score, adherence score, risk score, public streak, or comparison
 
 Stop participant escalation for coercive authorship, hidden or bundled consent, inaccessible recovery, essential-access harm, diagnostic/moral interpretation, material exclusion, care displacement, silent expiry/renewal error, or orphaned control.
 
-External review required: clinical/method, coercive-control, privacy/legal, security/platform, accessibility, inclusion/lived experience, localization, and research ethics. Founder decisions remain pending on final naming, cooling-off ranges, Strict eligibility, ally co-approval/recovery sharing, and quantitative thresholds.
+External review required: clinical/method, coercive-control, privacy/legal, security/platform, accessibility, inclusion/lived experience, localization, and research ethics. Founder decisions remain pending on final naming, cooling candidates, Strict eligibility, and quantitative thresholds. Ally co-approval and recovery sharing are prohibited in Cycle 3.

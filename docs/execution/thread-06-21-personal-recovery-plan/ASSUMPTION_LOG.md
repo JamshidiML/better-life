@@ -23,3 +23,13 @@ Date: 2026-07-15
 | A10 | Hypothesis | Users can correctly understand layered scope and platform limits. | Scenario tests across browser/profile/device/network examples. | Open |
 | A11 | Hypothesis | Versioned consent receipts improve control without overwhelming users. | Comprehension/burden test; simplify while preserving exactness. | Open |
 | A12 | Open question | Optional extended outcomes improve review without shame or compulsive checking. | Method/clinical review and staged adverse-effect test. | Deferred |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A13 | Hypothesis | Five required decisions are sufficient for a useful first Minimum Viable Experiment. | Low-fidelity completion, burden, recall, and usefulness comparison; remove fields that do not change action. | Open |
+| A14 | Hypothesis | `Personal plan`, `My plan`, `Protection plan`, or another neutral label avoids clinical and punitive interpretations better than `Recovery Plan` or `Constitution`. | Multilingual cognitive interviews across culture, faith/secular preference, literacy, and prior recovery experience. | Open |
+| A15 | Hypothesis | Explicit version conflict choices are safer than automatic last-write-wins synchronization. | Cross-device tabletop and comprehension research; no cloud sync in first MVE. | Open |
+| A16 | Hypothesis | Adaptive pathway variants can be driven by explicit user choices without inferring religion, culture, diagnosis, trauma, sexuality, or learning capacity. | Diverse scenario research and privacy review; remove any rule with hidden proxy inference. | Open |
+| A17 | Open question | Rewards add benefit beyond private acknowledgement without distorting motivation or increasing disclosure/engagement pressure. | Sequential reward-safety research after pathway usefulness; exclude from first MVE. | Deferred |
