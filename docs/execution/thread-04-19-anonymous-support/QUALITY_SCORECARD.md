@@ -52,9 +52,9 @@ Gate status: **Revision required; live matching deferred.**
 
 ## Performed verification
 
-- Executed test result: architecture, threat model, rules, and flow were cross-checked for consistent invariants.
-- Executed test result: source and repository policy links were reviewed.
-- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
+- Desk-review observation: architecture, threat model, rules, and flow were cross-checked for consistent invariants.
+- Research procedure executed: source and repository policy links were reviewed.
+- Repository-state verified: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: specialist review and all empirical tests remain pending.
 
 ## Score history

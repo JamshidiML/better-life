@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail. Repository inspection and scenario design are not executed tests.
 
 No proposed control is implemented or tested.
 
@@ -32,7 +34,7 @@ Anonymous support and enforcement authority use separate data models, permission
 | 4 | Split recovery hypothesis | Minimum recovery share, never content/history | Time-bound; key rotation on relationship change | User-held additional factor or independent delayed route required. |
 | 5 | Independent delayed recovery without ally | No ally data | User-selected waiting period and re-authentication | This is the recovery path. |
 
-Levels 3 and 4 are research hypotheses requiring security and coercive-control review. They are not authorized product requirements.
+Cycle 3 supersession: Levels 3 and 4 are prohibited Better Life roles. No peer, ally, sponsor-like role, or community actor may co-approve a protection change or hold a recovery share. Reconsideration would require a new founder decision, independent coercive-control and security evidence, and explicit cross-thread revision; no such reconsideration is authorized.
 
 ## Ally Abuse And Failure Cases
 
