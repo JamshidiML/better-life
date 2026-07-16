@@ -52,10 +52,10 @@ Gate status: **Revision required; no personal-data production implementation app
 
 ## Performed verification
 
-- Executed test result: data elements were checked against every class and optional capability layer.
-- Executed test result: consent withdrawal, deletion, export, recovery, logging, and backup failure paths are represented.
-- Executed test result: authoritative source links and repository red lines were reviewed; Markdown links/whitespace were checked locally.
-- Executed test result: no production code or compliance claim was added.
+- Desk-review observation: data elements were checked against every class and optional capability layer.
+- Desk-review observation: consent withdrawal, deletion, export, recovery, logging, and backup failure paths are represented.
+- Research procedure executed: authoritative source links and repository red lines were reviewed.
+- Repository-state verified: Markdown links/whitespace were checked locally; no production code or compliance claim was added.
 - Open question: all legal, security, platform, and user validation remains pending.
 
 ## Score history

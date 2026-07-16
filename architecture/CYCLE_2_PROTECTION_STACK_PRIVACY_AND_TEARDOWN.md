@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: repository/data-flow review is not an executed test. `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail.
 
 No control, permission flow, deletion path, or adapter teardown described here has been implemented or tested.
 
@@ -35,7 +37,7 @@ No control, permission flow, deletion path, or adapter teardown described here h
 | Account | Official provider family/safety/management control | Account policy and provider metadata | External account provider; possibly organization/family administrator | Off; only voluntary adult self-management scope approved for research | Account, owner/admin, policy and sync status | Revoke Better Life token, remove product-created policy where API permits, and direct user to provider-owned residual controls. |
 | Network | DNS/VPN/router rule | Domain/category rule, resolver events depending provider | ISP/DNS/VPN/router vendor and network administrator | Off; exact network/admin/data-flow receipt | Active network/resolver/profile/rule health | Remove product-created profile/rules/tokens; restore prior validated network config; disclose other-admin artifacts. |
 | Sync/backup | OS backup, encrypted export, optional future E2EE sync | D2/D3 copies and key metadata | OS/cloud/storage provider; other devices | Sensitive backup disabled or separately designed; no approved sync | Backup eligibility, copy/device/key state | Delete active copy, propagate tombstone where approved, exclude routine restore, rotate/destroy key only under verified design. |
-| Ally | Notification, acknowledgement, co-approval/recovery-share hypothesis | Exact event/message/role/term; no history by default | Messaging processor and ally account/device | Off; exact role/data/term; independent path mandatory | Delivery/role/key/expiry status | Cancel pending sends, revoke role/token/share, rotate recovery material, disclose recipient copy cannot be guaranteed deleted. |
+| Ally | Optional notification or acknowledgement only; co-approval/recovery-share prohibited in Cycle 3 | Exact event/message/role/term; no history by default | Messaging processor and ally account/device | Off; exact role/data/term; independent path mandatory | Delivery/role/expiry status | Cancel pending sends, revoke role/token, disclose recipient copy cannot be guaranteed deleted. |
 | Operations | Security/health telemetry and incident evidence | D1/D2 allowlist; D5 only for incident purpose | Better Life roles/processors | Minimal; no ad tech/session replay/free text | Pipeline/schema/access/retention status | Stop collection, delete by schedule/right, revoke processor/access, preserve only documented legal/safety exception. |
 
 ## Inventory Record
@@ -62,11 +64,11 @@ An artifact without a policy/receipt owner or teardown procedure is an orphan an
 | Receipt question | Browser | OS/app | Account | Network | Ally |
 | --- | --- | --- | --- | --- | --- |
 | Exact scope | Browser/profile/host/category | Device/user/profile/app/category | Provider account/policy | Network/resolver/router/rule | Person, role, event/message |
-| Permission/control | Host/rule permission and store install | Entitlement, VPN/filter/profile/device API | OAuth/API/admin relationship | VPN/DNS/router credential/admin | Delivery channel or key share |
+| Permission/control | Host/rule permission and store install | Entitlement, VPN/filter/profile/device API | OAuth/API/admin relationship | VPN/DNS/router credential/admin | Delivery channel only; no key share |
 | Data leaving device | Vendor/store update/security data; product cloud only if separately enabled | OS/provider behavior and any processor | Provider policy/account metadata | Resolver/VPN/router data | Exact previewed payload/delivery metadata |
 | Known limits | Alternate profile/browser/device | Alternate device/account, entitlement and OS behavior | Provider scope/admin ownership | Other network/VPN/encrypted DNS/admin | Recipient copy, compromise, availability |
-| Revocation effect | Disable/revoke/remove rules | Stop/remove service/profile/token | Revoke token/remove supported rule | Remove profile/rule/token, restore prior config | Cancel future send/revoke role/rotate key |
-| Teardown residual | Store listing/history, managed policy beyond product | OS logs/backups/profile controlled elsewhere | Provider retention/admin rule | Provider/router logs and other admin state | Recipient-held message or key copy |
+| Revocation effect | Disable/revoke/remove rules | Stop/remove service/profile/token | Revoke token/remove supported rule | Remove profile/rule/token, restore prior config | Cancel future send and revoke role/token |
+| Teardown residual | Store listing/history, managed policy beyond product | OS logs/backups/profile controlled elsewhere | Provider retention/admin rule | Provider/router logs and other admin state | Recipient-held message copy |
 
 Material changes to scope, purpose, data class, recipient/processor, permission, retention, recovery, or teardown invalidate the affected receipt and keep the adapter off until fresh confirmation.
 
@@ -78,7 +80,7 @@ Material changes to scope, purpose, data class, recipient/processor, permission,
 | Cloud D2 account/security | Open question | Only if justified; separated, least privilege, audited, short retention, no intimate payload. |
 | Cloud D3 sync | Open question | Not approved; would require demonstrated need, E2EE/recovery design, metadata map, rights, teardown, and user evidence. |
 | External adapter state | Platform limitation | External vendor/admin ultimately controls platform state; Better Life must identify what it can create/read/delete and what it cannot. |
-| Ally-held data/material | Hypothesis | Exact minimum for a finite role; no sole authority; recipient/device copy may persist after revocation. |
+| Ally-held data/material | Hypothesis | Exact minimum message for a finite notification/acknowledgement role; no key, recovery, approval, or protection authority; recipient/device copy may persist after revocation. |
 | Research data | Repository decision | Pseudonymous coded research only under approved protocol; raw notes/intimate artifacts remain outside repo and external AI. |
 
 ## Threat Model Extensions
@@ -91,7 +93,7 @@ Material changes to scope, purpose, data class, recipient/processor, permission,
 | Reinstall | App/extension reinstall reconnects stale rules, token, or ally role. | Treat reinstall as untrusted; reconcile inventory/receipt/expiry before activation. | No automatic reactivation from stale receipt. |
 | Offline device | Old policy/data persists and later syncs. | Device registry, receipt/version expiry, tombstone/revocation, bounded retry. | Unknown device is listed as residual; do not promise complete deletion. |
 | Lost recovery factor | User cannot remove Strict policy or decrypt data. | Multiple independent user-controlled routes, finite recovery, essential-access safe state. | Ally/provider cannot be sole factor. |
-| Compromised ally | Uses role/key to deny, observe, or impersonate. | Minimal role, expiry, revocation, key rotation, no content/history access. | Co-approval/recovery-share remains unapproved hypothesis. |
+| Compromised ally | Uses role to observe, coerce, or impersonate. | Minimal message, expiry, revocation, no content/history/key access. | Co-approval/recovery-share is prohibited; compromise still creates recipient-copy risk. |
 | Insider/support | Browses D2-D5 or exports case data. | Local D3 default, JIT case access, purpose, audit, two-person export, anomaly alert. | Broad support access blocks launch. |
 | Orphan adapter | Permission/rule/profile remains after policy deletion. | Reconciliation, teardown receipt, orphan scan, release-blocking synthetic tests. | Unremovable product-created control retires adapter. |
 | Supply chain | Extension/app dependency/update exfiltrates data or changes permissions. | Minimal dependencies, signed/reviewed update, permission diff, SBOM and incident rollback plan. | Implementation evidence required before approval. |

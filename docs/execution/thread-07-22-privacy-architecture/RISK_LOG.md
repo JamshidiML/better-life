@@ -27,3 +27,14 @@ Date: 2026-07-15
 | R14 | High | Platform limitation | External provider/admin owns residual state Better Life cannot delete. | Ownership disclosure, manual path, partial result, retire layer if disproportionate. | Inherent by adapter. |
 | R15 | High | Evidence-supported conclusion | Shared device/account crosses D3 or policy between people. | OS-user binding, re-authentication, account/profile checks, keep core off if isolation fails. | Platform/user tests absent. |
 | R16 | High | Open question | Processing has no valid legal basis/Article 9 condition or violates device/ePrivacy rules. | Purpose matrix, DPIA, counsel/DPO gate, rejected-alternative record. | Unmitigated until review. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R17 | Critical | Evidence-supported conclusion | Consent or legal basis for one purpose is silently reused for personal adaptation, analytics, safety, research, model training, or public-health reporting. | Six separate purpose records, default off where optional, independent withdrawal/retention/access, and no implied transfer. | Open pending counsel/UX review. |
+| R18 | Critical | Hypothesis | Local or global learning infers religion, sexuality, diagnosis, trauma, criminality, moral worth, incapacity, or vulnerability. | Explicit-choice inputs, prohibited proxy list, inspect/reset/delete, no global training default, human governance. | Open. |
+| R19 | Critical | Platform limitation | Factory reset/replacement device or stale backup revives policy, loses recovery, or creates false current-state claims. | User-held inventory, fresh-device off state, receipt/version/expiry reconciliation, no automatic reactivation. | Open; platform tests absent. |
+| R20 | High | Hypothesis | Differential privacy/federated language creates a false anonymity guarantee or hides weak parameters/central leakage. | Formal guarantee record, threat model, parameter/utility review, independent audit, precise claims, exit. | Open; no approach approved. |
+| R21 | High | Hypothesis | Partner, employer, sponsor, NGO, public-health body, or model provider gains intimate data or influence through funding/integration. | Structural data separation, no partner event access, purpose contract, audit, withdrawal, no mode/reward eligibility influence. | Open. |
+| R22 | High | Hypothesis | Cultural personalization becomes profiling, stereotyping, or hidden discrimination. | User-provided optional preferences, no inference, variant review, explain/change/reset/delete, subgroup harm audit. | Open. |
