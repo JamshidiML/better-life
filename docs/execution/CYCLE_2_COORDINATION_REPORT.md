@@ -8,7 +8,7 @@ Decision: Revise and escalate external gates; stop for ChatGPT and founder revie
 
 ## Report Boundary
 
-- **Executed test result:** All ten thread revisions were committed and pushed to their existing branches before this report was prepared.
+- **Repository-state verified:** All ten thread revisions were committed and pushed to their existing branches before this report was prepared.
 - **Repository decision:** All eleven PRs remain Draft; no branch is accepted or merge-ready.
 - **Repository decision:** This cycle contains research, architecture, product definition, and documentation only. It authorizes no production code.
 - **Founder decision:** Better Life should investigate a transparent multi-layer Protection Stack with central policy, platform adapters, three modes, finite user-authored cooling-off, official-control orchestration, and complete teardown/recovery.
@@ -22,6 +22,8 @@ Cycle 2 uses these labels for material statements:
 `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
 
 The Cycle 1 `Verified` and `Evidence-supported` labels are historical and must not be read as current classifications.
+
+Cycle 3 clarification: `Repository-state verified` records inspected repository/GitHub state; `Research procedure executed` records a documented research procedure; `Desk-review observation` records a non-test review observation; `Executed test result` is reserved for a real test with environment/version, input, expected result, observed result, evidence location, and pass/fail.
 
 ## Thread Dashboard
 
@@ -156,7 +158,7 @@ The Cycle 1 `Verified` and `Evidence-supported` labels are historical and must n
 ### 02 - Scientific Evidence and Claims
 
 - **Evidence-supported conclusion:** Available intervention literature supports only cautious mechanism hypotheses; it does not establish Better Life efficacy or justify diagnosis, cure, prevention, emergency, or guaranteed-protection claims.
-- **Executed test result:** Cycle 2 records reproducible search strings, source counts, adverse/non-benefit searches, attrition fields, and language ceilings.
+- **Research procedure executed:** Cycle 2 records reproducible search strings, source counts, adverse/non-benefit searches, attrition fields, and language ceilings.
 - **Open question:** Independent clinical/method review, complete screening, direct user evidence, and adverse-effect thresholds remain absent.
 
 ### 03 - Mutual Aid
@@ -318,11 +320,11 @@ No feature may advance when one of these fields is missing.
 
 ## Performed Verification
 
-- **Executed test result:** Each of the ten existing branches contains a Cycle 2 review response, Cycle 2 scorecard, updated Assumption Log, updated Risk Log, and substantive revision artifact.
-- **Executed test result:** Thread-owned false legacy read claims and overloaded active taxonomy were corrected.
-- **Executed test result:** Repository diff whitespace checks passed before each thread commit.
-- **Executed test result:** Business scenario arithmetic was independently recomputed from the Cycle 2 CSV inputs and matched the documented rounded outputs.
-- **Executed test result:** No production feature code was added in Cycle 2.
+- **Repository-state verified:** Each of the ten existing branches contains a Cycle 2 review response, Cycle 2 scorecard, updated Assumption Log, updated Risk Log, and substantive revision artifact.
+- **Desk-review observation:** Thread-owned false legacy read claims and overloaded active taxonomy were corrected.
+- **Repository-state verified:** Repository diff whitespace checks passed before each thread commit.
+- **Arithmetic check:** Business scenario arithmetic was independently recomputed from the Cycle 2 CSV inputs and matched the documented rounded outputs.
+- **Repository-state verified:** No production feature code was added in Cycle 2.
 - **Open question:** No user, clinical, legal, privacy, security, accessibility, moderation, ecosystem hands-on, or platform implementation test was performed.
 
 ## Review Request and Stop
