@@ -52,10 +52,11 @@ Gate status: **Revision required; EUR1 is an unvalidated hypothesis.**
 
 ## Performed verification
 
-- Executed test result: fee sources were refreshed on 2026-07-15 and arithmetic recomputed.
-- Executed test result: fee, VAT, app-store and operating-cost boundaries avoid known double counting.
-- Executed test result: all business models were checked against safety/privacy/claim red lines.
-- Executed test result: no production code or price promise was added; links/Markdown whitespace were checked locally.
+- Research procedure executed: fee sources were refreshed on 2026-07-15.
+- Arithmetic check: scenario arithmetic was recomputed from the documented formulas.
+- Desk-review observation: fee, VAT, app-store and operating-cost boundaries avoid known double counting in the displayed illustrative model.
+- Desk-review observation: all business models were checked against safety/privacy/claim red lines.
+- Repository-state verified: no production code or price promise was added; links/Markdown whitespace were checked locally.
 - Open question: specialist quotes/review and all market evidence remain pending.
 
 ## Score history

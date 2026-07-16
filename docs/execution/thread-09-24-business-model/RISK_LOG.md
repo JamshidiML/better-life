@@ -26,3 +26,14 @@ Date: 2026-07-15
 | R13 | High | Platform limitation | Store/payment/tax rules change or differ by user/install/agreement. | Dated channel inputs, refresh, specialist gate, no universal fee. | Inherent. |
 | R14 | High | Hypothesis | Positive S2/S4 sensitivity cases are presented as forecasts. | Hypothesis labels, interpretation limits, missing-cost register, no price promise. | Communication risk remains. |
 | R15 | High | Evidence-supported conclusion | Shutdown/runway obligations are omitted from apparent viability. | Required reserve and layer-specific exit/horizon. | No quoted reserve. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R16 | Critical | Hypothesis | Reward or sponsor benefit pressures intimate disclosure, surveillance, abstinence perfection, engagement, unpaid labor, or care avoidance. | Reward safety gate, no essential-support dependency, no intimate proof, independent adverse-effect review. | Open; no reward authorized. |
+| R17 | High | Hypothesis | Social/economic impact or avoided-cost claims monetize life, imply causality, double count outcomes, or exceed evidence. | Theory-of-change chain, attribution/counterfactual/uncertainty, no savings claim before validated method. | Open. |
+| R18 | High | Hypothesis | One AI/cloud/foundation/employer/payer partner creates dependency, endorsement confusion, or evidence/data influence. | Diversification, no intimate data, conflict terms, portability, no sole sponsor dependency, exit reserve. | Open. |
+| R19 | High | Hypothesis | Ethical-growth language masks vulnerability targeting, diagnosis advertising, shame, fear, urgency, or addictive engagement. | Prohibited-pattern register, channel review, no intimate audiences/lookalikes, outcome/adverse metrics. | Open. |
+| R20 | High | Open question | Reward, grant, donation, credit, benefit, or sponsor arrangement triggers tax, consumer, sanctions, employment, charity, insurance, medical, or promotion obligations. | Counsel/accountant/entity review before offer or outreach. | Unmitigated. |
+| R21 | Medium | Hypothesis | Low/base/high ranges acquire false precision and are treated as budgets or forecasts. | Hypothesis/confidence/provenance fields, rounded ranges, no commitment, replace with quotes. | Open. |

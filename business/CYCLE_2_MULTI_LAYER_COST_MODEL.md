@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: arithmetic recomputation, repository inspection, desk review, and executed tests are distinct. `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail.
 
 The structured inputs are in [Cycle 2 cost inputs](CYCLE_2_COST_INPUTS.csv) and [Cycle 2 scenarios](CYCLE_2_SCENARIOS.csv). All operating-cost, volume, conversion, funding, and price inputs are hypotheses until replaced by quotes or observed evidence.
 
@@ -109,4 +111,6 @@ Design requirement: every future scenario includes a named annual reserve for se
 
 ## Cycle 2 Recommendation
 
-Repository decision: treat EUR1 as an unresolved hypothesis, not a promise. Fund research/MVE first; preserve a genuinely useful free local core; test supporter intent separately from paid convenience; price managed controls and human services only from full cost; permit organization funding only without user reporting/control; and remove any layer whose responsible operation cannot be funded without violating safety, privacy, consent, evidence, or access.
+Cycle 2 repository decision: treat EUR1 as an unresolved hypothesis, not a promise. Fund research/MVE first; preserve a genuinely useful free local core; test supporter intent separately from paid convenience; price managed controls and human services only from full cost; permit organization funding only without user reporting/control; and remove any layer whose responsible operation cannot be funded without violating safety, privacy, consent, evidence, or access.
+
+Cycle 3 founder decision supersession: EUR1 is an accessibility principle and testable anchor, not a binding product constraint or public price promise.

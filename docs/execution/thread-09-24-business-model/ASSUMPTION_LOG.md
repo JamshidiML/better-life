@@ -22,4 +22,14 @@ Date: 2026-07-15
 | A09 | Hypothesis | 15% direct conversion at EUR36 can cover convenience at 100k active users under the model inputs. | Willingness/cohort evidence and quotes; current scenario is not forecast. | Open |
 | A10 | Open question | Organization funding is viable without admin reporting/control or user coercion. | Procurement/legal/user tests with hard independence clauses. | Deferred |
 | A11 | Hypothesis | Dedicated subsidy can support human operations without engagement pressure. | Conservative staffing plan, multi-year commitments, incident simulation. | Deferred |
-| A12 | Open question | EUR1 remains a useful mission constraint after full-cost and user evidence. | Founder decision and scenario comparison. | Open |
+| A12 | Open question | EUR1 remains a useful mission constraint after full-cost and user evidence. | Cycle 3 founder decision: accessibility principle/testable anchor, not binding constraint. Continue willingness and affordability research. | Superseded |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A13 | Hypothesis | Agency, quality of life, functioning, harm reduction, help-seeking, connection, and care access can form a useful theory of change without monetizing life or claiming causality. | Method/clinical/public-health/lived-experience review and prospective outcome protocol. | Open |
+| A14 | Hypothesis | Private acknowledgements or bounded sponsor benefits can reinforce helpful actions without crowding out intrinsic motivation or coercing disclosure/engagement. | Sequential reward study with no-reward comparator, adverse outcomes, fraud/equity/legal review. | Deferred |
+| A15 | Open question | AI/cloud/education credit partners, foundations, employers, payers, or public bodies will offer suitable support. | Official eligibility review and founder-approved outreach; assume no participation or revenue. | Deferred |
+| A16 | Hypothesis | Ethical growth can prioritize trust and outcomes rather than daily active use while remaining financially sustainable. | Campaign tests with non-engagement metrics, adverse effects, and full-cost attribution. | Open |
+| A17 | Hypothesis | Low/base/high planning ranges expose cost sensitivity without being mistaken for forecasts. | Independent finance review and replacement with quotes/observed data. | Open |
