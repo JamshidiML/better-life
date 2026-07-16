@@ -8,9 +8,9 @@
 
 ## Classification Vocabulary
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
 
-A founder decision is not platform proof. A design requirement is not an executed test. No capability below has been tested by Better Life on a real device.
+A founder decision is not platform proof. A design requirement is not an executed test. Repository/source review is not a product test. No capability below has been tested by Better Life on a real device.
 
 ## Product Pre-Check
 

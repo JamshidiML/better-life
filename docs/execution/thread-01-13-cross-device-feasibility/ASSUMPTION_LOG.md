@@ -24,3 +24,11 @@
 | A11 | Open question | At least one consumer adapter can meet transparent recovery and teardown gates. | Required before an actual MVP decision. | Stage B real-device spikes | Open |
 | A12 | Hypothesis | Official-control guidance can be completed accurately across supported OS versions. | Determines orchestrator value. | Named-version setup/rollback tests | Open |
 | A13 | Founder decision pending | Optional synchronization is valuable enough to justify account, key, and privacy risk. | Affects cross-device continuity. | User research plus Thread 07 threat model | Open |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Why it matters | Validation | Status |
+| --- | --- | --- | --- | --- | --- |
+| A14 | Hypothesis | Stable source IDs and named maintenance events will reduce platform-claim drift. | Supports auditable adapter research. | Independent source audit and future conformance protocol | Open |
+| A15 | Repository decision | Thread 07 owns canonical contract `BL-PLC-01`; Thread 01 owns capability and adapter matrices. | Prevents duplicate layer schemas across unmerged branches. | Cross-thread review in PR #40 | Adopted for Cycle 3 |
+| A16 | Open question | A printable user-held inventory can be authentic enough for recovery without hidden persistence. | Affects reset and replacement-device recovery. | Security and recovery usability review | Open |

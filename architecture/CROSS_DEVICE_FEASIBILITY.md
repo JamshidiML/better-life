@@ -7,7 +7,7 @@
 
 ## Classification
 
-Cycle 2 supersedes the Cycle 1 legend. Material statements now use: **Source-verified fact**, **Evidence-supported conclusion**, **Repository decision**, **Founder decision**, **Founder decision pending**, **Design requirement**, **Proposed control**, **Hypothesis**, **Platform limitation**, **Open question**, **Executed test result**, or **Arithmetic check**. Design requirements below are not implemented or tested behavior.
+Cycle 3 extends the Cycle 2 legend. Material statements use: **Source-verified fact**, **Evidence-supported conclusion**, **Repository decision**, **Founder decision**, **Founder decision pending**, **Design requirement**, **Proposed control**, **Hypothesis**, **Platform limitation**, **Open question**, **Repository-state verified**, **Research procedure executed**, **Desk-review observation**, **Executed test result**, or **Arithmetic check**. `Executed test result` requires a documented environment, version, input, expectation, observation, evidence, and pass/fail. Design requirements below are not implemented or tested behavior.
 
 ## Decision Summary
 

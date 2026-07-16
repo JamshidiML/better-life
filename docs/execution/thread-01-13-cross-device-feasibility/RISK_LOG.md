@@ -27,3 +27,11 @@
 | R14 | High | Open question | Store or entitlement review rejects the intended adult self-use model. | Gated spike; no product promise. | Open; Apple/Google/store evidence |
 | R15 | Medium | Platform limitation | Router or SafeSearch changes affect other household members. | Ownership confirmation, exact impact preview, avoid household logging. | Open; privacy review |
 | R16 | Medium | Hypothesis | Inventory export is lost, altered, or exposed. | Minimal fields, optional encryption, integrity check, recovery sheet alternatives. | Open; security/usability tests |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Mitigation | Residual / owner |
+| --- | --- | --- | --- | --- | --- |
+| R17 | High | Platform limitation | Store/API changes invalidate a previously documented adapter capability. | Source IDs, version fields, refresh triggers, emergency shutdown, unsupported state. | Open; external platform review and synthetic tests |
+| R18 | High | Open question | Reset, replacement, alternate profile/account, or clock change leaves policy state misleading. | Treat each as a separate protocol scenario; never infer continuity. | Open; synthetic protocol |
+| R19 | Medium | Repository decision | Cross-branch references drift before merge. | Reference canonical owner and contract ID, not another branch-only file path. | Open until coordinated integration |
