@@ -21,3 +21,13 @@ Date: 2026-07-15
 | A08 | Hypothesis | Users distinguish voluntary accountability from surveillance or device control. | Comprehension and coercion interviews with exact role descriptions. | Open |
 | A09 | Open question | Secular, spiritual, identity-specific, and clinician-facilitated options are sufficiently accessible in Germany/EU. | Regional directory sampling and lived-experience review. | Open |
 | A10 | Hypothesis | Meeting preparation can help without importing fellowship identity or authority. | Low-fidelity test with community/legal sensitivity review. | Open |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A11 | Hypothesis | Two visibly separate tracks can prevent users from confusing an authorized fellowship pathway with original Better Life content. | Legal/community review and comprehension research using provenance labels; reject the licensed track if affiliation confusion persists. | Open |
+| A12 | Hypothesis | Broad recovery mechanisms can be expressed in original, neutral language without copying protected expression or erasing source communities. | Legal/IP, community-governance, and diverse lived-experience review of every stage. | Open |
+| A13 | Open question | Any fellowship will authorize quotation, adaptation, linking, or a named digital pathway. | Obtain written permission and governance conditions; absence of permission means no Track A release. | Open |
+| A14 | Hypothesis | A structured founder register preserves insight while reducing representative overreach. | Founder confirmation plus independent lived-experience review; revise or withdraw disputed entries. | Open |
+| A15 | Open question | Existing official source terms are sufficient for repository storage or model use. | Source-by-source legal review; default to link and metadata only. | Open |

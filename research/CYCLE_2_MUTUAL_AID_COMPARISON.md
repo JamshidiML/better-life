@@ -7,7 +7,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: repository inspection, source review, and executed tests are distinct. `Executed test result` requires an environment/version, input, expected result, observed result, evidence location, and pass/fail result.
 
 ## Method And Limits
 

@@ -52,9 +52,10 @@ Gate status: **Revision required.** Live peer support remains deferred.
 
 ## Performed verification
 
-- Executed test result: required repository documents and named fellowship/Cochrane sources were reviewed.
-- Executed test result: no production implementation was added.
-- Executed test result: links and Markdown whitespace were checked locally.
+- Repository-state verified: required repository documents were reviewed.
+- Research procedure executed: named fellowship/Cochrane sources were reviewed.
+- Repository-state verified: no production implementation was added.
+- Repository-state verified: links and Markdown whitespace were checked locally.
 - Open question: independent source, clinical, community, and safety review remains pending.
 
 ## Score history

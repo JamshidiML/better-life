@@ -29,3 +29,14 @@ Date: 2026-07-15
 | R11 | High | Evidence-supported conclusion | Group interaction spreads triggering detail, misinformation, hostility, or dependency. | No live network; moderation and incident gates before any test. | Open. |
 | R12 | High | Hypothesis | `Accountability` is interpreted as a peer veto or surveillance mandate. | Exact role/permission language and withdrawal; no browsing history. | Open pending comprehension tests. |
 | R13 | Medium | Open question | Directory listings become stale or imply endorsement. | Source/date/relationship disclosure and removal process. | Open. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R14 | Critical | Platform limitation | Copyrighted fellowship literature is copied, stored, adapted, redistributed, or used for model training without sufficient rights. | Rights-aware registry, link/metadata default, legal approval, permission record, and immediate takedown path. | Open; no use authorized. |
+| R15 | Critical | Hypothesis | A licensed or named pathway implies fellowship endorsement, governance, or affiliation that does not exist. | Written authorization, exact attribution/non-affiliation language, community governance review, and comprehension stop threshold. | Open; Track A blocked. |
+| R16 | High | Hypothesis | Original Better Life stages become a disguised reproduction of protected steps, literature, prayers, sponsor roles, or meeting structures. | Provenance ledger, independent similarity review, original drafting, and mechanism/expression separation. | Open pending legal/community review. |
+| R17 | High | Evidence-supported conclusion | Inventory, responsibility, repair, or amends prompts create shame, unsafe contact, trauma disclosure, or self-incrimination. | Optional stages; skip/defer/revise/exit; unsafe-contact prohibition; minimal/no-save mode; clinical and safeguarding review. | Open. |
+| R18 | High | Founder decision | Founder vision or lived experience is presented as universal user evidence. | Register source/category/limit fields and independent evidence requirement. | Controlled in documentation; founder confirmation pending. |
+| R19 | Medium | Open question | Source terms, licenses, or organizational positions change after review. | Retrieval/version date, expiry, monitored review, and suspension on uncertainty. | Open. |
