@@ -7,10 +7,11 @@
 
 ## Classification And Evidence Boundary
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
 
-- Executed test result: official vendor, platform, app-store, and organization pages were reviewed for this snapshot.
-- Executed test result: no product was installed, purchased, subscribed to, configured, bypass-tested, removed, or used with sensitive data.
+- Research procedure executed: official vendor, platform, app-store, and organization pages were reviewed for this snapshot on the stated date.
+- Repository-state verified: the research record contains no evidence that a product was installed, purchased, subscribed to, configured, bypass-tested, removed, or used with sensitive data.
+- Desk-review observation: this is a sentinel sample chosen to expose relevant architecture families and decision questions. It is not a comprehensive market census, systematic product review, or ranking.
 - Design requirement: an official vendor page supports only what the vendor currently says about positioning/capability; it does not prove behavior, safety, privacy, accessibility, efficacy, or comparative superiority.
 - Design requirement: an app-store listing is additionally mediated by the store and remains listing-stated evidence.
 - Design requirement: official platform documentation is evidence of documented platform behavior and limitations, not proof of a third-party product's implementation.

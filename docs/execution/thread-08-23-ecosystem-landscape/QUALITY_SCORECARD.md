@@ -52,9 +52,9 @@ Gate status: **Revision required; internal research only.**
 
 ## Performed verification
 
-- Executed test result: named product and organization claims were checked against linked official pages in Cycle 1.
-- Executed test result: every external entity is presented without relationship or endorsement.
-- Executed test result: no outreach or production code occurred; links and Markdown whitespace were checked locally.
+- Research procedure executed: named product and organization claims were checked against linked official pages in Cycle 1.
+- Desk-review observation: every external entity is presented without relationship or endorsement.
+- Repository-state verified: no outreach or production code occurred; links and Markdown whitespace were checked locally.
 - Open question: systematic sampling, hands-on testing, and stakeholder review remain pending.
 
 ## Score history

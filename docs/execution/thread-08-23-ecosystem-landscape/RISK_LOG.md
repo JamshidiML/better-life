@@ -24,3 +24,13 @@ Date: 2026-07-15
 | R11 | High | Evidence-supported conclusion | Comparison omits free/open/first-party/DIY/no-tool substitutes and inflates uniqueness. | Fourteen-family frame and required comparators. | Completeness unverified. |
 | R12 | High | Evidence-supported conclusion | Dynamic price, region, platform, terms, or privacy fact becomes stale. | Search date, source link, refresh trigger, no external use. | Inherent. |
 | R13 | High | Hypothesis | Named organization/advisor map remains exclusionary or tokenizing. | Expanded roles, fair compensation/withdrawal, missing-category register. | Direct review absent. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R14 | High | Evidence-supported conclusion | Sentinel sample is misrepresented as complete, best-in-class, ranked, or representative. | Sentinel label, inclusion logic, gap register, no ranking, systematic-expansion trigger. | Open. |
+| R15 | High | Hypothesis | AI-credit, foundation, employer, medical, NGO, or reward candidate listing implies eligibility, availability, partnership, endorsement, or willingness. | `Research lead only`, no-contact state, official-source date, founder approval before outreach. | Open. |
+| R16 | High | Hypothesis | Digital therapeutic/medical candidate language creates an unearned clinical or regulatory claim. | Separate vendor/regulatory/evidence fields; qualified clinical/regulatory review; no transfer to MVE. | Open. |
+| R17 | High | Hypothesis | Campaign/gamification/reward mechanisms normalize manipulation, vulnerability targeting, surveillance, or engagement optimization. | Ethical-growth and reward red lines; hands-on/user/ethics review; reject on intimate-data dependency. | Open. |
+| R18 | Medium | Platform limitation | Program eligibility, credit value, product scope, price, country, and terms change rapidly. | Dated official source, refresh before decision/outreach, no budget dependency. | Inherent. |
