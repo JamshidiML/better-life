@@ -30,3 +30,13 @@ Date: 2026-07-15
 | R11 | High | Open question | The focused update misses contradictory or adverse evidence. | Preserve query protocol, candidate counts, and incomplete-screening disclosure. | Evidence update; methods reviewer. | Open. |
 | R12 | High | Evidence-supported conclusion | Attrition and non-adherence make positive digital-intervention findings difficult to transfer. | Study-level table and no efficacy transfer. | Any product efficacy claim; evidence owner. | Open. |
 | R13 | Medium | Hypothesis | Protection modes are interpreted as treatment intensity. | Explicitly state they are user-selected product-control modes, not clinical care levels. | Mode copy; clinical owner. | Open. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Trigger / owner | Residual status |
+| --- | --- | --- | --- | --- | --- | --- |
+| R14 | High | Evidence-supported conclusion | Incomparable burden estimates are combined into a false global total. | Domain-specific denominators, geography/year/source fields, no aggregation without an approved comparability decision. | Any cross-source synthesis; evidence-method owner. | Open pending public-health review. |
+| R15 | High | Hypothesis | A living review creates false authority through frequent updates, automation, or freshness badges. | Human approval, versioned claim changes, conflict log, and no automatic product claim promotion. | Any evidence release; scientific governance owner. | Open. |
+| R16 | High | Open question | Surveillance of broad behavioral domains expands beyond a decision-relevant and ethically justified scope. | Inclusion/exit gates, annual domain review, and explicit decision-use field. | New domain proposal; founder plus scientific owner. | Open. |
+| R17 | Medium | Platform limitation | Source APIs, classifications, or public datasets change and silently break reproducibility. | Store query, retrieval date, source version, immutable extract hash where lawful, and failure alerts. | Update pipeline; research-operations owner. | Open until exercised. |
+| R18 | Medium | Hypothesis | Evidence freshness is mistaken for certainty or applicability. | Display certainty, population, transfer distance, conflict status, and last review separately. | Product/research display; UX and evidence owners. | Open pending comprehension research. |

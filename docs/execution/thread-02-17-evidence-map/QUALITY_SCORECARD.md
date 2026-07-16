@@ -54,10 +54,10 @@ Gate status: **Revision required.** Acceptance is blocked by the three unchecked
 
 ## Performed verification
 
-- Executed test result: all required repository documents were read before revision.
-- Executed test result: WHO, PubMed, and PMC records linked in the artifacts were opened or retrieved during Cycle 1.
-- Executed test result: product claims were cross-checked against repository red lines.
-- Executed test result: deliverable links and Markdown whitespace were checked locally.
+- Repository-state verified: all required repository documents were read before revision.
+- Research procedure executed: WHO, PubMed, and PMC records linked in the artifacts were opened or retrieved during Cycle 1.
+- Desk-review observation: product claims were cross-checked against repository red lines.
+- Repository-state verified: deliverable links and Markdown whitespace were checked locally.
 - Open question: independent reproduction of source interpretation is pending.
 
 ## Next cycle actions

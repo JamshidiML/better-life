@@ -8,7 +8,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: `Executed test result` is reserved for a real test with environment/version, input, expected result, observed result, evidence location, and pass/fail outcome. Repository inspections use `Repository-state verified`; documented searches use `Research procedure executed`; review observations use `Desk-review observation`.
 
 ## Reproducible Search Protocol
 
@@ -44,7 +46,7 @@ AND (web-based[Title/Abstract] OR online[Title/Abstract] OR self-help[Title/Abst
 AND (randomized[Title/Abstract] OR trial[Title/Abstract])
 ```
 
-### Executed search results
+### Research Procedure Executed: Search Results
 
 | Query | ESearch count | Cycle 2 handling |
 | --- | ---: | --- |
