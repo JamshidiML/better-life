@@ -52,9 +52,9 @@ Gate status: **Revision required; research specification only.**
 
 ## Performed verification
 
-- Executed test result: all transitions were checked for exit and consent behavior.
-- Executed test result: intervention entries were cross-checked against Thread 02 claim limits and repository red lines.
-- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
+- Desk-review observation: all transitions were checked for exit and consent behavior.
+- Desk-review observation: intervention entries were cross-checked against Thread 02 claim limits and repository red lines.
+- Repository-state verified: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: clinical, accessibility, user, privacy, and independent review remain pending.
 
 ## Score history

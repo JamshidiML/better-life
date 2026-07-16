@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail. Repository inspection and scenario review are not tests.
 
 No proposed control has been implemented or tested with participants.
 
@@ -18,7 +20,7 @@ No proposed control has been implemented or tested with participants.
 | Expected benefit | Hypothesis | User-authored protection modes may make a chosen pause or alternative action easier while preserving agency. |
 | Supporting evidence | Evidence-supported conclusion | Thread 02 supports research on bounded self-management mechanisms, not efficacy of Better Life or digital blocking. |
 | Required data | Design requirement | Active mode, scoped rule, context, start/expiry, pending change, recovery route, consent receipt, and minimum local audit event. No explicit content is required. |
-| Consent requirements | Founder decision | The user chooses the mode and exact policy while calm; changes, sharing, external processing, and ally roles require separate visible consent. |
+| Consent requirements | Founder decision | The user chooses the mode and exact policy at a user-chosen setup time, voluntarily confirms readiness, and completes the required comprehension check; Strict also requires recovery rehearsal. The product does not infer calmness, mental state, capacity, or diagnosis. Changes, sharing, and external processing require separate visible consent. |
 | Safety risks | Evidence-supported conclusion | Lockout, shame, coercive configuration, inaccessible recovery, care displacement, over-reliance, and false confidence are material risks. |
 | Misuse risks | Evidence-supported conclusion | A partner, employer, family member, or administrator could attempt surveillance, punishment, hidden enrollment, or indefinite control. |
 | Platform feasibility | Platform limitation | Enforcement and uninstall resistance vary by browser, OS, account, device-management state, and network layer; no universal guarantee is possible. |
@@ -29,9 +31,9 @@ No proposed control has been implemented or tested with participants.
 
 | Mode | Classification | User promise | Permitted behavior | Prohibited behavior |
 | --- | --- | --- | --- | --- |
-| Supportive | Founder decision | Help me pause and choose without enforcing a block. | Manual Spiral, neutral reminder, private plan, one chosen action, optional resource. | Blocking, forced delay, hidden monitoring, automatic ally contact. |
-| Friction | Founder decision | Add a visible, user-configured step before the selected context. | Local warning, short optional pause, confirmation, context-specific detour, immediate legitimate-use route. | Claims that access is prevented, escalating punishment, inaccessible exit. |
-| Strict | Founder decision | Enforce the exact precommitted rule as far as the approved adapter can, with disclosed limits and safe recovery. | Scoped block/allow rules, finite policy term, precommitted downgrade delay, health/degraded state, independent recovery. | Secret enrollment, indefinite lock, universal protection claim, ally ownership, disabling emergency/accessibility recovery. |
+| Supportive | Founder decision | `Guide me` | Manual Spiral, neutral reminder, private plan, one chosen action, optional resource. | Blocking, forced delay, hidden monitoring, automatic ally contact. |
+| Friction | Founder decision | `Help me pause` | Local warning, optional user-chosen pause, confirmation, context-specific detour, immediate legitimate-use route. | Claims that access is prevented, escalating punishment, inaccessible exit. |
+| Strict | Founder decision | `Protect the decision I made while calm` | Scoped block/allow rules, finite policy term, precommitted downgrade delay, health/degraded state, independent user-controlled recovery. | Inferring calmness/capacity, secret enrollment, indefinite lock, universal protection claim, social ownership, disabling emergency/accessibility recovery. |
 
 Supportive is the default research mode. Friction and Strict require incremental evidence and the relevant platform, privacy, security, accessibility, coercion, and legal gates.
 
@@ -40,10 +42,10 @@ Supportive is the default research mode. Friction and Strict require incremental
 | Lifecycle event | Classification | Required behavior |
 | --- | --- | --- |
 | Draft | Design requirement | Show scope, layer, known bypasses, data, duration, recovery, ally role, and teardown effect before activation. |
-| Activate | Design requirement | Fresh local confirmation creates a versioned consent receipt. Strict activation also requires a comprehension check and independent recovery rehearsal. |
+| Activate | Design requirement | At a user-chosen setup time, voluntary readiness confirmation and comprehension create a versioned consent receipt. Strict activation also requires independent recovery rehearsal. No model or proxy infers mental state or capacity. |
 | Increase | Proposed control | Supportive to Friction or Friction to Strict may begin after exact-change preview and confirmation; an optional reflection delay may be chosen. |
 | Request decrease | Founder decision | A Friction/Strict downgrade creates a visible pending change under the user's calm-state rule; it never silently changes policy. |
-| Cooling-off | Proposed control | The user chooses the finite delay in advance. Candidate bands for research are immediate, 10 minutes, 1 hour, or 24 hours; no value is approved. |
+| Cooling-off | Proposed control | The user chooses any finite delay in advance. Research candidates are: immediate where appropriate; 15 minutes; 1 hour; 12 hours; 24 hours; 72 hours; next morning; end of a selected difficult window; a fixed term; or a scheduled review. No default or universally preferred value is approved. |
 | Cancel pending decrease | Design requirement | Cancelling means keep the current protection. It requires confirmation but no ally permission and creates no penalty. |
 | Complete decrease | Design requirement | At the due time, re-authenticate if configured, show exact effect, then apply. If the service is unavailable, fail toward the previously documented safe state. |
 | Renew | Design requirement | Renewal is never automatic by default. Show observed health/limitations and require current confirmation before the end time. |
@@ -83,8 +85,8 @@ Supportive is the default research mode. Friction and Strict require incremental
 | None | Founder decision | Full product operation with independent recovery. | Making an ally mandatory. |
 | Notification | Proposed control | Receive the exact previewed neutral event for a fixed term. | Browsing history, explicit context, device telemetry, secret notification. |
 | Acknowledgement | Proposed control | Acknowledge a pending change or support request. | Veto, extend delay, punish, force explanation. |
-| Time-limited co-approval | Hypothesis | Approve the exact precommitted change during an active term. | Permanent control; no independent timeout/recovery. |
-| Recovery share | Hypothesis | Hold minimum cryptographic material under reviewed design. | Sole recovery authority, content access, identity proof. |
+| Time-limited co-approval | Repository decision | Prohibited in Cycle 3. | Any peer/ally approval, veto, delay extension, or protection authority. |
+| Recovery share | Repository decision | Prohibited in Cycle 3. | Any peer/ally key custody or recovery authority. |
 
 Anonymous peers can never hold any role in protection, change approval, recovery, reporting, or enforcement.
 
@@ -102,7 +104,7 @@ Anonymous peers can never hold any role in protection, change approval, recovery
 | --- | --- | --- |
 | User enters Supportive mode, skips every step | Close immediately with no penalty or escalation. | Nagging, failure label, or hidden history. |
 | User enables Friction for one context | Preview exact trigger, pause, exception, duration, and platform limit. | Broad block or misleading prevention claim. |
-| User enables Strict while calm | Require exact policy, finite term, health check, comprehension, and recovery rehearsal. | Activation without independent recovery. |
+| User enables Strict at a chosen setup time | Require voluntary readiness confirmation, exact policy, finite term, health check, comprehension, and recovery rehearsal. Do not infer calmness or capacity. | Activation without comprehension and independent recovery. |
 | User requests Strict to Supportive during a high-risk moment | Create the precommitted pending change and show due time; safe recovery remains available. | Ally veto, moving deadline, or hidden cancellation. |
 | User cancels that pending downgrade | Keep Strict, remove pending state, confirm locally. | Cancellation sends social signal or adds a penalty. |
 | Cooling-off expires while device is offline | Apply at next trustworthy opportunity under the documented rule, showing elapsed/degraded state; never extend secretly. | Indefinite enforcement based on unavailable server. |
@@ -128,4 +130,4 @@ Anonymous peers can never hold any role in protection, change approval, recovery
 
 Stop escalation for inaccessible recovery, hidden disclosure, coercive enrollment, indefinite enforcement, essential-access harm, punitive language, material adverse effects, orphaned controls, or claims beyond observed adapter behavior.
 
-External review required before participant testing beyond static concepts: clinical/safety, coercive-control, accessibility, privacy/legal, platform security, diverse lived experience, and research ethics. Founder decisions are still required for approved cooling-off bands, Strict eligibility, co-approval, recovery-share use, and quantitative stop thresholds.
+External review required before participant testing beyond static concepts: clinical/safety, coercive-control, accessibility, privacy/legal, platform security, diverse lived experience, and research ethics. Founder decisions are still required for approved cooling candidates, Strict eligibility, and quantitative stop thresholds. Co-approval and recovery-share roles are prohibited in Cycle 3.

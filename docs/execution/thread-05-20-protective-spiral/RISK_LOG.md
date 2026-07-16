@@ -26,3 +26,12 @@ Date: 2026-07-15
 | R13 | High | Hypothesis | Cooling-off worsens distress or prevents a needed change. | User-precommitted finite band plus immediate safety recovery; adverse-effect stop rule. | Open. |
 | R14 | High | Evidence-supported conclusion | Renewal or expiry semantics preserve enforcement without current consent. | No default auto-renewal; exact expiry and receipt invalidation. | Specification only. |
 | R15 | High | Hypothesis | Strict mode displaces professional care or becomes compulsive reassurance. | Care boundary, comparative benefit, burden/care-displacement measures, stop rule. | Open. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R16 | Critical | Hypothesis | Product or model infers calmness, mental capacity, diagnosis, moral worth, or eligibility from behavior. | User-chosen setup time, voluntary readiness confirmation, comprehension, and Strict recovery rehearsal; no inference. | Open pending protocol/UX review. |
+| R17 | High | Hypothesis | A default cooling interval creates hidden coercion or is applied outside its researched context. | No default; exact candidate preview; context-specific evidence and user choice required. | Open. |
+| R18 | Critical | Hypothesis | Stage completion, learning, reward, payment, or social approval becomes a prerequisite for safety, recovery, exit, care, or essential support. | Explicit unconditional-access invariant and scenario tests. | Open pending cross-thread review. |
+| R19 | High | Hypothesis | Exact mode copy is interpreted as diagnosis, severity ranking, incapacity, or permanent commitment. | Neutral explanation, no assigned mode, comprehension/adverse-effect stop gate. | Open. |
