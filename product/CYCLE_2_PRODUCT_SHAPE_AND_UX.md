@@ -6,7 +6,9 @@
 
 ## Classification
 
-This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Executed test result`, and `Arithmetic check`.
+This document uses: `Source-verified fact`, `Evidence-supported conclusion`, `Repository decision`, `Founder decision`, `Founder decision pending`, `Design requirement`, `Proposed control`, `Hypothesis`, `Platform limitation`, `Open question`, `Repository-state verified`, `Research procedure executed`, `Desk-review observation`, `Executed test result`, and `Arithmetic check`.
+
+Cycle 3 clarification: repository and scenario review are not executed tests. `Executed test result` requires environment/version, input, expected result, observed result, evidence location, and pass/fail.
 
 No screen, adapter, permission flow, protection mode, or lifecycle control described here has been implemented or tested with users.
 
@@ -18,7 +20,7 @@ No screen, adapter, permission flow, protection mode, or lifecycle control descr
 | Expected benefit | Hypothesis | A small accountless core plus explicitly staged adapters may test user value before expensive multi-layer enforcement. |
 | Supporting evidence | Evidence-supported conclusion | Threads 01-09 bound platform feasibility, mechanism transfer, safety, privacy, ecosystem, and cost; none establishes Better Life efficacy or product-market fit. |
 | Required data | Design requirement | Local Constitution/policy, mode, adapter capability/health, consent receipts, pending changes, recovery and teardown state; explicit content and raw browsing history are unnecessary. |
-| Consent requirements | Founder decision | The user authors exact policy while calm; every adapter permission, external flow, ally role, and material change has a separate visible receipt. |
+| Consent requirements | Founder decision | The user initiates setup at a chosen time, voluntarily confirms readiness, and demonstrates comprehension; Strict also requires recovery rehearsal. No calmness, capacity, or mental state is inferred. Every adapter permission, external flow, and material change has a separate visible receipt. |
 | Safety risks | Evidence-supported conclusion | Lockout, coercion, shame, false confidence, sensitive disclosure, inaccessible recovery, care displacement, and orphan controls. |
 | Misuse risks | Evidence-supported conclusion | Partner/employer administration, secret reporting, ally veto, vulnerability optimization, and strictness used as punishment. |
 | Platform feasibility | Platform limitation | Supportive can be platform-light; Friction and Strict depend on adapter-specific browser/OS/account/network capability and remain bypassable or externally controlled. |
@@ -35,15 +37,15 @@ No screen, adapter, permission flow, protection mode, or lifecycle control descr
 | 3. Integrated product prototype | Hypothesis | Local dashboard plus one approved adapter; Supportive and bounded Friction; Strict marked unavailable unless all Strict gates pass. | No cloud by default; exact adapter receipt; no social network. | User incremental benefit, safety/privacy/accessibility/legal/security, full-cost, and teardown evidence. |
 | 4. Actual MVP candidate | Founder decision pending | Accountless local core plus the smallest validated adapter set and only modes each adapter can truthfully support. | Optional services remain separate; peer/AI excluded. | Independent score >=95, zero Critical/High, founder approval, all applicable gates. |
 
-MVE means Minimum Viable Evidence, not a production product. An adapter spike answers a bounded feasibility question and must be disposable; it does not create a roadmap commitment.
+MVE means Minimum Viable Experiment, not a production product. An adapter spike answers a bounded feasibility question and must be disposable; it does not create a roadmap commitment.
 
 ## Mode UX Contract
 
 | Mode | Founder-defined promise | Primary UX | Permission/data | Availability rule |
 | --- | --- | --- | --- | --- |
-| Supportive | Help me pause and choose without blocking. | Manual Pause, private plan, neutral prompt, one action/fallback, optional reviewed route. | No adapter permission by default; local plan/no-save option. | Available in MVE if language, privacy, and accessibility gates pass. |
-| Friction | Add a visible configured step before the selected context. | Exact trigger preview, pause/confirm/detour, immediate legitimate-use exception, health state. | Narrow per-adapter permission and local rule/event. | Offered only for a spike-approved scope; never described as prevention. |
-| Strict | Enforce the exact finite precommitment as far as the adapter can, with disclosed limits and safe recovery. | Exact policy, comprehension, recovery rehearsal, finite term, pending downgrade, health/degraded state, teardown. | Highest justified permission; versioned receipt; no raw history/cloud default. | `Not offered` until platform, coercion, security, privacy/legal, accessibility, full-cost, user-benefit, and teardown gates pass. |
+| Supportive | `Guide me` | Manual Pause, private plan, neutral prompt, one action/fallback, optional reviewed route. | No adapter permission by default; local plan/no-save option. | Available in MVE if language, privacy, and accessibility gates pass. |
+| Friction | `Help me pause` | Exact trigger preview, pause/confirm/detour, immediate legitimate-use exception, health state. | Narrow per-adapter permission and local rule/event. | Offered only for a spike-approved scope; never described as prevention. |
+| Strict | `Protect the decision I made while calm` | Exact policy, user-chosen setup, voluntary confirmation, comprehension, recovery rehearsal, finite term, pending downgrade, health/degraded state, teardown. | Highest justified permission; versioned receipt; no raw history/cloud default. | `Not offered` until platform, coercion, security, privacy/legal, accessibility, full-cost, user-benefit, and teardown gates pass. |
 
 The mode selector is a segmented control only when all displayed modes are genuinely available. Otherwise, unavailable modes appear as plain status with the unmet gate; they are not teasers or upsells.
 
@@ -99,11 +101,11 @@ Every material change shows:
 
 ## Cooling-Off UX
 
-- Founder decision: a Strict/Friction downgrade may use the user's finite calm-state cooling-off rule.
+- Founder decision: a Strict/Friction downgrade may use a finite rule selected by the user during an eligible setup process; the product does not infer calmness or capacity.
 - Hypothesis: candidate intervals require research; no default duration is approved.
 - Design requirement: the pending panel shows requested change, requested-at, due-at with timezone, remaining time without alarm pressure, `cancel change`, and `safety recovery`.
 - Design requirement: offline/server failure cannot secretly extend the due time; the documented local/external authority and next trustworthy action are shown.
-- Design requirement: ally acknowledgement/co-approval, if ever approved, cannot move the deadline or remove independent recovery.
+- Repository decision: ally co-approval and recovery-share custody are prohibited; no social actor can move the deadline or remove independent recovery.
 
 ## Health And Degraded States
 

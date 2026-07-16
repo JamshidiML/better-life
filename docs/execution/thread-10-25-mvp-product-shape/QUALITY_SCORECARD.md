@@ -54,9 +54,9 @@ Gate status: **Revision required; MVP not accepted or authorized.**
 
 ## Performed verification
 
-- Executed test result: all shapes and acceptance criteria were cross-checked against Threads 01-09 findings available in Cycle 1.
-- Executed test result: each first-journey external data/person/payment/AI path was removed from baseline.
-- Executed test result: no production code was added; links and Markdown whitespace were checked locally.
+- Desk-review observation: all shapes and acceptance criteria were cross-checked against Threads 01-09 findings available in Cycle 1.
+- Desk-review observation: each first-journey external data/person/payment/AI path was removed from baseline.
+- Repository-state verified: no production code was added; links and Markdown whitespace were checked locally.
 - Open question: every empirical, specialist, legal and implementation gate remains pending.
 
 ## Score history

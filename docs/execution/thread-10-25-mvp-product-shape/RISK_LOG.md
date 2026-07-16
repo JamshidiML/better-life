@@ -26,3 +26,13 @@ Date: 2026-07-15
 | R13 | High | Platform limitation | Permission loss/uninstall/offline/reinstall leaves false health or orphan control. | Degraded/unknown/orphan states and teardown/reconciliation. | No spike executed. |
 | R14 | High | Hypothesis | Complete lifecycle UX overwhelms users and defeats simplicity. | Progressive disclosure, smallest MVE, comprehension/load/accessibility tests. | Open. |
 | R15 | High | Evidence-supported conclusion | MVP label is used to bypass evidence and treat a spike as product approval. | Stage definitions, disposable spike rule, independent acceptance gates. | Governance required. |
+
+## Cycle 3 Additions
+
+| ID | Severity | Classification | Risk | Cycle 3 control | Residual status |
+| --- | --- | --- | --- | --- | --- |
+| R16 | Critical | Hypothesis | Long-term map is read as implementation scope, clinical capability, partnership, or feasibility commitment. | Horizon/status labels, first-MVE firewall, no roadmap date, separate gates and exits. | Open pending review. |
+| R17 | High | Hypothesis | Evidence-freshness UI implies latest treatment, certainty, universal applicability, or automatic guidance changes. | Date/version/classification/uncertainty/source/change reason; human approval; no silent plan change. | Open. |
+| R18 | High | Hypothesis | Adaptive microlearning becomes covert manipulation, compulsory course, streak loop, or attention optimization. | Transparent purpose, optional depth/no-save, no variable rewards, exit, burden/reactance stop thresholds. | Open. |
+| R19 | Critical | Hypothesis | AI or UI impersonates psychiatrist, psychologist, therapist, sponsor, emergency service, or human peer. | Explicit role/source labels and prohibited behavior scenarios; static fallback. | Open pending behavior/user tests. |
+| R20 | High | Hypothesis | Aggregate protocol thresholds hide severe or subgroup harm. | Individual Critical stops, subgroup review, qualitative adverse review, no aggregate override. | Open pending method review. |

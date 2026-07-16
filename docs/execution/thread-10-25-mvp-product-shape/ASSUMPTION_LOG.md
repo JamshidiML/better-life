@@ -23,3 +23,13 @@ Date: 2026-07-15
 | A10 | Hypothesis | Progressive permission and exact-change previews are understandable under realistic setup/change tasks. | Accessibility/coercion/user tests with recall measures. | Open |
 | A11 | Open question | Any adapter spike produces sufficient incremental value to enter an MVP candidate. | Technical spike plus comparative user research against free/first-party/no tool. | Deferred |
 | A12 | Open question | Strict can ever satisfy safe recovery, benefit, teardown, cost, and anti-coercion gates. | Sequential external review and participant research only after lower modes. | Deferred |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A13 | Hypothesis | Four low-fidelity views are sufficient to test the first five-decision Supportive MVE without simulating future complexity. | Protocol review and moderated usability; remove any view/decision not needed for action. | Open |
+| A14 | Hypothesis | Users understand evidence freshness as date/version/uncertainty rather than a guarantee of latest valid treatment. | Comprehension research with conflicting/stale evidence scenarios. | Open |
+| A15 | Hypothesis | Transparent optional microlearning can feel useful without covert persuasion or compulsory-course burden. | Compare no-learning/short/deeper options; measure comprehension, burden, reactance, return pressure. | Open |
+| A16 | Hypothesis | Long-term recovery-loop views can remain modular and optional without implying that all capabilities belong in the first MVE. | Roadmap comprehension and scope-recall research; preserve stage gates. | Open |
+| A17 | Open question | Frozen MVE thresholds are methodologically appropriate and achievable without hiding subgroup harm. | Independent clinical/method/accessibility/privacy/lived-experience review before enrollment. | Open |

@@ -6,7 +6,7 @@
 
 ## Accepted Findings
 
-1. Cycle 1 needed a clearer Minimum Viable Evidence -> adapter spikes -> integrated prototype -> actual MVP sequence.
+1. Cycle 1 needed a clearer Minimum Viable Experiment -> adapter spikes -> integrated prototype -> actual MVP sequence.
 2. Supportive, Friction, and Strict required explicit user promises and availability gates.
 3. Dashboard, policy, Protection Stack, changes, progress, privacy/people, recovery, teardown, and help views needed one information architecture.
 4. Setup and progressive permissions needed exact scope/data/owner/bypass/recovery/teardown previews.
