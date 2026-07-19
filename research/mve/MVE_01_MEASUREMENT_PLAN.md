@@ -1,6 +1,6 @@
 # MVE-01 Measurement Plan
 
-- Version: `0.2-draft`
+- Version: `0.3-draft`
 - Status: Draft for clinical, method, ethics, privacy, accessibility, inclusion, and lived-experience review
 - Claim ceiling: Formative interpretation of one reviewed low-fidelity version only
 
@@ -11,33 +11,33 @@
 3. No item diagnoses, predicts relapse/risk, measures moral worth, proves abstinence, or establishes treatment outcome.
 4. Report exact numerator/denominator, missingness, withdrawal, facilitator correction, accommodation, version, and order.
 5. Critical individual safety/privacy/exit failures are not averaged away.
-6. Numeric progression thresholds are hypotheses pending specialist/ethics approval.
+6. Category A failures are case-based stop conditions, not statistical thresholds. Category B and C summaries are formative/descriptive and do not validate Better Life.
 
 ## Construct Map
 
 | Construct | Operational observation / draft item | Data type | Decision use | Status/limit |
 | --- | --- | --- | --- | --- |
-| Problem relevance | `This kind of private practical help addresses a problem that matters to me` (1-5) plus broad explanation | Rating + qualitative | Continue, reframe, or stop problem concept | Project-drafted; not prevalence |
-| Five-decision comprehension | Teach-back of purpose/effect for goal, context, action, fallback, keep/use-once/discard | Five item outcomes | Simplify decisions/copy | Facilitator correction reported separately |
-| Boundary comprehension | States nonclinical, no monitoring/blocking/AI/contact; prototype vs research records | Item outcomes | Critical progression gate | Draft factual teach-back |
-| Task completion | Complete/skip/discard each decision and Spiral without correction | Event + reason | Usability progression | Low fidelity only |
-| Task time | Start/end per critical task, pause time separated | Seconds/minutes | Burden and design | No speed target until accessibility review |
-| Spiral usefulness | `The Guide me action was useful for what I wanted in this session` (1-5) | Rating + why | Value hypothesis | Not behavior/health outcome |
-| Agency | `I felt able to choose, skip, change direction, or leave` (1-5) | Rating + observation | Autonomy gate | Project-drafted |
-| Privacy trust/control | `I understood and controlled what was stored or kept` (1-5) plus teach-back | Rating + item outcomes | Data/copy gate | Trust is not security proof |
-| Burden | `The activity required too much effort or attention` (1-5) | Rating + reason | Simplify/stop | Project-drafted |
-| Shame | `The activity made me feel judged, defective, or ashamed` (1-5) | Rating + optional broad comment | Harm/stop | Sensitive; wording needs clinical review |
-| Reactance | `The activity made me feel pushed or want to resist` (1-5) | Rating + optional broad comment | Harm/stop | Project-drafted |
-| Rumination/distress | `The activity increased unwanted repetitive thinking or distress` (1-5) | Rating + AE path | Harm/stop | Not a clinical scale |
-| Privacy regret | `I regret sharing or creating information in this session` (1-5) | Rating + action | Harm/deletion review | Immediate control response required |
-| Accessibility | Critical tasks completed with chosen accommodation; reported blocker | Outcome + qualitative | Per-format/language stop | Accommodation is not correction |
-| Cultural fit | `The wording and choices fit my values/context without assuming an identity` (1-5) | Rating + qualitative | Reframe/localize/stop | Not group representation |
-| Exit success | Independently closes/discards and reaches approved other-support route | Pass/fail/time/help | Critical gate | Facilitator action = failure for independent success |
-| Deletion understanding | Explains prototype disposal vs research-record withdrawal/deletion limits | Item outcomes | Critical privacy gate | Must match approved data plan |
-| Decision recall | Recalls action, fallback, and keep/use-once/discard after approved delay | Three outcomes | Comprehension | Delay not approved yet |
-| Willingness to reuse | `I would voluntarily use a reviewed version again` (1-5) plus conditions | Rating + qualitative | Future-research interest | Not retention/demand forecast |
-| Preference | MVE-01, paper, no tool/current coping, none, or cannot compare | Choice + reason | Comparative interpretation | Comparator/order pending review |
-| Adverse effects | Any distress, shame, reactance, rumination, coercion, disclosure, care delay, privacy, accessibility, or exit event | Event record | Individual/study stop | Minimum necessary record |
+| Problem relevance | `This kind of private practical help addresses a problem that matters to me` (1-5) plus broad explanation | Rating + qualitative | Category C description; may support reframe/retirement, never progression alone | Project-drafted; not prevalence |
+| Five-decision comprehension | Teach-back of purpose/effect for goal, context, action, fallback, keep/use-once/discard | Five item outcomes | Category B iteration signal | Facilitator correction reported separately |
+| Boundary comprehension | States nonclinical, no monitoring/blocking/AI/contact; prototype vs research records | Item outcomes | Category A case review if critical misunderstanding persists | Draft factual teach-back |
+| Task completion | Complete/skip/discard each decision and Spiral without correction | Event + reason | Category B iteration signal | Low fidelity only |
+| Task time | Start/end per critical task, pause time separated | Seconds/minutes | Category B burden/design signal | No speed target until accessibility review |
+| Spiral usefulness | `The Guide me action was useful for what I wanted in this session` (1-5) | Rating + why | Category B/C value signal | Not behavior/health outcome |
+| Agency | `I felt able to choose, skip, change direction, or leave` (1-5) | Rating + observation | Category B iteration signal; Category A if actual choice/exit is unavailable | Project-drafted |
+| Privacy trust/control | `I understood and controlled what was stored or kept` (1-5) plus teach-back | Rating + item outcomes | Category B mental-model signal; Category A for material lack of control/disclosure | Trust is not security proof |
+| Burden | `The activity required too much effort or attention` (1-5) | Rating + reason | Category B/C iteration signal | Project-drafted |
+| Shame | `The activity made me feel judged, defective, or ashamed` (1-5) | Rating + optional broad comment | Category B/C signal; credible material harm follows Category A adjudication | Sensitive; wording needs clinical review |
+| Reactance | `The activity made me feel pushed or want to resist` (1-5) | Rating + optional broad comment | Category B/C signal; coercion follows Category A adjudication | Project-drafted |
+| Rumination/distress | `The activity increased unwanted repetitive thinking or distress` (1-5) | Rating + AE path | Category B/C signal; credible severe attributable harm follows Category A adjudication | Not a clinical scale |
+| Privacy regret | `I regret sharing or creating information in this session` (1-5) | Rating + action | Category B/C signal; material disclosure/control failure is Category A | Immediate control response required |
+| Accessibility | Critical tasks completed with chosen accommodation; reported blocker | Outcome + qualitative | Category A for inaccessible critical route; otherwise Category B/C | Accommodation is not correction |
+| Cultural fit | `The wording and choices fit my values/context without assuming an identity` (1-5) | Rating + qualitative | Category C description; may support reframe/localization | Not group representation |
+| Exit success | Independently closes/discards and reaches approved other-support route | Pass/fail/time/help | Category A case review for inability/inaccessibility; Category B for ordinary usability | Facilitator action is recorded, not averaged away |
+| Deletion understanding | Explains prototype disposal vs research-record withdrawal/deletion limits | Item outcomes | Category A if withdrawal/control is materially unavailable; otherwise Category B | Must match approved data plan |
+| Decision recall | Recalls action, fallback, and keep/use-once/discard after approved delay | Three outcomes | Category B comprehension signal | Delay not approved yet |
+| Willingness to reuse | `I would voluntarily use a reviewed version again` (1-5) plus conditions | Rating + qualitative | Category C future-research interest | Not retention/demand forecast |
+| Preference | MVE-01, paper, no tool/current coping, none, or cannot compare | Choice + reason | Category C comparative description | Comparator/order pending review |
+| Adverse effects | Any distress, shame, reactance, rumination, coercion, disclosure, care delay, privacy, accessibility, or exit event | Event record | Category A case adjudication where applicable; B/C signals otherwise | Minimum necessary record |
 
 ## Draft Five-Decision Comprehension Key
 
@@ -49,23 +49,37 @@ For each decision, independent comprehension requires the participant to state:
 4. `Fallback`: another action, close, or external route; no automatic contact.
 5. `Keep`: use-once/local-save/discard are distinct; research records are governed separately.
 
-## Draft Progression and Stop Hypotheses
+## Decision Rule Categories
 
-These preserve Cycle 3 v0.1 history but incorporate the independent correction: they are not scientifically approved, founder-approved product requirements, or frozen study thresholds.
+### Category A - Zero-Tolerance Individual Failures
 
-| Gate | Draft hypothesis | Interpretation limit |
+Inability to stop/exit/withdraw; coercive participation; material privacy disclosure; inaccessible critical consent, stop, exit, deletion, withdrawal, or support route; care displacement; severe attributable harm; facilitator clinical-role breach; and unauthorized recording/contact are case-based failures. They are not percentages or statistical thresholds. One credible event may pause or stop the relevant procedure or study pending independent adjudication under `MVE_01_ADVERSE_EVENT_AND_STOP_RULES.md`. A favorable aggregate cannot offset the case.
+
+### Category B - Formative Usability Signals
+
+Five-decision/boundary comprehension, ordinary task completion, time, facilitator correction, burden, privacy mental model, usefulness, agency, and noncritical accessibility friction guide version-specific iteration. Report counts, denominators, distributions, corrections, accommodations, and cases. Small-sample percentages or medians are observations, not validation, safety proof, population estimates, or automatic progression rules.
+
+### Category C - Descriptive Research Outcomes
+
+Preference, willingness to reuse, project-drafted ratings, qualitative themes, cultural fit, and comparison with paper/no tool describe the reviewed sample/version. They may support a recommendation to revise, retire, or ask a later research question, but cannot authorize progression by themselves.
+
+## Historical Threshold Record - Cycle 3 v0.1
+
+The following values are preserved only as superseded history. They are not active gates, scientific validation criteria, participant-ready rules, or founder-approved product requirements.
+
+| Historical rule | Superseded v0.1 value | Phase 4.1 disposition |
 | --- | --- | --- |
-| Severe product-attributable harm | Zero severe event, coercive use, care delay, privacy disclosure, or inability to leave | Any event pauses; specialist defines causality/severity process |
-| Critical boundary comprehension | Every participant correctly states nonclinical/no monitoring-blocking, storage/no-save, exit/delete | May be too rigid for formative iteration; methods review required |
-| Exit success | 100% independent critical exit/discard/support-route success with accommodations | A single failure is a design stop, not a population estimate |
-| Five decisions | At least 80% complete without facilitator correction | Denominator includes starts, skips, withdrawals as prespecified |
-| Recall | At least 80% recall action, fallback, keep state | Delay and recall method unresolved |
-| Usefulness and agency | At least 60% rate each >=4/5 and no worse observed median than approved comparator | Small-sample percentages/medians are descriptive |
-| Burden | Observed median <=2/5 and no more than 20% >=4/5 | Reviewer may replace with case-based rule |
-| Shame/reactance | Observed median <=1/5; any attributable rating >=4 triggers independent review | Individual and qualitative signals override aggregate |
-| Privacy | 100% storage/location/deletion teach-back; at least 80% control >=4/5 | Trust rating never proves privacy/security |
-| Accessibility | Every critical task succeeds with required accommodation; no unresolved blocker | Progression may be blocked by modality/language rather than universal claim |
-| Qualitative contradiction | No unresolved diagnosis, moralization, surveillance, care replacement, or stronger-mode pressure theme | Theme definition/coding requires methods review |
+| Severe product-attributable harm | Zero severe event, coercive use, care delay, privacy disclosure, or inability to leave | Reclassified Category A; one credible case triggers independent pause/stop adjudication, not a zero-percent estimate |
+| Critical boundary comprehension | Every participant correct | Split: material persistent failure is Category A; ordinary misunderstanding is Category B |
+| Exit success | 100% independent success | Reclassified Category A for any credible inability/inaccessibility; no 100% validation claim |
+| Five decisions | At least 80% without correction | Category B descriptive iteration signal only |
+| Recall | At least 80% | Category B descriptive signal; delay/method unresolved |
+| Usefulness and agency | At least 60% at 4/5 and comparator median condition | Category B/C descriptive signal; cannot authorize progression |
+| Burden | Median <=2/5 and no more than 20% at 4/5 | Category B/C case and distribution review; no pass threshold |
+| Shame/reactance | Median <=1/5; any attributable rating >=4 reviewed | Ratings are B/C; credible coercion/material harm is adjudicated under A without a rating cutoff |
+| Privacy | 100% teach-back; at least 80% control at 4/5 | Material lack of control is A; mental model/rating is B/C; no privacy proof |
+| Accessibility | Every critical task succeeds | Any inaccessible critical route is A; other usability is B; no universal conformance claim |
+| Qualitative contradiction | No unresolved prohibited theme | Category C negative case may block a claim or prompt review; theme frequency is not prevalence |
 
 ## Timing Plan
 

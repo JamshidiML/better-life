@@ -13,15 +13,15 @@ MVE-01 contains no Twelve-Step delivery, fellowship literature, sponsor role, li
 
 ## Documents to Read
 
-1. `docs/integration/CANONICAL_ARTIFACT_INDEX.md`
-2. `docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md`, D05, D10, D11, D14
-3. `docs/integration/DECISION_AND_DEPENDENCY_REGISTER.md`
-4. Source locator `667b878:research/CYCLE_3_RIGHTS_AND_PATHWAY_RESEARCH_PROGRAM.md`
-5. Source locator `667b878:research/CYCLE_3_RIGHTS_AWARE_SOURCE_REGISTRY.csv`
-6. Source locator `6983df1:security/CYCLE_3_LIVING_COMMUNITY_AND_STORY_GOVERNANCE.md`
-7. `research/mve/MVE_01_RESEARCH_PROTOCOL.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-IP-01`, and its exact immutable sources: S01-S04 and S27-S29.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+Use S28 as the bounded rights decision table and its official URLs as exact source locators. Do not request or place copyrighted fellowship material in this repository. If a source, item-level right, version, access right, required section, or integrity value cannot be verified, return `Insufficient information`.
 
 ## Decisions Requested
+
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
 
 - Confirm/revise the Track A licensed/authorized versus Track B original separation.
 - Review each registry field and provisional rights classification; do not issue blanket clearance.
@@ -68,7 +68,7 @@ MVE-01 contains no Twelve-Step delivery, fellowship literature, sponsor role, li
 
 ## Expected Reviewer Output
 
-Provide jurisdiction and qualification; item-by-item rights disposition; permitted/prohibited uses; required wording/attribution; trademark/affiliation decision; Track B review procedure; community-governance needs; takedown/withdrawal terms; evidence retained; unresolved questions; and expiry. Use `Not reviewed` where evidence is absent.
+Complete `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md` with jurisdiction/qualification; item-by-item rights disposition; permitted/prohibited uses; wording/attribution; trademark/affiliation decision; Track B procedure; community-governance needs; takedown/withdrawal terms; retained evidence; unresolved questions; and expiry. Use `Insufficient information` where evidence is absent.
 
 ## Conflict-of-Interest Declaration
 

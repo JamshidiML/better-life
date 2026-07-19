@@ -1,14 +1,14 @@
 # MVE-01 Research Protocol
 
 - Protocol ID: `BL-MVE-01`
-- Version: `0.2-draft`
+- Version: `0.3-draft`
 - Status: Draft for specialist and ethics review; not approved for participant execution
 - Phase: Integration and Evidence Readiness
 - Study type: Proposed formative, low-fidelity, nonclinical product research
 
 ## Authorization Boundary
 
-This protocol does not authorize recruitment, contact, consent, pilot sessions, participant data collection, prototype implementation, clinical activity, or publication. The five decisions, wireframes, measures, thresholds, sample, and comparison are draft research instruments. They may be version-locked only after all required reviews and founder authorization.
+This protocol does not authorize recruitment, contact, consent, pilot sessions, participant data collection, prototype implementation, clinical activity, or publication. The five decisions, wireframes, measures, decision rules, sample, and comparison are draft research instruments. They may be version-locked only after all required reviews, every mandatory role in `MVE_01_GOVERNANCE_AND_AUTHORIZATION_MATRIX.md` is approved, and exact final written authorization exists.
 
 ## Decision Frame
 
@@ -106,7 +106,13 @@ See `MVE_01_PARTICIPANT_JOURNEY.md` for the stage-level journey.
 
 ## Measures and Decision Rules
 
-`MVE_01_MEASUREMENT_PLAN.md` defines draft measures and progression/stop hypotheses. Critical safety, privacy, consent, and exit failures cannot be averaged away. Numeric thresholds do not prove efficacy, clinical safety, generalizability, or MVP readiness.
+`MVE_01_MEASUREMENT_PLAN.md` and `MVE_01_ANALYSIS_PLAN.md` separate all rules into:
+
+- **Category A - Zero-tolerance individual failures:** inability to stop/exit/withdraw, coercive participation, material privacy disclosure, inaccessible critical route, care displacement, severe attributable harm, facilitator clinical-role breach, and unauthorized recording/contact. They are case-based, not statistical. One credible event may pause or stop the procedure/study pending independent adjudication.
+- **Category B - Formative usability signals:** comprehension, task completion, time, facilitator correction, burden, privacy mental model, usefulness, agency, and noncritical access friction guide iteration. Small-sample percentages do not validate the instrument or product.
+- **Category C - Descriptive research outcomes:** preference, willingness to reuse, ratings, qualitative themes, cultural fit, and paper/no-tool comparison describe only the exact sample/version and cannot authorize progression alone.
+
+The superseded Cycle 3 v0.1 numeric thresholds remain in the measurement plan as historical records, not active gates. Critical safety, privacy, consent, withdrawal, accessibility, and exit failures cannot be averaged away. No numeric observation proves efficacy, clinical safety, generalizability, or MVP readiness.
 
 ## Safety and Adverse Events
 
@@ -130,6 +136,8 @@ Follow `MVE_01_ANALYSIS_PLAN.md`. Report all enrolled/session-started participan
 - Lived-experience perspectives without claiming representation.
 - Copyright/IP only if any external content enters materials.
 - Founder and independent ChatGPT Quality Loop review.
+
+In addition, every mandatory role, authority, backup, conflict rule, approval, and expiry in `MVE_01_GOVERNANCE_AND_AUTHORIZATION_MATRIX.md` must be complete. Any `Unassigned`, unapproved, suspended, expired, or materially conflicted mandatory role blocks participant activity.
 
 Every reviewer supplies competence/scope, COI, item decisions, amendments, unresolved risks, and expiry. No single reviewer approves the whole study.
 

@@ -13,16 +13,15 @@ MVE-01 is low fidelity and no product implementation exists. The candidate produ
 
 ## Documents to Read
 
-1. `docs/integration/CANONICAL_ARTIFACT_INDEX.md`, `BL-PLC-01`
-2. `docs/integration/DECISION_AND_DEPENDENCY_REGISTER.md`
-3. `research/mve/MVE_01_RESEARCH_PROTOCOL.md`
-4. `research/mve/MVE_01_DATA_MINIMIZATION_PLAN.md`
-5. `research/mve/MVE_01_PARTICIPANT_JOURNEY.md`
-6. Source locator `6740c0b:architecture/CYCLE_3_CANONICAL_PROTECTION_LAYER_AND_LEARNING_GOVERNANCE.md`
-7. Source locator `6740c0b:security/DATA_CLASSIFICATION.md`
-8. Source locator `6740c0b:security/RETENTION_DELETION_AND_EXPORT.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-PRIV-01`, and its exact immutable sources: S01, S03-S05, S10, S12, and S31-S33.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+Confidential legal advice, reviewer identity, and operational records require an approved restricted channel outside GitHub. If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
+
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
 
 - Determine controller/joint-controller/processor roles and German/EU research context.
 - Determine candidate Article 6/9 bases, consent requirements, withdrawal consequences, and whether MVE-01 should proceed at all.

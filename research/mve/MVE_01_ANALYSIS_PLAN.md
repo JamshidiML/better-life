@@ -1,6 +1,6 @@
 # MVE-01 Analysis Plan
 
-- Version: `0.2-draft`
+- Version: `0.3-draft`
 - Status: Draft for methods/ethics review; no data exist and no analysis was performed
 - Claim ceiling: Formative description of the exact studied version, sample, languages, modalities, and conditions
 
@@ -46,6 +46,20 @@ Primary formative denominator proposal: every participant who starts the relevan
 
 Confidence intervals or percentages may be shown only if methods review finds them useful and their small-sample limitation is explicit. No null-hypothesis significance testing, effect-size efficacy claim, prevalence estimate, or population ranking is planned.
 
+## Decision Rule Categories
+
+### Category A - Zero-Tolerance Individual Failures
+
+Analyze inability to stop/exit/withdraw, coercive participation, material privacy disclosure, inaccessible critical route, care displacement, severe attributable harm, facilitator clinical-role breach, and unauthorized recording/contact as individual cases. These are not statistical thresholds. One credible event may pause or stop the relevant procedure or study and requires independent adjudication, minimum-necessary incident handling, and a documented disposition. Never pool, average, discount, or exclude the case because other participants had favorable outcomes.
+
+### Category B - Formative Usability Signals
+
+Describe comprehension, task completion, time, facilitator correction, burden, privacy mental model, usefulness, agency, and noncritical accessibility friction by exact version and condition. Counts, percentages, medians, and ranges guide iteration only. In a small formative sample they do not validate the instrument, establish safety/usability, or estimate population performance.
+
+### Category C - Descriptive Research Outcomes
+
+Describe preference, willingness to reuse, ratings, qualitative themes, cultural fit, and paper/no-tool comparison with exact context, negative cases, order, and missingness. These outcomes cannot authorize progression alone. They may support revision, retirement, or a proposal for separately reviewed later research.
+
 ## Comparator Analysis
 
 Comparator is unresolved. If approved:
@@ -76,15 +90,13 @@ Methods review must decide coding approach, number/independence of coders, refle
 
 Use a joint decision table by research question:
 
-| Evidence | Supports considering next step | Requires revision | Stops progression |
+| Category | Evidence use | Requires revision | Pause/stop authority |
 | --- | --- | --- | --- |
-| Task/comprehension | Independent critical success with accommodations | Noncritical confusion/correction pattern | Exit/privacy/consent failure |
-| Value | Relevant/useful/agency signal with clear mechanism | Mixed or comparator-sensitive value | No meaningful value or safer alternative clearly preferred |
-| Harm | No material individual/pattern signal | Bounded remediable burden | Severe event, coercion, care delay, disclosure, persistent shame/reactance/distress |
-| Inclusion | Critical access and no identity pressure | Localizable/accommodatable issue | Unresolved blocker for intended modality/group |
-| Privacy | Accurate mental model and control | Copy/flow misunderstanding | Material false privacy/deletion belief or unsafe discovery |
+| A - individual failure | Case record and independent adjudication; no aggregate pass | Exact affected procedure/system/material must be corrected before any proposed restart | One credible event may pause/stop; favorable B/C evidence cannot override |
+| B - usability | Version-specific iteration using counts, cases, corrections, accommodations, distributions and timing | Confusion, correction, burden, privacy-model, usefulness, agency or access pattern | Does not independently prove safety or authorize progression; unresolved pattern may justify conservative pause/revision |
+| C - descriptive | Contextualize preference, reuse, ratings, themes, cultural fit and comparator observations | Negative/contradictory cases, poor fit or safer preferred alternative | Cannot authorize progression alone; may support concept retirement or block a claim |
 
-Qualitative contradiction can block progression even when a numeric hypothesis is met. Passing allows only consideration of a later reviewed local Supportive prototype, not MVP, efficacy, production, enforcement, AI, social, reward, or payment scope.
+Qualitative contradiction can block a claim or next-step recommendation even when a numeric observation appears favorable. No Category B percentage or Category C result is a `pass`. A recommendation may only ask the authorized owners to consider a later reviewed local Supportive prototype; it does not authorize MVP, efficacy, production, enforcement, AI, social, reward, or payment scope.
 
 ## Missingness and Withdrawal
 

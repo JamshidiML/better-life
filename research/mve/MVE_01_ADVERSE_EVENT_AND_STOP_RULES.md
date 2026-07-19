@@ -1,6 +1,6 @@
 # MVE-01 Adverse Event and Stop Rules
 
-- Version: `0.2-draft`
+- Version: `0.3-draft`
 - Status: Draft for clinical, ethics, coercive-control, privacy, accessibility, and methods review; do not execute
 
 ## Boundary
@@ -57,14 +57,26 @@ End the participant's session when any of these occurs:
 
 The participant may end for any other reason. No adverse-event threshold is required for withdrawal.
 
+## Decision Rule Categories
+
+### Category A - Zero-Tolerance Individual Failures
+
+Inability to stop/exit/withdraw, coercive participation, material privacy disclosure, inaccessible critical route, care displacement, severe attributable harm, facilitator clinical-role breach, and unauthorized recording/contact are case-based failures, not statistical thresholds. One credible event may pause or stop the affected procedure or whole study. The event requires minimum-necessary recording and independent adjudication by the applicable safety, ethics, privacy, accessibility, coercive-control, or institutional authority. No score, percentage, favorable participant, founder preference, or proposed benefit offsets the event.
+
+### Category B - Formative Usability Signals
+
+Noncritical comprehension/task difficulty, time, facilitator correction, burden, privacy mental-model confusion, usefulness, agency, and remediable access friction are iteration signals. Repeated or material patterns may justify a conservative pause, but no percentage validates usability or proves safety. If a B signal reveals actual coercion, inaccessible critical access, material privacy loss, care displacement, severe harm, or role breach, classify the event under Category A.
+
+### Category C - Descriptive Research Outcomes
+
+Preference, willingness to reuse, ratings, themes, cultural fit, and comparison observations do not authorize continuation, restart, or progression. They may support revision or concept retirement and remain subordinate to every Category A disposition.
+
 ## Study Pause Rules
 
 Pause new sessions immediately for:
 
-- Any S2/S3 event.
-- Any inability to exit/discard or critical privacy/consent failure.
-- Any coercive enrollment, unauthorized contact/recording/data disclosure, or unsafe discovery event.
-- Repeated S1 events with a common feature, wording, population, facilitator, language, or accommodation.
+- Any credible Category A event, including S2/S3, inability to exit/discard/withdraw, critical privacy/consent/access failure, coercive enrollment, unauthorized contact/recording/disclosure, unsafe discovery, care displacement, severe attributable harm, or facilitator clinical-role breach, while independent adjudication is pending.
+- Repeated or material Category B signals with a common feature, wording, population, facilitator, language, or accommodation.
 - A reviewer/ethics/counsel direction, expired approval, protocol mismatch, or missing current support route.
 - Any material amendment made without required approval/version control.
 
@@ -76,8 +88,10 @@ Stop rather than revise within the current study when:
 - The concept systematically implies diagnosis, morality, treatment, surveillance, or stronger control.
 - Safe voluntary participation cannot be separated from coercive/unsafe contexts.
 - Critical accessibility or exit cannot be made reliable in the intended modality.
-- Benefit is weak while harm/burden persists across an approved formative round.
+- Independent case adjudication finds a Category A failure cannot be acceptably remedied for the proposed study.
 - The required qualified safety, ethics, privacy, or clinical oversight cannot be maintained.
+
+Separately, an authorized methods/ethics decision may retire or substantially reframe the concept when Category B/C evidence shows weak relevance/value, persistent burden, poor fit, or a safer preferred alternative. That is a research disposition, not a statistical safety threshold, and favorable descriptive evidence cannot restart a Category A stop.
 
 ## Minimal Incident Record
 

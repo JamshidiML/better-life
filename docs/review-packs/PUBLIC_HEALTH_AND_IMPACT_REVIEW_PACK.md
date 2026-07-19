@@ -13,17 +13,17 @@ MVE-01 tests formative relevance, comprehension, usefulness/agency, burden, harm
 
 ## Documents to Read
 
-1. `research/mve/MVE_01_RESEARCH_PROTOCOL.md`
-2. `research/mve/MVE_01_MEASUREMENT_PLAN.md`
-3. `research/mve/MVE_01_ANALYSIS_PLAN.md`
-4. `docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md`, D12-D16
-5. Source locator `05c06ec:research/CYCLE_3_GLOBAL_BURDEN_AND_LIVING_EVIDENCE_ARCHITECTURE.md`
-6. Source locator `5ea3017:business/CYCLE_3_IMPACT_REWARDS_AND_ETHICAL_GROWTH_MODEL.md`
-7. Source locator `512de00:research/CYCLE_3_LIVING_RECOVERY_ECOSYSTEM_EXPANSION.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-PH-01`, and its exact immutable sources: S02-S04, S07, S11-S12, S26, and S34-S35.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- Approve/revise/block the MVE outcome/claim ceiling from a public-health perspective.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of the MVE outcome/claim ceiling from a public-health perspective.
 - Review the burden comparability and no-double-counting gates.
 - Decide which future outcome families and validated measures merit research.
 - Define equity, subgroup-harm, access, help-seeking, counterfactual, attribution, and follow-up requirements.

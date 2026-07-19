@@ -13,17 +13,17 @@ MVE-01 is low fidelity and can use paper, facilitator-presented static screens, 
 
 ## Documents to Read
 
-1. `research/mve/MVE_01_PARTICIPANT_JOURNEY.md`
-2. `research/mve/MVE_01_INTERVIEW_GUIDE.md`
-3. `research/mve/MVE_01_MEASUREMENT_PLAN.md`
-4. `research/mve/MVE_01_RECRUITMENT_AND_INCLUSION_PLAN.md`
-5. `research/mve/MVE_01_ADVERSE_EVENT_AND_STOP_RULES.md`
-6. Source locator `210e1ce:product/CYCLE_3_ADAPTIVE_PATHWAY_AND_REWARD_SAFETY.md`
-7. Source locator `4f6a4b0:product/CYCLE_3_LIVING_RECOVERY_PRODUCT_MAP.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-A11Y-01`, and its exact immutable sources: S04-S09, S12, S30, and S36.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- Approve/revise/block critical-task definitions and accommodation plan.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of critical-task definitions and the accommodation plan.
 - Review cognitive load, literacy, language, sensory, motor, neurodiversity, and trauma-sensitive access.
 - Decide how cultural, religious/secular, sexuality/gender, disability, and prior-recovery diversity should shape recruitment and interpretation.
 - Approve measure wording and response modes or identify inaccessible constructs.

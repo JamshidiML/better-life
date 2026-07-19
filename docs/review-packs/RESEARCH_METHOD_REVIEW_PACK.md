@@ -14,16 +14,17 @@ MVE-01 evaluates a low-fidelity Supportive-only flow. It is not an efficacy tria
 
 ## Documents to Read
 
-1. `docs/integration/DECISION_AND_DEPENDENCY_REGISTER.md`
-2. All files in `research/mve/`
-3. `docs/review-packs/CLINICAL_AND_CSBD_REVIEW_PACK.md`
-4. Source locator `05c06ec:research/CYCLE_3_GLOBAL_BURDEN_AND_LIVING_EVIDENCE_ARCHITECTURE.md`
-5. Source locator `4f6a4b0:product/CYCLE_3_LIVING_RECOVERY_PRODUCT_MAP.md`
-6. PR #40 independent Cycle 3 review correction on draft instruments
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-METHOD-01`, and its exact immutable sources: S03-S12, S26, S36, and S37.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+S37 supplies the immutable coordination artifact and locator for the PR #40 draft-instrument correction. If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- Approve/revise/block the primary question and formative design.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of the primary question and formative design.
 - Select or reject paper/no-tool, within-participant, between-condition, think-aloud, and counterbalancing options.
 - Approve or amend sample rationale, inclusion strategy, accommodations, and stopping logic.
 - Determine which measures are decision-bearing, exploratory, or unsuitable.
@@ -69,7 +70,7 @@ MVE-01 evaluates a low-fidelity Supportive-only flow. It is not an efficacy tria
 
 ## Expected Reviewer Output
 
-Return a scoped decision; recommended design diagram; sample/round rationale; comparator/order decision; measure disposition; approved denominator and missingness rules; analysis amendments; ethics/preregistration needs; exact claim ceiling; unresolved biases; and review expiry. Mark each item approve/revise/block/outside expertise.
+Complete `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md` with a scoped decision, recommended design, sample/round rationale, comparator/order decision, measure disposition, denominator/missingness rules, analysis amendments, ethics/preregistration needs, exact claim ceiling, unresolved biases and expiry. Use only the six allowed item decisions.
 
 ## Conflict-of-Interest Declaration
 

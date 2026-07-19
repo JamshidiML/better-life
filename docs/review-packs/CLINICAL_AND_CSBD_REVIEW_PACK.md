@@ -14,18 +14,17 @@ MVE-01 is a low-fidelity, Supportive-only research concept for adults who volunt
 
 ## Documents to Read
 
-1. `docs/integration/CANONICAL_ARTIFACT_INDEX.md`
-2. `docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md`, especially D02-D07 and D12
-3. `research/mve/MVE_01_RESEARCH_PROTOCOL.md`
-4. `research/mve/MVE_01_INTERVIEW_GUIDE.md`
-5. `research/mve/MVE_01_MEASUREMENT_PLAN.md`
-6. `research/mve/MVE_01_ADVERSE_EVENT_AND_STOP_RULES.md`
-7. Source locator `05c06ec:research/CYCLE_3_GLOBAL_BURDEN_AND_LIVING_EVIDENCE_ARCHITECTURE.md`
-8. Source locator `4f6a4b0:product/CYCLE_3_LIVING_RECOVERY_PRODUCT_MAP.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-CLIN-01`, and its exact immutable sources: S01, S02, S04, S06-S08, S12, S26, and S36.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- `Approve for protocol revision`, `Revise`, `Block`, or `Outside expertise` for the nonclinical boundary and participant-facing language.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of the nonclinical boundary and participant-facing language.
 - Decide whether the target description avoids diagnosis, moralization, abstinence ideology, and treatment implication.
 - Approve or amend distress/adverse-event prompts, stop rules, referral boundaries, and facilitator conduct.
 - Decide which candidate outcomes are clinically interpretable and which should be removed or relabeled.
@@ -68,7 +67,7 @@ MVE-01 is a low-fidelity, Supportive-only research concept for adults who volunt
 
 ## Expected Reviewer Output
 
-Provide credentials and scope; decision per requested item; findings labeled Critical/High/Medium/Low; exact wording or protocol amendments; supporting source or professional rationale; populations/contexts not covered; unresolved risks; referral/facilitator boundary; and refresh trigger. State `Outside expertise` where appropriate.
+Complete `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`, including credentials/scope, one allowed decision per item, severity, exact amendments, rationale/evidence, uncovered populations/contexts, unresolved risks, referral/facilitator boundary, conditions, blocked/permitted activity, expiry and refresh trigger.
 
 ## Conflict-of-Interest Declaration
 

@@ -13,18 +13,17 @@ MVE-01 has no enforcement, ally contact, peer/community, monitoring, account, sy
 
 ## Documents to Read
 
-1. `docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md`, D03-D04, D08-D10, D18
-2. `docs/integration/DECISION_AND_DEPENDENCY_REGISTER.md`
-3. `research/mve/MVE_01_PARTICIPANT_JOURNEY.md`
-4. `research/mve/MVE_01_ADVERSE_EVENT_AND_STOP_RULES.md`
-5. `research/mve/MVE_01_RECRUITMENT_AND_INCLUSION_PLAN.md`
-6. `research/mve/MVE_01_DATA_MINIMIZATION_PLAN.md`
-7. Source locator `6983df1:security/CYCLE_3_LIVING_COMMUNITY_AND_STORY_GOVERNANCE.md`
-8. Source locator `6740c0b:architecture/CYCLE_3_CANONICAL_PROTECTION_LAYER_AND_LEARNING_GOVERNANCE.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-COERCE-01`, and its exact immutable sources: S02-S05, S08-S10, S12, S29, and S31.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- Approve/revise/block recruitment, consent, contact, scheduling, recording, withdrawal, compensation, and follow-up safety controls.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of recruitment, consent, contact, scheduling, recording, withdrawal, compensation, and follow-up safety controls.
 - Identify unsafe language, household/device assumptions, or facilitator behaviors.
 - Approve private stop/exit and minimal-record procedures.
 - Confirm or strengthen the prohibition on third-party authorship, notification, approval, recovery custody, and hidden enrollment.

@@ -13,16 +13,17 @@ The protocols describe disposable synthetic research only. They use reserved dom
 
 ## Documents to Read
 
-1. `docs/integration/CANONICAL_ARTIFACT_INDEX.md`, `BL-CAP-01` and `BL-PLC-01`
-2. `docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md`, D01, D04, D09, D17-D18
-3. All files in `research/adapter-tests/`
-4. Source locator `a5a991e:architecture/CYCLE_3_ADAPTER_RESEARCH_READINESS.md`
-5. Source locator `a5a991e:architecture/CYCLE_3_PLATFORM_SOURCE_REGISTER.csv`
-6. Source locator `6740c0b:architecture/CYCLE_3_CANONICAL_PROTECTION_LAYER_AND_LEARNING_GOVERNANCE.md`
+1. `REVIEW_BUNDLE_MANIFEST.md`, pack row `P4-RP-SECPLAT-01`, and its exact immutable sources: S01-S03, S12-S25, and S31.
+2. `SPECIALIST_REVIEW_RESPONSE_TEMPLATE.md`; return every item decision using its allowed vocabulary.
+3. `SPECIALIST_CONFLICT_AND_ESCALATION_PROTOCOL.md`; do not reconcile cross-specialist conflict inside this response.
+
+S25 is the bounded official-source claim table; current official pages control over stale summaries. Raw captures, identifiers, credentials, and signing material remain outside GitHub. If a listed source, version, access right, required section, or integrity value cannot be verified, return `Insufficient information` for the affected item.
 
 ## Decisions Requested
 
-- Approve/revise/block each protocol for safe execution preparation.
+For every requested item, use exactly one `BL-SRR-01` decision: `Approve within scope`, `Approve with conditions`, `Revise`, `Block`, `Outside expertise`, or `Insufficient information`.
+
+- Decide the disposition of each protocol for safe execution preparation.
 - Approve the exact-version run-manifest freeze and evidence-capture method.
 - Identify missing bypass, privilege, store/entitlement, update/supply-chain, performance, privacy, recovery, and teardown cases.
 - Decide lab isolation, fixture, account, network, cleanup, retention, and emergency shutdown requirements.

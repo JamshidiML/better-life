@@ -1,15 +1,28 @@
 # Phase 4 Integration and Evidence Readiness Report
 
-- Date: 2026-07-16
+- Date: 2026-07-19
 - Branch: `codex/integration-and-evidence-readiness`
-- Status: Author package complete; Draft PR and independent review required
+- Status: Phase 4.1 narrow amendment complete in author draft; ChatGPT and founder review required
 - Authorization: Research architecture and protocol preparation only
 
 ## Executive Decision
 
-Phase 4 has produced an integration control layer, eight bounded specialist review packs, an MVE-01 protocol package, and seven synthetic adapter protocol documents. It has not merged PRs #30-#40, implemented production code, recruited/contacted participants, contacted specialists or organizations, executed adapter tests, or generated clinical/user/platform/legal evidence.
+Phase 4 produced the integration control layer, eight specialist packs, MVE-01 protocol package and synthetic adapter protocols. Independent ChatGPT scored it **87/100** against the creator's **88/100** and required a narrow operational revision before specialist outreach. Phase 4.1 adds versioned review-bundle controls, specialist response/conflict governance, explicit unassigned MVE authority, corrected A/B/C decision rules, adapter run/result/fixture templates and a dedicated iOS official-controls protocol. It generated no external evidence.
 
-Decision: **Keep Draft; request ChatGPT and founder review; then obtain scoped specialist decisions. Do not merge, recruit, run tests, or implement.**
+Decision: **Keep Draft; request ChatGPT and founder review of Phase 4.1. Do not yet contact specialists, merge, recruit, run tests, or implement.**
+
+## Phase 4.1 Independent Review Response
+
+| Independent defect | Accepted | Author-draft resolution | Residual/open condition |
+| --- | --- | --- | --- |
+| High: review packages required cross-branch discovery and lacked complete delivery provenance | Yes | `BL-RBM-01` maps every pack to exact repository/PR/branch/commit/path/permalink/version/owner/section/hash/access/confidentiality/rights/refresh controls | Coordinator `Unassigned`; real reviewer access/usability and source refresh untested |
+| High: MVE institutional authority and accountable roles were absent | Yes | 19 required roles, authorities, prohibited powers, dependencies, conflicts, backups, approvals and expiry are explicit | Every role/backup is `Unassigned`; all participant activity remains blocked |
+| Medium: reviewer output and disagreement handling were incomplete | Yes | `BL-SRR-01` and `BL-SCEP-01` standardize scoped decisions, preserve dissent and protect non-waivable gates | No response/conflict has occurred; protocol usability untested |
+| Medium: zero-tolerance failures were mixed with percentages/descriptive outcomes | Yes | Four MVE documents now use Category A case adjudication, Category B iteration, and Category C description; v0.1 thresholds are superseded history | Methods, ethics, clinical and safety approval absent |
+| Medium: adapter execution records and synthetic fixture were underspecified | Yes | Run manifest, result/evidence and fixture specifications define mandatory evidence and block incomplete runs | No environment, fixture, evidence system, approval or test exists |
+| Medium: iOS official-control feasibility was not separately prepared | Yes | Dedicated protocol separates consumer, Family Controls, Network Extension and Safari families | Entitlement/store/device/account feasibility open; no execution |
+
+Internal documentation defects are resolved only as author-draft controls. Independent acceptance and every external High gate remain open.
 
 ## Required Inputs Reviewed
 
@@ -18,6 +31,7 @@ Decision: **Keep Draft; request ChatGPT and founder review; then obtain scoped s
 - Founder Issues #42 and #44 and their current comments.
 - `docs/execution/CYCLE_3_COORDINATION_REPORT.md` at `d53e34d`.
 - ChatGPT independent Cycle 3 coordination review on PR #40.
+- Complete independent Phase 4 review on Draft PR #45: 87/100, narrow revision before specialist outreach.
 
 The independent Cycle 3 correction is carried throughout: five decisions, wireframes, and v0.1 thresholds are draft research instruments pending specialist/ethics review. Version control does not make them scientifically or founder approved.
 
@@ -48,7 +62,7 @@ The highest-risk reconciliations are:
 7. Distinguish local save, no-save/use-once, discard, research records, deletion, uninstall, and teardown.
 8. Preserve MVE -> approved research -> synthetic adapters -> integrated prototype gate -> actual MVP decision.
 
-No original branch document was deleted, moved, or rewritten.
+No original document on source branches for PRs #30-#40 was deleted, moved, or rewritten.
 
 ## Integration Sequence
 
@@ -70,7 +84,7 @@ This is a proposed file-level reconciliation order, not a merge operation. Found
 | Pack | Decision focus | Current state |
 | --- | --- | --- |
 | Clinical and CSBD | Nonclinical language, measures, harms, care boundaries | Prepared; nobody contacted |
-| Research method | Design, comparator, sample, thresholds, analysis, ethics | Prepared; nobody contacted |
+| Research method | Design, comparator, sample, A/B/C decision rules, analysis, ethics | Prepared; nobody contacted |
 | Fellowship/IP | Item rights, trademark/affiliation, Track A/B, similarity | Prepared; no permission/legal opinion |
 | Privacy/GDPR/DPIA | Roles, bases, Article 9/ePrivacy, DPIA, rights, retention | Prepared; no DPO/counsel review |
 | Security/platform | Environments, permissions, bypass, evidence, teardown | Prepared; no test/reviewer/vendor contact |
@@ -78,15 +92,17 @@ This is a proposed file-level reconciliation order, not a merge operation. Found
 | Accessibility/inclusion | Critical tasks, accommodations, language/cultural fit | Prepared; no conformance/lived-experience review |
 | Public health/impact | Burden, outcomes, equity, causal/impact claim ceilings | Prepared; no impact/public-health review |
 
-Every pack contains purpose, boundary, documents, requested decisions, claims, risks, questions, prohibited assumptions, expected output, COI, and refresh rules. No pack claims engagement or approval.
+Every pack contains purpose, boundary, requested decisions, claims, risks, questions, prohibited assumptions, output, COI and refresh rules. Each now references `BL-RBM-01`, exact source IDs, `BL-SRR-01` and `BL-SCEP-01`. The manifest uses immutable links and bounded claim/rights tables instead of copying copyrighted or sensitive sources.
+
+Specialist outreach readiness: **Conditionally prepared but not authorized.** ChatGPT/founder must accept Phase 4.1; a qualified review coordinator must be assigned; source access, integrity, rights and refresh must be validated for the actual reviewer. Nobody has been contacted.
 
 ## MVE-01 Readiness
 
-Eight documents define protocol, journey, interview, measurement, adverse events, minimization, recruitment/inclusion, and analysis.
+Nine documents define protocol, journey, interview, measurement, adverse events, minimization, recruitment/inclusion, analysis, and governance/authorization.
 
 The package tests all requested domains: problem relevance; five-decision comprehension; task completion/time; Spiral usefulness; agency; privacy trust/control; burden; shame; reactance; rumination/distress/privacy regret; accessibility; cultural fit; exit; deletion understanding; recall; reuse intent; adverse effects; and preference versus an approved paper/no-tool condition.
 
-Readiness status: **Ready for specialist and ethics review only.**
+Readiness status: **Drafts ready for scoped review; participant activity blocked.** All 19 mandatory roles and backups are `Unassigned`.
 
 Not ready:
 
@@ -94,16 +110,21 @@ Not ready:
 - no participant materials are approved;
 - no ethics/DPIA/clinical/coercion/accessibility decision exists;
 - no recruitment, contact, pilot, session, or data collection is authorized.
+- no sponsor/institution, research lead, methods, ethics, clinical safety, controller/DPO, custodian, security/incident, coercive-control, accessibility, recruitment, facilitation, analysis, compensation, contact, final authorization, or study-stop authority is assigned/approved.
+
+Category A failures are individual case-based stop conditions and may pause/stop after one credible event. Category B usability observations guide iteration only. Category C preference/ratings/themes/comparison outcomes are descriptive and cannot authorize progression. Cycle 3 v0.1 percentages remain visible only as superseded history.
 
 ## Adapter Protocol Readiness
 
-Seven requested documents exist: common security/teardown, Chromium/Edge, Firefox, Safari feasibility, Android VPN, DNS filtering, and router control.
+Eleven documents now define the adapter readiness package: common security/teardown; Chromium/Edge; Firefox; macOS Safari; Android VPN; DNS; router; iOS official controls; run manifest; result/evidence; and synthetic fixture specification.
 
 Every platform protocol specifies the exact research question, environment-lock fields, platform/version requirement, accounts/permissions, synthetic domains/apps, expected behavior, bypass and alternate contexts, false positives, legitimate recovery, offline and clock/timezone behavior, uninstall/reinstall/reset/replacement, degraded/orphan state, teardown, privacy, performance/battery relevance, pass/fail/stop, and evidence capture.
 
-Readiness status: **Protocol prepared; execution blocked.**
+Readiness status: **Protocols and evidence templates prepared; execution blocked.**
 
-Exact numeric versions, hardware/firmware, fixture builds/hashes, permissions, accounts, topology, policies/entitlements, and evidence systems are deliberately `UNFROZEN` or `NOT IMPLEMENTED`. Inventing current versions would create false precision; an authorized run must freeze them in an immutable manifest after platform/security review. No adapter or fixture was built or executed.
+Exact versions, hardware/firmware, fixture builds/hashes, permissions, accounts, topology, policies/entitlements and evidence systems remain `UNFROZEN` or `NOT IMPLEMENTED`. Any blank, inferred, `latest`, inconsistent or expired mandatory manifest field blocks a run. Raw captures must remain outside GitHub. No adapter or fixture was built or executed.
+
+Founder iOS working decision: **Prepare a dedicated iOS official-controls synthetic feasibility protocol before the first adapter execution wave. Do not execute it during Phase 4.1.** The protocol makes entitlement/store approval an open question and prevents Safari extension results from being treated as iPhone-wide control evidence.
 
 ## Founder Decisions Required
 
@@ -114,7 +135,7 @@ Exact numeric versions, hardware/firmware, fixture builds/hashes, permissions, a
 5. Confirm ally Levels 3-4 remain prohibited by capability.
 6. Keep the plan/pathway name open pending research.
 7. Confirm EUR1 remains an accessibility principle/testable anchor, not price.
-8. Confirm iOS Family Controls/Network Extension protocol is deferred from this requested pack rather than silently covered by Safari/macOS.
+8. Confirm or revise the recorded iOS working decision and the separate capability-family protocol; no execution is implied.
 9. Keep PRs #30-#40 Draft/unmerged and authorize only the next bounded reviews.
 
 ## Specialist Gates
@@ -143,7 +164,7 @@ No founder, author, ChatGPT, or one specialist can waive another applicable gate
 | ID | High defect | Required closure |
 | --- | --- | --- |
 | H1 | Canonical ownership and retention/historical dispositions are author proposals. | Founder and ChatGPT decision; later file-level integration review |
-| H2 | MVE question, sample, comparator, measures, thresholds, analysis and ethics are unapproved. | Independent method/ethics decision |
+| H2 | MVE question, sample, comparator, measures, A/B/C decision rules, analysis and ethics are unapproved. | Independent method/ethics decision |
 | H3 | Clinical language, action content, harms, facilitator and care boundaries are unapproved. | Qualified clinical/CSBD review |
 | H4 | Research data legality, DPIA, systems, retention, rights and incident process are unresolved. | EU/German counsel/DPO/ethics/security decisions |
 | H5 | Coercive-control, safe-contact, accessibility, inclusion, localization and lived-experience evidence are absent. | Scoped specialist reviews and later approved research |
@@ -162,30 +183,36 @@ No Critical defect was identified in the documentation-only scope. This does not
 - Cycle 3 coordination creator score: **88/100**.
 - Cycle 3 independent coordination score: **88/100**, documentation foundation accepted; program/product acceptance blocked.
 - Phase 4 author self-score: **88/100**, descriptive only.
+- Phase 4 independent ChatGPT score: **87/100**, narrow revision required before specialist outreach.
+- Phase 4.1 author score: **88/100 unchanged**; internal documents do not close external deductions.
 
 Scores are not averaged into acceptance and cannot close High gates.
 
 ## Verification Performed
 
 - Repository-state verified: local `main` was synchronized to `origin/main`; Phase 4 branch was created from `origin/main` without merging thread branches.
-- Repository-state verified: all 29 requested Markdown deliverables exist on the Phase 4 branch.
+- Repository-state verified: all 29 Phase 4 and eight Phase 4.1 deliverables exist on the Phase 4 branch.
 - Desk-review observation: each review pack contains all 11 required sections.
 - Desk-review observation: MVE measurement map includes every requested evaluation domain.
 - Desk-review observation: every adapter protocol names all required lifecycle/security/evidence topics and blocks execution while exact environments are unfrozen.
+- Desk-review observation: all eight packs reference the manifest and exact source IDs; source records include required delivery/control fields.
+- Desk-review observation: 19 MVE roles and backups are explicitly `Unassigned`; A/B/C categories align across four revised documents.
+- Desk-review observation: adapter run/result required fields, fixture safeguards and separate iOS family/lifecycle cases are present.
 - Repository check: Markdown whitespace validation with `git diff --check` passed during drafting.
 - Executed empirical test: none.
 - Not performed: participant, adapter, clinical, legal, privacy, DPIA, security, accessibility, community, market, product, or production test.
 
 ## Recommended Next Sequence
 
-1. ChatGPT independently reviews this Draft PR, canonical ownership, conflict matrix, protocols, score and deductions.
-2. Founder confirms/revises the named decisions only; do not authorize execution by implication.
-3. Send bounded packs to qualified specialists with COI/output/expiry requirements.
-4. Revise the same Phase 4 branch/PR against exact review findings and re-score.
-5. After all MVE gates and ethics/privacy systems are approved, seek a separate written participant-research authorization.
-6. After platform/security protocol approval and exact environment freeze, seek a separate written synthetic-test authorization.
-7. Keep production, enforcement with participants, live social scope, AI, rewards, payments, fellowship delivery, and merges blocked.
+1. ChatGPT independently reviews the Phase 4.1 amendment against the 87/100 findings and records acceptance, defects and score without inflation.
+2. Founder confirms/revises the named decisions, including iOS, without authorizing execution by implication.
+3. Assign a qualified review coordinator and validate each actual reviewer's source access, integrity, rights, scope and current versions.
+4. Only then send bounded packs to qualified specialists with COI/output/expiry requirements.
+5. Revise the same Phase 4 branch/PR against exact review findings and re-score.
+6. After all MVE gates, roles and ethics/privacy systems are approved, seek separate written participant-research authorization.
+7. After platform/security protocol approval and exact environment freeze, seek separate written synthetic-test authorization.
+8. Keep production, enforcement with participants, live social scope, AI, rewards, payments, fellowship delivery and merges blocked.
 
 ## Stop and Review Request
 
-Author work stops after the Draft PR is opened. Request independent ChatGPT and founder review. Do not merge PRs #30-#40 or this PR, recruit participants, contact reviewers as if approved, execute adapter tests, or implement production features.
+Phase 4.1 author work stops after updating Draft PR #45. Request ChatGPT and founder review. Do not merge PRs #30-#40 or this PR, recruit/contact participants, contact specialists, execute adapter tests, or implement production features.
