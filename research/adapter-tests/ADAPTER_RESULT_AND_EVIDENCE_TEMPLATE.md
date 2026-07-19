@@ -1,10 +1,10 @@
 # Adapter Result and Evidence Template
 
 - Template ID: `BL-ADAPTER-EVIDENCE-01`
-- Version: `0.1-draft`
+- Version: `0.1.1-draft`
 - Date: 2026-07-19
 - Status: Template only; no adapter result exists
-- Classification: `Verified` repository requirement - raw captures remain outside GitHub
+- Classification: `Repository decision` - all mandatory result/evidence fields and the requirement that raw captures remain outside GitHub
 
 ## Test-Case Result
 

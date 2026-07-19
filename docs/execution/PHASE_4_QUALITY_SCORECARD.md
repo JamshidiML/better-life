@@ -1,15 +1,15 @@
 # Phase 4 Quality Scorecard
 
-- Version: Phase 4.1 amendment `v0.2`
+- Version: Phase 4.1 administrative update `v0.3`
 - Date: 2026-07-19
-- Status: Draft; Phase 4 independent review complete, Phase 4.1 ChatGPT and founder review required
-- Decision: Revise/escalate; no merge or execution authorization
+- Status: Draft; Phase 4.1 independent review complete; internal readiness accepted
+- Decision: Specialist Review Wave 1 preparation authorized; no outreach performed in this update and no participant research, adapter execution, production implementation, or merge authorization
 
 ## Self-Score
 
 **88/100**
 
-The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4 **87/100** and required this narrow revision before specialist outreach. Phase 4.1 resolves specified internal operational defects in author draft form but does not add external evidence, specialist acceptance, institutional ownership, participant evidence, exact platform environments, implemented fixtures, or executed adapter results. The score is therefore not increased.
+The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4 **87/100**. The Phase 4.1 creator score remains **88/100** and independent ChatGPT scored Phase 4.1 readiness **90/100**, accepting internal readiness for Specialist Review Wave 1 preparation and bounded outreach subject to stated conditions. No external evidence gate was closed, so the creator score is not retroactively increased.
 
 ## Shared Dimensions - 62/70
 
@@ -44,14 +44,14 @@ The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4
 | No hidden/coercive control | Pass in documentation scope | Hidden persistence rejected; ally Levels 3-4 prohibited; specialist review still open |
 | Unsupported clinical/platform/privacy claim | Pass in current wording check | Claims bounded; exact versions and compliance remain open |
 | Reproducible evidence/test basis | Partial | Protocols reproducible in structure; no populated run manifest or executed evidence |
-| Review bundle operations | Pass for author draft / blocked for outreach | Exact source manifest and response/conflict protocols exist; coordinator/access test/ChatGPT/founder acceptance absent |
+| Review bundle operations | Internally accepted / preparation authorized | Independent Phase 4.1 review accepted the bundle; coordinator/custodian assignment, founder confirmations and reviewer-specific access validation remain before later bounded outreach; no outreach performed here |
 | MVE governance assignment | Fail/open | Matrix exists; all mandatory roles and backups are `Unassigned` |
 | Clinical/method/ethics | Fail/open | No qualified decision |
 | Privacy/legal/DPIA | Fail/open | No qualified decision |
 | Security/platform/teardown | Fail/open | No review or executed test |
 | Accessibility/inclusion/coercion | Fail/open | No qualified decision or participant evidence |
 | Rights/community | Fail/open | No item-level clearance/permission/similarity review |
-| Acceptance threshold and zero High | Fail | Creator 88 and independent 87 are below 95; external High gates remain |
+| Acceptance threshold and zero High | Fail | Phase 4 creator 88, Phase 4 independent 87, Phase 4.1 creator 88 and Phase 4.1 independent 90 remain below 95; external High gates remain |
 
 ## Known Weaknesses
 
@@ -90,17 +90,17 @@ The complete Phase 4 assumption and risk logs are in `docs/integration/DECISION_
 | Phase 4 v0.1 | 88 | Creator self-score | Revise/escalate; Draft only |
 | Phase 4 | 87 | Independent ChatGPT | Narrow revision before specialist outreach |
 | Phase 4.1 v0.2 | 88 unchanged | Creator score preserved | Internal amendment prepared; external gates unchanged |
+| Phase 4.1 | 90 | Independent ChatGPT | Internal readiness accepted for Specialist Review Wave 1 preparation and bounded outreach; external gates remain |
 
 Scores are preserved separately and are not averaged.
 
 ## Next Improvement Loop
 
-1. Independent ChatGPT reviews the Phase 4.1 amendment against the accepted defects; do not infer a higher score.
-2. Founder confirms/revises the decision register and amendment, including the recorded iOS decision.
-3. Only after both reviews and an assigned coordinator/access check, qualified specialists may receive scoped packs and return `BL-SRR-01` decisions.
-4. Revise the same branch/PR, preserve score history, re-run document checks, and re-score.
-5. Stop if remaining points require participant or adapter execution; create separate written authorization rather than inflating this score.
+1. Preserve the independent 90/100 decision and all earlier scores separately.
+2. Complete founder confirmations, coordinator/custodian assignment and reviewer-specific bundle access validation for Wave 1 preparation.
+3. Stop before specialist contact under the current instruction; later bounded outreach uses `BL-SRR-01` and remains scope-limited.
+4. Keep participant research and adapter execution behind separate exact written authorization; do not inflate scores with documentation.
 
 ## Author Decision
 
-**Request ChatGPT and founder review. Keep Draft. Do not contact specialists, merge, conduct participant work, execute adapters, or implement production features.**
+**Internal readiness accepted. Keep Draft. Stop after this administrative update. Do not contact specialists, merge, conduct participant work, execute adapters, or implement production features.**

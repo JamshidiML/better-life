@@ -2,14 +2,23 @@
 
 - Date: 2026-07-19
 - Branch: `codex/integration-and-evidence-readiness`
-- Status: Phase 4.1 narrow amendment complete in author draft; ChatGPT and founder review required
-- Authorization: Research architecture and protocol preparation only
+- Status: Phase 4.1 internal readiness accepted; Specialist Review Wave 1 preparation authorized; Draft remains open
+- Authorization: Specialist-review preparation only in this administrative update; no outreach, participant research, adapter execution, production implementation, or merge
 
 ## Executive Decision
 
-Phase 4 produced the integration control layer, eight specialist packs, MVE-01 protocol package and synthetic adapter protocols. Independent ChatGPT scored it **87/100** against the creator's **88/100** and required a narrow operational revision before specialist outreach. Phase 4.1 adds versioned review-bundle controls, specialist response/conflict governance, explicit unassigned MVE authority, corrected A/B/C decision rules, adapter run/result/fixture templates and a dedicated iOS official-controls protocol. It generated no external evidence.
+Phase 4 produced the integration control layer, eight specialist packs, MVE-01 protocol package and synthetic adapter protocols. Independent ChatGPT scored Phase 4 **87/100** against the creator's **88/100** and required a narrow operational revision. Phase 4.1 added versioned review-bundle controls, specialist response/conflict governance, explicit unassigned MVE authority, corrected A/B/C decision rules, adapter run/result/fixture templates and a dedicated iOS official-controls protocol. The Phase 4.1 creator score remained **88/100**; independent ChatGPT then scored readiness **90/100** and accepted internal readiness for Specialist Review Wave 1 preparation and bounded outreach, subject to founder confirmations and assignment of review coordination/record custody.
 
-Decision: **Keep Draft; request ChatGPT and founder review of Phase 4.1. Do not yet contact specialists, merge, recruit, run tests, or implement.**
+Decision: **Internal readiness accepted. Specialist Review Wave 1 preparation is authorized. Keep Draft. This administrative update performs no specialist contact; participant research, adapter execution, production implementation, and merge remain blocked.**
+
+## Phase 4.1 Independent Decision
+
+- Independent readiness score: **90/100**.
+- Review record: [PR #45 Phase 4.1 independent review](https://github.com/JamshidiML/better-life/pull/45#pullrequestreview-4730544381).
+- Decision: **Accepted for Specialist Review Wave 1 preparation and bounded outreach, subject to founder confirmations and assignment of review coordination/record custody.**
+- Internal status: accepted for specialist-review operations; product and evidence acceptance remain blocked.
+- Remaining gates: all nine external High categories remain open; no clinical, methods/ethics, GDPR/DPIA, security/platform, coercive-control, accessibility/inclusion, fellowship/IP, participant-value, or executed-adapter gate was closed.
+- Current action boundary: no specialist is contacted by this update. No participant research, adapter execution, production implementation, or merge is authorized.
 
 ## Phase 4.1 Independent Review Response
 
@@ -22,7 +31,7 @@ Decision: **Keep Draft; request ChatGPT and founder review of Phase 4.1. Do not 
 | Medium: adapter execution records and synthetic fixture were underspecified | Yes | Run manifest, result/evidence and fixture specifications define mandatory evidence and block incomplete runs | No environment, fixture, evidence system, approval or test exists |
 | Medium: iOS official-control feasibility was not separately prepared | Yes | Dedicated protocol separates consumer, Family Controls, Network Extension and Safari families | Entitlement/store/device/account feasibility open; no execution |
 
-Internal documentation defects are resolved only as author-draft controls. Independent acceptance and every external High gate remain open.
+The internal documentation defects are accepted as resolved for specialist-review readiness. Every external High gate remains open.
 
 ## Required Inputs Reviewed
 
@@ -32,6 +41,7 @@ Internal documentation defects are resolved only as author-draft controls. Indep
 - `docs/execution/CYCLE_3_COORDINATION_REPORT.md` at `d53e34d`.
 - ChatGPT independent Cycle 3 coordination review on PR #40.
 - Complete independent Phase 4 review on Draft PR #45: 87/100, narrow revision before specialist outreach.
+- Complete independent Phase 4.1 review on Draft PR #45: 90/100, internal readiness accepted for Specialist Review Wave 1 preparation and bounded outreach subject to stated conditions.
 
 The independent Cycle 3 correction is carried throughout: five decisions, wireframes, and v0.1 thresholds are draft research instruments pending specialist/ethics review. Version control does not make them scientifically or founder approved.
 
@@ -94,7 +104,7 @@ This is a proposed file-level reconciliation order, not a merge operation. Found
 
 Every pack contains purpose, boundary, requested decisions, claims, risks, questions, prohibited assumptions, output, COI and refresh rules. Each now references `BL-RBM-01`, exact source IDs, `BL-SRR-01` and `BL-SCEP-01`. The manifest uses immutable links and bounded claim/rights tables instead of copying copyrighted or sensitive sources.
 
-Specialist outreach readiness: **Conditionally prepared but not authorized.** ChatGPT/founder must accept Phase 4.1; a qualified review coordinator must be assigned; source access, integrity, rights and refresh must be validated for the actual reviewer. Nobody has been contacted.
+Specialist review readiness: **Internal readiness accepted; Wave 1 preparation authorized.** Before any later bounded outreach, founder confirmations, an assigned qualified review coordinator and restricted record custodian, and validation of reviewer access, integrity, rights, scope and refresh are required. This administrative update performs no outreach and nobody has been contacted.
 
 ## MVE-01 Readiness
 
@@ -185,6 +195,7 @@ No Critical defect was identified in the documentation-only scope. This does not
 - Phase 4 author self-score: **88/100**, descriptive only.
 - Phase 4 independent ChatGPT score: **87/100**, narrow revision required before specialist outreach.
 - Phase 4.1 author score: **88/100 unchanged**; internal documents do not close external deductions.
+- Phase 4.1 independent ChatGPT readiness score: **90/100**, internal readiness accepted; external High gates remain open.
 
 Scores are not averaged into acceptance and cannot close High gates.
 
@@ -204,15 +215,11 @@ Scores are not averaged into acceptance and cannot close High gates.
 
 ## Recommended Next Sequence
 
-1. ChatGPT independently reviews the Phase 4.1 amendment against the 87/100 findings and records acceptance, defects and score without inflation.
-2. Founder confirms/revises the named decisions, including iOS, without authorizing execution by implication.
-3. Assign a qualified review coordinator and validate each actual reviewer's source access, integrity, rights, scope and current versions.
-4. Only then send bounded packs to qualified specialists with COI/output/expiry requirements.
-5. Revise the same Phase 4 branch/PR against exact review findings and re-score.
-6. After all MVE gates, roles and ethics/privacy systems are approved, seek separate written participant-research authorization.
-7. After platform/security protocol approval and exact environment freeze, seek separate written synthetic-test authorization.
-8. Keep production, enforcement with participants, live social scope, AI, rewards, payments, fellowship delivery and merges blocked.
+1. Preserve the Phase 4.1 independent 90/100 decision and all earlier scores separately.
+2. Prepare Specialist Review Wave 1 administration only: founder confirmations, coordinator and restricted record-custodian assignment, and reviewer-specific source/access/right/refresh validation.
+3. Stop before specialist contact under the current founder instruction; bounded outreach requires the later authorized operational step.
+4. Keep participant research, adapter/fixture execution, production, enforcement with participants, live social scope, AI, rewards, payments, fellowship delivery and merges blocked.
 
-## Stop and Review Request
+## Stop
 
-Phase 4.1 author work stops after updating Draft PR #45. Request ChatGPT and founder review. Do not merge PRs #30-#40 or this PR, recruit/contact participants, contact specialists, execute adapter tests, or implement production features.
+This final Phase 4.1 administrative update records independent acceptance and then stops. Do not merge PRs #30-#40 or this PR, recruit/contact participants, contact specialists, execute adapter tests, or implement production features.

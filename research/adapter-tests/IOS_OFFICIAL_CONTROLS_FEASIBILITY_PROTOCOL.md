@@ -1,7 +1,7 @@
 # iOS Official Controls Synthetic Feasibility Protocol
 
 - Protocol ID: `BL-ADAPTER-IOS-OFFICIAL-01`
-- Version: `0.1-draft`
+- Version: `0.1.1-draft`
 - Date: 2026-07-19
 - Official-source review cutoff: 2026-07-19
 - Status: Prepared for security/platform/privacy review; do not execute during Phase 4.1
@@ -9,7 +9,7 @@
 
 ## Founder Working Decision
 
-`Verified` from the Phase 4.1 instruction: **Prepare a dedicated iOS official-controls synthetic feasibility protocol before the first adapter execution wave. Do not execute it during Phase 4.1.**
+`Founder decision`: **Prepare a dedicated iOS official-controls synthetic feasibility protocol before the first adapter execution wave. Do not execute it during Phase 4.1.**
 
 This protocol does not claim that Better Life has, will receive, or qualifies for any Apple entitlement, capability, signing permission, store approval, device-management authority, or distribution route.
 
@@ -110,4 +110,4 @@ Report a separate final disposition for every capability-family/environment row.
 
 ## Current Decision
 
-`Verified` repository state: protocol prepared; no device, account, entitlement, app, fixture, reviewer approval, run manifest, evidence system, or execution exists. Phase 4.1 execution is `Blocked`.
+`Repository-state verified`: this protocol exists and the repository contains no populated run manifest, result record, or executed-test evidence for it. `Open question`: device, account, entitlement, app, fixture, reviewer approval, and evidence-system readiness have not been established. `Repository decision`: execution remains `Blocked` without separate exact authorization.

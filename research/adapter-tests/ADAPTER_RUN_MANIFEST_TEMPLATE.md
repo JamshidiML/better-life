@@ -1,10 +1,10 @@
 # Adapter Run Manifest Template
 
 - Template ID: `BL-ADAPTER-RUN-01`
-- Version: `0.1-draft`
+- Version: `0.1.1-draft`
 - Date: 2026-07-19
 - Status: Template only; no run authorized or performed
-- Classification: `Verified` repository requirement - execution is blocked during Phase 4.1
+- Classification: `Repository decision` - all mandatory run-manifest and run-gate rules; execution remains separately authorization-gated
 
 ## Run Gate
 
