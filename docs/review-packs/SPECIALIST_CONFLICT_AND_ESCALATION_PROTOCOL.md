@@ -1,9 +1,10 @@
 # Specialist Conflict and Escalation Protocol
 
 - Protocol ID: `BL-SCEP-01`
-- Version: `0.1-draft`
+- Version: `0.1.1-draft`
 - Date: 2026-07-19
-- Owner: Review coordinator role, currently `Unassigned`
+- Administrative Review Coordinator: Founder, administrative scope only
+- Restricted review-record custodian: `Unassigned`
 - Status: Governance protocol; no specialist findings have been received
 
 ## Governing Rules
@@ -64,7 +65,7 @@ The relevant activity stays `Blocked` until the competent authority records lawf
 
 ## Founder Decision Boundary
 
-The founder may choose among options that remain after all applicable non-waivable gates and assigned specialist conditions. The founder cannot recast a prohibition as accepted residual risk, approve outside their competence, or authorize activity while a mandatory owner is `Unassigned` or unapproved. Founder disagreement is preserved as a separate decision input, not substituted for specialist evidence.
+The founder may choose among options that remain after all applicable non-waivable gates and assigned specialist conditions. The founder cannot recast a prohibition as accepted residual risk, approve outside their competence, or authorize activity while a mandatory owner is `Unassigned` or unapproved. Founder disagreement is preserved as a separate decision input, not substituted for specialist evidence. The founder's current Administrative Review Coordinator assignment permits administrative preparation, routing, and tracking only; it does not assign specialist, MVE, restricted-custody, safety, ethics, evidence, test, clinical, or final-authorization authority.
 
 ## Expiry
 

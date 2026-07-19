@@ -1,9 +1,9 @@
 # Phase 4 Quality Scorecard
 
-- Version: Phase 4.1 administrative update `v0.3`
+- Version: Phase 4.1 founder-confirmation update `v0.4`
 - Date: 2026-07-19
 - Status: Draft; Phase 4.1 independent review complete; internal readiness accepted
-- Decision: Specialist Review Wave 1 preparation authorized; no outreach performed in this update and no participant research, adapter execution, production implementation, or merge authorization
+- Decision: Specialist Review Wave 1A preparation and bounded outreach founder-authorized; no outreach performed in this update and no participant research, adapter/fixture execution, production implementation, clinical activity, sensitive-data collection, or merge authorization
 
 ## Self-Score
 
@@ -20,7 +20,7 @@ The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4
 | Evidence and traceability | 10 | 8 | Immutable source manifest, source hashes, 18 conflicts, classifications, dependencies, run/result templates and protocols. | No empirical or professional evidence; manifest access has not been tested with a specialist. |
 | Safety and harm prevention | 10 | 9 | Nonclinical boundary, adverse-event levels, stop/pause rules, coercion, care, explicit-detail minimization, adapter kill/teardown. | Clinical, ethics, coercive-control and platform safety reviewers have not approved controls. |
 | Privacy and consent | 10 | 9 | Purpose separation, data inventory, prohibited data, prototype/research separation, withdrawal/deletion limits, no GitHub/external AI raw data. | No legal basis, DPIA, processor/system, retention, incident or participant notice approval. |
-| Internal consistency | 5 | 5 | Five interfaces, A/B/C MVE rules, governance block, iOS/Safari separation and no-execution labels align across packages. | Independent Phase 4.1 review remains pending. |
+| Internal consistency | 5 | 5 | Five interfaces, A/B/C MVE rules, governance block, iOS/Safari separation, founder decisions, and no-execution labels align across packages. | External specialist consistency review remains open. |
 | Clarity and usability | 5 | 4 | Reviewer outputs, matrices, test IDs, decision tables and stop rules are actionable. | Package is large; specialist review may identify scope overload or redundant wording. |
 | Feasibility and realism | 5 | 4 | Unfrozen environments block execution; rights/legal/platform limits and valid unsupported outcomes are explicit. | Exact fixtures, hardware, versions, permissions, staff, systems, cost and schedules are unresolved. |
 | Testability and verification | 5 | 5 | MVE measures/analysis and adapter expected/result/evidence/pass/fail/stop protocols are prespecified as drafts. | No deduction for testability; no test result is claimed. |
@@ -29,8 +29,8 @@ The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4
 
 | Dimension | Weight | Score | Evidence for awarded points | Deduction |
 | --- | ---: | ---: | --- | --- |
-| Integration and canonical decision quality | 10 | 9 | Five interfaces, supporting ownership, 18 complete conflict records, dependencies, future merge order, historical retention. | No file-level integration or founder/ChatGPT owner acceptance yet. |
-| Specialist review readiness | 10 | 9 | Eight packs use one versioned manifest, immutable source sets, standardized response and conflict protocols. | No coordinator is assigned; no reviewer has tested access/usability or accepted scope. |
+| Integration and canonical decision quality | 10 | 9 | Five interfaces, supporting ownership, 18 complete conflict records, dependencies, future merge order, historical retention. | Owners/sequence are accepted only for the current research stage; no file-level integration or merge approval exists. |
+| Specialist review readiness | 10 | 9 | Eight packs use one versioned manifest, immutable source sets, standardized response and conflict protocols; the founder is Administrative Review Coordinator only. | Wave 1A pack membership is undefined, restricted record custodian is unassigned, and no reviewer has tested access/usability or accepted scope. |
 | MVE and adapter evidence-protocol quality | 10 | 8 | MVE roles/A-B-C rules and adapter run/result/fixture/iOS protocols now close internal template gaps. | Roles remain unassigned; design and exact environments/fixture implementation remain unapproved/unfrozen. |
 
 ## Mandatory Gate Status
@@ -44,7 +44,7 @@ The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4
 | No hidden/coercive control | Pass in documentation scope | Hidden persistence rejected; ally Levels 3-4 prohibited; specialist review still open |
 | Unsupported clinical/platform/privacy claim | Pass in current wording check | Claims bounded; exact versions and compliance remain open |
 | Reproducible evidence/test basis | Partial | Protocols reproducible in structure; no populated run manifest or executed evidence |
-| Review bundle operations | Internally accepted / preparation authorized | Independent Phase 4.1 review accepted the bundle; coordinator/custodian assignment, founder confirmations and reviewer-specific access validation remain before later bounded outreach; no outreach performed here |
+| Review bundle operations | Internally accepted / Wave 1A authorized | Independent Phase 4.1 review accepted the bundle; founder confirmations and Administrative Review Coordinator assignment are recorded; exact Wave 1A pack IDs/scopes, restricted custodian assignment, and reviewer-specific preflight remain before pack delivery; no outreach performed here |
 | MVE governance assignment | Fail/open | Matrix exists; all mandatory roles and backups are `Unassigned` |
 | Clinical/method/ethics | Fail/open | No qualified decision |
 | Privacy/legal/DPIA | Fail/open | No qualified decision |
@@ -55,8 +55,8 @@ The Phase 4 creator score remains **88/100**. Independent ChatGPT scored Phase 4
 
 ## Known Weaknesses
 
-- Canonical dispositions are recommendations, not accepted integration decisions.
-- Manifest access and pack usability have not been tested with a specialist; coordinator is unassigned.
+- Canonical owners and sequence are accepted only for the current research stage; file-level integration, unresolved conflict dispositions, and merge remain open.
+- Wave 1A pack membership and reviewer scopes are not yet recorded; manifest access and pack usability have not been tested with a specialist; the restricted review-record custodian is unassigned.
 - MVE sponsor, authorization and every other mandatory role remain unassigned; sample, comparator, order, measures, recruitment, compensation and data systems remain open.
 - Local/no-save behavior is conceptual, not implemented or tested.
 - Adapter protocols have templates but no populated approved run manifest, implemented fixture, evidence system, entitlement/store decision or test result.
@@ -97,10 +97,10 @@ Scores are preserved separately and are not averaged.
 ## Next Improvement Loop
 
 1. Preserve the independent 90/100 decision and all earlier scores separately.
-2. Complete founder confirmations, coordinator/custodian assignment and reviewer-specific bundle access validation for Wave 1 preparation.
-3. Stop before specialist contact under the current instruction; later bounded outreach uses `BL-SRR-01` and remains scope-limited.
+2. Prepare Wave 1A under the founder's Administrative Review Coordinator role, record its exact review-pack IDs/scopes, and separately assign the restricted review-record custodian.
+3. Complete reviewer-specific source/access/rights/confidentiality/scope/refresh preflight before bounded outreach; use `BL-SRR-01` for any later response.
 4. Keep participant research and adapter execution behind separate exact written authorization; do not inflate scores with documentation.
 
 ## Author Decision
 
-**Internal readiness accepted. Keep Draft. Stop after this administrative update. Do not contact specialists, merge, conduct participant work, execute adapters, or implement production features.**
+**Internal readiness accepted. Wave 1A preparation and bounded outreach are founder-authorized. Keep Draft. Stop after recording this confirmation; no outreach is performed here. Do not merge, conduct participant work, execute adapters/fixtures, collect sensitive user data, conduct clinical activity, or implement production features.**

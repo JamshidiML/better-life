@@ -1,15 +1,17 @@
 # Review Bundle Manifest
 
 - Manifest ID: `BL-RBM-01`
-- Version: `0.1.1-draft`
+- Version: `0.1.2-draft`
 - Date: 2026-07-19
 - Repository: `JamshidiML/better-life`
 - Pull request: Draft PR #45
 - Branch: `codex/integration-and-evidence-readiness`
 - Amendment source commit: `3c566d57c20ae3673fd0e6debdeb6fc43c415a15`
 - Administrative taxonomy source commit: `30260f3bf5632327589c6154add0bb831fa8af33`
-- Owner: Phase 4 review coordinator role, currently `Unassigned`
-- Status: Phase 4.1 bundle definition; no specialist has been contacted
+- Administrative Review Coordinator: Founder, administrative scope only
+- Restricted review-record custodian: `Unassigned`
+- Wave 1A pack roster: `Open question`; no pack ID is assigned by implication
+- Status: Phase 4.1 internal readiness accepted; Wave 1A preparation and bounded outreach founder-authorized; no specialist has been contacted
 
 ## Use Rules
 
@@ -18,19 +20,20 @@
 3. Repository sources are internal review material. External links, official-source metadata, and rights observations are not permission to copy, adapt, redistribute, train a model, imply affiliation, or publish protected material.
 4. Do not add participant data, personal reviewer identity, confidential legal advice, credentials, raw captures, or copyrighted source copies to this repository. Approved excerpts must be minimal and separately authorized.
 5. If a required source, section, hash, access right, or controlling-source rule cannot be confirmed, return `Insufficient information`; do not infer it.
+6. The Administrative Review Coordinator may prepare, route, and track review administration only. This role does not confer specialist, MVE, restricted-custody, safety, ethics, evidence, test, clinical, or final-authorization authority.
 
 ## Review Packs and Required Sources
 
 | Review-pack ID | Pack | Required source IDs | Bundle state |
 | --- | --- | --- | --- |
-| `P4-RP-CLIN-01` | Clinical and CSBD | S01, S02, S04, S06, S07, S08, S12, S26, S36 | Prepared; outreach prohibited pending Phase 4.1 review |
-| `P4-RP-METHOD-01` | Research method | S03-S12, S26, S36, S37 | Prepared; outreach prohibited pending Phase 4.1 review |
-| `P4-RP-IP-01` | Fellowship, copyright, and IP | S01-S04, S27-S29 | Prepared; no source-content redistribution permission |
-| `P4-RP-PRIV-01` | Privacy, GDPR, and DPIA | S01, S03-S05, S10, S12, S31-S33 | Prepared; counsel/DPO access controls remain open |
-| `P4-RP-SECPLAT-01` | Security and platform | S01-S03, S12-S25, S31 | Prepared; all execution blocked |
-| `P4-RP-COERCE-01` | Coercive control and safety | S02-S05, S08-S10, S12, S29, S31 | Prepared; outreach prohibited pending Phase 4.1 review |
-| `P4-RP-A11Y-01` | Accessibility and inclusion | S04-S09, S12, S30, S36 | Prepared; no conformance or participant evidence |
-| `P4-RP-PH-01` | Public health and impact | S02-S04, S07, S11-S12, S26, S34-S35 | Prepared; no impact or causal evidence |
+| `P4-RP-CLIN-01` | Clinical and CSBD | S01, S02, S04, S06, S07, S08, S12, S26, S36 | Prepared; Wave 1A membership open; no delivery authorization yet |
+| `P4-RP-METHOD-01` | Research method | S03-S12, S26, S36, S37 | Prepared; Wave 1A membership open; no delivery authorization yet |
+| `P4-RP-IP-01` | Fellowship, copyright, and IP | S01-S04, S27-S29 | Prepared; Wave 1A membership open; no delivery authorization or source-content redistribution permission |
+| `P4-RP-PRIV-01` | Privacy, GDPR, and DPIA | S01, S03-S05, S10, S12, S31-S33 | Prepared; Wave 1A membership open; no delivery authorization; counsel/DPO access controls remain open |
+| `P4-RP-SECPLAT-01` | Security and platform | S01-S03, S12-S25, S31 | Prepared; Wave 1A membership open; no delivery authorization; all execution blocked |
+| `P4-RP-COERCE-01` | Coercive control and safety | S02-S05, S08-S10, S12, S29, S31 | Prepared; Wave 1A membership open; no delivery authorization yet |
+| `P4-RP-A11Y-01` | Accessibility and inclusion | S04-S09, S12, S30, S36 | Prepared; Wave 1A membership open; no delivery authorization, conformance, or participant evidence |
+| `P4-RP-PH-01` | Public health and impact | S02-S04, S07, S11-S12, S26, S34-S35 | Prepared; Wave 1A membership open; no delivery authorization, impact, or causal evidence |
 
 Ranges such as `S03-S12` include every source ID in the range. The tables below are joined by source ID; together they supply every required provenance and review-control field. The explicit repository field for every source S01-S37 is `JamshidiML/better-life`.
 
@@ -135,4 +138,4 @@ All sources use repository `JamshidiML/better-life`; each row states its exact P
 
 ## Bundle Validation
 
-Before outreach, the review coordinator must verify every required source ID resolves, the commit and blob hash match, access is authorized, refresh triggers are clear, the response template is included, conflicts route through `BL-SCEP-01`, and no restricted/copyrighted material was copied. Any failure leaves the pack `Blocked`.
+Before any pack delivery, the exact Wave 1A pack ID and reviewer scope must be recorded, and the Administrative Review Coordinator and a separately assigned restricted review-record custodian must verify every required source ID resolves, the commit and blob hash match, access is authorized, confidentiality and response custody are defined, refresh triggers are clear, the response template is included, conflicts route through `BL-SCEP-01`, and no restricted/copyrighted material was copied. Any missing roster entry, assignment, or failed check leaves the pack `Blocked` despite the bounded Wave 1A outreach authorization.
