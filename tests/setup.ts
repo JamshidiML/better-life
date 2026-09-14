@@ -30,9 +30,10 @@ class MemoryStorage implements Storage {
   }
 }
 
+const testStorage = new MemoryStorage();
 Object.defineProperty(window, 'localStorage', {
   configurable: true,
-  value: new MemoryStorage(),
+  get: () => testStorage,
 });
 
 beforeEach(() => {

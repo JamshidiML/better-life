@@ -115,7 +115,7 @@ describe('VS-01 application integration', () => {
     await user.click(screen.getByTestId('persistence-save-local'));
     expect(
       screen.getByText(
-        'This browser could not update local storage. Choose Use once or Discard instead.',
+        'Better Life could not save this plan in browser storage. You can try saving again, choose Use once, or discard these changes.',
       ),
     ).toBeVisible();
     await user.click(screen.getByTestId('persistence-use-once'));
