@@ -1,0 +1,17 @@
+input_id,category,unit,value,classification,source_or_basis,status
+direct_eea_card_fixed,payment,EUR_per_transaction,0.25,Source-verified fact,Stripe Germany pricing checked 2026-07-15,Current snapshot
+direct_eea_card_variable,payment,fraction_of_gross,0.015,Source-verified fact,Stripe Germany pricing checked 2026-07-15,Current snapshot
+sepa_direct_debit,payment,EUR_per_transaction,0.35,Source-verified fact,Stripe Germany pricing checked 2026-07-15,Current snapshot
+store_fee_illustration,payment,fraction_of_gross,0.15,Hypothesis,Apple eligible small-business rate and simplified Google subscription illustration,Channel-specific review required
+illustrative_german_vat,tax,fraction_of_tax_exclusive_price,0.19,Hypothesis,Illustrative reserve only,Tax and merchant role unresolved
+free_core_variable,operations,EUR_per_active_user_year,0.25,Hypothesis,Unquoted support and distribution allowance,Replace with pilot evidence
+convenience_free_variable,operations,EUR_per_free_user_year,0.50,Hypothesis,Unquoted service and support allowance,Replace with quotes
+convenience_paid_variable,operations,EUR_per_payer_year,4.00,Hypothesis,Unquoted account sync support rights and payment allowance,Replace with quotes
+managed_control_variable,operations,EUR_per_payer_year,15.00,Hypothesis,Unquoted adapter support incident and platform allowance,Replace with quotes
+human_service_variable,operations,EUR_per_payer_year,40.00,Hypothesis,Unquoted moderation support and safeguarding allowance,Not a staffing plan
+research_fixed,operations,EUR_per_year,160000,Hypothesis,Illustrative loaded research governance engineering and review cost,Replace with budget
+free_core_fixed,operations,EUR_per_year,150000,Hypothesis,Illustrative maintenance security privacy clinical legal accessibility and support,Replace with budget
+convenience_fixed,operations,EUR_per_year,300000,Hypothesis,Illustrative multi-device account sync and support fixed cost,Replace with budget
+managed_control_fixed,operations,EUR_per_year,500000,Hypothesis,Illustrative multi-platform adapter security support and compliance fixed cost,Replace with budget
+human_service_fixed,operations,EUR_per_year,4000000,Hypothesis,Illustrative staffed moderation safeguarding supervision legal privacy and insurance cost,Not an approved staffing plan
+organization_core_fixed,operations,EUR_per_year,450000,Hypothesis,Illustrative organization-funded free core with procurement and governance,Replace with quotes
