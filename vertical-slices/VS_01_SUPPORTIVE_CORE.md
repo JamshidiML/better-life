@@ -4,7 +4,7 @@
 - Frozen research baseline: `298ab23fa00899ba533db3cecc487d6cf7c02087`
 - Freeze tag: `better-life/research-freeze-phase-4.1`
 - Implementation branch: `codex/vertical-slice-01-supportive-core`
-- Status: Complete creator implementation; independent and founder review required
+- Status: Revised after independent ChatGPT review (86/100); second independent and founder review required
 - Product boundary: Supportive-only, local, nonclinical, no monitoring, no blocking
 
 ## Decision Frame
@@ -20,7 +20,7 @@
 | Misuse risks         | Another person could operate an unlocked shared browser profile or read its local storage. No ally, remote access, surveillance, or automatic contact exists. | Platform limitation                   |
 | Platform feasibility | A static React application can support the complete journey with in-memory state and browser `localStorage`; no backend is required.                          | Implementation-verified in Chrome     |
 | Success metric       | The journey, Spiral, persistence choices, editing, reset, keyboard path, and malformed-data recovery pass automated acceptance tests.                         | Test evidence                         |
-| Exit strategy        | Leave guide exits setup; Exit leaves the Spiral; Finish clears use-once state; Clear my data removes saved state; Discard deletes the current plan.           | E2E-verified                          |
+| Exit strategy        | Temporary finish/exit/discard clears only the temporary guide; explicit deletion reports success only after readback confirms absence.                        | Test evidence                         |
 
 ## Implemented Journey
 
@@ -32,7 +32,7 @@
 6. **Data choice** presents exactly Use once, Save on this device, and Discard.
 7. **Protective Spiral** presents Pause, the user's goal, selected action, fallback, and nonjudgmental completion.
 8. **Saved-plan home** restores a valid local plan after reload and offers use, edit, and clear controls.
-9. **Recovery** isolates malformed or unsupported local state and offers a neutral explicit reset.
+9. **Recovery** distinguishes malformed/unsupported data, unreadable storage, and unconfirmed deletion. It offers retry or continued use without saving, with persistent factual notices.
 
 The Focus and Routine scenarios are synthetic product demos. They are not therapeutic recommendations.
 
@@ -46,7 +46,7 @@ The Focus and Routine scenarios are synthetic product demos. They are not therap
 - Persistence choice
 - Five-step Protective Spiral
 - Saved-plan home
-- Malformed-state recovery
+- Malformed-state, storage-unavailable, and unconfirmed-deletion recovery
 - How-this-works dialog
 
 ## Architecture
@@ -87,13 +87,29 @@ The model intentionally has no account, timestamps, hidden identifier, diagnosis
 
 ### Persistence Behavior
 
-| Choice              | Runtime behavior                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Use once            | Plan remains in React memory only. Finish or Exit clears it. Reload/close also loses the in-memory state.   |
-| Save on this device | A validated minimal plan is written under `better-life.vs01.support-plan` in this browser's `localStorage`. |
-| Discard             | Current and saved plan state are cleared immediately and the app returns to Welcome.                        |
+| Choice              | Runtime behavior                                                                                                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Use once            | In-memory plan only. Finish/Exit clears temporary state and returns to the saved plan if present; saved bytes are unchanged. Reload discards temporary use and restores the original saved plan.                                      |
+| Save on this device | An explicit successful write saves or replaces the validated plan under `better-life.vs01.support-plan`. Failure stays on the data-choice screen with an alert. Disabled while prior storage is unreadable or removal is unconfirmed. |
+| Discard             | Discard temporary changes only. Preserve existing saved data and return to the saved-plan home, or Welcome when no valid saved plan is loaded. Never calls browser storage.                                                           |
 
-Storage supports create, read, update, clear, schema validation, malformed JSON recovery, unsupported-version recovery, and a visible fallback when browser-local saving fails.
+Storage access is deferred through a getter inside the adapter's guarded operations. Read results distinguish empty, ready, corrupt, and unavailable. Writes and removals return explicit success/failure results. No storage exception text or plan content is logged.
+
+### Temporary Edits And Consent
+
+A saved plan and a temporary plan have separate lifecycles. Editing creates a draft in memory. Use once runs the edited draft without any storage write or removal; Finish, Exit, Discard, and Leave guide clear temporary state and return to the original saved-plan home. Reload restores the original saved bytes. Only choosing Save on this device replaces the saved plan; the button explains replacement before activation. Discard explicitly means discarding temporary changes.
+
+### Storage Failures And Deletion
+
+- Access/getItem failure: show a factual unavailable screen, preserve unknown stored data, and offer Try reading again or Continue without saving.
+- Malformed/unsupported data: show the distinct data-recovery screen; no automatic deletion or replacement.
+- Continuing without saving: retain the notice throughout the journey, keep Use once and Discard operational, and disable Save until storage is checked. Review browser storage on Welcome returns to the recovery controls.
+- Failed setItem: keep the draft and the prior in-memory saved plan, show a static alert, focus it, and permit retry, Use once, or Discard. Success is reported only if the browser write returns successfully.
+- Explicit Clear my data/reset: remove only the plan key, then read it back. Confirm removal only when that key is absent. Access, removal, or confirmation-read failure shows that removal could not be confirmed; it never emits the success message.
+- After unconfirmed removal: drop application-held plan/draft references and offer retry or Use once. A saved plan may remain on disk, so the UI does not continue presenting the cached guide as confirmed saved or deleted.
+- Confirmation describes the observed browser key at that moment. It does not assert secure erasure, backup deletion, prevention of later writes from other tabs, or browser/OS memory zeroization.
+
+The revision changes no schema, data fields, storage key, dependency, or persistence system.
 
 ## Privacy Behavior
 
@@ -115,6 +131,17 @@ Storage supports create, read, update, clear, schema validation, malformed JSON 
 
 Screenshots contain synthetic demo content only.
 
+Revised states, each inspected at all requested widths:
+
+| State                            | 375px                                                       | 768px                                                       | 1440px                                                        |
+| -------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------- |
+| Temporary edit choices           | [Mobile](screenshots/vs01-revision-temporary-edits-375.png) | [Tablet](screenshots/vs01-revision-temporary-edits-768.png) | [Desktop](screenshots/vs01-revision-temporary-edits-1440.png) |
+| Failed save                      | [Mobile](screenshots/vs01-revision-save-failed-375.png)     | [Tablet](screenshots/vs01-revision-save-failed-768.png)     | [Desktop](screenshots/vs01-revision-save-failed-1440.png)     |
+| Original plan preserved          | [Mobile](screenshots/vs01-revision-saved-preserved-375.png) | [Tablet](screenshots/vs01-revision-saved-preserved-768.png) | [Desktop](screenshots/vs01-revision-saved-preserved-1440.png) |
+| Unconfirmed deletion             | [Mobile](screenshots/vs01-revision-delete-failed-375.png)   | [Tablet](screenshots/vs01-revision-delete-failed-768.png)   | [Desktop](screenshots/vs01-revision-delete-failed-1440.png)   |
+| Storage unavailable              | [Mobile](screenshots/vs01-revision-unavailable-375.png)     | [Tablet](screenshots/vs01-revision-unavailable-768.png)     | [Desktop](screenshots/vs01-revision-unavailable-1440.png)     |
+| Use once with saving unavailable | [Mobile](screenshots/vs01-revision-use-once-only-375.png)   | [Tablet](screenshots/vs01-revision-use-once-only-768.png)   | [Desktop](screenshots/vs01-revision-use-once-only-1440.png)   |
+
 ## Accessibility
 
 - Semantic headings, buttons, labels, description lists, status messages, and alerts
@@ -123,19 +150,21 @@ Screenshots contain synthetic demo content only.
 - Focus handoff when builder steps and app screens change
 - No mouse-only control
 - Reduced-motion override
-- Automated axe checks on Welcome and saved-plan states
+- Automated axe checks on Welcome, saved-plan, unavailable-storage, failed-save, and failed-deletion states
+- Failure alerts receive focus or a focused recovery screen; normal transitions focus the main region or builder heading
+- A browser keyboard test traverses from the failed-save alert back to Use once with Shift+Tab and activates it
 
 Automated checks do not establish formal WCAG conformance. Screen-reader, zoom, forced-colors, cognitive-accessibility, and real-user evaluation remain open.
 
 ## Test Evidence
 
-| Layer                | Result                     | Scope                                                                                                                                  |
-| -------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Unit and integration | 15/15 passed               | Validation, bounds, schema, storage CRUD, corrupted data, persistence modes, builder, Spiral, editing, clearing, storage-write failure |
-| E2E                  | 13/13 passed               | E2E-01 through E2E-07, runtime network, axe, responsive evidence, flow screenshots                                                     |
-| Responsive           | Passed                     | 375px, 768px, and 1440px Playwright captures plus visual inspection                                                                    |
-| Runtime privacy      | Passed within tested scope | No external requests and no plan text in observed request records                                                                      |
-| Production build     | Passed                     | Vite production bundle generated without errors                                                                                        |
+| Layer                | Result                     | Scope                                                                                                                                                                             |
+| -------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit and integration | 34/34 passed               | Original coverage plus temporary saved-plan lifecycle, all four throwing storage operations, retries, deletion readback, unknown/corrupt data preservation, and truthful feedback |
+| E2E                  | 26/26 passed               | Original 13 checks plus saved-plan preservation/reload, failure injection, explicit deletion, keyboard error recovery, accessibility, and revised screens                         |
+| Responsive           | Passed                     | 375px, 768px, and 1440px Playwright captures plus visual inspection                                                                                                               |
+| Runtime privacy      | Passed within tested scope | No external requests and no plan text in observed request records                                                                                                                 |
+| Production build     | Passed                     | Vite production bundle generated without errors                                                                                                                                   |
 
 Exact final command outputs are summarized in `VS_01_ACCEPTANCE_REPORT.md`.
 
@@ -157,11 +186,11 @@ npm run lint
 npm test
 npm run build
 npm run test:e2e
-npm audit
+npm audit --audit-level=high
 git diff --check
 ```
 
-`npm run test:e2e` uses the installed Google Chrome channel and starts the built local preview automatically.
+`npm run test:e2e` uses the installed Google Chrome channel and starts the built local preview automatically. Stop the dev server on port 4173 before running it.
 
 ## Known Limitations
 
@@ -172,7 +201,9 @@ git diff --check
 5. No participant evidence, usability study, clinical review, treatment evidence, or product-effect evidence exists.
 6. Axe and keyboard automation do not replace screen-reader, low-vision, motor, cognitive, or lived-experience review.
 7. The application does not detect context, run in the background, send notifications, or work as a device-native offline app.
-8. Denied storage access, read, and deletion errors are not handled by recovery UI or separately simulated. Save-time failure is handled and tested. Ordinary load and clear paths pass; broader storage-failure behavior remains a Medium reliability limitation for review.
+8. Fault injection covers denied access, getItem, setItem, removeItem, and deletion verification. It cannot establish all browser-policy, OS, hardware, eviction, or extension behavior.
+9. The saved-plan view is a snapshot for a single tab. Concurrent changes from another tab or browser settings are not synchronized or conflict-resolved; user-visible preservation claims apply to this app's tested actions.
+10. Deletion confirmation is limited to reading back the plan key as absent at that moment, not secure erasure or removal from browser/OS backups.
 
 ## Bounded Extension Points
 

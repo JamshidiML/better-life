@@ -1,123 +1,134 @@
 # VS-01 Acceptance Report
 
-- Slice: `VS-01 — Supportive Core`
-- Date: 2026-08-12
-- Delivery verification: 2026-09-13
+- Slice: VS-01 Supportive Core, review revision dated 2026-09-14
+- PR: [#46](https://github.com/JamshidiML/better-life/pull/46), Draft; no merge or self-approval
+- Branch: `codex/vertical-slice-01-supportive-core`
+- Base: `codex/integration-and-evidence-readiness`
 - Frozen baseline: `298ab23fa00899ba533db3cecc487d6cf7c02087`
 - Freeze tag: `better-life/research-freeze-phase-4.1`
-- Implementation branch: `codex/vertical-slice-01-supportive-core`
-- Creator: Codex
-- Decision: Candidate for founder and independent ChatGPT review; do not merge
+- Creator re-score: **92/100**
+- Last independent ChatGPT score: **86/100**, Revision required
+- Current decision: Fixes implemented and verified by creator; second independent ChatGPT review and founder review requested. No accepted score is assigned.
+
+## Review Source And Root Causes
+
+The founder supplied the independent ChatGPT review and its 86/100 score in the 2026-09-14 revision brief. That supplied review is the source of this record; no GitHub-submitted review was present when PR metadata was inspected. No reviewer category breakdown was supplied, so none is invented.
+
+| Defect                                              | Severity at revision triage | Root cause                                                                                                                         | Corrected behavior                                                                                                                                                           | Evidence                                                                                                      |
+| --------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Silent saved-plan deletion during temporary edits   | High                        | `activatePlan` called `storage.clear()` when switching a saved plan to Use once; Discard shared the destructive `clearAll` handler | Use once, Finish, Exit, Discard, and Leave guide modify temporary memory only; the original saved bytes and saved-plan home remain                                           | Four integration endings, browser finish/exit/discard and reload checks; storage-write/removal spies          |
+| Storage access/read failure could prevent rendering | Medium                      | `window.localStorage` was accessed before a guard; `getItem` was unguarded                                                         | Deferred storage getter and explicit unavailable result; retry or Use once without saving; unknown stored data is preserved                                                  | Adapter, React, and Chrome access/getItem fault injection                                                     |
+| Storage deletion outcome lacked reliable feedback   | Medium                      | Unguarded `removeItem`; no explicit failure result or verification read                                                            | Success only after the plan key reads back as absent; failure displays that removal could not be confirmed, drops application-held references, and permits retry or Use once | Throwing removal, no-op removal, failed readback, retry, explicit deletion, and no-success-message assertions |
+| Save failure handling needed a consistent boundary  | Medium                      | Only the UI save path caught errors; storage operations had inconsistent exception contracts                                       | Adapter returns success/failure; failed writes keep the draft, show a static focused alert, and permit retry/Use once/Discard                                                | setItem fault tests for new plans and replacement saves; keyboard recovery and axe                            |
+
+Critical defects in the supplied independent review: none identified. The severity labels above are implementation triage, not an invented reviewer breakdown. The High lifecycle defect is resolved in the tested revision; independent confirmation is pending.
 
 ## Acceptance Matrix
 
-| Acceptance criterion        | Expected                                                                            | Observed                                                                                                | Result                 | Evidence                            | Limitation                                                                      |
-| --------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------- | ------------------------------------------------------------------------------- |
-| Welcome boundary            | Short, human no-diagnosis/no-monitoring/no-blocking/no-contact/data-choice boundary | All boundaries and leave control visible                                                                | Pass                   | React integration, E2E, screenshots | Copy is research-stage working language                                         |
-| General goal                | Neutral presets and bounded custom text                                             | Five presets, Something else, 120-character maximum                                                     | Pass                   | Model and UI tests                  | No user comprehension evidence                                                  |
-| Broad context               | User-entered; no detection claim                                                    | Five presets, Something else, explicit no-detection copy, 120-character maximum                         | Pass                   | Model and E2E                       | No contextual automation by design                                              |
-| Supportive action           | Small neutral set, skippable, nonclinical                                           | Six actions including Continue without an action                                                        | Pass                   | Integration and E2E-07              | Wording lacks specialist/user validation                                        |
-| Fallback                    | Another action, close, or none; no automatic contact                                | All three classes implemented                                                                           | Pass                   | Integration and E2E                 | No external communication exists                                                |
-| Use once                    | Session memory only; Finish/Exit clears                                             | In-memory plan clears and reload is clean                                                               | Pass                   | E2E-01                              | Browser crash behavior is equivalent to losing memory, not explicitly simulated |
-| Save locally                | Minimal plan restores after reload                                                  | Validated plan restores from one local key                                                              | Pass                   | Storage tests and E2E-02            | Browser-profile storage is unencrypted and single-device                        |
-| Discard                     | Immediate deletion and neutral return                                               | Current/saved state cleared; Welcome returns                                                            | Pass                   | Integration and E2E-03              | None in current single-plan scope                                               |
-| Protective Spiral           | 3–5 short interactions with exit and no forced timer                                | Five steps: Pause, goal, action, fallback, completion                                                   | Pass                   | Integration and E2E-01              | Benefit is not participant-validated                                            |
-| Completion controls         | Finish, edit, restart, clear                                                        | All controls operational                                                                                | Pass                   | Integration; E2E-04/05              | Start again restarts the same plan only                                         |
-| Edit                        | Updated plan persists correctly                                                     | Action/fallback can be changed and survive reload                                                       | Pass                   | E2E-04                              | Single-plan editing only                                                        |
-| Clear everything            | Saved data removed; clean reload                                                    | Local key removed and Welcome restored                                                                  | Pass                   | E2E-05                              | Browser backups outside application control are not claimed cleared             |
-| Corrupted state             | No crash; neutral recovery/reset                                                    | Malformed and unsupported data blocked from rendering                                                   | Pass                   | Unit tests and E2E-06               | Initial storage API denial is not separately simulated                          |
-| Keyboard journey            | Critical journey completes by keyboard                                              | All seven builder decisions keyboard-activated                                                          | Pass                   | E2E-07                              | Full manual tab-order/screen-reader audit remains open                          |
-| Accessibility automation    | No detectable critical automated violations                                         | Axe reports zero violations on Welcome and saved-plan states                                            | Pass in tested scope   | Playwright axe test                 | No formal WCAG claim                                                            |
-| Responsive layout           | Usable at 375, 768, and 1440 pixels                                                 | Captures inspected without clipping, overlap, or text overflow                                          | Pass                   | Six screenshot artifacts            | Physical devices not tested                                                     |
-| Runtime privacy             | No external user-data request                                                       | Only local static requests observed; plan text absent from request records                              | Pass in tested scope   | Runtime network E2E                 | Browser/OS behavior beyond test harness not claimed                             |
-| No configured analytics/API | No endpoint or analytics client                                                     | No endpoint, `fetch`, XHR, WebSocket, beacon, analytics, telemetry, or remote asset configuration       | Pass                   | Source audit and runtime test       | Future dependencies require repeat audit                                        |
-| Production build            | Static optimized build succeeds                                                     | Vite bundle generated                                                                                   | Pass                   | `npm run build`                     | Prototype is not production authorization                                       |
-| Research separation         | VS-01 leaves the frozen branch/tag and research PRs untouched                       | Implementation starts at frozen SHA on a separate branch; PR #45 and freeze tag retain the approved SHA | Pass for this delivery | Git and GitHub verification         | PR #30 was already merged outside this delivery; see status record below        |
+| Criterion                         | Expected and observed                                                                                    | Result                 | Evidence                                                                      | Remaining limit                                                         |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Welcome and five decisions        | Existing goal, context, action, fallback, and three data choices continue to work                        | Pass                   | Original integration and E2E suite                                            | Working copy, no participant validation                                 |
+| Saved edit -> Use once -> Finish  | Edited action runs in memory; Finish clears it and returns to the unchanged original                     | Pass                   | React lifecycle and browser finish tests                                      | Single-tab scope                                                        |
+| Saved edit -> Use once -> Exit    | Exit clears only the temporary guide and restores saved home                                             | Pass                   | React and browser exit tests                                                  | Browser/OS memory zeroization not claimed                               |
+| Saved edit -> Discard/Leave       | Discarded edits do not call storage writes/removals                                                      | Pass                   | React spies; browser discard                                                  | No concurrent-tab conflict handling                                     |
+| Reload during/after temporary use | Original stored bytes and action restore                                                                 | Pass                   | Browser reload tests and React remount                                        | One browser profile                                                     |
+| Explicit save replacement         | Only Save on this device replaces saved data, with explanatory copy                                      | Pass                   | Existing edit/reload plus failed replacement tests                            | Write success follows native setItem return, not a durability guarantee |
+| Fresh Use once and Discard        | No durable writes; finish/exit/discard releases current temporary references                             | Pass                   | Original and new suites                                                       | Closing/reloading loses temporary state by design                       |
+| Storage property access throws    | Factual recovery screen; full Use once journey remains operational                                       | Pass                   | Adapter, React, Chrome fault injection                                        | Synthetic failure, not all browser policies                             |
+| getItem throws                    | Distinct unavailable state; no automatic removal/overwrite                                               | Pass                   | Adapter, React, Chrome fault injection                                        | Other processes remain outside control                                  |
+| setItem throws                    | No success state; focused alert; original saved plan retained in tested failure                          | Pass                   | Adapter, React, Chrome, keyboard recovery                                     | Native storage semantics assumed                                        |
+| removeItem/readback fails         | No successful-deletion message; retained on-disk data disclosed as possible                              | Pass                   | Adapter, React, Chrome; no-op and readback faults                             | Presence cannot be determined while reads fail                          |
+| Retry after failure               | Read retry restores the original; removal retry confirms absence when successful                         | Pass                   | React tests; adapter results                                                  | Retry may remain unavailable                                            |
+| Malformed/unsupported state       | Distinct recovery, optional temporary use, explicit reset only                                           | Pass                   | Original and new adapter/React/browser tests                                  | No migration beyond schema 1                                            |
+| Clear only this guide             | Explicit clear removes the plan key and leaves unrelated storage intact                                  | Pass                   | Adapter and browser reset tests                                               | No secure-erasure or backup-removal claim                               |
+| Accessibility                     | Semantic controls, focused error/recovery states, keyboard recovery, zero axe violations in tested views | Pass in tested scope   | React focus assertions; Chrome keyboard and axe                               | No formal WCAG/screen-reader conformance                                |
+| Responsive UI                     | Revised messages and controls fit at 375, 768, and 1440 pixels                                           | Pass                   | 18 revised captures, overflow checks, visual inspection                       | Physical devices untested                                               |
+| Runtime privacy                   | No external request or plan-content logging added                                                        | Pass in tested scope   | Original runtime test; failure-journey request/page-error checks; source scan | Extensions, OS, and future builds not covered                           |
+| Scope and baseline                | Existing branch/PR, schema, storage key, runtime dependencies, and research baseline preserved           | Pass for this revision | Git/PR metadata and scoped diff                                               | Pre-existing research history noted below                               |
+
+Detailed lifecycle, consent, state behavior, and all screenshot links: [VS_01_SUPPORTIVE_CORE.md](VS_01_SUPPORTIVE_CORE.md).
 
 ## Verification Results
 
-| Command                        | Result                                                                                     |
-| ------------------------------ | ------------------------------------------------------------------------------------------ |
-| `npm ci`                       | Passed: 243 packages installed from the lockfile; install audit reported 0 vulnerabilities |
-| `npm run format:check`         | Passed                                                                                     |
-| `npm run typecheck`            | Passed                                                                                     |
-| `npm run lint`                 | Passed with zero warnings                                                                  |
-| `npm test`                     | Passed: 3 files, 15 tests                                                                  |
-| `npm run test:e2e`             | Passed: 13 tests in installed Google Chrome                                                |
-| `npm run build`                | Passed: production bundle generated                                                        |
-| `npm audit --audit-level=high` | Passed: 0 vulnerabilities                                                                  |
-| `git diff --check`             | Passed                                                                                     |
+Final revision commands executed on 2026-09-14:
 
-The first sandboxed E2E attempt could not bind `127.0.0.1:4173` (`EPERM`). The same test command was rerun with approved local-server permission and passed. This was an execution-environment restriction, not an application defect.
+| Command                        | Result                                                                  |
+| ------------------------------ | ----------------------------------------------------------------------- |
+| `npm ci`                       | Passed: 243 packages installed, 244 audited, 0 vulnerabilities reported |
+| `npm run format:check`         | Passed                                                                  |
+| `npm run typecheck`            | Passed                                                                  |
+| `npm run lint`                 | Passed with zero warnings                                               |
+| `npm test`                     | Passed: 4 files, 34 tests                                               |
+| `npm run build`                | Passed: JS 219.90 kB / 68.79 kB gzip; CSS 13.41 kB / 3.36 kB gzip       |
+| `npm run test:e2e`             | Passed: 26 tests in installed Google Chrome                             |
+| `npm audit --audit-level=high` | Passed: 0 vulnerabilities                                               |
+| `git diff --check`             | Passed                                                                  |
 
-### Delivery Verification Record
+Environment: Node `v26.3.0`, npm `11.16.0`, Vitest `4.1.11`, and installed Google Chrome. No dependency or lockfile changed in this revision. Optional fsevents install-script approval warnings remain from the prior delivery; no additional scripts were approved. The original delivery's moderate Vitest advisory was already patched before this revision.
 
-- The checks above were repeated for delivery on 2026-09-13 with Node `v26.3.0`, npm `11.16.0`, Vitest `4.1.11`, and installed Google Chrome. The delivery creator score is 90/100, pending independent review; the original 91/100 is preserved below.
-- The refreshed audit initially reported two moderate findings in Vitest `4.1.10` and `@vitest/mocker` (GHSA-82fw-gwwq-j7x9). Updating to patch release `4.1.11` cleared them; the subsequent audit reported zero vulnerabilities. Application runtime dependencies were unchanged.
-- The lockfile reinstall reported optional `fsevents` install-script approval warnings. No additional script approvals were granted; build and test verification completed successfully.
-- Responsive evidence starts at the top of each page after the initial focus handoff; horizontal overflow is checked at 375, 768, and 1440 pixels. All six screenshots use synthetic content.
-- Repository-state verified: PR #45 is open, Draft, and unmerged at `298ab23fa00899ba533db3cecc487d6cf7c02087`. Both local and remote freeze tags resolve to that commit.
-- Repository-state verified: PR #30 is already merged, with GitHub recording `2026-08-19T09:30:45Z`. That merge predates this delivery. PRs #31-#40 remain open Drafts. This delivery neither changes those PRs nor rewrites that history.
+During test authoring, typecheck rejected the Playwright-only `exact` role-query option in a Testing Library test. The matcher usage was corrected; the final checks above passed. No failing check was disabled. The earlier delivery's sandbox port-binding restriction was handled by authorized local-server execution; this revision also uses an authorized isolated production preview.
 
-### Score History
+### Tests Added
 
-| Record                            | Creator | Independent reviewer | Accepted score | Decision                                                        |
-| --------------------------------- | ------: | -------------------- | -------------- | --------------------------------------------------------------- |
-| Original VS-01 report, 2026-08-12 |  91/100 | Pending              | Not assigned   | Candidate for review                                            |
-| Delivery verification, 2026-09-13 |  90/100 | Pending              | Not assigned   | Draft delivery; founder and independent ChatGPT review required |
+- `tests/App.storage-lifecycle.test.tsx`: 13 tests for saved-plan preservation on finish/exit/discard/leave, remount during temporary use, failed replacement save, denied access/read with recovery, deletion failures from saved/malformed/unsupported states, failed confirmation read, and continued use beside unsupported data.
+- `tests/storage.test.ts`: six added adapter tests for all throwing operations, write preservation, removal verification, no-op removal, and retaining unrelated data. Existing CRUD/schema tests now assert result contracts.
+- `tests/App.integration.test.tsx`: existing failed-save test updated to truthful alert copy; all six existing tests retained.
+- `tests/setup.ts`: a configurable getter around the existing in-memory test storage permits property-access fault injection; no production test switches.
+- `e2e/saved-plan-recovery.spec.ts`: 13 browser tests, including three viewport evidence cases. The original 13 browser tests remain in the suite.
+- Screenshot evidence: six materially changed states at three widths (18 captures): edit choices, failed save, preserved saved home, failed removal, unavailable storage, and the Use-once-only data choice. Unchanged original screenshot evidence is retained.
 
-The frozen research scores are a separate history: Phase 4 creator 88, Phase 4 ChatGPT 87, Phase 4.1 creator 88, and Phase 4.1 ChatGPT 90. No research score is changed or converted into an implementation acceptance score.
+### Privacy And Accessibility Observations
 
-Delivery inspection lowered functional completeness by one point: access to `window.localStorage`, `getItem`, and `removeItem` can throw without a recovery UI. The earlier report described only an untested initial-storage limitation. This is now an explicit Medium reliability limitation requiring review; no denial scenario has been executed or represented as passing.
+The original runtime test still finds zero external-origin requests and no synthetic goal/context in request records. New access/read-failure journeys also observe zero external requests and zero uncaught page errors. The failed-deletion journey has zero uncaught page errors. Source inspection finds no external endpoint, plan-content logging, arbitrary HTML insertion, or new persistence mechanism.
 
-## Runtime Network Result
-
-The complete synthetic Supportive journey was observed through Playwright request events.
-
-- External origins contacted: **0**
-- User-plan POST or request payloads: **0**
-- Synthetic goal/context found in observed request records: **0**
-- Expected local requests: application HTML, JavaScript, and CSS from `http://127.0.0.1:4173`
-
-This supports a local-only runtime claim for the tested production preview. It does not prove all browser, extension, operating-system, or future-build behavior.
+Axe reports zero violations in Welcome, saved-plan, unavailable-storage, failed-save, and unconfirmed-deletion views. Focus returns to the saved home after temporary use; a failed-save alert receives focus. The browser keyboard test traverses from that alert back to Use once with Shift+Tab and activates it. Broader assistive-technology validation remains open.
 
 ## Quality Scorecard
 
-**Delivery creator self-score: 90/100**
+The founder-approved VS-01 rubric remains the comparison basis. The general quality loop still requires independent review; a numeric self-score alone does not accept the work.
 
-| Dimension                     | Weight | Score | Evidence for awarded points                                                                                                               | Deduction                                                                      |
-| ----------------------------- | -----: | ----: | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Functional completeness       |     25 |    23 | Complete builder, Spiral, use once, local save/reload, discard, edit, restart, clear, recovery, and synthetic demos in the tested browser | One-plan/browser scope; denied storage access/read/delete has no recovery UI   |
-| Test evidence                 |     20 |    19 | 15 unit/integration tests and 13 E2E tests cover every required named journey plus network and screenshots                                | E2E runs only in installed Chrome; no physical device matrix                   |
-| UX quality                    |     15 |    12 | Calm responsive product UI, clear hierarchy, explicit boundaries, six inspected screenshots                                               | No real-user usability/comprehension evidence; copy remains working language   |
-| Privacy/data minimization     |     15 |    14 | Six-field minimal model, no IDs/timestamps/telemetry, local-only observed runtime, clear/discard controls                                 | Browser local storage is unencrypted and visible to the same profile/origin    |
-| Accessibility                 |     10 |     8 | Semantic controls, focus handoff, skip link, reduced motion, keyboard E2E, zero axe violations in tested views                            | No formal WCAG, screen-reader, forced-colors, zoom, or lived-experience review |
-| Code quality/maintainability  |     10 |     9 | Strict TypeScript, feature-oriented components, validated storage boundary, zero-warning lint, lockfile, small dependency set             | No top-level error boundary; only the current schema version exists            |
-| Documentation/reproducibility |      5 |     5 | Architecture, data behavior, screenshots, commands, evidence, limitations, non-goals, and acceptance matrix recorded                      | None in required creator-document scope                                        |
+| Dimension                     | Weight | Original creator | Delivery creator | Revision creator | Evidence and remaining deduction                                                                                                                                                          |
+| ----------------------------- | -----: | ---------------: | ---------------: | ---------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Functional completeness       |     25 |               24 |               23 |               25 | Restore two points: saved-plan lifecycle now has byte-preservation/reload tests, and storage failures have guarded outcomes plus tested recovery. All requested current-scope paths pass. |
+| Test evidence                 |     20 |               19 |               19 |               19 | 34 unit/integration and 26 E2E tests, fault injection, assertions on outcomes and storage effects; one point withheld for Chrome-only evidence.                                           |
+| UX quality                    |     15 |               12 |               12 |               12 | Explicit temporary/replacement/deletion copy and inspected layouts; three points withheld for absent user comprehension/usefulness evidence and working language.                         |
+| Privacy/data minimization     |     15 |               14 |               14 |               14 | Unchanged six-field model, no temporary storage mutation, truthful removal, observed local runtime; one point withheld for unencrypted browser storage.                                   |
+| Accessibility                 |     10 |                8 |                8 |                8 | Semantic controls, focus and keyboard recovery, reduced motion, axe; two points withheld for broader manual assistive-technology work.                                                    |
+| Code quality/maintainability  |     10 |                9 |                9 |                9 | Small result-based adapter, separate temporary state, strict TS/lint, no new dependency; one point withheld for broader application-error and migration handling.                         |
+| Documentation/reproducibility |      5 |                5 |                5 |                5 | Corrected lifecycle, exact commands, evidence, review source, score history, risks, and screenshot references.                                                                            |
+| Total                         |    100 |               91 |               90 |           **92** | Two recovered functional points; no automatic increase for more tests or more documentation.                                                                                              |
 
-### Score Decision
+### Complete Score History
 
-- Total: **90/100**
-- Critical defects: **0 known**
-- High defects: **0 known**
-- Medium limitations: **4**
-- Confidence: **Medium-high for tested prototype behavior; low for user benefit**
-- Creator decision: **Meets the numeric VS-01 prototype target and is ready for independent/founder review; not self-approved and not merge-authorized**
+| Record                                         |        Creator score | Independent reviewer score | Accepted score | Decision                                             |
+| ---------------------------------------------- | -------------------: | -------------------------: | -------------- | ---------------------------------------------------- |
+| Original VS-01 report, 2026-08-12              |               91/100 |           Not yet reviewed | Not assigned   | Candidate for review                                 |
+| Delivery verification, 2026-09-13              |               90/100 |           Not yet reviewed | Not assigned   | Draft delivery; storage-failure deduction            |
+| Independent ChatGPT review supplied 2026-09-14 | No new creator score |                 **86/100** | Not assigned   | **Revision required**, destructive lifecycle blocker |
+| This creator revision, 2026-09-14              |           **92/100** |      Second review pending | Not assigned   | Request second independent and founder review        |
 
-The score is not clinical evidence, participant evidence, production readiness, formal accessibility conformance, or approval of any future mode.
+The 86/100 independent judgment remains the last independent result until re-review. It is not replaced, averaged with, or raised to the new creator score. Prior complete reports remain in Git at `54400a0`; their earlier no-High-defect assessment missed the destructive lifecycle bug and is superseded by this explicit defect record.
 
-## Known Defects And Limitations
+Frozen research history is separate and unchanged: Phase 4 creator **88**, Phase 4 ChatGPT **87**, Phase 4.1 creator **88**, Phase 4.1 ChatGPT **90**.
 
-| Severity | Item                                                                     | Current control                                                                                                           | Exit condition                                                                                |
-| -------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Medium   | Cross-browser behavior beyond installed Chrome is unverified             | Claims remain limited to tested Chrome behavior                                                                           | Add Firefox/WebKit/Edge-compatible runs and inspect failures                                  |
-| Medium   | Saved plan is unencrypted browser-profile storage                        | General-text prompt, factual copy, Use once/Discard, minimal fields                                                       | Approved stronger local storage design with truthful recovery/deletion behavior               |
-| Medium   | No real-user evidence for usefulness, comprehension, or emotional impact | No efficacy claim; prototype/research separation                                                                          | Separately authorized research after governance gates, not this PR                            |
-| Low      | Automated accessibility evidence is incomplete                           | Semantic UI, keyboard test, axe, reduced motion                                                                           | Manual screen-reader/zoom/forced-colors and qualified review                                  |
-| Medium   | Browser storage access/read/delete failure lacks recovery UI             | Save-time failure is caught and tested; ordinary clear/read paths pass, but denied storage access is outside tested scope | Add fault-injection coverage and explicit recovery without claiming failed deletion succeeded |
+## Assumptions And Residual Risks
 
-No unresolved Critical or High defect is currently known within the declared local prototype scope. Independent review may revise this classification.
+- Hypothesis: the guide reduces immediate decision burden; no participant, clinical, or product-effect evidence establishes that benefit.
+- Platform assumption: browser Storage follows its native synchronous contract. Fault injection models thrown operations and unavailable access; it cannot reproduce every browser/OS/hardware condition.
+- Medium: Chrome-only browser evidence and no physical-device matrix.
+- Medium: saved data is unencrypted and accessible to the same unlocked browser profile/origin.
+- Medium: usefulness, comprehension, and emotional impact are unvalidated.
+- Low/current scope limit: manual screen-reader, zoom, forced-colors, and full tab-order review remains incomplete.
+- Current scope limit: no cross-tab synchronization or conflict detection. Concurrent browser/tab modifications can invalidate a previously loaded snapshot; this revision guarantees no storage mutation by its temporary-use/discard handlers, not exclusive ownership of the browser key.
+- Deletion observation is limited to this key reading as absent at verification time. Browser/OS backups, secure erasure, and garbage-collector memory zeroization are not claimed.
+- Creator verification identifies no remaining Critical or High defect in the requested, tested revision scope. Severity and score still require independent confirmation.
 
-## Non-Authorization Record
+## Scope Record And Review Request
 
-This report does not authorize participant research, clinical use, production release, Friction Mode, Strict Mode, blocking, monitoring, AI, external support, adapter execution, or merge. Research PRs remain separate from the VS-01 delivery; their inspected status, including the pre-existing merge of PR #30, is recorded above.
+This revision changes only Supportive Core lifecycle/error handling, related UI, tests/screenshots, and these implementation documents on PR #46. No schema, external service, backend, account, logging, telemetry, cookies, IndexedDB, or alternative persistence was added. No research branch, research PR, freeze tag, or historical research score was modified.
+
+Prior repository-state observation retained for accuracy: PR #30 had already been merged on 2026-08-19 before this delivery track was published. That historical action is not part of this revision. PR #45 and the research freeze remain at the specified baseline.
+
+Second independent ChatGPT review requested: verify saved-byte preservation across temporary edits and reload; challenge failure, retry, and deletion semantics; inspect error focus/copy and the awarded two functional points. Founder review requested: use synthetic demos to assess the temporary-edit explanation and storage-recovery choices.
+
+Keep PR #46 Draft and unmerged. No participant research, clinical activity, production release, adapter work, future mode, or VS-02 is authorized by this report.
