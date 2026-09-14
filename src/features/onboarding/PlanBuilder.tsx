@@ -30,7 +30,9 @@ const STEPS: BuilderStep[] = ['goal', 'context', 'action', 'fallback', 'data'];
 interface PlanBuilderProps {
   initialDraft: PlanDraft;
   initialStep?: BuilderStep;
-  onActivate: (plan: SupportPlan) => void;
+  hasSavedPlan: boolean;
+  canSave: boolean;
+  onActivate: (plan: SupportPlan) => string | undefined;
   onDiscard: () => void;
   onExit: () => void;
   onStepChange: (step: BuilderStep) => void;
@@ -39,6 +41,8 @@ interface PlanBuilderProps {
 export function PlanBuilder({
   initialDraft,
   initialStep = 'goal',
+  hasSavedPlan,
+  canSave,
   onActivate,
   onDiscard,
   onExit,
@@ -64,6 +68,10 @@ export function PlanBuilder({
   useEffect(() => {
     document.getElementById('builder-title')?.focus();
   }, [step]);
+
+  useEffect(() => {
+    if (error) document.getElementById('plan-error')?.focus();
+  }, [error]);
 
   const canContinue = useMemo(() => {
     if (step === 'goal') return draft.goal.trim().length > 0;
@@ -95,13 +103,9 @@ export function PlanBuilder({
   const activate = (mode: PersistenceMode) => {
     setError('');
     try {
-      onActivate(createSupportPlan(draft, mode));
-    } catch (caught) {
-      setError(
-        caught instanceof Error
-          ? caught.message
-          : 'Please complete each choice before continuing.',
-      );
+      setError(onActivate(createSupportPlan(draft, mode)) ?? '');
+    } catch {
+      setError('Please complete each choice before continuing.');
     }
   };
 
@@ -240,7 +244,11 @@ export function PlanBuilder({
 
       {step === 'data' ? (
         <BuilderSection
-          description="Choose what happens to this plan. There is no account, cloud sync, analytics, or remote API."
+          description={
+            hasSavedPlan
+              ? 'These edits are temporary until you choose Save on this device. Use once and Discard leave your saved plan unchanged.'
+              : 'Choose what happens to this plan. Use once and Discard do not change anything already in browser storage.'
+          }
           title="What should happen to your plan?"
         >
           <div className="data-choice-list">
@@ -254,8 +262,9 @@ export function PlanBuilder({
               <span>
                 <strong>Use once</strong>
                 <small>
-                  Keep the plan for this session. Explicitly finishing clears
-                  it.
+                  {hasSavedPlan
+                    ? 'Use these edits for this session only. Finishing or exiting clears them and returns to your unchanged saved plan.'
+                    : 'Keep this plan only for this session. Finishing, exiting, or reloading clears it.'}
                 </small>
               </span>
               <ArrowRight size={19} aria-hidden="true" />
@@ -263,13 +272,20 @@ export function PlanBuilder({
             <button
               className="data-choice"
               data-testid="persistence-save-local"
+              disabled={!canSave}
               onClick={() => activate('save_local')}
               type="button"
             >
               <HardDrive size={22} aria-hidden="true" />
               <span>
                 <strong>Save on this device</strong>
-                <small>Saved in this browser on this device.</small>
+                <small>
+                  {!canSave
+                    ? 'Saving is unavailable until browser storage can be checked. Use once or Discard is available.'
+                    : hasSavedPlan
+                      ? 'Replace your saved plan with these edits in this browser on this device.'
+                      : 'Save this plan in this browser on this device.'}
+                </small>
               </span>
               <ArrowRight size={19} aria-hidden="true" />
             </button>
@@ -282,7 +298,11 @@ export function PlanBuilder({
               <Trash2 size={22} aria-hidden="true" />
               <span>
                 <strong>Discard</strong>
-                <small>Delete this plan now and return to the start.</small>
+                <small>
+                  {hasSavedPlan
+                    ? 'Discard these temporary changes and return to your unchanged saved plan.'
+                    : 'Discard this temporary plan and return to the start. Browser storage is unchanged.'}
+                </small>
               </span>
               <ArrowRight size={19} aria-hidden="true" />
             </button>
@@ -291,7 +311,7 @@ export function PlanBuilder({
       ) : null}
 
       {error ? (
-        <p className="form-error" role="alert">
+        <p className="form-error" id="plan-error" role="alert" tabIndex={-1}>
           {error}
         </p>
       ) : null}

@@ -14,11 +14,17 @@ import { Button } from '../../shared/ui/Button';
 
 interface WelcomeProps {
   statusMessage?: string;
+  onStorageReview?: () => void;
   onStart: () => void;
   onDemo: (draft: PlanDraft) => void;
 }
 
-export function Welcome({ statusMessage, onStart, onDemo }: WelcomeProps) {
+export function Welcome({
+  statusMessage,
+  onStart,
+  onDemo,
+  onStorageReview,
+}: WelcomeProps) {
   const [showHow, setShowHow] = useState(false);
 
   return (
@@ -74,6 +80,11 @@ export function Welcome({ statusMessage, onStart, onDemo }: WelcomeProps) {
       </div>
 
       <p className="leave-note">You can leave at any time.</p>
+      {onStorageReview ? (
+        <Button variant="quiet" onClick={onStorageReview}>
+          Review browser storage
+        </Button>
+      ) : null}
 
       <div className="demo-section">
         <div>

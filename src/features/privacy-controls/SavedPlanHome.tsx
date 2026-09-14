@@ -5,6 +5,7 @@ import type { SupportPlan } from '../support-plan/model';
 
 interface SavedPlanHomeProps {
   plan: SupportPlan;
+  statusMessage?: string;
   onClear: () => void;
   onEdit: () => void;
   onUse: () => void;
@@ -12,6 +13,7 @@ interface SavedPlanHomeProps {
 
 export function SavedPlanHome({
   plan,
+  statusMessage,
   onClear,
   onEdit,
   onUse,
@@ -22,6 +24,11 @@ export function SavedPlanHome({
         <HardDrive size={16} aria-hidden="true" /> Saved in this browser
       </div>
       <h1 id="saved-title">Your saved guide is ready.</h1>
+      {statusMessage ? (
+        <p className="status-message" role="status">
+          {statusMessage}
+        </p>
+      ) : null}
       <p className="lede">
         Better Life does not detect your context or start this guide on its own.
       </p>

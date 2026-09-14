@@ -676,6 +676,22 @@ dialog:focus-visible,
   border-color: var(--teal);
 }
 
+.data-choice:disabled {
+  cursor: not-allowed;
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.storage-notice {
+  margin: 24px 24px 0;
+  padding: 16px;
+  border-left: 4px solid var(--gold);
+  color: var(--ink);
+  background: var(--surface);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
 .data-choice--discard:hover {
   background: var(--coral-soft);
   border-color: var(--coral);
@@ -704,6 +720,10 @@ dialog:focus-visible,
 
 .saved-page .lede {
   margin-bottom: 38px;
+}
+
+.saved-page .status-message {
+  margin-bottom: 20px;
 }
 
 .plan-summary {

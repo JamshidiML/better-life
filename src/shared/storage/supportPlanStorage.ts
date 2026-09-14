@@ -8,20 +8,31 @@ export const SUPPORT_PLAN_STORAGE_KEY = 'better-life.vs01.support-plan';
 export type StoredPlanReadResult =
   | { status: 'empty' }
   | { status: 'ready'; plan: SupportPlan }
+  | { status: 'unavailable' }
   | { status: 'corrupt'; reason: 'malformed' | 'unsupported_schema' };
+
+export type StorageChangeResult =
+  { ok: true } | { ok: false; reason: 'unavailable' | 'invalid_plan' };
 
 export interface SupportPlanStorage {
   read(): StoredPlanReadResult;
-  create(plan: SupportPlan): void;
-  update(plan: SupportPlan): void;
-  clear(): void;
+  create(plan: SupportPlan): StorageChangeResult;
+  update(plan: SupportPlan): StorageChangeResult;
+  clear(): StorageChangeResult;
 }
 
 export class BrowserSupportPlanStorage implements SupportPlanStorage {
-  constructor(private readonly storage: Storage) {}
+  constructor(
+    private readonly getStorage: () => Storage = () => window.localStorage,
+  ) {}
 
   read(): StoredPlanReadResult {
-    const raw = this.storage.getItem(SUPPORT_PLAN_STORAGE_KEY);
+    let raw: string | null;
+    try {
+      raw = this.getStorage().getItem(SUPPORT_PLAN_STORAGE_KEY);
+    } catch {
+      return { status: 'unavailable' };
+    }
     if (raw === null) {
       return { status: 'empty' };
     }
@@ -45,24 +56,41 @@ export class BrowserSupportPlanStorage implements SupportPlanStorage {
     return { status: 'ready', plan: result.plan };
   }
 
-  create(plan: SupportPlan): void {
-    this.write(plan);
+  create(plan: SupportPlan): StorageChangeResult {
+    return this.write(plan);
   }
 
-  update(plan: SupportPlan): void {
-    this.write(plan);
+  update(plan: SupportPlan): StorageChangeResult {
+    return this.write(plan);
   }
 
-  clear(): void {
-    this.storage.removeItem(SUPPORT_PLAN_STORAGE_KEY);
+  clear(): StorageChangeResult {
+    try {
+      const storage = this.getStorage();
+      storage.removeItem(SUPPORT_PLAN_STORAGE_KEY);
+      // Confirm removal by reading back this plan's key, not other site data.
+      return storage.getItem(SUPPORT_PLAN_STORAGE_KEY) === null
+        ? { ok: true }
+        : { ok: false, reason: 'unavailable' };
+    } catch {
+      return { ok: false, reason: 'unavailable' };
+    }
   }
 
-  private write(plan: SupportPlan): void {
+  private write(plan: SupportPlan): StorageChangeResult {
     const result = validateSupportPlan(plan);
     if (!result.ok || result.plan.persistenceMode !== 'save_local') {
-      throw new Error('Only a valid local support plan can be saved.');
+      return { ok: false, reason: 'invalid_plan' };
     }
 
-    this.storage.setItem(SUPPORT_PLAN_STORAGE_KEY, JSON.stringify(result.plan));
+    try {
+      this.getStorage().setItem(
+        SUPPORT_PLAN_STORAGE_KEY,
+        JSON.stringify(result.plan),
+      );
+      return { ok: true };
+    } catch {
+      return { ok: false, reason: 'unavailable' };
+    }
   }
 }

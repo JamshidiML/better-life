@@ -13,12 +13,14 @@ interface AppShellProps {
   children: ReactNode;
   currentStep?: number;
   phaseLabel?: string;
+  storageNotice?: string;
 }
 
 export function AppShell({
   children,
   currentStep,
   phaseLabel = 'Supportive Core',
+  storageNotice,
 }: AppShellProps) {
   return (
     <div className="app-shell">
@@ -74,6 +76,11 @@ export function AppShell({
         </div>
       </aside>
       <main id="main-content" className="app-main" tabIndex={-1}>
+        {storageNotice ? (
+          <p className="storage-notice" role="status">
+            {storageNotice}
+          </p>
+        ) : null}
         {children}
       </main>
     </div>
