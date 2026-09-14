@@ -1,0 +1,35 @@
+# Assumption Log - Thread 10
+
+Issue: #25
+Branch: `codex/25-mvp-product-shape`
+Date: 2026-07-15
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A01 | Hypothesis | An accountless plan/manual Spiral is valuable enough to be the first digital core. | Phase 0 concept/usability test; stop if no incremental value. | Open |
+| A02 | Hypothesis | A local web app is an acceptable first container despite storage and enforcement limits. | Browser/device tests and user trust/usability comparison. | Open |
+| A03 | Hypothesis | A separate Chromium adapter can later add value without redefining the core. | Thread 01/07 spike and incremental-value test. | Deferred |
+| A04 | Hypothesis | Users prefer honest limited support to a stronger-looking but bypassable/coercive promise. | Compare concepts and comprehension; do not overclaim either result. | Open |
+| A05 | Hypothesis | The first journey can avoid account, payment, AI, human contact, and explicit disclosure. | Low-fidelity walkthroughs. | Open |
+| A06 | Open question | Which first languages should be released after human clinical/privacy review. | Founder/recruitment need and qualified translation/user validation. | Open |
+| A07 | Open question | Target thresholds for comprehension, value, burden, shame and usability. | Method/clinical/user research plan freezes before testing. | Open |
+
+## Cycle 2 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A08 | Hypothesis | Users understand Supportive/Friction/Strict as different contracts rather than a moral severity ladder. | Concept and comprehension tests; rename/restructure if stronger means better. | Open |
+| A09 | Hypothesis | One local dashboard can explain layered scope/health without false composite protection. | Scenario usability across browser/device/network states. | Open |
+| A10 | Hypothesis | Progressive permission and exact-change previews are understandable under realistic setup/change tasks. | Accessibility/coercion/user tests with recall measures. | Open |
+| A11 | Open question | Any adapter spike produces sufficient incremental value to enter an MVP candidate. | Technical spike plus comparative user research against free/first-party/no tool. | Deferred |
+| A12 | Open question | Strict can ever satisfy safe recovery, benefit, teardown, cost, and anti-coercion gates. | Sequential external review and participant research only after lower modes. | Deferred |
+
+## Cycle 3 Additions
+
+| ID | Classification | Assumption | Validation / falsification | Status |
+| --- | --- | --- | --- | --- |
+| A13 | Hypothesis | Four low-fidelity views are sufficient to test the first five-decision Supportive MVE without simulating future complexity. | Protocol review and moderated usability; remove any view/decision not needed for action. | Open |
+| A14 | Hypothesis | Users understand evidence freshness as date/version/uncertainty rather than a guarantee of latest valid treatment. | Comprehension research with conflicting/stale evidence scenarios. | Open |
+| A15 | Hypothesis | Transparent optional microlearning can feel useful without covert persuasion or compulsory-course burden. | Compare no-learning/short/deeper options; measure comprehension, burden, reactance, return pressure. | Open |
+| A16 | Hypothesis | Long-term recovery-loop views can remain modular and optional without implying that all capabilities belong in the first MVE. | Roadmap comprehension and scope-recall research; preserve stage gates. | Open |
+| A17 | Open question | Frozen MVE thresholds are methodologically appropriate and achievable without hiding subgroup harm. | Independent clinical/method/accessibility/privacy/lived-experience review before enrollment. | Open |
