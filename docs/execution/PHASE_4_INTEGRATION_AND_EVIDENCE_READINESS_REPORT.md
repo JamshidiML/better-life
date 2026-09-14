@@ -1,0 +1,230 @@
+# Phase 4 Integration and Evidence Readiness Report
+
+- Date: 2026-07-19
+- Branch: `codex/integration-and-evidence-readiness`
+- Status: Phase 4.1 internal readiness accepted; Specialist Review Wave 1A preparation and bounded outreach founder-authorized; Draft remains open
+- Authorization: Wave 1A specialist-review preparation and bounded outreach only; this update performs no outreach, participant research, adapter execution, production implementation, clinical activity, sensitive-data collection, or merge
+
+## Executive Decision
+
+Phase 4 produced the integration control layer, eight specialist packs, MVE-01 protocol package and synthetic adapter protocols. Independent ChatGPT scored Phase 4 **87/100** against the creator's **88/100** and required a narrow operational revision. Phase 4.1 added versioned review-bundle controls, specialist response/conflict governance, explicit unassigned MVE authority, corrected A/B/C decision rules, adapter run/result/fixture templates and a dedicated iOS official-controls protocol. The Phase 4.1 creator score remained **88/100**; independent ChatGPT then scored readiness **90/100** and accepted internal readiness for Specialist Review Wave 1 preparation and bounded outreach, subject to founder confirmations and assignment of review coordination/record custody. The founder has now confirmed the nine working decisions, accepted Wave 1A preparation and bounded outreach, and accepted assignment only as Administrative Review Coordinator. Restricted review-record custody remains `Unassigned`.
+
+Decision: **Internal readiness accepted. Specialist Review Wave 1A preparation and bounded outreach are founder-authorized. Keep Draft. This administrative update performs no specialist contact; Wave 1A pack membership is not yet recorded, pack delivery waits for exact scope, required custody, and preflight controls, and participant research, adapter execution, production implementation, clinical activity, sensitive-data collection, and merge remain blocked.**
+
+## Phase 4.1 Independent Decision
+
+- Independent readiness score: **90/100**.
+- Review record: [PR #45 Phase 4.1 independent review](https://github.com/JamshidiML/better-life/pull/45#pullrequestreview-4730544381).
+- Decision: **Accepted for Specialist Review Wave 1 preparation and bounded outreach, subject to founder confirmations and assignment of review coordination/record custody.**
+- Founder disposition: the working decisions are confirmed and the founder is assigned only as Administrative Review Coordinator; restricted review-record custody remains `Unassigned`.
+- Internal status: accepted for specialist-review operations; product and evidence acceptance remain blocked.
+- Remaining gates: all nine external High categories remain open; no clinical, methods/ethics, GDPR/DPIA, security/platform, coercive-control, accessibility/inclusion, fellowship/IP, participant-value, or executed-adapter gate was closed.
+- Current action boundary: no specialist is contacted by this update. No participant research, adapter execution, production implementation, or merge is authorized.
+
+## Phase 4.1 Independent Review Response
+
+| Independent defect | Accepted | Author-draft resolution | Residual/open condition |
+| --- | --- | --- | --- |
+| High: review packages required cross-branch discovery and lacked complete delivery provenance | Yes | `BL-RBM-01` maps every pack to exact repository/PR/branch/commit/path/permalink/version/owner/section/hash/access/confidentiality/rights/refresh controls | Founder assigned as Administrative Review Coordinator only; restricted custodian `Unassigned`; real reviewer access/usability and source refresh untested |
+| High: MVE institutional authority and accountable roles were absent | Yes | 19 required roles, authorities, prohibited powers, dependencies, conflicts, backups, approvals and expiry are explicit | Every role/backup is `Unassigned`; all participant activity remains blocked |
+| Medium: reviewer output and disagreement handling were incomplete | Yes | `BL-SRR-01` and `BL-SCEP-01` standardize scoped decisions, preserve dissent and protect non-waivable gates | No response/conflict has occurred; protocol usability untested |
+| Medium: zero-tolerance failures were mixed with percentages/descriptive outcomes | Yes | Four MVE documents now use Category A case adjudication, Category B iteration, and Category C description; v0.1 thresholds are superseded history | Methods, ethics, clinical and safety approval absent |
+| Medium: adapter execution records and synthetic fixture were underspecified | Yes | Run manifest, result/evidence and fixture specifications define mandatory evidence and block incomplete runs | No environment, fixture, evidence system, approval or test exists |
+| Medium: iOS official-control feasibility was not separately prepared | Yes | Dedicated protocol separates consumer, Family Controls, Network Extension and Safari families | Entitlement/store/device/account feasibility open; no execution |
+
+The internal documentation defects are accepted as resolved for specialist-review readiness. Every external High gate remains open.
+
+## Required Inputs Reviewed
+
+- Draft PRs #30-#40 and their Cycle 1/Cycle 2 review histories and Cycle 3 updates.
+- PR #43 and `CHATGPT_CYCLE_2_INDEPENDENT_REVIEW.md`.
+- Founder Issues #42 and #44 and their current comments.
+- `docs/execution/CYCLE_3_COORDINATION_REPORT.md` at `d53e34d`.
+- ChatGPT independent Cycle 3 coordination review on PR #40.
+- Complete independent Phase 4 review on Draft PR #45: 87/100, narrow revision before specialist outreach.
+- Complete independent Phase 4.1 review on Draft PR #45: 90/100, internal readiness accepted for Specialist Review Wave 1 preparation and bounded outreach subject to stated conditions.
+
+The independent Cycle 3 correction is carried throughout: five decisions, wireframes, and v0.1 thresholds are draft research instruments pending specialist/ethics review. Version control does not make them scientifically or founder approved.
+
+## Canonical Status
+
+| Interface | Owner/source | Phase 4 disposition | Evidence state |
+| --- | --- | --- | --- |
+| `BL-CAP-01` | T01 / `a5a991e` | Platform/adapter truth; consumes base layer contract | No executed adapter conformance |
+| `BL-MODE-01` | T05 / `b7d14dd` | Exact mode meaning/copy/transitions/cooling; Supportive research only | No participant or enforcement evidence |
+| `BL-PC-01` | T06 / `210e1ce` | Five draft decisions and future user-owned pathway semantics | Naming/value/comprehension untested |
+| `BL-PLC-01` | T07 / `6740c0b` | Base data/consent/inventory/recovery/teardown contract | No DPIA, compliance, security, deletion, or teardown proof |
+| `BL-UX-01` | T10 / `4f6a4b0` | Presentation, MVE instruments, and stage gates | Draft protocol only; no MVP accepted |
+
+Supporting owners remain T02 evidence, T03 rights/provenance, T04 community/story safety, T08 ecosystem sentinels, and T09 economics/impact/rewards.
+
+## Duplication and Conflicts
+
+`docs/integration/DUPLICATION_AND_CONFLICT_MATRIX.md` records 18 concepts. Every entry names canonical owner, duplicate locations, exact conflict, proposed resolution, dependency, merge order, future retained/historical disposition, founder decision, and specialist decision.
+
+The highest-risk reconciliations are:
+
+1. Split platform truth (`BL-CAP-01`) from the base protection-layer contract (`BL-PLC-01`).
+2. Prevent mode/calm/cooling wording from implying diagnosis, inferred capacity, or delayed safety recovery.
+3. Keep plan/path semantics separate from fellowship rights/provenance.
+4. Correct `frozen threshold` language to draft-for-review status.
+5. Keep six data purposes and consent/legal decisions separate.
+6. Preserve the prohibition on ally co-approval/recovery custody despite renamed roles.
+7. Distinguish local save, no-save/use-once, discard, research records, deletion, uninstall, and teardown.
+8. Preserve MVE -> approved research -> synthetic adapters -> integrated prototype gate -> actual MVP decision.
+
+No original document on source branches for PRs #30-#40 was deleted, moved, or rewritten.
+
+## Integration Sequence
+
+The proposed future order is:
+
+1. Integration controls and immutable source locators.
+2. Evidence (T02) and rights/provenance (T03).
+3. Capability (T01) and protection-layer contract (T07).
+4. Social authority/safety (T04).
+5. Modes (T05) and personal plan/pathway (T06).
+6. UX/study instruments (T10).
+7. Ecosystem (T08), economics/impact/rewards (T09), and future horizons.
+8. Historical score/review/source preservation.
+
+This is an accepted current-research-stage sequence, not a merge operation or final file-level reconciliation. Specialist gates, unresolved conflict dispositions, and a later explicit merge decision still control.
+
+## Specialist Review Packs
+
+| Pack | Decision focus | Current state |
+| --- | --- | --- |
+| Clinical and CSBD | Nonclinical language, measures, harms, care boundaries | Prepared; nobody contacted |
+| Research method | Design, comparator, sample, A/B/C decision rules, analysis, ethics | Prepared; nobody contacted |
+| Fellowship/IP | Item rights, trademark/affiliation, Track A/B, similarity | Prepared; no permission/legal opinion |
+| Privacy/GDPR/DPIA | Roles, bases, Article 9/ePrivacy, DPIA, rights, retention | Prepared; no DPO/counsel review |
+| Security/platform | Environments, permissions, bypass, evidence, teardown | Prepared; no test/reviewer/vendor contact |
+| Coercive control/safety | Safe contact, shared context, withdrawal, role abuse | Prepared; no specialist review |
+| Accessibility/inclusion | Critical tasks, accommodations, language/cultural fit | Prepared; no conformance/lived-experience review |
+| Public health/impact | Burden, outcomes, equity, causal/impact claim ceilings | Prepared; no impact/public-health review |
+
+Every pack contains purpose, boundary, requested decisions, claims, risks, questions, prohibited assumptions, output, COI and refresh rules. Each now references `BL-RBM-01`, exact source IDs, `BL-SRR-01` and `BL-SCEP-01`. The manifest uses immutable links and bounded claim/rights tables instead of copying copyrighted or sensitive sources.
+
+Specialist review readiness: **Internal readiness accepted; Wave 1A preparation and bounded outreach founder-authorized.** The founder is the Administrative Review Coordinator only. `Wave 1A` does not yet map to specific review-pack IDs or reviewer scopes in the repository, so no pack inherits delivery authorization by implication. Before any pack delivery or response receipt, that bounded roster must be recorded, the restricted review-record custodian must be assigned, and reviewer access, integrity, rights, scope, confidentiality and refresh controls must pass preflight. This update performs no outreach and nobody has been contacted.
+
+## MVE-01 Readiness
+
+Nine documents define protocol, journey, interview, measurement, adverse events, minimization, recruitment/inclusion, analysis, and governance/authorization.
+
+The package tests all requested domains: problem relevance; five-decision comprehension; task completion/time; Spiral usefulness; agency; privacy trust/control; burden; shame; reactance; rumination/distress/privacy regret; accessibility; cultural fit; exit; deletion understanding; recall; reuse intent; adverse effects; and preference versus an approved paper/no-tool condition.
+
+Readiness status: **Drafts ready for scoped review; participant activity blocked.** All 19 mandatory roles and backups are `Unassigned`.
+
+Not ready:
+
+- comparator, order/allocation, sample, languages, channels, compensation, measures, thresholds, retention, systems, and follow-up are not approved;
+- no participant materials are approved;
+- no ethics/DPIA/clinical/coercion/accessibility decision exists;
+- no recruitment, contact, pilot, session, or data collection is authorized.
+- no sponsor/institution, research lead, methods, ethics, clinical safety, controller/DPO, custodian, security/incident, coercive-control, accessibility, recruitment, facilitation, analysis, compensation, contact, final authorization, or study-stop authority is assigned/approved.
+
+Category A failures are individual case-based stop conditions and may pause/stop after one credible event. Category B usability observations guide iteration only. Category C preference/ratings/themes/comparison outcomes are descriptive and cannot authorize progression. Cycle 3 v0.1 percentages remain visible only as superseded history.
+
+## Adapter Protocol Readiness
+
+Eleven documents now define the adapter readiness package: common security/teardown; Chromium/Edge; Firefox; macOS Safari; Android VPN; DNS; router; iOS official controls; run manifest; result/evidence; and synthetic fixture specification.
+
+Every platform protocol specifies the exact research question, environment-lock fields, platform/version requirement, accounts/permissions, synthetic domains/apps, expected behavior, bypass and alternate contexts, false positives, legitimate recovery, offline and clock/timezone behavior, uninstall/reinstall/reset/replacement, degraded/orphan state, teardown, privacy, performance/battery relevance, pass/fail/stop, and evidence capture.
+
+Readiness status: **Protocols and evidence templates prepared; execution blocked.**
+
+Exact versions, hardware/firmware, fixture builds/hashes, permissions, accounts, topology, policies/entitlements and evidence systems remain `UNFROZEN` or `NOT IMPLEMENTED`. Any blank, inferred, `latest`, inconsistent or expired mandatory manifest field blocks a run. Raw captures must remain outside GitHub. No adapter or fixture was built or executed.
+
+Founder decision: **The dedicated iOS official-controls feasibility protocol is accepted for future review without assuming Apple entitlement, App Store approval, or technical feasibility.** The protocol remains unexecuted and prevents Safari extension results from being treated as iPhone-wide control evidence.
+
+## Founder Working Decisions Confirmed
+
+1. The five canonical artifact owners and proposed integration sequence are accepted for the current research stage.
+2. MVE-01 remains low-fidelity, Supportive-only, nonclinical, accountless where practical, and without enforcement, AI personalization, peer networking, rewards, Twelve-Step delivery, sync, payment, or monitoring.
+3. Current Mode labels remain research copy and are not final product language.
+4. Better Life never infers that a user is calm, rational, irrational, impaired, incapable, or out of control.
+5. No default cooling-off duration is approved.
+6. Trusted-ally Levels 3 and 4, including co-approval and recovery-key custody, remain prohibited.
+7. No final public name for the personal plan or pathway is approved.
+8. EUR1 remains an accessibility principle and research price anchor, not a promised product price.
+9. The dedicated iOS official-controls feasibility protocol is accepted for future review without assuming Apple entitlement, App Store approval, or technical feasibility.
+
+Founder role boundary: **The founder acts only as Administrative Review Coordinator unless another role is explicitly and validly assigned.** This does not assign any MVE, specialist, restricted-custody, safety, ethics, evidence, test, clinical, or final-authorization role.
+
+Founder authorization boundary: **Specialist Review Wave 1A preparation and bounded outreach are authorized.** Participant recruitment/research, adapter or fixture execution, production implementation, clinical activity, collection of sensitive user data, and merging PR #45 or PRs #30-#40 are not authorized.
+
+## Specialist Gates
+
+- Clinical/CSBD and adverse-effect review.
+- Research method, ethics, sample/comparator/threshold review.
+- EU/German privacy/GDPR/ePrivacy/DPIA, controller/processor, retention and rights review.
+- Security/platform permission, fixture, environment and teardown review.
+- Coercive-control and safe-contact review.
+- Accessibility, plain-language, localization, inclusion and lived-experience review.
+- Public-health burden/outcome/impact review.
+- Fellowship copyright/trademark/affiliation/community and Track B similarity review.
+
+No founder, author, ChatGPT, or one specialist can waive another applicable gate.
+
+## Legal and Licensing Status
+
+- No item-level legal opinion, permission, fellowship authorization, trademark clearance, or Track B similarity review exists.
+- No GDPR/ePrivacy legal-basis decision, DPIA, processor/transfer map, retention schedule, participant notice, or research system approval exists.
+- No store/entitlement/vendor approval is claimed.
+- No validated instrument license or translation permission is assumed.
+- MVE-01 contains no fellowship/pathway content; external reviewed resources and actions still require source/rights checks before participant use.
+
+## Unresolved High Defects
+
+| ID | High defect | Required closure |
+| --- | --- | --- |
+| H1 | Canonical owners and sequence are accepted only for the current research stage; retention/historical dispositions and file-level integration remain unapproved. | Later conflict disposition and explicit file-level integration/merge review |
+| H2 | MVE question, sample, comparator, measures, A/B/C decision rules, analysis and ethics are unapproved. | Independent method/ethics decision |
+| H3 | Clinical language, action content, harms, facilitator and care boundaries are unapproved. | Qualified clinical/CSBD review |
+| H4 | Research data legality, DPIA, systems, retention, rights and incident process are unresolved. | EU/German counsel/DPO/ethics/security decisions |
+| H5 | Coercive-control, safe-contact, accessibility, inclusion, localization and lived-experience evidence are absent. | Scoped specialist reviews and later approved research |
+| H6 | Adapter versions, builds, fixtures, accounts, permissions, topology and store/entitlement states are unfrozen. | Platform/security review and authorized run manifests |
+| H7 | No adapter test, recovery, performance, battery, uninstall, reset, orphan or teardown result exists. | Later approved synthetic execution; not Phase 4 |
+| H8 | Fellowship rights, permissions, community legitimacy and original-path similarity remain unresolved. | Item-level legal/IP/community review |
+| H9 | No participant value, harm, comprehension, privacy, accessibility, cultural-fit or preference evidence exists. | Later approved MVE execution; not Phase 4 |
+
+No Critical defect was identified in the documentation-only scope. This does not mean the proposed study or adapters are safe to execute.
+
+## Score History
+
+- Cycle 2 independent thread mean: **85.3/100**.
+- Cycle 2 provisional independent program score: **85.2/100**.
+- Cycle 3 creator thread mean: **86.9/100**, not an independent replacement.
+- Cycle 3 coordination creator score: **88/100**.
+- Cycle 3 independent coordination score: **88/100**, documentation foundation accepted; program/product acceptance blocked.
+- Phase 4 author self-score: **88/100**, descriptive only.
+- Phase 4 independent ChatGPT score: **87/100**, narrow revision required before specialist outreach.
+- Phase 4.1 author score: **88/100 unchanged**; internal documents do not close external deductions.
+- Phase 4.1 independent ChatGPT readiness score: **90/100**, internal readiness accepted; external High gates remain open.
+
+Scores are not averaged into acceptance and cannot close High gates.
+
+## Verification Performed
+
+- Repository-state verified: local `main` was synchronized to `origin/main`; Phase 4 branch was created from `origin/main` without merging thread branches.
+- Repository-state verified: all 29 Phase 4 and eight Phase 4.1 deliverables exist on the Phase 4 branch.
+- Desk-review observation: each review pack contains all 11 required sections.
+- Desk-review observation: MVE measurement map includes every requested evaluation domain.
+- Desk-review observation: every adapter protocol names all required lifecycle/security/evidence topics and blocks execution while exact environments are unfrozen.
+- Desk-review observation: all eight packs reference the manifest and exact source IDs; source records include required delivery/control fields.
+- Desk-review observation: 19 MVE roles and backups are explicitly `Unassigned`; A/B/C categories align across four revised documents.
+- Desk-review observation: adapter run/result required fields, fixture safeguards and separate iOS family/lifecycle cases are present.
+- Repository check: Markdown whitespace validation with `git diff --check` passed during drafting.
+- Executed empirical test: none.
+- Not performed: participant, adapter, clinical, legal, privacy, DPIA, security, accessibility, community, market, product, or production test.
+
+## Recommended Next Sequence
+
+1. Preserve the Phase 4.1 independent 90/100 decision and all earlier scores separately.
+2. Prepare Specialist Review Wave 1A administration under the founder's Administrative Review Coordinator role; assign a restricted review-record custodian through a separate valid record.
+3. Record the exact Wave 1A review-pack IDs and reviewer scopes, then complete reviewer-specific source, access, rights, confidentiality, scope and refresh preflight before any authorized pack delivery; no outreach was performed in this update.
+4. Keep participant research, adapter/fixture execution, production, enforcement with participants, live social scope, AI, rewards, payments, fellowship delivery and merges blocked.
+
+## Stop
+
+This founder-confirmation administrative update records the decisions and then stops. No specialist was contacted. Do not merge PRs #30-#40 or this PR, recruit/contact participants, execute adapters or fixtures, collect sensitive user data, conduct clinical activity, or implement production features.
